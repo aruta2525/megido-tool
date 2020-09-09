@@ -1,0 +1,49 @@
+.max-width {
+  max-width: 600px !important;
+}
+
+.row-1 {
+  padding-top: 5px;
+  background: linear-gradient(#fdebeb, rgb(253, 212, 212));
+}
+
+.row-2 {
+  padding-top: 5px;
+  background: linear-gradient(#e2fdda, rgb(180, 248, 160));
+}
+
+.row-3 {
+  padding-top: 5px;
+  background: linear-gradient(#fffcd8, rgb(255, 227, 168));
+}
+
+.row-4 {
+  padding-top: 5px;
+  background: linear-gradient(#e9fcff, rgb(153, 240, 255));
+}
+
+.row-5 {
+  padding-top: 5px;
+  background: linear-gradient(rgb(255, 234, 253), rgb(243, 194, 255));
+}
+
+.row-6 {
+  padding-top: 5px;
+  background: linear-gradient(#f0f4ff, rgb(153, 206, 255));
+}
+
+.row-7 {
+  padding-top: 5px;
+  background: linear-gradient(#d8d8d8, rgb(180, 180, 180));
+}
+
+.row-8 {
+  padding-top: 5px;
+  background: linear-gradient(#ffcbcb, #f99);
+}
+
+body {
+  background-color: #dedede;
+  background-image: linear-gradient(#ecebeb 50%, transparent 50%, transparent);
+  background-size: 10px 10px;
+}

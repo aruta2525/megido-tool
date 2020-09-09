@@ -1,0 +1,25 @@
+{
+  "plugins": [
+    "stylelint-scss",
+    "stylelint-order"
+  ],
+  "extends": [
+    "stylelint-config-standard",
+    "stylelint-config-recess-order"
+  ],
+  "rules": {
+    "indentation": [
+      2,
+      {
+        "ignore": [
+          "value"
+        ]
+      }
+    ],
+    "no-empty-source": null,
+    "length-zero-no-unit": null,
+    "at-rule-no-unknown": null,
+    "scss/at-rule-no-unknown": true,
+    "no-descending-specificity": null
+  }
+}

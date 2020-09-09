@@ -1,0 +1,59 @@
+.max-width {
+  max-width: 600px !important;
+}
+
+.row-1 {
+  padding-top: 5px;
+  background: -webkit-gradient(linear, left top, left bottom, from(#fdebeb), to(#fdd4d4));
+  background: linear-gradient(#fdebeb, #fdd4d4);
+}
+
+.row-2 {
+  padding-top: 5px;
+  background: -webkit-gradient(linear, left top, left bottom, from(#e2fdda), to(#b4f8a0));
+  background: linear-gradient(#e2fdda, #b4f8a0);
+}
+
+.row-3 {
+  padding-top: 5px;
+  background: -webkit-gradient(linear, left top, left bottom, from(#fffcd8), to(#ffe3a8));
+  background: linear-gradient(#fffcd8, #ffe3a8);
+}
+
+.row-4 {
+  padding-top: 5px;
+  background: -webkit-gradient(linear, left top, left bottom, from(#e9fcff), to(#99f0ff));
+  background: linear-gradient(#e9fcff, #99f0ff);
+}
+
+.row-5 {
+  padding-top: 5px;
+  background: -webkit-gradient(linear, left top, left bottom, from(#ffeafd), to(#f3c2ff));
+  background: linear-gradient(#ffeafd, #f3c2ff);
+}
+
+.row-6 {
+  padding-top: 5px;
+  background: -webkit-gradient(linear, left top, left bottom, from(#f0f4ff), to(#99ceff));
+  background: linear-gradient(#f0f4ff, #99ceff);
+}
+
+.row-7 {
+  padding-top: 5px;
+  background: -webkit-gradient(linear, left top, left bottom, from(#d8d8d8), to(#b4b4b4));
+  background: linear-gradient(#d8d8d8, #b4b4b4);
+}
+
+.row-8 {
+  padding-top: 5px;
+  background: -webkit-gradient(linear, left top, left bottom, from(#ffcbcb), to(#f99));
+  background: linear-gradient(#ffcbcb, #f99);
+}
+
+body {
+  background-color: #dedede;
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #ecebeb), color-stop(50%, transparent), to(transparent));
+  background-image: linear-gradient(#ecebeb 50%, transparent 50%, transparent);
+  background-size: 10px 10px;
+}
+/*# sourceMappingURL=index.css.map */

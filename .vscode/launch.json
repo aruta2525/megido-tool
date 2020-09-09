@@ -1,0 +1,20 @@
+{
+  "version": "0.1.0",
+  "configurations": [
+    // Webサーバー上にあるファイルをデバッグ
+    {
+      // デバッグ設定の名称
+      "name": "chrome",
+      // デバッグ種別を指定（chrome/node/monoなど）
+      "type": "chrome",
+      // lanunchまたはattachを指定
+      "request": "launch",
+      // Webサーバー上にあるデバッグ対象のURLを指定
+      "url": "http://localhost:5500/index.html",
+      // マッピングするローカルファイルが配置されているディレクトリを指定
+      "webRoot": "${workspaceFolder}//",
+      // ソースマップの有効・無効の指定（true/false）
+      "sourceMaps": true
+    }
+  ]
+}
