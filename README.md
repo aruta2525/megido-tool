@@ -22,12 +22,17 @@ https://twitter.com/megido72_tool 様 提供のツールが使えなくなって
 適当に触ってください
 
 ## ToDo
-- 真メギドの各種スキル追加
+- ~~真メギドの各種スキル追加~~
 - 大幻獣のステータス追加
-- 霊宝追加
+- ~~霊宝追加~~
+- 系譜追加
+- メギドSelectにアイコン追加
+- favicon
 
 ## 更新履歴
-- 2020/09/06 v0.1公開
+- 2020/09/09 v0.3 霊宝暫定追加。スマフォ時のレイアウト調整。ダメージを最下段に固定
+- 2020/09/08 v0.2 真メギド・Rジズ追加 
+- 2020/09/06 v0.1 公開
 
 ## License
 megido-tool is licensed under the [MIT](https://en.wikipedia.org/wiki/MIT_License) license.  

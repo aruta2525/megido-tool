@@ -1,5 +1,5 @@
-import { ICharacter } from '../../../interface/ICharacter';
-import { SkillType, Attribute, ClassType, StyleType, ClockType } from '../../../enum/MegidoType';
+import {ICharacter} from '../../../interface/ICharacter';
+import {SkillType, Attribute, ClassType, StyleType, ClockType} from '../../../enum/MegidoType';
 
 export const So06: ICharacter[] = [
   {
@@ -7,13 +7,13 @@ export const So06: ICharacter[] = [
     no: 6,
     id: 1,
     name: 'ウァレフォル',
-    classType: ClassType.Rush,
-    styleType: StyleType.Fighter,
+    styleType: StyleType.Rush,
+    classType: ClassType.Fighter,
     hp: 5855,
     offense: 1150,
     deffense: 287,
     speed: 678,
-    ability: { name: '', text: '' },
+    ability: {name: '', text: ''},
     skills: [
       {
         name: 'アタック',

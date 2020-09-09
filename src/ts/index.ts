@@ -3,9 +3,11 @@ import 'bootstrap';
 import 'bootstrap-select';
 
 import {joinAndSortMegidoByName} from './data/megido/Megido';
+import {sacredTreasureList} from './data/sacred-treasure/SacredTreasure';
 import {ISkillData, ISkillLevel, defaultSkills} from './interface/ISkillData';
 import {getPhotonCorrection} from './util/MegidoUtil';
-import {PhotonType} from './enum/MegidoType';
+import {PhotonType, StyleType} from './enum/MegidoType';
+import {GenealogyType, convertToGenealogySizeName} from './enum/MegidoType';
 
 const megidoList = joinAndSortMegidoByName();
 const ids = {
@@ -33,7 +35,15 @@ const ids = {
   damagePerHit: 'damagePerHit',
   offensiveDebuff: 'offensiveDebuff',
   defensiveBuff: 'defensiveBuff',
-  totalDamage: 'totalDamage'
+  totalDamage: 'totalDamage',
+  sacredTreasure1: 'sacredTreasure1',
+  sacredTreasureText1: 'sacredTreasureText1',
+  sacredTreasure2: 'sacredTreasure2',
+  sacredTreasureText2: 'sacredTreasureText2',
+  sacredTreasure3: 'sacredTreasure3',
+  sacredTreasureText3: 'sacredTreasureText3',
+  sacredTreasure4: 'sacredTreasure4',
+  sacredTreasureText4: 'sacredTreasureText4'
 };
 let nowSkill: ISkillData = defaultSkills[0];
 
@@ -49,6 +59,7 @@ $(document).ready(function () {
     const megido = megidoList[Number(index)];
     $(`#${ids.offense}`).val(megido.offense);
     setupSkills(megido.skills);
+    setupSacredTreasures(megido.styleType);
   });
   megidoSelect.change();
 
@@ -121,6 +132,67 @@ function setupLevels(levels: ISkillLevel[]) {
     calculateMagnification();
   });
   levelSelect.change();
+}
+
+/**
+ * 全霊宝selectの設定
+ * @param styleType 表示する霊宝のスタイル
+ */
+function setupSacredTreasures(styleType: StyleType) {
+  setupSacredTreasure(ids.sacredTreasure1, ids.sacredTreasureText1, styleType);
+  setupSacredTreasure(ids.sacredTreasure2, ids.sacredTreasureText2, styleType);
+  setupSacredTreasure(ids.sacredTreasure3, ids.sacredTreasureText3, styleType);
+  setupSacredTreasure(ids.sacredTreasure4, ids.sacredTreasureText4, styleType);
+}
+
+/**
+ * 霊宝selectの設定
+ *
+ * @param selectId selectのID
+ * @param textId divのID
+ * @param styleType 表示する霊宝のスタイル
+ */
+function setupSacredTreasure(selectId: string, textId: string, styleType: StyleType) {
+  const stList = $(`#${selectId}`);
+  const stText = $(`#${textId}`);
+  let beforeOffense = 0;
+
+  let genealogyList: {
+    [GenealogyType: string]: JQuery;
+  } = {};
+  Object.entries(GenealogyType).forEach(([key, value]) => {
+    genealogyList[value] = $(`<optgroup label="系譜: ${value}"></optgroup>`);
+  });
+
+  stList.empty();
+  sacredTreasureList.forEach((st, i) => {
+    if ((st.styleType & styleType) == styleType) {
+      genealogyList[st.type].append(`<option value="${i}">${st.name}(${convertToGenealogySizeName(st.size)})</option>`);
+    }
+  });
+  Object.keys(genealogyList).forEach((key) => {
+    if (genealogyList[key].children.length != 0) {
+      stList.append(genealogyList[key]);
+    }
+  });
+  stList.selectpicker('render').selectpicker('refresh');
+
+  stList.off('change');
+  stList.change(() => {
+    const offenseInput = $(`#${ids.offense}`);
+    const index = stList.val();
+    stList.selectpicker('val', String(index));
+    const st = sacredTreasureList[Number(index)];
+    const offense = st.offense;
+    const ability = st.ability != undefined ? st.ability : {value: 0, text: ''};
+    stText.text(ability.text);
+    const o = Number(offenseInput.val()) - beforeOffense + offense;
+    beforeOffense = offense;
+    offenseInput.val(o);
+
+    calculateMagnification();
+  });
+  stList.change();
 }
 
 /**

@@ -1,4 +1,4 @@
-import { StyleType, GenealogyType, GenealogyRank, GenealogySize } from '../enum/MegidoType';
+import {StyleType, GenealogyType, GenealogyRank, GenealogySize} from '../enum/MegidoType';
 
 export interface ISacredTreasure {
   type: GenealogyType; // 系譜
@@ -11,6 +11,15 @@ export interface ISacredTreasure {
   defense: number;
   speed: number;
   ability?: {
+    type?: number;
+    value: number;
+    text: string;
+  };
+}
+
+export interface IGenealogy {
+  type: GenealogyType;
+  ability: {
     type?: number;
     value: number;
     text: string;

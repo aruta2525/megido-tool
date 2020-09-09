@@ -22,19 +22,36 @@ export const Attribute = {
 } as const;
 export type Attribute = typeof Attribute[keyof typeof Attribute];
 
-export const ClassType = {
-  Rush: 'ラッシュ',
-  Counter: 'カウンター',
-  Burst: 'バースト'
-} as const;
-export type ClassType = typeof ClassType[keyof typeof ClassType];
-
 export const StyleType = {
+  Rush: 1,
+  Counter: 2,
+  Burst: 4,
+  RC: 1 | 2,
+  CB: 2 | 4,
+  RB: 1 | 4,
+  All: 1 | 2 | 4
+} as const;
+export type StyleType = typeof StyleType[keyof typeof StyleType];
+
+export function convertToStyleName(styleType: StyleType) {
+  switch (styleType) {
+    case StyleType.Rush:
+      return 'ラッシュ';
+    case StyleType.Counter:
+      return 'カウンター';
+    case StyleType.Burst:
+      return 'バースト';
+    default:
+      return 'なし';
+  }
+}
+
+export const ClassType = {
   Fighter: 'ファイター',
   Trooper: 'トルーパー',
   Sniper: 'スナイパー'
 } as const;
-export type StyleType = typeof StyleType[keyof typeof StyleType];
+export type ClassType = typeof ClassType[keyof typeof ClassType];
 
 export const ClockType = {
   So: '祖',
@@ -63,8 +80,21 @@ export const GenealogyRank = {
 export type GenealogyRank = typeof GenealogyRank[keyof typeof GenealogyRank];
 
 export const GenealogySize = {
-  Big: '大',
-  Medium: '中',
-  Small: '小'
+  Big: '2',
+  Medium: '1',
+  Small: '0'
 } as const;
 export type GenealogySize = typeof GenealogySize[keyof typeof GenealogySize];
+
+export function convertToGenealogySizeName(size: GenealogySize): string {
+  switch (size) {
+    case GenealogySize.Big:
+      return '大';
+    case GenealogySize.Medium:
+      return '中';
+    case GenealogySize.Small:
+      return '小';
+    default:
+      return '無';
+  }
+}

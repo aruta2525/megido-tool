@@ -1,5 +1,5 @@
-import { ICharacter } from '../../../interface/ICharacter';
-import { SkillType, Attribute, ClassType, StyleType, ClockType } from '../../../enum/MegidoType';
+import {ICharacter} from '../../../interface/ICharacter';
+import {SkillType, Attribute, ClassType, StyleType, ClockType} from '../../../enum/MegidoType';
 
 export const So66: ICharacter[] = [
   {
@@ -7,13 +7,13 @@ export const So66: ICharacter[] = [
     no: 66,
     id: 1,
     name: 'キマリス',
-    classType: ClassType.Rush,
-    styleType: StyleType.Trooper,
+    styleType: StyleType.Rush,
+    classType: ClassType.Trooper,
     hp: 4270,
     offense: 1159,
     deffense: 405,
     speed: 673,
-    ability: { name: '', text: '' },
+    ability: {name: '', text: ''},
     skills: [
       {
         name: 'アタック',
@@ -67,13 +67,13 @@ export const So66: ICharacter[] = [
     no: 66,
     id: 2,
     name: 'キマリス',
-    classType: ClassType.Counter,
-    styleType: StyleType.Trooper,
+    styleType: StyleType.Counter,
+    classType: ClassType.Trooper,
     hp: 6698,
     offense: 1111,
     deffense: 419,
     speed: 627,
-    ability: { name: '', text: '' },
+    ability: {name: '', text: ''},
     skills: [
       {
         name: 'アタック',

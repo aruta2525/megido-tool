@@ -1,6 +1,7 @@
 import $ from 'jquery';
 import {ICharacter} from '../../interface/ICharacter';
 import {SkillType, Attribute, ClassType, StyleType, ClockType} from '../../enum/MegidoType';
+import {convertToStyleName} from '../../enum/MegidoType';
 
 import {So01} from './so/So01';
 import {So02} from './so/So02';
@@ -301,8 +302,8 @@ export function joinAndSortMegidoByName(): ICharacter[] {
   $.merge(megidoList, MegidoList);
   return megidoList.sort(function (a, b) {
     if (a.name == b.name) {
-      a.name += `（${a.classType}）`;
-      b.name += `（${b.classType}）`;
+      a.name += `（${convertToStyleName(a.styleType)}）`;
+      b.name += `（${convertToStyleName(b.styleType)}）`;
       if (a.id > b.id) return 1;
       else return -1;
     } else if (a.name > b.name) {
