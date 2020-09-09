@@ -1,3 +1,5 @@
+const TerserPlugin = require('terser-webpack-plugin');
+
 module.exports = {
   // モード値を production に設定すると最適化された状態で、
   // development に設定するとソースマップ効でJSファイルが出力される
@@ -9,7 +11,7 @@ module.exports = {
     //  出力ファイルのディレクトリ名
     path: `${__dirname}/dist`,
     // 出力ファイル名
-    filename: 'main.js'
+    filename: 'main.min.js'
   },
   module: {
     rules: [
@@ -28,5 +30,12 @@ module.exports = {
   resolve: {
     // 拡張子を配列で指定
     extensions: ['.ts', '.js']
+  },
+  optimization: {
+    minimize: true,
+    minimizer: [
+      new TerserPlugin() // JavaScript の minify を行う
+      // new OptimizeCSSAssetsPlugin() // CSS の minify を行う
+    ]
   }
 };
