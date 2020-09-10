@@ -13,7 +13,7 @@ export const So05: ICharacter[] = [
     offense: 628,
     deffense: 489,
     speed: 719,
-    ability: {name: '', text: ''},
+    ability: {name: '私すごーい☆', text: '毎ターン終了時、覚醒ゲージが+1される	'},
     skills: [
       {
         name: 'アタック',
@@ -73,7 +73,7 @@ export const So05: ICharacter[] = [
     offense: 597,
     deffense: 586,
     speed: 657,
-    ability: {name: '', text: ''},
+    ability: {name: '空気読みなさいよ☆', text: '行動開始時、20%の確率でスキルが追加される'},
     skills: [
       {
         name: 'アタック',

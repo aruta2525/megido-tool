@@ -13,7 +13,7 @@ export const So16: ICharacter[] = [
     offense: 1209,
     deffense: 271,
     speed: 693,
-    ability: {name: '', text: ''},
+    ability: {name: '結婚願望', text: '男性キャラクターがパーティに居る場合、攻撃力が20%上昇する'},
     skills: [
       {
         name: 'アタック',
@@ -73,7 +73,7 @@ export const So16: ICharacter[] = [
     offense: 1150,
     deffense: 409,
     speed: 642,
-    ability: {name: '', text: ''},
+    ability: {name: '過激エンパシー', text: 'バーサーク状態の味方の数が多いほど、受けるダメージを軽減する（最大50%）'},
     skills: [
       {
         name: 'アタック',

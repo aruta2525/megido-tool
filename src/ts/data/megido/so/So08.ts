@@ -13,7 +13,7 @@ export const So08: ICharacter[] = [
     offense: 960,
     deffense: 476,
     speed: 474,
-    ability: {name: '', text: ''},
+    ability: {name: '恋心をひとつまみ', text: '女性キャラクターへの回復量が30%上昇する'},
     skills: [
       {
         name: 'アタック',
@@ -85,7 +85,7 @@ export const So08: ICharacter[] = [
     offense: 1226,
     deffense: 421,
     speed: 492,
-    ability: {name: '', text: ''},
+    ability: {name: '流離いの吟遊詩人', text: '大協奏中なら自身のチャージが強化される'},
     skills: [
       {
         name: 'アタック',

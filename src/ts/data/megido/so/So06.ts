@@ -13,7 +13,7 @@ export const So06: ICharacter[] = [
     offense: 1150,
     deffense: 287,
     speed: 678,
-    ability: {name: '', text: ''},
+    ability: {name: '弱肉強食', text: '獣人系のモンスターに2倍のダメージ'},
     skills: [
       {
         name: 'アタック',

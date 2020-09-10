@@ -13,7 +13,7 @@ export const So15: ICharacter[] = [
     offense: 768,
     deffense: 622,
     speed: 627,
-    ability: {name: '', text: ''},
+    ability: {name: '闘争心', text: '虫系のモンスターに2倍のダメージ'},
     skills: [
       {
         name: 'アタック',
@@ -73,7 +73,7 @@ export const So15: ICharacter[] = [
     offense: 1280,
     deffense: 410,
     speed: 462,
-    ability: {name: '', text: ''},
+    ability: {name: '湧き上がる闘志', text: '封印状態中、自身のフォトン容量を+2する'},
     skills: [
       {
         name: 'アタック',

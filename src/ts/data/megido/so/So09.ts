@@ -13,7 +13,7 @@ export const So09: ICharacter[] = [
     offense: 1191,
     deffense: 420,
     speed: 472,
-    ability: {name: '', text: ''},
+    ability: {name: 'プレイボーイ', text: '女性キャラクターが多いほど、攻撃力が上昇する(最大値25%)'},
     skills: [
       {
         name: 'アタック',

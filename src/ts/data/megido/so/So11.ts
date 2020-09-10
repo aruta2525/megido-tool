@@ -13,7 +13,7 @@ export const So11: ICharacter[] = [
     offense: 857,
     deffense: 430,
     speed: 697,
-    ability: {name: '', text: ''},
+    ability: {name: '負けず嫌い', text: 'HPが50%以下の時、攻撃力が30%上昇する'},
     skills: [
       {
         name: 'アタック',
@@ -97,7 +97,7 @@ export const So11: ICharacter[] = [
     offense: 1037,
     deffense: 430,
     speed: 491,
-    ability: {name: '', text: ''},
+    ability: {name: '褒めてもいいですよ', text: '音符が1つ以上蓄積されているとき、ターン終了時、味方単体のHPを音符1つにつき4%回復（最大値20%）'},
     skills: [
       {
         name: 'アタック',

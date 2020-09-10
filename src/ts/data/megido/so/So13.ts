@@ -13,7 +13,7 @@ export const So13: ICharacter[] = [
     offense: 1206,
     deffense: 411,
     speed: 626,
-    ability: {name: '', text: ''},
+    ability: {name: '憤怒の瞳(専用霊宝)', text: 'バーサーク時、毎ターン開始時にアタックフォトンを1つ追加する'},
     skills: [
       {
         name: 'アタック',

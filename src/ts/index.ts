@@ -6,12 +6,14 @@ import {joinAndSortMegidoByName} from './data/megido/Megido';
 import {sacredTreasureList} from './data/sacred-treasure/SacredTreasure';
 import {ISkillData, ISkillLevel, defaultSkills} from './interface/ISkillData';
 import {getPhotonCorrection} from './util/MegidoUtil';
-import {PhotonType, StyleType} from './enum/MegidoType';
+import {PhotonType, StyleType, GenealogyRank} from './enum/MegidoType';
 import {GenealogyType, convertToGenealogySizeName} from './enum/MegidoType';
 
 const megidoList = joinAndSortMegidoByName();
 const ids = {
   megido: 'megido',
+  megidoAbility: 'megidoAbility',
+  megidoAbilityText: 'megidoAbilityText',
   offense: 'offense',
   offensiveBuff: 'offensiveBuff',
   skill: 'skill',
@@ -58,6 +60,8 @@ $(document).ready(function () {
     const index = megidoSelect.val();
     const megido = megidoList[Number(index)];
     $(`#${ids.offense}`).val(megido.offense);
+
+    if (megido.ability != undefined) setupAbility(megido.ability);
     setupSkills(megido.skills);
     setupSacredTreasures(megido.styleType);
   });
@@ -72,6 +76,17 @@ $(document).ready(function () {
 $(document).change(() => {
   calculateDamage();
 });
+
+/**
+ * メギドの特性をセットする関数です。
+ * @param ability メギドの特性
+ */
+function setupAbility(ability: {name: string; text: string}) {
+  const megidoAbility = $(`#${ids.megidoAbility}`);
+  const megidoAbilityText = $(`#${ids.megidoAbilityText}`);
+  megidoAbility.val(ability.name);
+  megidoAbilityText.text(ability.text);
+}
 
 /**
  * スキルをセットする関数です。
@@ -167,7 +182,19 @@ function setupSacredTreasure(selectId: string, textId: string, styleType: StyleT
   stList.empty();
   sacredTreasureList.forEach((st, i) => {
     if ((st.styleType & styleType) == styleType) {
-      genealogyList[st.type].append(`<option value="${i}">${st.name}(${convertToGenealogySizeName(st.size)})</option>`);
+      let background = '';
+      switch (st.rank) {
+        case GenealogyRank.Blue:
+          background = 'st-blue';
+          break;
+        case GenealogyRank.Silver:
+          background = 'st-silver';
+          break;
+        case GenealogyRank.Gold:
+          background = 'st-gold';
+          break;
+      }
+      genealogyList[st.type].append(`<option value="${i}" class="${background}">(${convertToGenealogySizeName(st.size)})${st.name}</option>`);
     }
   });
   Object.keys(genealogyList).forEach((key) => {

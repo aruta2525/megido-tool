@@ -13,7 +13,7 @@ export const So17: ICharacter[] = [
     offense: 761,
     deffense: 717,
     speed: 286,
-    ability: {name: '', text: ''},
+    ability: {name: '誇り高きメギド', text: 'HPが100%のとき、受けるダメージを30%軽減'},
     skills: [
       {
         name: 'アタック',

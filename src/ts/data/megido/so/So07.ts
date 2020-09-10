@@ -13,7 +13,7 @@ export const So07: ICharacter[] = [
     offense: 1194,
     deffense: 417,
     speed: 685,
-    ability: {name: '', text: ''},
+    ability: {name: '隠密行動', text: '敵から狙われにくくなり、攻撃力が10%上昇する'},
     skills: [
       {
         name: 'アタック',
@@ -73,7 +73,7 @@ export const So07: ICharacter[] = [
     offense: 1200,
     deffense: 420,
     speed: 627,
-    ability: {name: '', text: ''},
+    ability: {name: '間隙突き', text: '覚醒ゲージが0の対象に1.5倍のダメージ'},
     skills: [
       {
         name: 'アタック',

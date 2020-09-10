@@ -13,7 +13,7 @@ export const So10: ICharacter[] = [
     offense: 642,
     deffense: 477,
     speed: 716,
-    ability: {name: '', text: ''},
+    ability: {name: '甘えん坊', text: '毎ターン終了時、覚醒ゲージが+1される'},
     skills: [
       {
         name: 'アタック',

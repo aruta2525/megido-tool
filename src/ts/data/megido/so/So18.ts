@@ -13,7 +13,7 @@ export const So18: ICharacter[] = [
     offense: 1222,
     deffense: 431,
     speed: 423,
-    ability: {name: '', text: ''},
+    ability: {name: 'お注射の時間です', text: '戦闘不能時、3ターンの間、ターン終了時に味方全体のHPが20%回復する効果を付与する'},
     skills: [
       {
         name: 'アタック',
@@ -73,7 +73,7 @@ export const So18: ICharacter[] = [
     offense: 1362,
     deffense: 419,
     speed: 431,
-    ability: {name: '', text: ''},
+    ability: {name: 'さあ…治療の時間です', text: '自身にフォトンが与えられなかった場合ターン終了時、味方単体のHPを20%回復する'},
     skills: [
       {
         name: 'アタック',

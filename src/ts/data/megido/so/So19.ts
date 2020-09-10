@@ -13,7 +13,7 @@ export const So19: ICharacter[] = [
     offense: 945,
     deffense: 490,
     speed: 424,
-    ability: {name: '', text: ''},
+    ability: {name: '後光アタック', text: '攻撃を受けたとき、10%の確率で暗闇攻撃で反撃する'},
     skills: [
       {
         name: 'アタック',
@@ -73,7 +73,10 @@ export const So19: ICharacter[] = [
     offense: 881,
     deffense: 525,
     speed: 479,
-    ability: {name: '', text: ''},
+    ability: {
+      name: '仏の顔も三度まで',
+      text: '自身が攻撃でダメージを3回受けたとき1ターンの間自身の攻撃力を25%上昇させ、バーサーク状態になる（最大125%上昇）'
+    },
     skills: [
       {
         name: 'アタック',

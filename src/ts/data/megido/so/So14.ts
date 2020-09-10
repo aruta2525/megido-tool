@@ -13,7 +13,7 @@ export const So14: ICharacter[] = [
     offense: 1386,
     deffense: 424,
     speed: 475,
-    ability: {name: '', text: ''},
+    ability: {name: 'ビーストハンター', text: '獣系のモンスターに2倍のダメージ'},
     skills: [
       {
         name: 'アタック',
@@ -110,7 +110,7 @@ export const So14: ICharacter[] = [
     offense: 1210,
     deffense: 644,
     speed: 430,
-    ability: {name: '', text: ''},
+    ability: {name: '手堅い一手', text: '自身の点穴が69以下のとき、攻撃時に点穴の効果発動と消費がされない'},
     skills: [
       {
         name: 'アタック',

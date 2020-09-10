@@ -13,7 +13,7 @@ export const So12: ICharacter[] = [
     offense: 1176,
     deffense: 494,
     speed: 476,
-    ability: {name: '', text: ''},
+    ability: {name: 'ハルマニアの槍', text: '覚醒ゲージが多いほど攻撃力が上昇する(最大値25%)'},
     skills: [
       {
         name: 'アタック',
@@ -76,7 +76,7 @@ export const So12: ICharacter[] = [
     offense: 1001,
     deffense: 487,
     speed: 421,
-    ability: {name: '', text: ''},
+    ability: {name: '変幻自在の槍', text: '敵全体にHボムが付与されているほど、攻撃力が上昇する（最大45%）'},
     skills: [
       {
         name: 'アタック',
