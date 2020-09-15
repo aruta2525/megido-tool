@@ -4,10 +4,12 @@ import 'bootstrap-select';
 
 import {joinAndSortMegidoByName} from './data/megido/Megido';
 import {sacredTreasureList} from './data/sacred-treasure/SacredTreasure';
+import {genealogyList} from './data/sacred-treasure/Genealogy';
 import {ISkillData, ISkillLevel, defaultSkills} from './interface/ISkillData';
 import {getPhotonCorrection} from './util/MegidoUtil';
-import {PhotonType, StyleType, GenealogyRank} from './enum/MegidoType';
+import {PhotonType, StyleType, GenealogyRank, GenealogySize} from './enum/MegidoType';
 import {GenealogyType, convertToGenealogySizeName} from './enum/MegidoType';
+import {ISacredTreasure} from './interface/ISacredTreasure';
 
 const megidoList = joinAndSortMegidoByName();
 const ids = {
@@ -45,7 +47,9 @@ const ids = {
   sacredTreasure3: 'sacredTreasure3',
   sacredTreasureText3: 'sacredTreasureText3',
   sacredTreasure4: 'sacredTreasure4',
-  sacredTreasureText4: 'sacredTreasureText4'
+  sacredTreasureText4: 'sacredTreasureText4',
+  genealogy: 'genealogy',
+  genealogyText: 'genealogyText'
 };
 let nowSkill: ISkillData = defaultSkills[0];
 
@@ -56,7 +60,7 @@ $(document).ready(function () {
   });
   megidoSelect.selectpicker('refresh');
 
-  megidoSelect.change(function () {
+  megidoSelect.on('change', function () {
     const index = megidoSelect.val();
     const megido = megidoList[Number(index)];
     $(`#${ids.offense}`).val(megido.offense);
@@ -65,15 +69,15 @@ $(document).ready(function () {
     setupSkills(megido.skills);
     setupSacredTreasures(megido.styleType);
   });
-  megidoSelect.change();
+  megidoSelect.trigger('change');
 
   const mysteriesLevels = $(`#${ids.mysteriesLevels}`);
-  mysteriesLevels.change(() => {
+  mysteriesLevels.on('change', () => {
     calculateMagnification();
   });
 });
 
-$(document).change(() => {
+$(document).on('change', () => {
   calculateDamage();
 });
 
@@ -103,7 +107,7 @@ function setupSkills(skills: ISkillData[] = defaultSkills) {
   skillSelect.selectpicker('render').selectpicker('refresh');
 
   skillSelect.off('change');
-  skillSelect.change(() => {
+  skillSelect.on('change', () => {
     const index = skillSelect.val();
     skillSelect.selectpicker('val', String(index));
     const skill = skills[Number(index)];
@@ -118,7 +122,7 @@ function setupSkills(skills: ISkillData[] = defaultSkills) {
 
     setupLevels(skill.levels);
   });
-  skillSelect.change();
+  skillSelect.trigger('change');
 }
 
 /**
@@ -141,12 +145,12 @@ function setupLevels(levels: ISkillLevel[]) {
   levelSelect.selectpicker('render').selectpicker('refresh');
 
   levelSelect.off('change');
-  levelSelect.change(() => {
+  levelSelect.on('change', () => {
     const index = levelSelect.val();
     levelSelect.selectpicker('val', String(index));
     calculateMagnification();
   });
-  levelSelect.change();
+  levelSelect.trigger('change');
 }
 
 /**
@@ -168,18 +172,18 @@ function setupSacredTreasures(styleType: StyleType) {
  * @param styleType 表示する霊宝のスタイル
  */
 function setupSacredTreasure(selectId: string, textId: string, styleType: StyleType) {
-  const stList = $(`#${selectId}`);
+  const stSelect = $(`#${selectId}`);
   const stText = $(`#${textId}`);
   let beforeOffense = 0;
 
-  let genealogyList: {
+  let genealogyGroup: {
     [GenealogyType: string]: JQuery;
   } = {};
   Object.entries(GenealogyType).forEach(([key, value]) => {
-    genealogyList[value] = $(`<optgroup label="系譜: ${value}"></optgroup>`);
+    genealogyGroup[value] = $(`<optgroup label="系譜: ${value}"></optgroup>`);
   });
 
-  stList.empty();
+  stSelect.empty();
   sacredTreasureList.forEach((st, i) => {
     if ((st.styleType & styleType) == styleType) {
       let background = '';
@@ -194,21 +198,21 @@ function setupSacredTreasure(selectId: string, textId: string, styleType: StyleT
           background = 'st-gold';
           break;
       }
-      genealogyList[st.type].append(`<option value="${i}" class="${background}">(${convertToGenealogySizeName(st.size)})${st.name}</option>`);
+      genealogyGroup[st.type].append(`<option value="${i}" class="${background}">(${convertToGenealogySizeName(st.size)})${st.name}</option>`);
     }
   });
-  Object.keys(genealogyList).forEach((key) => {
-    if (genealogyList[key].children.length != 0) {
-      stList.append(genealogyList[key]);
+  Object.keys(genealogyGroup).forEach((key) => {
+    if (genealogyGroup[key].children.length != 0) {
+      stSelect.append(genealogyGroup[key]);
     }
   });
-  stList.selectpicker('render').selectpicker('refresh');
+  stSelect.selectpicker('render').selectpicker('refresh');
 
-  stList.off('change');
-  stList.change(() => {
+  stSelect.off('change');
+  stSelect.on('change', () => {
     const offenseInput = $(`#${ids.offense}`);
-    const index = stList.val();
-    stList.selectpicker('val', String(index));
+    const index = stSelect.val();
+    stSelect.selectpicker('val', String(index));
     const st = sacredTreasureList[Number(index)];
     const offense = st.offense;
     const ability = st.ability != undefined ? st.ability : {value: 0, text: ''};
@@ -217,9 +221,86 @@ function setupSacredTreasure(selectId: string, textId: string, styleType: StyleT
     beforeOffense = offense;
     offenseInput.val(o);
 
+    calculateGenealogy();
     calculateMagnification();
   });
-  stList.change();
+  stSelect.trigger('change');
+}
+
+/**
+ * 系譜算出関数
+ */
+function calculateGenealogy() {
+  const stList: ISacredTreasure[] = [];
+  stList.push(getSelectedSacredTreasure(ids.sacredTreasure1));
+  stList.push(getSelectedSacredTreasure(ids.sacredTreasure2));
+  stList.push(getSelectedSacredTreasure(ids.sacredTreasure3));
+  stList.push(getSelectedSacredTreasure(ids.sacredTreasure4));
+
+  if (stList.filter((st) => st.type === GenealogyType.None).length >= 2) {
+    setGenealogy(GenealogyType.None);
+    return;
+  }
+
+  let type: GenealogyType = GenealogyType.None;
+  Object.entries(GenealogyType).forEach(([key, value]) => {
+    if (stList.filter((st) => st.type === value).length >= 3) {
+      type = value;
+    }
+  });
+
+  if (type == GenealogyType.None) {
+    setGenealogy(GenealogyType.None);
+    return;
+  }
+
+  let point = 0;
+  stList
+    .filter((st) => st.type === type)
+    .forEach((st) => {
+      switch (st.size) {
+        case GenealogySize.Big:
+          point += 15;
+          break;
+        case GenealogySize.Medium:
+          point += 10;
+          break;
+        case GenealogySize.Small:
+          point += 5;
+          break;
+      }
+    });
+
+  if (point >= 30) {
+    setGenealogy(type);
+  } else {
+    setGenealogy(GenealogyType.None);
+  }
+}
+
+/**
+ * 指定selectIdの選択中の霊宝データ取得関数
+ * @param selectId 霊宝SelectID
+ */
+function getSelectedSacredTreasure(selectId: string): ISacredTreasure {
+  const stSelect = $(`#${selectId}`);
+  const index = stSelect.val();
+  const st = sacredTreasureList[Number(index)];
+
+  return st;
+}
+
+/**
+ * 系譜欄に表示する関数
+ * @param type 系譜タイプ
+ */
+function setGenealogy(type: GenealogyType) {
+  const genealogy = $(`#${ids.genealogy}`);
+  const genealogyText = $(`#${ids.genealogyText}`);
+
+  const g = genealogyList.find((g) => g.type === type) || genealogyList[0];
+  genealogy.val(g.type);
+  genealogyText.text(g.ability.text);
 }
 
 /**

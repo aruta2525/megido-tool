@@ -60,7 +60,7 @@ export const ClockType = {
 export type ClockType = typeof ClockType[keyof typeof ClockType];
 
 export const GenealogyType = {
-  None: '無し',
+  None: 'なし',
   Mougeki: '猛撃',
   Isshin: '一心',
   Gouken: '剛堅',

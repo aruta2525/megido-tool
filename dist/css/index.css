@@ -20,6 +20,14 @@ body::-webkit-scrollbar {
   display: none;
 }
 
+input:-moz-read-only {
+  background-color: white !important;
+}
+
+input:read-only {
+  background-color: white !important;
+}
+
 .container-wrap {
   max-width: 600px !important;
 }
