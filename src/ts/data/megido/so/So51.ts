@@ -13,7 +13,7 @@ export const So51: ICharacter[] = [
     offense: 838,
     deffense: 594,
     speed: 676,
-    ability: {name: '', text: ''},
+    ability: {name: '観察者', text: '奥義使用時、50%の確率で覚醒ゲージの消費が0になる'},
     skills: [
       {
         name: 'アタック',

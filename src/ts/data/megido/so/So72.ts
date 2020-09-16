@@ -13,7 +13,7 @@ export const So72: ICharacter[] = [
     offense: 752,
     deffense: 472,
     speed: 643,
-    ability: {name: '', text: ''},
+    ability: {name: '臆病者', text: 'HPが50%以下のとき、30%の確率で攻撃を無効化する'},
     skills: [
       {
         name: 'アタック',

@@ -13,7 +13,7 @@ export const So56: ICharacter[] = [
     offense: 989,
     deffense: 485,
     speed: 416,
-    ability: {name: '', text: ''},
+    ability: {name: '上質な装備', text: '自身の防御力が30%上昇する'},
     skills: [
       {
         name: 'アタック',

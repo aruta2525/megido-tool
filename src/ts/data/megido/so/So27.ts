@@ -13,7 +13,7 @@ export const So27: ICharacter[] = [
     offense: 645,
     deffense: 714,
     speed: 285,
-    ability: {name: '', text: ''},
+    ability: {name: '正義のヒーロー', text: 'HPが50%以下のとき、30%の確率で攻撃を無効化する'},
     skills: [
       {
         name: 'アタック',

@@ -13,7 +13,7 @@ export const So68: ICharacter[] = [
     offense: 976,
     deffense: 431,
     speed: 644,
-    ability: {name: '', text: ''},
+    ability: {name: '虚心坦懐', text: '自身の点穴の値が高いほど、受けるダメージを軽減する（最大40%）'},
     skills: [
       {
         name: 'アタック',

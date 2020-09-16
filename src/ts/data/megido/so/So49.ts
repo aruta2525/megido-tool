@@ -13,7 +13,7 @@ export const So49: ICharacter[] = [
     offense: 1197,
     deffense: 287,
     speed: 703,
-    ability: {name: '', text: ''},
+    ability: {name: 'リズムに乗るのです！', text: '戦闘中、徐々に素早さが上昇する（最大値50%）'},
     skills: [
       {
         name: 'アタック',
@@ -85,7 +85,7 @@ export const So49: ICharacter[] = [
     offense: 1164,
     deffense: 476,
     speed: 500,
-    ability: {name: '', text: ''},
+    ability: {name: 'ポジティブスコア', text: 'アタック時、2ターンの間、継続する音符を1つ付与する'},
     skills: [
       {
         name: 'アタック',

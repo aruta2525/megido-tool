@@ -13,7 +13,7 @@ export const So29: ICharacter[] = [
     offense: 1075,
     deffense: 496,
     speed: 476,
-    ability: {name: '', text: ''},
+    ability: {name: 'ピンチはチャンス', text: 'HPが50%以下のとき、すべての覚醒ゲージ増加量が+1される'},
     skills: [
       {
         name: 'アタック',
@@ -73,7 +73,7 @@ export const So29: ICharacter[] = [
     offense: 1216,
     deffense: 545,
     speed: 413,
-    ability: {name: '', text: ''},
+    ability: {name: 'コールドリーディング', text: '戦闘中、徐々に攻撃力が上昇する（最大値25%）'},
     skills: [
       {
         name: 'アタック',

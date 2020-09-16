@@ -13,7 +13,7 @@ export const So33: ICharacter[] = [
     offense: 854,
     deffense: 642,
     speed: 279,
-    ability: {name: '', text: ''},
+    ability: {name: 'リボルトストライク', text: '攻撃を受けたとき、10%の確率でめまい攻撃で反撃する'},
     skills: [
       {
         name: 'アタック',

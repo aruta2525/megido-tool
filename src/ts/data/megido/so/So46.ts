@@ -13,7 +13,7 @@ export const So46: ICharacter[] = [
     offense: 1189,
     deffense: 493,
     speed: 424,
-    ability: {name: '', text: ''},
+    ability: {name: '魂狩り', text: '精霊系のモンスターに2倍のダメージ'},
     skills: [
       {
         name: 'アタック',
@@ -73,7 +73,7 @@ export const So46: ICharacter[] = [
     offense: 1214,
     deffense: 464,
     speed: 468,
-    ability: {name: '', text: ''},
+    ability: {name: '死に寄り添う者', text: 'ネクロ状態時、味方が戦闘不能になったとき、ソウルが+1される'},
     skills: [
       {
         name: 'アタック',

@@ -13,7 +13,7 @@ export const So58: ICharacter[] = [
     offense: 953,
     deffense: 406,
     speed: 626,
-    ability: {name: '', text: ''},
+    ability: {name: '絃結界', text: '戦闘中、徐々に素早さが上昇する（最大値50%）'},
     skills: [
       {
         name: 'アタック',

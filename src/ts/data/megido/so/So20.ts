@@ -13,7 +13,7 @@ export const So20: ICharacter[] = [
     offense: 975,
     deffense: 412,
     speed: 475,
-    ability: {name: '', text: ''},
+    ability: {name: '俺はまだやれる！', text: '致死ダメージを受けたとき、20%の確率で踏みとどまる'},
     skills: [
       {
         name: 'アタック',

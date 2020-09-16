@@ -13,7 +13,7 @@ export const So24: ICharacter[] = [
     offense: 948,
     deffense: 501,
     speed: 503,
-    ability: {name: '', text: ''},
+    ability: {name: '調教師', text: 'オーブの使用可能までのターンを-1する'},
     skills: [
       {
         name: 'アタック',

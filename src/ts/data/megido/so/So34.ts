@@ -13,7 +13,7 @@ export const So34: ICharacter[] = [
     offense: 1178,
     deffense: 487,
     speed: 285,
-    ability: {name: '', text: ''},
+    ability: {name: 'ものぐさ', text: '睡眠状態のとき、毎ターン終了時、覚醒ゲージが+2される'},
     skills: [
       {
         name: 'アタック',
@@ -87,7 +87,7 @@ export const So34: ICharacter[] = [
     offense: 1089,
     deffense: 524,
     speed: 308,
-    ability: {name: '', text: ''},
+    ability: {name: '寝る子は育つ', text: '自身が睡眠状態かつエレキ状態のとき、フォトンによる行動がキャンセルされた場合自身のエレキレベルを+3する'},
     skills: [
       {
         name: 'アタック',

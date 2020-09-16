@@ -13,7 +13,7 @@ export const So69: ICharacter[] = [
     offense: 1152,
     deffense: 421,
     speed: 642,
-    ability: {name: '', text: ''},
+    ability: {name: '滅びの美学', text: '植物系のモンスターに2倍のダメージ'},
     skills: [
       {
         name: 'アタック',

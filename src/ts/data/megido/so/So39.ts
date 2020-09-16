@@ -13,7 +13,7 @@ export const So39: ICharacter[] = [
     offense: 981,
     deffense: 504,
     speed: 499,
-    ability: {name: '', text: ''},
+    ability: {name: '天駆ける者', text: '自身の攻撃力が15％上昇する'},
     skills: [
       {
         name: 'アタック',

@@ -185,6 +185,7 @@ function setupSacredTreasure(selectId: string, textId: string, styleType: StyleT
 
   stSelect.empty();
   sacredTreasureList.forEach((st, i) => {
+    // 霊宝のスタイルとメギドのスタイルが一致してるなら追加
     if ((st.styleType & styleType) == styleType) {
       let background = '';
       switch (st.rank) {
@@ -237,11 +238,13 @@ function calculateGenealogy() {
   stList.push(getSelectedSacredTreasure(ids.sacredTreasure3));
   stList.push(getSelectedSacredTreasure(ids.sacredTreasure4));
 
+  // 系譜なしの霊宝が2個以上なら、系譜はなし
   if (stList.filter((st) => st.type === GenealogyType.None).length >= 2) {
     setGenealogy(GenealogyType.None);
     return;
   }
 
+  // 同種の系譜の霊宝が3個以上なら系譜取得
   let type: GenealogyType = GenealogyType.None;
   Object.entries(GenealogyType).forEach(([key, value]) => {
     if (stList.filter((st) => st.type === value).length >= 3) {
@@ -249,11 +252,13 @@ function calculateGenealogy() {
     }
   });
 
+  // 同種の系譜が3個以上の系譜がなかったのなら系譜なし
   if (type == GenealogyType.None) {
     setGenealogy(GenealogyType.None);
     return;
   }
 
+  // 系譜のポイント計算
   let point = 0;
   stList
     .filter((st) => st.type === type)
@@ -271,6 +276,7 @@ function calculateGenealogy() {
       }
     });
 
+  // 30p以上なら系譜設定、未満なら系譜なし
   if (point >= 30) {
     setGenealogy(type);
   } else {

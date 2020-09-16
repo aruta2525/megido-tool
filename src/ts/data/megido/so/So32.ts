@@ -13,7 +13,7 @@ export const So32: ICharacter[] = [
     offense: 1402,
     deffense: 423,
     speed: 283,
-    ability: {name: '', text: ''},
+    ability: {name: '混沌を孕む者', text: '自身のHPが33.3%以下のとき、通常攻撃、スキル、覚醒スキル、奥義の効果範囲が敵全体になる'},
     skills: [
       {
         name: 'アタック',

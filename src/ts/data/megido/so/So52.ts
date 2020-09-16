@@ -13,7 +13,7 @@ export const So52: ICharacter[] = [
     offense: 1199,
     deffense: 500,
     speed: 427,
-    ability: {name: '', text: ''},
+    ability: {name: '天才的センス', text: 'HPが20%上昇する'},
     skills: [
       {
         name: 'アタック',

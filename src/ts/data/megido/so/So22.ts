@@ -13,7 +13,7 @@ export const So22: ICharacter[] = [
     offense: 984,
     deffense: 286,
     speed: 646,
-    ability: {name: '', text: ''},
+    ability: {name: '歴戦の兵', text: 'クエストでの獲得経験値が50％上昇する'},
     skills: [
       {
         name: 'アタック',
@@ -73,7 +73,7 @@ export const So22: ICharacter[] = [
     offense: 617,
     deffense: 630,
     speed: 489,
-    ability: {name: '', text: ''},
+    ability: {name: '闘争の探求者', text: '怒闘状態時、毎ターン開始時にアタックフォトンを1つ追加する'},
     skills: [
       {
         name: 'アタック',

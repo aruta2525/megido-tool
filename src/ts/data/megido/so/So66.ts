@@ -13,7 +13,7 @@ export const So66: ICharacter[] = [
     offense: 1159,
     deffense: 405,
     speed: 673,
-    ability: {name: '', text: ''},
+    ability: {name: 'キマリスは強いのだ！', text: '死者系のモンスターに2倍のダメージ'},
     skills: [
       {
         name: 'アタック',
@@ -73,7 +73,7 @@ export const So66: ICharacter[] = [
     offense: 1111,
     deffense: 419,
     speed: 627,
-    ability: {name: '', text: ''},
+    ability: {name: 'キマリス・エ・ゼレ！', text: '味方が一度でも戦闘不能になっているとき、自身の攻撃力が40%上昇する'},
     skills: [
       {
         name: 'アタック',

@@ -13,7 +13,7 @@ export const So35: ICharacter[] = [
     offense: 1152,
     deffense: 431,
     speed: 473,
-    ability: {name: '', text: ''},
+    ability: {name: '悪魔狩り', text: '悪魔系のモンスターに2倍のダメージ'},
     skills: [
       {
         name: 'アタック',
@@ -107,7 +107,7 @@ export const So35: ICharacter[] = [
     offense: 1338,
     deffense: 465,
     speed: 462,
-    ability: {name: '', text: ''},
+    ability: {name: '正義の執行者(専用霊宝)', text: 'チェイン中、攻撃力が4%上昇する'},
     skills: [
       {
         name: 'アタック',

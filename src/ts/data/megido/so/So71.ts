@@ -13,7 +13,7 @@ export const So71: ICharacter[] = [
     offense: 1387,
     deffense: 491,
     speed: 270,
-    ability: {name: '', text: ''},
+    ability: {name: 'メギドの記憶', text: 'HPが20%上昇する'},
     skills: [
       {
         name: 'アタック',
@@ -73,7 +73,7 @@ export const So71: ICharacter[] = [
     offense: 1212,
     deffense: 446,
     speed: 471,
-    ability: {name: '', text: ''},
+    ability: {name: '終わらない記録', text: '封印状態中、自身のスキルレベルが低下しなくなる'},
     skills: [
       {
         name: 'アタック',

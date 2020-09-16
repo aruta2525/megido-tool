@@ -13,7 +13,7 @@ export const So42: ICharacter[] = [
     offense: 1188,
     deffense: 287,
     speed: 699,
-    ability: {name: '', text: ''},
+    ability: {name: '面倒くさい…', text: '最初のターン、攻撃力が25%上昇する'},
     skills: [
       {
         name: 'アタック',
@@ -73,7 +73,7 @@ export const So42: ICharacter[] = [
     offense: 639,
     deffense: 646,
     speed: 493,
-    ability: {name: '', text: ''},
+    ability: {name: '泡沫夢幻', text: 'HPが100%のとき、受けるダメージを30%軽減する'},
     skills: [
       {
         name: 'アタック',

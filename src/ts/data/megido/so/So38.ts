@@ -13,7 +13,7 @@ export const So38: ICharacter[] = [
     offense: 1400,
     deffense: 643,
     speed: 269,
-    ability: {name: '', text: ''},
+    ability: {name: '形見の大斧', text: 'HPが100%のとき、毎ターン終了時、覚醒ゲージが+2される'},
     skills: [
       {
         name: 'アタック',

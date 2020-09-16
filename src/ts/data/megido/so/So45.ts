@@ -13,7 +13,7 @@ export const So45: ICharacter[] = [
     offense: 841,
     deffense: 416,
     speed: 708,
-    ability: {name: '', text: ''},
+    ability: {name: '慈愛の心', text: 'HPが50%以下の味方への回復量が50%上昇する'},
     skills: [
       {
         name: 'アタック',
@@ -73,7 +73,7 @@ export const So45: ICharacter[] = [
     offense: 746,
     deffense: 495,
     speed: 647,
-    ability: {name: '', text: ''},
+    ability: {name: 'お転婆姫君', text: 'HPが33.3%以下のとき、スキルの効果範囲が敵全体になる'},
     skills: [
       {
         name: 'アタック',

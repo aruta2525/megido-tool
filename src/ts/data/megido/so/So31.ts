@@ -13,7 +13,7 @@ export const So31: ICharacter[] = [
     offense: 746,
     deffense: 491,
     speed: 691,
-    ability: {name: '', text: ''},
+    ability: {name: '好奇心旺盛', text: 'オーブの使用可能までのターンを-1する'},
     skills: [
       {
         name: 'アタック',

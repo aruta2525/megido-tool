@@ -13,7 +13,7 @@ export const So70: ICharacter[] = [
     offense: 944,
     deffense: 416,
     speed: 711,
-    ability: {name: '', text: ''},
+    ability: {name: 'トレジャーハンター', text: 'ラッシュのモンスターからのレアドロップ率が50%上昇する'},
     skills: [
       {
         name: 'アタック',
@@ -73,7 +73,7 @@ export const So70: ICharacter[] = [
     offense: 884,
     deffense: 646,
     speed: 413,
-    ability: {name: '', text: ''},
+    ability: {name: '準備は万全！', text: '自身封印中、ターン終了時、味方単体の状態異常を治癒する'},
     skills: [
       {
         name: 'アタック',

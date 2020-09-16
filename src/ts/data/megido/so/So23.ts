@@ -13,7 +13,7 @@ export const So23: ICharacter[] = [
     offense: 1171,
     deffense: 426,
     speed: 644,
-    ability: {name: '', text: ''},
+    ability: {name: '焔の担い手', text: '戦闘中、徐々に攻撃力が上昇する（最大値25%）'},
     skills: [
       {
         name: 'アタック',
@@ -90,7 +90,7 @@ export const So23: ICharacter[] = [
     offense: 751,
     deffense: 674,
     speed: 280,
-    ability: {name: '', text: ''},
+    ability: {name: '洗浄の天使', text: '毎ターン終了時、自身の覚醒ゲージが0のとき、覚醒ゲージが+2される'},
     skills: [
       {
         name: 'アタック',

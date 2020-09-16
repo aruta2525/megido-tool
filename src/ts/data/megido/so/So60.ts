@@ -13,7 +13,7 @@ export const So60: ICharacter[] = [
     offense: 1375,
     deffense: 409,
     speed: 490,
-    ability: {name: '', text: ''},
+    ability: {name: '一騎当千', text: '敵の数が多いほど、攻撃力が上昇する(最大20％)'},
     skills: [
       {
         name: 'アタック',
@@ -89,7 +89,7 @@ export const So60: ICharacter[] = [
     offense: 953,
     deffense: 624,
     speed: 381,
-    ability: {name: '', text: ''},
+    ability: {name: '百戦錬磨', text: '敵の数が多いほど、受けるダメージを軽減する（最大値20%）'},
     skills: [
       {
         name: 'アタック',

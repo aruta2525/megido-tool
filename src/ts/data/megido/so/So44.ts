@@ -13,7 +13,7 @@ export const So44: ICharacter[] = [
     offense: 954,
     deffense: 478,
     speed: 501,
-    ability: {name: '', text: ''},
+    ability: {name: '暴走少女', text: '自身の素早さが30%上昇する'},
     skills: [
       {
         name: 'アタック',
@@ -91,7 +91,7 @@ export const So44: ICharacter[] = [
     offense: 1157,
     deffense: 428,
     speed: 478,
-    ability: {name: '', text: ''},
+    ability: {name: '鳥頭少女', text: '自身がチェインを行うとき、次の行動のチェイン数を+1する'},
     skills: [
       {
         name: 'アタック',

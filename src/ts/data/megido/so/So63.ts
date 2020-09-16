@@ -13,7 +13,7 @@ export const So63: ICharacter[] = [
     offense: 849,
     deffense: 490,
     speed: 481,
-    ability: {name: '', text: ''},
+    ability: {name: '特製プロテイン', text: '自身の防御力が30%上昇する'},
     skills: [
       {
         name: 'アタック',
@@ -73,7 +73,7 @@ export const So63: ICharacter[] = [
     offense: 639,
     deffense: 618,
     speed: 609,
-    ability: {name: '', text: ''},
+    ability: {name: '毒をもって毒を制す', text: '状態異常耐性50%上昇'},
     skills: [
       {
         name: 'アタック',

@@ -13,7 +13,7 @@ export const So61: ICharacter[] = [
     offense: 975,
     deffense: 472,
     speed: 406,
-    ability: {name: '', text: ''},
+    ability: {name: 'パソドブレ', text: '15%の確率で攻撃を無効化する'},
     skills: [
       {
         name: 'アタック',

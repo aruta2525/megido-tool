@@ -13,7 +13,7 @@ export const So55: ICharacter[] = [
     offense: 1207,
     deffense: 483,
     speed: 284,
-    ability: {name: '', text: ''},
+    ability: {name: '禁呪', text: '戦闘不能時、敵全体に攻撃力の1.5倍のダメージ'},
     skills: [
       {
         name: 'アタック',
@@ -73,7 +73,10 @@ export const So55: ICharacter[] = [
     offense: 1345,
     deffense: 446,
     speed: 482,
-    ability: {name: '', text: ''},
+    ability: {
+      name: '禁忌の魔術',
+      text: 'ネクロ状態時、自身が戦闘不能になったとき、自身に付与されているデスギフトの数が多いほど、ソウルが増加する【2つにつき+1、最大2】'
+    },
     skills: [
       {
         name: 'アタック',

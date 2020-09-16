@@ -13,7 +13,7 @@ export const So67: ICharacter[] = [
     offense: 756,
     deffense: 500,
     speed: 645,
-    ability: {name: '', text: ''},
+    ability: {name: '漆黒の翼', text: '自身の素早さが30%上昇する'},
     skills: [
       {
         name: 'アタック',

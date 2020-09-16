@@ -13,7 +13,7 @@ export const So30: ICharacter[] = [
     offense: 635,
     deffense: 487,
     speed: 616,
-    ability: {name: '', text: ''},
+    ability: {name: '自信過剰', text: '受けるダメージを15%軽減する'},
     skills: [
       {
         name: 'アタック',

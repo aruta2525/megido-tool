@@ -13,7 +13,7 @@ export const So64: ICharacter[] = [
     offense: 1184,
     deffense: 405,
     speed: 483,
-    ability: {name: '', text: ''},
+    ability: {name: 'ソードブレイカー', text: '近接攻撃を受けたとき、20%の確率で反撃し、2ターンの間、攻撃力を15%低下させる'},
     skills: [
       {
         name: 'アタック',
@@ -99,7 +99,7 @@ export const So64: ICharacter[] = [
     offense: 1005,
     deffense: 504,
     speed: 485,
-    ability: {name: '', text: ''},
+    ability: {name: '天邪鬼', text: '攻撃を受けたとき、10%の確率で反撃し、2ターンの間、防御力を25%低下させる'},
     skills: [
       {
         name: 'アタック',

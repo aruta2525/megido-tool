@@ -13,7 +13,7 @@ export const So21: ICharacter[] = [
     offense: 1218,
     deffense: 414,
     speed: 614,
-    ability: {name: '', text: ''},
+    ability: {name: '逆ギレカウンター', text: '攻撃を受けたとき、20%の確率で反撃する'},
     skills: [
       {
         name: 'アタック',

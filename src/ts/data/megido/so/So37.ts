@@ -13,7 +13,7 @@ export const So37: ICharacter[] = [
     offense: 967,
     deffense: 472,
     speed: 490,
-    ability: {name: '', text: ''},
+    ability: {name: '断罪', text: '攻撃時、敵の防御力を無視する'},
     skills: [
       {
         name: 'アタック',
@@ -75,7 +75,7 @@ export const So37: ICharacter[] = [
     offense: 1144,
     deffense: 413,
     speed: 600,
-    ability: {name: '', text: ''},
+    ability: {name: '悪を断ずる覚悟', text: '自身蘇生時、1ターンの間、自身を無敵状態にする'},
     skills: [
       {
         name: 'アタック',

@@ -13,7 +13,7 @@ export const So36: ICharacter[] = [
     offense: 1167,
     deffense: 411,
     speed: 488,
-    ability: {name: '', text: ''},
+    ability: {name: '花鳥風月', text: '行動開始時、20%の確率でスキルが追加される'},
     skills: [
       {
         name: 'アタック',
@@ -73,7 +73,7 @@ export const So36: ICharacter[] = [
     offense: 1081,
     deffense: 420,
     speed: 479,
-    ability: {name: '', text: ''},
+    ability: {name: '慈雨育苗', text: '自身がチャージフォトン使用時、自身の点穴を+5する'},
     skills: [
       {
         name: 'アタック',

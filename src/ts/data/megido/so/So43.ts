@@ -13,7 +13,7 @@ export const So43: ICharacter[] = [
     offense: 751,
     deffense: 682,
     speed: 274,
-    ability: {name: '', text: ''},
+    ability: {name: '小さな英雄', text: '敵から狙われやすくなり、防御力が20%上昇する'},
     skills: [
       {
         name: 'アタック',

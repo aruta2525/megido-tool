@@ -13,7 +13,7 @@ export const So57: ICharacter[] = [
     offense: 1152,
     deffense: 283,
     speed: 614,
-    ability: {name: '', text: ''},
+    ability: {name: '豹の化身', text: '自身の攻撃力が15%上昇する'},
     skills: [
       {
         name: 'アタック',

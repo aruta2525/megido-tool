@@ -13,7 +13,7 @@ export const So47: ICharacter[] = [
     offense: 1404,
     deffense: 275,
     speed: 501,
-    ability: {name: '', text: ''},
+    ability: {name: 'キリングマシーン', text: '敵の数が少ないほど、攻撃力が上昇する（最大値20%）'},
     skills: [
       {
         name: 'アタック',

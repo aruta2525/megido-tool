@@ -13,7 +13,7 @@ export const So28: ICharacter[] = [
     offense: 1226,
     deffense: 428,
     speed: 623,
-    ability: {name: '', text: ''},
+    ability: {name: '恥かかすなよ！', text: 'HPが50%以下のとき、攻撃力が30%上昇する'},
     skills: [
       {
         name: 'アタック',
@@ -73,7 +73,7 @@ export const So28: ICharacter[] = [
     offense: 1053,
     deffense: 518,
     speed: 432,
-    ability: {name: '', text: ''},
+    ability: {name: '帯電体質', text: 'チェイン中、自身のアタックとスキルが雷ダメージになる'},
     skills: [
       {
         name: 'アタック',

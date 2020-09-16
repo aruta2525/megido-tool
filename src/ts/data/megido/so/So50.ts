@@ -13,7 +13,7 @@ export const So50: ICharacter[] = [
     offense: 1190,
     deffense: 406,
     speed: 477,
-    ability: {name: '', text: ''},
+    ability: {name: '撲殺気分', text: '戦闘中、徐々に攻撃力が上昇する（最大値25%）'},
     skills: [
       {
         name: 'アタック',

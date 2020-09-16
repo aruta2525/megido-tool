@@ -13,7 +13,7 @@ export const So25: ICharacter[] = [
     offense: 1170,
     deffense: 416,
     speed: 494,
-    ability: {name: '', text: ''},
+    ability: {name: '器物破損', text: '物体系のモンスターに2倍のダメージ'},
     skills: [
       {
         name: 'アタック',

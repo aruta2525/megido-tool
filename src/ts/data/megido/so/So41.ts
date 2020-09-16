@@ -13,7 +13,7 @@ export const So41: ICharacter[] = [
     offense: 993,
     deffense: 504,
     speed: 487,
-    ability: {name: '', text: ''},
+    ability: {name: '鍛練の成果', text: '戦闘中、徐々に防御力が上昇する（最大値50%）1ターン目に20%、2・4・6ターン目に10%上昇'},
     skills: [
       {
         name: 'アタック',
@@ -73,7 +73,7 @@ export const So41: ICharacter[] = [
     offense: 728,
     deffense: 507,
     speed: 626,
-    ability: {name: '', text: ''},
+    ability: {name: '戦場の覚悟', text: 'バレットのストック数に応じて、受けるダメージを軽減する（最大60%）'},
     skills: [
       {
         name: 'アタック',

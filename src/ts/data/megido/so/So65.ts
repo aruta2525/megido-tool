@@ -13,7 +13,7 @@ export const So65: ICharacter[] = [
     offense: 988,
     deffense: 285,
     speed: 637,
-    ability: {name: '', text: ''},
+    ability: {name: 'クロスカウンター', text: '攻撃を受けたとき、20%の確率で反撃する'},
     skills: [
       {
         name: 'アタック',

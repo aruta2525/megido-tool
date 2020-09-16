@@ -13,7 +13,7 @@ export const So48: ICharacter[] = [
     offense: 968,
     deffense: 418,
     speed: 628,
-    ability: {name: '', text: ''},
+    ability: {name: '守銭奴', text: 'クエストでの獲得ゴルドが50%上昇する'},
     skills: [
       {
         name: 'アタック',
@@ -73,7 +73,7 @@ export const So48: ICharacter[] = [
     offense: 1199,
     deffense: 454,
     speed: 494,
-    ability: {name: '', text: ''},
+    ability: {name: 'この世はあたいの宝島', text: 'チェイン中、与えるステータス強化とステータス弱体の持続ターンを+1する'},
     skills: [
       {
         name: 'アタック',

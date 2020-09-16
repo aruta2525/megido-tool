@@ -13,7 +13,7 @@ export const So59: ICharacter[] = [
     offense: 1191,
     deffense: 278,
     speed: 711,
-    ability: {name: '', text: ''},
+    ability: {name: '不死の予言者', text: '次に出現するフォトンが亀裂の色でわかるようになる'},
     skills: [
       {
         name: 'アタック',
@@ -73,7 +73,7 @@ export const So59: ICharacter[] = [
     offense: 750,
     deffense: 610,
     speed: 502,
-    ability: {name: '', text: ''},
+    ability: {name: '雪華の予言者', text: '次に出現するフォトンが亀裂の色でわかるようになる'},
     skills: [
       {
         name: 'アタック',

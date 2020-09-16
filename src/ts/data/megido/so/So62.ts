@@ -13,7 +13,7 @@ export const So62: ICharacter[] = [
     offense: 943,
     deffense: 502,
     speed: 490,
-    ability: {name: '', text: ''},
+    ability: {name: '天上の踊り子', text: '戦闘中、徐々に防御力が上昇する（最大値50%）'},
     skills: [
       {
         name: 'アタック',

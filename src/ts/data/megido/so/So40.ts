@@ -13,7 +13,7 @@ export const So40: ICharacter[] = [
     offense: 1155,
     deffense: 418,
     speed: 277,
-    ability: {name: '', text: ''},
+    ability: {name: '拾ったぞコラァッ！', text: '行動開始時、20%の確率でチャージが追加される'},
     skills: [
       {
         name: 'アタック',
@@ -73,7 +73,7 @@ export const So40: ICharacter[] = [
     offense: 955,
     deffense: 618,
     speed: 282,
-    ability: {name: '', text: ''},
+    ability: {name: '不屈の執念', text: '自身のHPが少ないほど、受けるダメージを軽減する（最大70%）'},
     skills: [
       {
         name: 'アタック',
