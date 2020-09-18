@@ -1,7 +1,7 @@
-import {ICharacter} from '../../../interface/ICharacter';
+import {IMegido} from '../../../interface/IMegido';
 import {SkillType, Attribute, ClassType, StyleType, ClockType} from '../../../enum/MegidoType';
 
-export const So23: ICharacter[] = [
+export const So23: IMegido[] = [
   {
     clockType: ClockType.So,
     no: 23,
@@ -11,7 +11,7 @@ export const So23: ICharacter[] = [
     classType: ClassType.Sniper,
     hp: 5630,
     offense: 1171,
-    deffense: 426,
+    defense: 426,
     speed: 644,
     ability: {name: '焔の担い手', text: '戦闘中、徐々に攻撃力が上昇する（最大値25%）'},
     skills: [
@@ -88,7 +88,7 @@ export const So23: ICharacter[] = [
     classType: ClassType.Sniper,
     hp: 8455,
     offense: 751,
-    deffense: 674,
+    defense: 674,
     speed: 280,
     ability: {name: '洗浄の天使', text: '毎ターン終了時、自身の覚醒ゲージが0のとき、覚醒ゲージが+2される'},
     skills: [

@@ -1,7 +1,7 @@
-import {ICharacter} from '../../../interface/ICharacter';
+import {IMegido} from '../../../interface/IMegido';
 import {SkillType, Attribute, ClassType, StyleType, ClockType} from '../../../enum/MegidoType';
 
-const megido: ICharacter[] = [
+const megido: IMegido[] = [
   {
     clockType: ClockType.Shin,
     no: 62,
@@ -11,7 +11,7 @@ const megido: ICharacter[] = [
     classType: ClassType.Trooper,
     hp: 6148,
     offense: 818,
-    deffense: 643,
+    defense: 643,
     speed: 616,
     ability: {name: 'イタズラ大成功！', text: '自身の行動で、敵が1体以上感電した場合、自身の覚醒ゲージが+1される'},
     skills: [

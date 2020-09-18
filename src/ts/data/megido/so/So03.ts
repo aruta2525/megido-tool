@@ -1,7 +1,7 @@
-import {ICharacter} from '../../../interface/ICharacter';
+import {IMegido} from '../../../interface/IMegido';
 import {SkillType, Attribute, ClassType, StyleType, ClockType} from '../../../enum/MegidoType';
 
-export const So03: ICharacter[] = [
+export const So03: IMegido[] = [
   {
     clockType: ClockType.So,
     no: 3,
@@ -11,7 +11,7 @@ export const So03: ICharacter[] = [
     classType: ClassType.Fighter,
     hp: 5743,
     offense: 980,
-    deffense: 500,
+    defense: 500,
     speed: 614,
     ability: {name: '高貴な血筋', text: '戦闘開始時、覚醒ゲージが最大になる'},
     skills: [

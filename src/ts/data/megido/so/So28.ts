@@ -1,7 +1,7 @@
-import {ICharacter} from '../../../interface/ICharacter';
+import {IMegido} from '../../../interface/IMegido';
 import {SkillType, Attribute, ClassType, StyleType, ClockType} from '../../../enum/MegidoType';
 
-export const So28: ICharacter[] = [
+export const So28: IMegido[] = [
   {
     clockType: ClockType.So,
     no: 28,
@@ -11,7 +11,7 @@ export const So28: ICharacter[] = [
     classType: ClassType.Fighter,
     hp: 5631,
     offense: 1226,
-    deffense: 428,
+    defense: 428,
     speed: 623,
     ability: {name: '恥かかすなよ！', text: 'HPが50%以下のとき、攻撃力が30%上昇する'},
     skills: [
@@ -71,7 +71,7 @@ export const So28: ICharacter[] = [
     classType: ClassType.Fighter,
     hp: 7942,
     offense: 1053,
-    deffense: 518,
+    defense: 518,
     speed: 432,
     ability: {name: '帯電体質', text: 'チェイン中、自身のアタックとスキルが雷ダメージになる'},
     skills: [

@@ -1,7 +1,7 @@
-import {ICharacter} from '../../../interface/ICharacter';
+import {IMegido} from '../../../interface/IMegido';
 import {SkillType, Attribute, ClassType, StyleType, ClockType} from '../../../enum/MegidoType';
 
-export const So18: ICharacter[] = [
+export const So18: IMegido[] = [
   {
     clockType: ClockType.So,
     no: 18,
@@ -11,7 +11,7 @@ export const So18: ICharacter[] = [
     classType: ClassType.Trooper,
     hp: 9140,
     offense: 1222,
-    deffense: 431,
+    defense: 431,
     speed: 423,
     ability: {name: 'お注射の時間です', text: '戦闘不能時、3ターンの間、ターン終了時に味方全体のHPが20%回復する効果を付与する'},
     skills: [
@@ -71,7 +71,7 @@ export const So18: ICharacter[] = [
     classType: ClassType.Trooper,
     hp: 7379,
     offense: 1362,
-    deffense: 419,
+    defense: 419,
     speed: 431,
     ability: {name: 'さあ…治療の時間です', text: '自身にフォトンが与えられなかった場合ターン終了時、味方単体のHPを20%回復する'},
     skills: [

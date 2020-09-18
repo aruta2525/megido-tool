@@ -1,7 +1,7 @@
-import {ICharacter} from '../../../interface/ICharacter';
+import {IMegido} from '../../../interface/IMegido';
 import {SkillType, Attribute, ClassType, StyleType, ClockType} from '../../../enum/MegidoType';
 
-const megido: ICharacter[] = [
+const megido: IMegido[] = [
   {
     clockType: ClockType.Shin,
     no: 38,
@@ -11,7 +11,7 @@ const megido: ICharacter[] = [
     classType: ClassType.Fighter,
     hp: 7702,
     offense: 968,
-    deffense: 276,
+    defense: 276,
     speed: 811,
     ability: {name: '軽快なステップ', text: '戦闘中、徐々に素早さが上昇する(最大値50％)'},
     skills: [
@@ -91,7 +91,7 @@ const megido: ICharacter[] = [
     classType: ClassType.Fighter,
     hp: 6390,
     offense: 1100,
-    deffense: 271,
+    defense: 271,
     speed: 706,
     ability: {name: '因果律崩壊', text: '自身が励起状態のとき、攻撃力が30％上昇する'},
     skills: [

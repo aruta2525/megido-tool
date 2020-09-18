@@ -1,7 +1,7 @@
-import {ICharacter} from '../../../interface/ICharacter';
+import {IMegido} from '../../../interface/IMegido';
 import {SkillType, Attribute, ClassType, StyleType, ClockType} from '../../../enum/MegidoType';
 
-const megido: ICharacter[] = [
+const megido: IMegido[] = [
   {
     clockType: ClockType.Shin,
     no: 48,
@@ -11,7 +11,7 @@ const megido: ICharacter[] = [
     classType: ClassType.Sniper,
     hp: 6982,
     offense: 927,
-    deffense: 479,
+    defense: 479,
     speed: 624,
     ability: {name: '火砲は撃って待て', text: 'バレットアーツ状態時、受けるダメージを20%軽減する'},
     skills: [

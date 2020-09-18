@@ -1,7 +1,7 @@
-import {ICharacter} from '../../../interface/ICharacter';
+import {IMegido} from '../../../interface/IMegido';
 import {SkillType, Attribute, ClassType, StyleType, ClockType} from '../../../enum/MegidoType';
 
-const megido: ICharacter[] = [
+const megido: IMegido[] = [
   {
     clockType: ClockType.Shin,
     no: 9,
@@ -11,7 +11,7 @@ const megido: ICharacter[] = [
     classType: ClassType.Fighter,
     hp: 6209,
     offense: 1177,
-    deffense: 489,
+    defense: 489,
     speed: 497,
     ability: {name: '傲慢たる夢魔', text: 'めまい、混乱、悪夢のいずれかの状態異常が付与されている敵へのダメージが20%上昇する(効果は重複可能/最大60%上昇)'},
     skills: [
@@ -103,7 +103,7 @@ const megido: ICharacter[] = [
     classType: ClassType.Fighter,
     hp: 8527,
     offense: 1370,
-    deffense: 302,
+    defense: 302,
     speed: 449,
     ability: {name: '反逆の夢魔', text: '自身のHPが33.3%以下のとき、奥義使用時、覚醒ゲージの消費が0になる'},
     skills: [

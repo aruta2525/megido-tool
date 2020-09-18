@@ -3,12 +3,15 @@ import 'bootstrap';
 import 'bootstrap-select';
 
 import {joinAndSortMegidoByName} from './data/megido/Megido';
+import {matchEnemyStage, matchEnemyName} from './data/enemy/Enemy';
 import {sacredTreasureList} from './data/sacred-treasure/SacredTreasure';
 import {genealogyList} from './data/sacred-treasure/Genealogy';
 import {ISkillData, ISkillLevel, defaultSkills} from './interface/ISkillData';
 import {getPhotonCorrection} from './util/MegidoUtil';
 import {PhotonType, StyleType, GenealogyRank, GenealogySize} from './enum/MegidoType';
 import {GenealogyType, convertToGenealogySizeName} from './enum/MegidoType';
+import {Stage, convertToStageName} from './enum/MegidoType';
+import {DifficultyLevel, convertToDifficultyLevelName} from './enum/MegidoType';
 import {ISacredTreasure} from './interface/ISacredTreasure';
 
 const megidoList = joinAndSortMegidoByName();
@@ -49,7 +52,12 @@ const ids = {
   sacredTreasure4: 'sacredTreasure4',
   sacredTreasureText4: 'sacredTreasureText4',
   genealogy: 'genealogy',
-  genealogyText: 'genealogyText'
+  genealogyText: 'genealogyText',
+  stage: 'stage',
+  enemy: 'enemy',
+  difficultyLevel: 'difficultyLevel',
+  hp: 'hp',
+  dph: 'dph'
 };
 let nowSkill: ISkillData = defaultSkills[0];
 
@@ -75,6 +83,8 @@ $(document).ready(function () {
   mysteriesLevels.on('change', () => {
     calculateMagnification();
   });
+
+  setupStage();
 });
 
 $(document).on('change', () => {
@@ -103,7 +113,6 @@ function setupSkills(skills: ISkillData[] = defaultSkills) {
   skills.forEach((skill, i) => {
     skillSelect.append(`<option value="${i}">${skill.name}</option>`);
   });
-  // skillSelect.selectpicker('val', '1');
   skillSelect.selectpicker('render').selectpicker('refresh');
 
   skillSelect.off('change');
@@ -310,6 +319,94 @@ function setGenealogy(type: GenealogyType) {
 }
 
 /**
+ * ステージのセレクトをセットアップする関数
+ */
+function setupStage() {
+  const stageSelect = $(`#${ids.stage}`);
+
+  Object.entries(Stage).forEach(([key, value]) => {
+    stageSelect.append(`<option value="${value}">${convertToStageName(value)}</option>`);
+  });
+  stageSelect.selectpicker('render').selectpicker('refresh');
+
+  stageSelect.off('change');
+  stageSelect.on('change', () => {
+    const stage: Stage = stageSelect.val() as Stage;
+    stageSelect.selectpicker('val', String(stage));
+
+    setupEnemy(stage);
+  });
+  stageSelect.trigger('change');
+}
+
+/**
+ * ステージに属する敵のセレクトをセットアップする。
+ * @param stage ステージ
+ */
+function setupEnemy(stage: Stage) {
+  const enemySelect = $(`#${ids.enemy}`);
+  const enemyList = matchEnemyStage(stage);
+
+  enemySelect.empty();
+  enemyList.forEach((e, i) => {
+    enemySelect.append(`<option value="${i}">${e.name}</option>`);
+  });
+  enemySelect.selectpicker('render').selectpicker('refresh');
+
+  enemySelect.off('change');
+  enemySelect.on('change', () => {
+    const index = enemySelect.val();
+    enemySelect.selectpicker('val', String(index));
+    const enemy = enemyList[Number(index)];
+
+    setupDifficultyLevel(enemy.name);
+  });
+  enemySelect.trigger('change');
+}
+
+/**
+ * 難易度のセットアップ
+ *
+ * @param {String} name 敵の名前
+ */
+function setupDifficultyLevel(name: String) {
+  const difficultSelect = $(`#${ids.difficultyLevel}`);
+  const enemyList = matchEnemyName(name);
+  // 最高難易度取得
+  let mostDifficultyLevel: DifficultyLevel = DifficultyLevel.N;
+  let mostDifficultyLevelIndex = 0;
+  difficultSelect.empty();
+  enemyList.forEach((e, i) => {
+    if (e.difficultyLevel > mostDifficultyLevel) {
+      mostDifficultyLevel = e.difficultyLevel;
+      mostDifficultyLevelIndex = i;
+    }
+    difficultSelect.append(`<option value="${i}">${convertToDifficultyLevelName(e.difficultyLevel)}</option>`);
+  });
+  // 登録難易度が1つしかないなら選択不可にする。
+  if (enemyList.length != 1) {
+    difficultSelect.prop('disabled', false);
+  } else {
+    difficultSelect.prop('disabled', true);
+  }
+  difficultSelect.selectpicker('render').selectpicker('refresh');
+  // 最高難易度を選択中にする
+  difficultSelect.selectpicker('val', String(mostDifficultyLevelIndex));
+
+  difficultSelect.off('change');
+  difficultSelect.on('change', () => {
+    const index = difficultSelect.val();
+    difficultSelect.selectpicker('val', String(index));
+    const enemy = enemyList[Number(index)];
+
+    // TODO: HPや防御力を設定
+    $(`#${ids.defense}`).val(enemy.defense || '');
+    $(`#${ids.hp}`).val(enemy.hp || '');
+  });
+  difficultSelect.trigger('change');
+}
+
+/**
  * 倍率とhit数を計算しセットする関数です。
  */
 function calculateMagnification() {
@@ -370,6 +467,10 @@ function calculateDamage() {
   const maxDamage = Math.round(damage * 1.05) + additionalDamage;
   const totalMinDamage = minDamage * hit;
   const totalMaxDamage = maxDamage * hit;
+
+  const hp = $(`#${ids.hp}`).val() as number;
+  const dph = Math.round((totalMinDamage / hp) * 10000) / 100;
+  $(`#${ids.dph}`).val(`${dph.toLocaleString()}%`);
 
   $(`#${ids.damagePerHit}`).val(`${minDamage.toLocaleString()} ～ ${maxDamage.toLocaleString()}`);
   $(`#${ids.totalDamage}`).val(`${totalMinDamage.toLocaleString()} ～ ${totalMaxDamage.toLocaleString()}`);

@@ -1,7 +1,7 @@
-import {ICharacter} from '../../../interface/ICharacter';
+import {IMegido} from '../../../interface/IMegido';
 import {SkillType, Attribute, ClassType, StyleType, ClockType} from '../../../enum/MegidoType';
 
-const megido: ICharacter[] = [
+const megido: IMegido[] = [
   {
     clockType: ClockType.Shin,
     no: 6,
@@ -11,7 +11,7 @@ const megido: ICharacter[] = [
     classType: ClassType.Trooper,
     hp: 9208,
     offense: 776,
-    deffense: 424,
+    defense: 424,
     speed: 627,
     ability: {name: '胡蝶之夢', text: '毎ターン終了時、覚醒ゲージが+1される'},
     skills: [

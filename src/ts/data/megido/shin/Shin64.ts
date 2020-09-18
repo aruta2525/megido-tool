@@ -1,7 +1,7 @@
-import {ICharacter} from '../../../interface/ICharacter';
+import {IMegido} from '../../../interface/IMegido';
 import {SkillType, Attribute, ClassType, StyleType, ClockType} from '../../../enum/MegidoType';
 
-const megido: ICharacter[] = [
+const megido: IMegido[] = [
   {
     clockType: ClockType.Shin,
     no: 64,
@@ -11,7 +11,7 @@ const megido: ICharacter[] = [
     classType: ClassType.Sniper,
     hp: 8712,
     offense: 637,
-    deffense: 625,
+    defense: 625,
     speed: 569,
     ability: {name: 'ハピネスライブ', text: '自分が発動させたライブの効果が継続中、自身の受けるダメージを20％軽減する'},
     skills: [

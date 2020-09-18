@@ -1,7 +1,7 @@
-import {ICharacter} from '../../../interface/ICharacter';
+import {IMegido} from '../../../interface/IMegido';
 import {SkillType, Attribute, ClassType, StyleType, ClockType} from '../../../enum/MegidoType';
 
-export const So09: ICharacter[] = [
+export const So09: IMegido[] = [
   {
     clockType: ClockType.So,
     no: 9,
@@ -11,7 +11,7 @@ export const So09: ICharacter[] = [
     classType: ClassType.Fighter,
     hp: 7172,
     offense: 1191,
-    deffense: 420,
+    defense: 420,
     speed: 472,
     ability: {name: 'プレイボーイ', text: '女性キャラクターが多いほど、攻撃力が上昇する(最大値25%)'},
     skills: [

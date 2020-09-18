@@ -1,7 +1,7 @@
-import {ICharacter} from '../../../interface/ICharacter';
+import {IMegido} from '../../../interface/IMegido';
 import {SkillType, Attribute, ClassType, StyleType, ClockType} from '../../../enum/MegidoType';
 
-export const So47: ICharacter[] = [
+export const So47: IMegido[] = [
   {
     clockType: ClockType.So,
     no: 47,
@@ -11,7 +11,7 @@ export const So47: ICharacter[] = [
     classType: ClassType.Fighter,
     hp: 7585,
     offense: 1404,
-    deffense: 275,
+    defense: 275,
     speed: 501,
     ability: {name: 'キリングマシーン', text: '敵の数が少ないほど、攻撃力が上昇する（最大値20%）'},
     skills: [

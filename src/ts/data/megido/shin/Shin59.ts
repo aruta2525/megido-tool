@@ -1,7 +1,7 @@
-import {ICharacter} from '../../../interface/ICharacter';
+import {IMegido} from '../../../interface/IMegido';
 import {SkillType, Attribute, ClassType, StyleType, ClockType} from '../../../enum/MegidoType';
 
-const megido: ICharacter[] = [
+const megido: IMegido[] = [
   {
     clockType: ClockType.Shin,
     no: 59,
@@ -11,7 +11,7 @@ const megido: ICharacter[] = [
     classType: ClassType.Trooper,
     hp: 7066,
     offense: 949,
-    deffense: 575,
+    defense: 575,
     speed: 504,
     ability: {name: 'ネガティブの功名', text: '自身がブレイク待機状態のとき、自身が受けるスキルフォトンからのダメージを30%軽減する'},
     skills: [

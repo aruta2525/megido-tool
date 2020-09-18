@@ -1,7 +1,7 @@
-import {ICharacter} from '../../../interface/ICharacter';
+import {IMegido} from '../../../interface/IMegido';
 import {SkillType, Attribute, ClassType, StyleType, ClockType} from '../../../enum/MegidoType';
 
-const megido: ICharacter[] = [
+const megido: IMegido[] = [
   {
     clockType: ClockType.Shin,
     no: 11,
@@ -11,7 +11,7 @@ const megido: ICharacter[] = [
     classType: ClassType.Fighter,
     hp: 8949,
     offense: 788,
-    deffense: 416,
+    defense: 416,
     speed: 563,
     ability: {name: '魂無き軍団の王', text: '束縛状態の敵1人につき、自身の攻撃力が10%上昇する'},
     skills: [

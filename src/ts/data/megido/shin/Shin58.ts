@@ -1,7 +1,7 @@
-import {ICharacter} from '../../../interface/ICharacter';
+import {IMegido} from '../../../interface/IMegido';
 import {SkillType, Attribute, ClassType, StyleType, ClockType} from '../../../enum/MegidoType';
 
-const megido: ICharacter[] = [
+const megido: IMegido[] = [
   {
     clockType: ClockType.Shin,
     no: 58,
@@ -11,7 +11,7 @@ const megido: ICharacter[] = [
     classType: ClassType.Trooper,
     hp: 9316,
     offense: 1200,
-    deffense: 420,
+    defense: 420,
     speed: 276,
     ability: {name: '美味しいとこ取り', text: '自身がバーサーク状態のとき、防御力と素早さが毎ターン25%ずつ上昇する（最大値100%）'},
     skills: [

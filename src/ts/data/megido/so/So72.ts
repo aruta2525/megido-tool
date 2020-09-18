@@ -1,7 +1,7 @@
-import {ICharacter} from '../../../interface/ICharacter';
+import {IMegido} from '../../../interface/IMegido';
 import {SkillType, Attribute, ClassType, StyleType, ClockType} from '../../../enum/MegidoType';
 
-export const So72: ICharacter[] = [
+export const So72: IMegido[] = [
   {
     clockType: ClockType.So,
     no: 72,
@@ -11,7 +11,7 @@ export const So72: ICharacter[] = [
     classType: ClassType.Sniper,
     hp: 7094,
     offense: 752,
-    deffense: 472,
+    defense: 472,
     speed: 643,
     ability: {name: '臆病者', text: 'HPが50%以下のとき、30%の確率で攻撃を無効化する'},
     skills: [

@@ -1,7 +1,7 @@
-import {ICharacter} from '../../../interface/ICharacter';
+import {IMegido} from '../../../interface/IMegido';
 import {SkillType, Attribute, ClassType, StyleType, ClockType} from '../../../enum/MegidoType';
 
-const megido: ICharacter[] = [
+const megido: IMegido[] = [
   {
     clockType: ClockType.Shin,
     no: 68,
@@ -11,7 +11,7 @@ const megido: ICharacter[] = [
     classType: ClassType.Sniper,
     hp: 8302,
     offense: 1359,
-    deffense: 491,
+    defense: 491,
     speed: 279,
     ability: {name: 'オートパイロット', text: '戦闘不能時、一度だけ最大HPの50%で蘇生し自身の特性によって蘇生した場合、自動操縦モードにシフトする'},
     skills: [

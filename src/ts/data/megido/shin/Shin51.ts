@@ -1,7 +1,7 @@
-import {ICharacter} from '../../../interface/ICharacter';
+import {IMegido} from '../../../interface/IMegido';
 import {SkillType, Attribute, ClassType, StyleType, ClockType} from '../../../enum/MegidoType';
 
-const megido: ICharacter[] = [
+const megido: IMegido[] = [
   {
     clockType: ClockType.Shin,
     no: 51,
@@ -11,7 +11,7 @@ const megido: ICharacter[] = [
     classType: ClassType.Fighter,
     hp: 7528,
     offense: 1209,
-    deffense: 414,
+    defense: 414,
     speed: 498,
     ability: {name: '心眼', text: '自身への暗闇が無効になる'},
     skills: [
@@ -71,7 +71,7 @@ const megido: ICharacter[] = [
     classType: ClassType.Fighter,
     hp: 7771,
     offense: 1219,
-    deffense: 419,
+    defense: 419,
     speed: 450,
     ability: {name: 'めげない心', text: '自身がチェイン4以上の奥義を発動直後、アタックフォトンが1つ以上積まれていれば自身を覚醒状態にする'},
     skills: [

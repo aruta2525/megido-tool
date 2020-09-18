@@ -1,7 +1,7 @@
-import {ICharacter} from '../../../interface/ICharacter';
+import {IMegido} from '../../../interface/IMegido';
 import {SkillType, Attribute, ClassType, StyleType, ClockType} from '../../../enum/MegidoType';
 
-const megido: ICharacter[] = [
+const megido: IMegido[] = [
   {
     clockType: ClockType.Shin,
     no: 63,
@@ -11,7 +11,7 @@ const megido: ICharacter[] = [
     classType: ClassType.Trooper,
     hp: 6816,
     offense: 1280,
-    deffense: 393,
+    defense: 393,
     speed: 527,
     ability: {name: '臍下金剛', text: '封印状態中、自身の全ての状態異常への耐性が100%上昇する'},
     skills: [

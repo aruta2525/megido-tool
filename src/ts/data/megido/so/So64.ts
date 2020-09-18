@@ -1,7 +1,7 @@
-import {ICharacter} from '../../../interface/ICharacter';
+import {IMegido} from '../../../interface/IMegido';
 import {SkillType, Attribute, ClassType, StyleType, ClockType} from '../../../enum/MegidoType';
 
-export const So64: ICharacter[] = [
+export const So64: IMegido[] = [
   {
     clockType: ClockType.So,
     no: 64,
@@ -11,7 +11,7 @@ export const So64: ICharacter[] = [
     classType: ClassType.Trooper,
     hp: 7308,
     offense: 1184,
-    deffense: 405,
+    defense: 405,
     speed: 483,
     ability: {name: 'ソードブレイカー', text: '近接攻撃を受けたとき、20%の確率で反撃し、2ターンの間、攻撃力を15%低下させる'},
     skills: [
@@ -97,7 +97,7 @@ export const So64: ICharacter[] = [
     classType: ClassType.Trooper,
     hp: 7702,
     offense: 1005,
-    deffense: 504,
+    defense: 504,
     speed: 485,
     ability: {name: '天邪鬼', text: '攻撃を受けたとき、10%の確率で反撃し、2ターンの間、防御力を25%低下させる'},
     skills: [

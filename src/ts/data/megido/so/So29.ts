@@ -1,7 +1,7 @@
-import {ICharacter} from '../../../interface/ICharacter';
+import {IMegido} from '../../../interface/IMegido';
 import {SkillType, Attribute, ClassType, StyleType, ClockType} from '../../../enum/MegidoType';
 
-export const So29: ICharacter[] = [
+export const So29: IMegido[] = [
   {
     clockType: ClockType.So,
     no: 29,
@@ -11,7 +11,7 @@ export const So29: ICharacter[] = [
     classType: ClassType.Fighter,
     hp: 7365,
     offense: 1075,
-    deffense: 496,
+    defense: 496,
     speed: 476,
     ability: {name: 'ピンチはチャンス', text: 'HPが50%以下のとき、すべての覚醒ゲージ増加量が+1される'},
     skills: [
@@ -71,7 +71,7 @@ export const So29: ICharacter[] = [
     classType: ClassType.Fighter,
     hp: 5945,
     offense: 1216,
-    deffense: 545,
+    defense: 545,
     speed: 413,
     ability: {name: 'コールドリーディング', text: '戦闘中、徐々に攻撃力が上昇する（最大値25%）'},
     skills: [

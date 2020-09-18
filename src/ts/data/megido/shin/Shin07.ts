@@ -1,7 +1,7 @@
-import {ICharacter} from '../../../interface/ICharacter';
+import {IMegido} from '../../../interface/IMegido';
 import {SkillType, Attribute, ClassType, StyleType, ClockType} from '../../../enum/MegidoType';
 
-const megido: ICharacter[] = [
+const megido: IMegido[] = [
   {
     clockType: ClockType.Shin,
     no: 7,
@@ -11,7 +11,7 @@ const megido: ICharacter[] = [
     classType: ClassType.Sniper,
     hp: 7616,
     offense: 784,
-    deffense: 493,
+    defense: 493,
     speed: 619,
     ability: {name: '巧みな交渉術', text: '行動開始時、20%の確率でチャージが追加される'},
     skills: [

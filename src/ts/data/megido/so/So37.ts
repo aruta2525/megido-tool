@@ -1,7 +1,7 @@
-import {ICharacter} from '../../../interface/ICharacter';
+import {IMegido} from '../../../interface/IMegido';
 import {SkillType, Attribute, ClassType, StyleType, ClockType} from '../../../enum/MegidoType';
 
-export const So37: ICharacter[] = [
+export const So37: IMegido[] = [
   {
     clockType: ClockType.So,
     no: 37,
@@ -11,7 +11,7 @@ export const So37: ICharacter[] = [
     classType: ClassType.Fighter,
     hp: 7259,
     offense: 967,
-    deffense: 472,
+    defense: 472,
     speed: 490,
     ability: {name: '断罪', text: '攻撃時、敵の防御力を無視する'},
     skills: [
@@ -73,7 +73,7 @@ export const So37: ICharacter[] = [
     classType: ClassType.Fighter,
     hp: 7571,
     offense: 1144,
-    deffense: 413,
+    defense: 413,
     speed: 600,
     ability: {name: '悪を断ずる覚悟', text: '自身蘇生時、1ターンの間、自身を無敵状態にする'},
     skills: [

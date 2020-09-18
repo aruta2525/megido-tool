@@ -1,7 +1,7 @@
-import {ICharacter} from '../../../interface/ICharacter';
+import {IMegido} from '../../../interface/IMegido';
 import {SkillType, Attribute, ClassType, StyleType, ClockType} from '../../../enum/MegidoType';
 
-const megido: ICharacter[] = [
+const megido: IMegido[] = [
   {
     clockType: ClockType.Shin,
     no: 50,
@@ -11,7 +11,7 @@ const megido: ICharacter[] = [
     classType: ClassType.Fighter,
     hp: 5786,
     offense: 1221,
-    deffense: 427,
+    defense: 427,
     speed: 619,
     ability: {name: 'テラインストール', text: 'HPが70%以下のとき、攻撃力が25%上昇する'},
     skills: [

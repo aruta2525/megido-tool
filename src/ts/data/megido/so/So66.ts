@@ -1,7 +1,7 @@
-import {ICharacter} from '../../../interface/ICharacter';
+import {IMegido} from '../../../interface/IMegido';
 import {SkillType, Attribute, ClassType, StyleType, ClockType} from '../../../enum/MegidoType';
 
-export const So66: ICharacter[] = [
+export const So66: IMegido[] = [
   {
     clockType: ClockType.So,
     no: 66,
@@ -11,7 +11,7 @@ export const So66: ICharacter[] = [
     classType: ClassType.Trooper,
     hp: 4270,
     offense: 1159,
-    deffense: 405,
+    defense: 405,
     speed: 673,
     ability: {name: 'キマリスは強いのだ！', text: '死者系のモンスターに2倍のダメージ'},
     skills: [
@@ -71,7 +71,7 @@ export const So66: ICharacter[] = [
     classType: ClassType.Trooper,
     hp: 6698,
     offense: 1111,
-    deffense: 419,
+    defense: 419,
     speed: 627,
     ability: {name: 'キマリス・エ・ゼレ！', text: '味方が一度でも戦闘不能になっているとき、自身の攻撃力が40%上昇する'},
     skills: [

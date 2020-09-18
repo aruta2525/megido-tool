@@ -1,7 +1,7 @@
-import {ICharacter} from '../../../interface/ICharacter';
+import {IMegido} from '../../../interface/IMegido';
 import {SkillType, Attribute, ClassType, StyleType, ClockType} from '../../../enum/MegidoType';
 
-export const So67: ICharacter[] = [
+export const So67: IMegido[] = [
   {
     clockType: ClockType.So,
     no: 67,
@@ -11,7 +11,7 @@ export const So67: ICharacter[] = [
     classType: ClassType.Sniper,
     hp: 7171,
     offense: 756,
-    deffense: 500,
+    defense: 500,
     speed: 645,
     ability: {name: '漆黒の翼', text: '自身の素早さが30%上昇する'},
     skills: [

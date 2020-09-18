@@ -23,8 +23,10 @@
     <div class="container-md container-wrap pt-2">
       <div class="row align-items-end mb-2">
         <h3>メギド72 ダメージ計算ツールβ</h3>
-        <span class="ml-2">v0.4</span>
+        <span class="ml-2">v0.5</span>
       </div>
+
+      <!-- メギド行 -->
       <div class="row border border-bottom-0 px-0">
         <div class="form-group col-sm-6 col-12 px-2 mb-2">
           <label for="megido">メギド</label>
@@ -39,28 +41,42 @@
           <input type="tel" id="offensiveBuff" class="form-control" />
         </div>
 
-        <div class="form-group col-12">
+        <div class="form-group col-12 mb-0">
           <div class="row">
             <div class="col-12 px-2">
               <label for="megidoAbility">特性</label>
+              <button
+                type="button"
+                class="btn btn-primary rounded-circle collapse-btn ml-1"
+                data-toggle="collapse"
+                data-target=".megido-ability"
+                aria-expanded="false"
+                title=""
+              >
+                <img src="./dist/img/plus.png" class="plus" />
+              </button>
             </div>
           </div>
-          <div class="row pr-2">
-            <div class="col-5 px-2">
+          <div class="row pr-2 mb-0 collapse megido-ability">
+            <div class="col-5 px-2 mb-3">
               <input type="tel" id="megidoAbility" class="form-control" readonly />
             </div>
-            <div id="megidoAbilityText" class="col-7 border border-light rounded ability-text"></div>
+            <div id="megidoAbilityText" class="col-7 border border-light rounded ability-text mb-3"></div>
           </div>
         </div>
       </div>
 
+      <!-- 霊宝行 -->
       <div class="row border-left border-right pr-2">
-        <div class="col-12 px-2">
+        <div class="col-12 px-2 pb-2">
           霊宝
+          <button type="button" class="btn btn-primary rounded-circle collapse-btn ml-1" data-toggle="collapse" data-target=".multi-st" aria-expanded="false">
+            <img src="./dist/img/plus.png" class="plus" />
+          </button>
         </div>
         <!-- 霊宝1 -->
-        <div class="form-group col-sm-12 mb-2">
-          <div class="row pt-2">
+        <div class="form-group col-sm-12 mb-0 collapse multi-st">
+          <div class="row mb-2">
             <div class="col-5 px-2">
               <select title="" id="sacredTreasure1" class="selectpicker" data-width="100%"> </select>
             </div>
@@ -68,8 +84,8 @@
           </div>
         </div>
         <!-- 霊宝2 -->
-        <div class="form-group col-sm-12 mb-2">
-          <div class="row">
+        <div class="form-group col-sm-12 mb-0 collapse multi-st">
+          <div class="row mb-2">
             <div class="col-5 px-2">
               <select title="" id="sacredTreasure2" class="selectpicker" data-width="100%"> </select>
             </div>
@@ -77,8 +93,8 @@
           </div>
         </div>
         <!-- 霊宝3 -->
-        <div class="form-group col-sm-12 mb-2">
-          <div class="row">
+        <div class="form-group col-sm-12 mb-0 collapse multi-st">
+          <div class="row mb-2">
             <div class="col-5 px-2">
               <select title="" id="sacredTreasure3" class="selectpicker" data-width="100%"> </select>
             </div>
@@ -86,8 +102,8 @@
           </div>
         </div>
         <!-- 霊宝4 -->
-        <div class="form-group col-sm-12 mb-2">
-          <div class="row">
+        <div class="form-group col-sm-12 mb-0 collapse multi-st">
+          <div class="row mb-2">
             <div class="col-5 px-2">
               <select title="" id="sacredTreasure4" class="selectpicker" data-width="100%"> </select>
             </div>
@@ -95,13 +111,13 @@
           </div>
         </div>
         <!-- 系譜 -->
-        <div class="form-group col-12">
+        <div class="form-group col-12 mb-0 collapse multi-st">
           <div class="row">
             <div class="col-12 px-2">
               <label for="genealogy">系譜</label>
             </div>
           </div>
-          <div class="row pr-2">
+          <div class="row mb-3 pr-2">
             <div class="col-5 px-2">
               <input type="tel" id="genealogy" class="form-control" readonly />
             </div>
@@ -109,7 +125,7 @@
           </div>
         </div>
       </div>
-
+      <!-- スキル行 -->
       <div class="row border-left border-right">
         <div class="form-group col-sm-4 col-6 px-2">
           <label for="skill">技</label>
@@ -144,6 +160,7 @@
         </div>
       </div>
 
+      <!-- フォトン行 -->
       <div class="row border-left border-right align-items-center">
         <div class="form-group col-sm-4 col-4 px-2">
           <label for="photon">フォトン</label>
@@ -172,6 +189,23 @@
         </div>
       </div>
 
+      <!-- 敵行 -->
+      <div class="row border-left border-right">
+        <div class="form-group col-sm-3 col-3 px-2">
+          <label for="stage">エリア</label>
+          <select title="" id="stage" class="selectpicker" data-width="100%"> </select>
+        </div>
+        <div class="form-group col-sm-6 col-6 px-2">
+          <label for="enemy">敵の名前</label>
+          <select title="" id="enemy" class="selectpicker" data-width="100%"> </select>
+        </div>
+        <div class="form-group col-sm-3 col-3 px-2">
+          <label for="difficultyLevel">難易度</label>
+          <select title="" id="difficultyLevel" class="selectpicker" data-width="100%"> </select>
+        </div>
+      </div>
+
+      <!-- 防御行 -->
       <div class="row border-left border-right px-0">
         <div class="form-group col-4 px-2">
           <label for="defense">敵防御力</label>
@@ -233,12 +267,29 @@
       </div>
 
       <div class="row border-left border-right border-bottompx-0 damage-row">
+        <div class="form-group col-6 px-2 collapse multi-damage mb-0">
+          <label for="hp">HP</label>
+          <input type="tel" id="hp" class="form-control mb-2" style="text-align: center;" />
+        </div>
+        <div class="form-group col-6 px-2 collapse multi-damage mb-0">
+          <label for="dph">総ダメージ / HP</label>
+          <input type="tel" id="dph" class="form-control mb-2" style="text-align: center;" readonly />
+        </div>
         <div class="form-group col-6 px-2">
           <label for="damagePerHit">ダメージ / Hit</label>
           <input type="tel" id="damagePerHit" class="form-control" style="text-align: center;" readonly />
         </div>
         <div class="form-group col-6 px-2">
           <label for="totalDamage">総ダメージ</label>
+          <button
+            type="button"
+            class="btn btn-primary rounded-circle collapse-btn ml-1"
+            data-toggle="collapse"
+            data-target=".multi-damage"
+            aria-expanded="false"
+          >
+            <img src="./dist/img/plus.png" class="plus" />
+          </button>
           <input type="tel" id="totalDamage" class="form-control" style="text-align: center;" readonly />
         </div>
       </div>

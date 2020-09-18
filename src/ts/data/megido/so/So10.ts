@@ -1,7 +1,7 @@
-import {ICharacter} from '../../../interface/ICharacter';
+import {IMegido} from '../../../interface/IMegido';
 import {SkillType, Attribute, ClassType, StyleType, ClockType} from '../../../enum/MegidoType';
 
-export const So10: ICharacter[] = [
+export const So10: IMegido[] = [
   {
     clockType: ClockType.So,
     no: 10,
@@ -11,7 +11,7 @@ export const So10: ICharacter[] = [
     classType: ClassType.Sniper,
     hp: 7275,
     offense: 642,
-    deffense: 477,
+    defense: 477,
     speed: 716,
     ability: {name: '甘えん坊', text: '毎ターン終了時、覚醒ゲージが+1される'},
     skills: [

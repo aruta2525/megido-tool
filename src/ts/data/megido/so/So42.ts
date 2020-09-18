@@ -1,7 +1,7 @@
-import {ICharacter} from '../../../interface/ICharacter';
+import {IMegido} from '../../../interface/IMegido';
 import {SkillType, Attribute, ClassType, StyleType, ClockType} from '../../../enum/MegidoType';
 
-export const So42: ICharacter[] = [
+export const So42: IMegido[] = [
   {
     clockType: ClockType.So,
     no: 42,
@@ -11,7 +11,7 @@ export const So42: ICharacter[] = [
     classType: ClassType.Trooper,
     hp: 5646,
     offense: 1188,
-    deffense: 287,
+    defense: 287,
     speed: 699,
     ability: {name: '面倒くさい…', text: '最初のターン、攻撃力が25%上昇する'},
     skills: [
@@ -71,7 +71,7 @@ export const So42: ICharacter[] = [
     classType: ClassType.Trooper,
     hp: 8606,
     offense: 639,
-    deffense: 646,
+    defense: 646,
     speed: 493,
     ability: {name: '泡沫夢幻', text: 'HPが100%のとき、受けるダメージを30%軽減する'},
     skills: [

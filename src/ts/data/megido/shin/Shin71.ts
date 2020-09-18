@@ -1,7 +1,7 @@
-import {ICharacter} from '../../../interface/ICharacter';
+import {IMegido} from '../../../interface/IMegido';
 import {SkillType, Attribute, ClassType, StyleType, ClockType} from '../../../enum/MegidoType';
 
-const megido: ICharacter[] = [
+const megido: IMegido[] = [
   {
     clockType: ClockType.Shin,
     no: 71,
@@ -11,7 +11,7 @@ const megido: ICharacter[] = [
     classType: ClassType.Sniper,
     hp: 8024,
     offense: 857,
-    deffense: 425,
+    defense: 425,
     speed: 681,
     ability: {name: 'ファルサグロリア', text: '自身以外の味方の行動で、対象が1体以上状態異常になった場合、自身の覚醒ゲージが+1される'},
     skills: [

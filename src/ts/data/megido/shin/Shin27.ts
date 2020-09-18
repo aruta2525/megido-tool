@@ -1,7 +1,7 @@
-import {ICharacter} from '../../../interface/ICharacter';
+import {IMegido} from '../../../interface/IMegido';
 import {SkillType, Attribute, ClassType, StyleType, ClockType} from '../../../enum/MegidoType';
 
-const megido: ICharacter[] = [
+const megido: IMegido[] = [
   {
     clockType: ClockType.Shin,
     no: 27,
@@ -11,7 +11,7 @@ const megido: ICharacter[] = [
     classType: ClassType.Fighter,
     hp: 6697,
     offense: 1353,
-    deffense: 417,
+    defense: 417,
     speed: 488,
     ability: {name: '特攻少女', text: 'チェイン中に行動する度、覚醒ゲージが+1される'},
     skills: [

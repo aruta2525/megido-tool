@@ -1,7 +1,7 @@
-import {ICharacter} from '../../../interface/ICharacter';
+import {IMegido} from '../../../interface/IMegido';
 import {SkillType, Attribute, ClassType, StyleType, ClockType} from '../../../enum/MegidoType';
 
-const megido: ICharacter[] = [
+const megido: IMegido[] = [
   {
     clockType: ClockType.Shin,
     no: 14,
@@ -11,7 +11,7 @@ const megido: ICharacter[] = [
     classType: ClassType.Fighter,
     hp: 9190,
     offense: 638,
-    deffense: 615,
+    defense: 615,
     speed: 503,
     ability: {name: 'ここどこだろ～？', text: '毎ターン終了時に、自身の点穴を+5する'},
     skills: [

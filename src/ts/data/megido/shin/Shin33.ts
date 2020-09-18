@@ -1,7 +1,7 @@
-import {ICharacter} from '../../../interface/ICharacter';
+import {IMegido} from '../../../interface/IMegido';
 import {SkillType, Attribute, ClassType, StyleType, ClockType} from '../../../enum/MegidoType';
 
-const megido: ICharacter[] = [
+const megido: IMegido[] = [
   {
     clockType: ClockType.Shin,
     no: 33,
@@ -11,7 +11,7 @@ const megido: ICharacter[] = [
     classType: ClassType.Fighter,
     hp: 8902,
     offense: 1001,
-    deffense: 287,
+    defense: 287,
     speed: 629,
     ability: {name: '指導者の矜持', text: '致死ダメージを受けたとき、生存している味方が多いほど、高確率で踏みとどまる(最大40%)'},
     skills: [

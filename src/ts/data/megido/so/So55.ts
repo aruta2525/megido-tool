@@ -1,7 +1,7 @@
-import {ICharacter} from '../../../interface/ICharacter';
+import {IMegido} from '../../../interface/IMegido';
 import {SkillType, Attribute, ClassType, StyleType, ClockType} from '../../../enum/MegidoType';
 
-export const So55: ICharacter[] = [
+export const So55: IMegido[] = [
   {
     clockType: ClockType.So,
     no: 55,
@@ -11,7 +11,7 @@ export const So55: ICharacter[] = [
     classType: ClassType.Sniper,
     hp: 8990,
     offense: 1207,
-    deffense: 483,
+    defense: 483,
     speed: 284,
     ability: {name: '禁呪', text: '戦闘不能時、敵全体に攻撃力の1.5倍のダメージ'},
     skills: [
@@ -71,7 +71,7 @@ export const So55: ICharacter[] = [
     classType: ClassType.Sniper,
     hp: 6133,
     offense: 1345,
-    deffense: 446,
+    defense: 446,
     speed: 482,
     ability: {
       name: '禁忌の魔術',

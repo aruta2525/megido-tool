@@ -1,7 +1,7 @@
-import {ICharacter} from '../../../interface/ICharacter';
+import {IMegido} from '../../../interface/IMegido';
 import {SkillType, Attribute, ClassType, StyleType, ClockType} from '../../../enum/MegidoType';
 
-const megido: ICharacter[] = [
+const megido: IMegido[] = [
   {
     clockType: ClockType.Shin,
     no: 69,
@@ -11,7 +11,7 @@ const megido: ICharacter[] = [
     classType: ClassType.Sniper,
     hp: 7245,
     offense: 629,
-    deffense: 630,
+    defense: 630,
     speed: 643,
     ability: {name: '筆が乗ってきたぜ！', text: '自身の覚醒ゲージが最大の60%以上のとき、チャージフォトン使用時に味方単体にチェインする'},
     skills: [

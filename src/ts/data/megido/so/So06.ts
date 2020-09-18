@@ -1,7 +1,7 @@
-import {ICharacter} from '../../../interface/ICharacter';
+import {IMegido} from '../../../interface/IMegido';
 import {SkillType, Attribute, ClassType, StyleType, ClockType} from '../../../enum/MegidoType';
 
-export const So06: ICharacter[] = [
+export const So06: IMegido[] = [
   {
     clockType: ClockType.So,
     no: 6,
@@ -11,7 +11,7 @@ export const So06: ICharacter[] = [
     classType: ClassType.Fighter,
     hp: 5855,
     offense: 1150,
-    deffense: 287,
+    defense: 287,
     speed: 678,
     ability: {name: '弱肉強食', text: '獣人系のモンスターに2倍のダメージ'},
     skills: [

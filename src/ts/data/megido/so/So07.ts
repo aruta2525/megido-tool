@@ -1,7 +1,7 @@
-import {ICharacter} from '../../../interface/ICharacter';
+import {IMegido} from '../../../interface/IMegido';
 import {SkillType, Attribute, ClassType, StyleType, ClockType} from '../../../enum/MegidoType';
 
-export const So07: ICharacter[] = [
+export const So07: IMegido[] = [
   {
     clockType: ClockType.So,
     no: 7,
@@ -11,7 +11,7 @@ export const So07: ICharacter[] = [
     classType: ClassType.Fighter,
     hp: 4598,
     offense: 1194,
-    deffense: 417,
+    defense: 417,
     speed: 685,
     ability: {name: '隠密行動', text: '敵から狙われにくくなり、攻撃力が10%上昇する'},
     skills: [
@@ -71,7 +71,7 @@ export const So07: ICharacter[] = [
     classType: ClassType.Fighter,
     hp: 6039,
     offense: 1200,
-    deffense: 420,
+    defense: 420,
     speed: 627,
     ability: {name: '間隙突き', text: '覚醒ゲージが0の対象に1.5倍のダメージ'},
     skills: [

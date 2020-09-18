@@ -1,7 +1,7 @@
-import {ICharacter} from '../../../interface/ICharacter';
+import {IMegido} from '../../../interface/IMegido';
 import {SkillType, Attribute, ClassType, StyleType, ClockType} from '../../../enum/MegidoType';
 
-export const So62: ICharacter[] = [
+export const So62: IMegido[] = [
   {
     clockType: ClockType.So,
     no: 62,
@@ -11,7 +11,7 @@ export const So62: ICharacter[] = [
     classType: ClassType.Trooper,
     hp: 7703,
     offense: 943,
-    deffense: 502,
+    defense: 502,
     speed: 490,
     ability: {name: '天上の踊り子', text: '戦闘中、徐々に防御力が上昇する（最大値50%）'},
     skills: [

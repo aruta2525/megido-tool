@@ -1,7 +1,7 @@
-import {ICharacter} from '../../../interface/ICharacter';
+import {IMegido} from '../../../interface/IMegido';
 import {SkillType, Attribute, ClassType, StyleType, ClockType} from '../../../enum/MegidoType';
 
-export const So58: ICharacter[] = [
+export const So58: IMegido[] = [
   {
     clockType: ClockType.So,
     no: 58,
@@ -11,7 +11,7 @@ export const So58: ICharacter[] = [
     classType: ClassType.Trooper,
     hp: 7331,
     offense: 953,
-    deffense: 406,
+    defense: 406,
     speed: 626,
     ability: {name: '絃結界', text: '戦闘中、徐々に素早さが上昇する（最大値50%）'},
     skills: [

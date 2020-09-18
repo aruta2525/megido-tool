@@ -1,7 +1,7 @@
-import {ICharacter} from '../../../interface/ICharacter';
+import {IMegido} from '../../../interface/IMegido';
 import {SkillType, Attribute, ClassType, StyleType, ClockType} from '../../../enum/MegidoType';
 
-const megido: ICharacter[] = [
+const megido: IMegido[] = [
   {
     clockType: ClockType.Shin,
     no: 4,
@@ -11,7 +11,7 @@ const megido: ICharacter[] = [
     classType: ClassType.Sniper,
     hp: 7042,
     offense: 632,
-    deffense: 635,
+    defense: 635,
     speed: 614,
     ability: {name: '抜群の包容力', text: '男性キャラクターへの回復量が30%上昇する'},
     skills: [
@@ -71,7 +71,7 @@ const megido: ICharacter[] = [
     classType: ClassType.Sniper,
     hp: 7070,
     offense: 700,
-    deffense: 640,
+    defense: 640,
     speed: 610,
     ability: {name: '医者の矜持', text: '味方が戦闘不能になったとき、自身の覚醒ゲージが+2される'},
     skills: [

@@ -1,7 +1,7 @@
-import {ICharacter} from '../../../interface/ICharacter';
+import {IMegido} from '../../../interface/IMegido';
 import {SkillType, Attribute, ClassType, StyleType, ClockType} from '../../../enum/MegidoType';
 
-const megido: ICharacter[] = [
+const megido: IMegido[] = [
   {
     clockType: ClockType.Shin,
     no: 18,
@@ -11,7 +11,7 @@ const megido: ICharacter[] = [
     classType: ClassType.Fighter,
     hp: 8805,
     offense: 1080,
-    deffense: 471,
+    defense: 471,
     speed: 430,
     ability: {name: '不屈の精神', text: '15%の確率で攻撃を無効化する'},
     skills: [
@@ -71,7 +71,7 @@ const megido: ICharacter[] = [
     classType: ClassType.Fighter,
     hp: 8032,
     offense: 949,
-    deffense: 279,
+    defense: 279,
     speed: 688,
     ability: {name: '戦乙女の覚悟', text: '覚醒状態中なら自身のアタックが強化される'},
     skills: [

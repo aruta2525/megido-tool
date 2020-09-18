@@ -1,7 +1,7 @@
-import {ICharacter} from '../../../interface/ICharacter';
+import {IMegido} from '../../../interface/IMegido';
 import {SkillType, Attribute, ClassType, StyleType, ClockType} from '../../../enum/MegidoType';
 
-const megido: ICharacter[] = [
+const megido: IMegido[] = [
   {
     clockType: ClockType.Shin,
     no: 28,
@@ -11,7 +11,7 @@ const megido: ICharacter[] = [
     classType: ClassType.Fighter,
     hp: 7098,
     offense: 1222,
-    deffense: 409,
+    defense: 409,
     speed: 497,
     ability: {name: '翳なる者', text: '25%の確率で、受ける攻撃をMISSにする（奥義、秘奥義、オーブによる攻撃を除く）'},
     skills: [

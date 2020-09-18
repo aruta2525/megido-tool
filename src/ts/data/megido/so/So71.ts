@@ -1,7 +1,7 @@
-import {ICharacter} from '../../../interface/ICharacter';
+import {IMegido} from '../../../interface/IMegido';
 import {SkillType, Attribute, ClassType, StyleType, ClockType} from '../../../enum/MegidoType';
 
-export const So71: ICharacter[] = [
+export const So71: IMegido[] = [
   {
     clockType: ClockType.So,
     no: 71,
@@ -11,7 +11,7 @@ export const So71: ICharacter[] = [
     classType: ClassType.Sniper,
     hp: 7462,
     offense: 1387,
-    deffense: 491,
+    defense: 491,
     speed: 270,
     ability: {name: 'メギドの記憶', text: 'HPが20%上昇する'},
     skills: [
@@ -71,7 +71,7 @@ export const So71: ICharacter[] = [
     classType: ClassType.Sniper,
     hp: 6988,
     offense: 1212,
-    deffense: 446,
+    defense: 446,
     speed: 471,
     ability: {name: '終わらない記録', text: '封印状態中、自身のスキルレベルが低下しなくなる'},
     skills: [

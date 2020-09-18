@@ -1,7 +1,7 @@
-import {ICharacter} from '../../../interface/ICharacter';
+import {IMegido} from '../../../interface/IMegido';
 import {SkillType, Attribute, ClassType, StyleType, ClockType} from '../../../enum/MegidoType';
 
-const megido: ICharacter[] = [
+const megido: IMegido[] = [
   {
     clockType: ClockType.Shin,
     no: 49,
@@ -11,7 +11,7 @@ const megido: ICharacter[] = [
     classType: ClassType.Trooper,
     hp: 8189,
     offense: 838,
-    deffense: 459,
+    defense: 459,
     speed: 630,
     ability: {name: 'マエストロ', text: '音符が多いほど、攻撃力が上昇する（最大値50%）音符数×10%（5以上で50%）'},
     skills: [

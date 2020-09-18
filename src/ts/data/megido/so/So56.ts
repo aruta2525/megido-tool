@@ -1,7 +1,7 @@
-import {ICharacter} from '../../../interface/ICharacter';
+import {IMegido} from '../../../interface/IMegido';
 import {SkillType, Attribute, ClassType, StyleType, ClockType} from '../../../enum/MegidoType';
 
-export const So56: ICharacter[] = [
+export const So56: IMegido[] = [
   {
     clockType: ClockType.So,
     no: 56,
@@ -11,7 +11,7 @@ export const So56: ICharacter[] = [
     classType: ClassType.Fighter,
     hp: 8773,
     offense: 989,
-    deffense: 485,
+    defense: 485,
     speed: 416,
     ability: {name: '上質な装備', text: '自身の防御力が30%上昇する'},
     skills: [

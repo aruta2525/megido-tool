@@ -1,7 +1,7 @@
-import {ICharacter} from '../../../interface/ICharacter';
+import {IMegido} from '../../../interface/IMegido';
 import {SkillType, Attribute, ClassType, StyleType, ClockType} from '../../../enum/MegidoType';
 
-export const So26: ICharacter[] = [
+export const So26: IMegido[] = [
   {
     clockType: ClockType.So,
     no: 26,
@@ -11,7 +11,7 @@ export const So26: ICharacter[] = [
     classType: ClassType.Fighter,
     hp: 9049,
     offense: 949,
-    deffense: 497,
+    defense: 497,
     speed: 414,
     ability: {name: '豪放磊落', text: '15%の確率で攻撃を無効化する'},
     skills: [
@@ -71,7 +71,7 @@ export const So26: ICharacter[] = [
     classType: ClassType.Fighter,
     hp: 9000,
     offense: 1430,
-    deffense: 420,
+    defense: 420,
     speed: 271,
     ability: {name: '轅門竜変', text: '覚醒状態中なら自身のアタックが強化される'},
     skills: [

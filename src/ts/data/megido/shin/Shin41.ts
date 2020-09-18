@@ -1,7 +1,7 @@
-import {ICharacter} from '../../../interface/ICharacter';
+import {IMegido} from '../../../interface/IMegido';
 import {SkillType, Attribute, ClassType, StyleType, ClockType} from '../../../enum/MegidoType';
 
-const megido: ICharacter[] = [
+const megido: IMegido[] = [
   {
     clockType: ClockType.Shin,
     no: 41,
@@ -11,7 +11,7 @@ const megido: ICharacter[] = [
     classType: ClassType.Fighter,
     hp: 5997,
     offense: 1354,
-    deffense: 429,
+    defense: 429,
     speed: 503,
     ability: {name: '死を紡ぐ策王', text: '攻撃を受けたとき、10%の確率で呪い攻撃で反撃する'},
     skills: [

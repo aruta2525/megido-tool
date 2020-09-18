@@ -1,7 +1,7 @@
-import {ICharacter} from '../../../interface/ICharacter';
+import {IMegido} from '../../../interface/IMegido';
 import {SkillType, Attribute, ClassType, StyleType, ClockType} from '../../../enum/MegidoType';
 
-export const So12: ICharacter[] = [
+export const So12: IMegido[] = [
   {
     clockType: ClockType.So,
     no: 12,
@@ -11,7 +11,7 @@ export const So12: ICharacter[] = [
     classType: ClassType.Trooper,
     hp: 5667,
     offense: 1176,
-    deffense: 494,
+    defense: 494,
     speed: 476,
     ability: {name: 'ハルマニアの槍', text: '覚醒ゲージが多いほど攻撃力が上昇する(最大値25%)'},
     skills: [
@@ -74,7 +74,7 @@ export const So12: ICharacter[] = [
     classType: ClassType.Trooper,
     hp: 8547,
     offense: 1001,
-    deffense: 487,
+    defense: 487,
     speed: 421,
     ability: {name: '変幻自在の槍', text: '敵全体にHボムが付与されているほど、攻撃力が上昇する（最大45%）'},
     skills: [

@@ -1,7 +1,7 @@
-import {ICharacter} from '../../../interface/ICharacter';
+import {IMegido} from '../../../interface/IMegido';
 import {SkillType, Attribute, ClassType, StyleType, ClockType} from '../../../enum/MegidoType';
 
-export const So34: ICharacter[] = [
+export const So34: IMegido[] = [
   {
     clockType: ClockType.So,
     no: 34,
@@ -11,7 +11,7 @@ export const So34: ICharacter[] = [
     classType: ClassType.Sniper,
     hp: 8688,
     offense: 1178,
-    deffense: 487,
+    defense: 487,
     speed: 285,
     ability: {name: 'ものぐさ', text: '睡眠状態のとき、毎ターン終了時、覚醒ゲージが+2される'},
     skills: [
@@ -85,7 +85,7 @@ export const So34: ICharacter[] = [
     classType: ClassType.Sniper,
     hp: 8517,
     offense: 1089,
-    deffense: 524,
+    defense: 524,
     speed: 308,
     ability: {name: '寝る子は育つ', text: '自身が睡眠状態かつエレキ状態のとき、フォトンによる行動がキャンセルされた場合自身のエレキレベルを+3する'},
     skills: [

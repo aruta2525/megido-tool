@@ -1,7 +1,7 @@
-import {ICharacter} from '../../../interface/ICharacter';
+import {IMegido} from '../../../interface/IMegido';
 import {SkillType, Attribute, ClassType, StyleType, ClockType} from '../../../enum/MegidoType';
 
-const megido: ICharacter[] = [
+const megido: IMegido[] = [
   {
     clockType: ClockType.Shin,
     no: 25,
@@ -11,7 +11,7 @@ const megido: ICharacter[] = [
     classType: ClassType.Fighter,
     hp: 8840,
     offense: 1226,
-    deffense: 421,
+    defense: 421,
     speed: 438,
     ability: {name: '飽くなき食への探求', text: '敵の数が少ないほど、攻撃力が上昇する（最大値20%）'},
     skills: [

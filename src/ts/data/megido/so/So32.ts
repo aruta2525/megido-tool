@@ -1,7 +1,7 @@
-import {ICharacter} from '../../../interface/ICharacter';
+import {IMegido} from '../../../interface/IMegido';
 import {SkillType, Attribute, ClassType, StyleType, ClockType} from '../../../enum/MegidoType';
 
-export const So32: ICharacter[] = [
+export const So32: IMegido[] = [
   {
     clockType: ClockType.So,
     no: 32,
@@ -11,7 +11,7 @@ export const So32: ICharacter[] = [
     classType: ClassType.Fighter,
     hp: 8686,
     offense: 1402,
-    deffense: 423,
+    defense: 423,
     speed: 283,
     ability: {name: '混沌を孕む者', text: '自身のHPが33.3%以下のとき、通常攻撃、スキル、覚醒スキル、奥義の効果範囲が敵全体になる'},
     skills: [

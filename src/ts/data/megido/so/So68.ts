@@ -1,7 +1,7 @@
-import {ICharacter} from '../../../interface/ICharacter';
+import {IMegido} from '../../../interface/IMegido';
 import {SkillType, Attribute, ClassType, StyleType, ClockType} from '../../../enum/MegidoType';
 
-export const So68: ICharacter[] = [
+export const So68: IMegido[] = [
   {
     clockType: ClockType.So,
     no: 68,
@@ -11,7 +11,7 @@ export const So68: ICharacter[] = [
     classType: ClassType.Sniper,
     hp: 7630,
     offense: 976,
-    deffense: 431,
+    defense: 431,
     speed: 644,
     ability: {name: '虚心坦懐', text: '自身の点穴の値が高いほど、受けるダメージを軽減する（最大40%）'},
     skills: [

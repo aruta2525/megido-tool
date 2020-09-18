@@ -1,7 +1,7 @@
-import {ICharacter} from '../../../interface/ICharacter';
+import {IMegido} from '../../../interface/IMegido';
 import {SkillType, Attribute, ClassType, StyleType, ClockType} from '../../../enum/MegidoType';
 
-export const So25: ICharacter[] = [
+export const So25: IMegido[] = [
   {
     clockType: ClockType.So,
     no: 25,
@@ -11,7 +11,7 @@ export const So25: ICharacter[] = [
     classType: ClassType.Trooper,
     hp: 7290,
     offense: 1170,
-    deffense: 416,
+    defense: 416,
     speed: 494,
     ability: {name: '器物破損', text: '物体系のモンスターに2倍のダメージ'},
     skills: [

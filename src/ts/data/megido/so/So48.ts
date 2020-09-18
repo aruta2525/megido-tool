@@ -1,7 +1,7 @@
-import {ICharacter} from '../../../interface/ICharacter';
+import {IMegido} from '../../../interface/IMegido';
 import {SkillType, Attribute, ClassType, StyleType, ClockType} from '../../../enum/MegidoType';
 
-export const So48: ICharacter[] = [
+export const So48: IMegido[] = [
   {
     clockType: ClockType.So,
     no: 48,
@@ -11,7 +11,7 @@ export const So48: ICharacter[] = [
     classType: ClassType.Trooper,
     hp: 7382,
     offense: 968,
-    deffense: 418,
+    defense: 418,
     speed: 628,
     ability: {name: '守銭奴', text: 'クエストでの獲得ゴルドが50%上昇する'},
     skills: [
@@ -71,7 +71,7 @@ export const So48: ICharacter[] = [
     classType: ClassType.Trooper,
     hp: 7004,
     offense: 1199,
-    deffense: 454,
+    defense: 454,
     speed: 494,
     ability: {name: 'この世はあたいの宝島', text: 'チェイン中、与えるステータス強化とステータス弱体の持続ターンを+1する'},
     skills: [

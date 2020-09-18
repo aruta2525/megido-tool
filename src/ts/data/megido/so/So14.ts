@@ -1,7 +1,7 @@
-import {ICharacter} from '../../../interface/ICharacter';
+import {IMegido} from '../../../interface/IMegido';
 import {SkillType, Attribute, ClassType, StyleType, ClockType} from '../../../enum/MegidoType';
 
-export const So14: ICharacter[] = [
+export const So14: IMegido[] = [
   {
     clockType: ClockType.So,
     no: 14,
@@ -11,7 +11,7 @@ export const So14: ICharacter[] = [
     classType: ClassType.Sniper,
     hp: 5980,
     offense: 1386,
-    deffense: 424,
+    defense: 424,
     speed: 475,
     ability: {name: 'ビーストハンター', text: '獣系のモンスターに2倍のダメージ'},
     skills: [
@@ -108,7 +108,7 @@ export const So14: ICharacter[] = [
     classType: ClassType.Sniper,
     hp: 6116,
     offense: 1210,
-    deffense: 644,
+    defense: 644,
     speed: 430,
     ability: {name: '手堅い一手', text: '自身の点穴が69以下のとき、攻撃時に点穴の効果発動と消費がされない'},
     skills: [

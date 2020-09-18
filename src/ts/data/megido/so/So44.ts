@@ -1,7 +1,7 @@
-import {ICharacter} from '../../../interface/ICharacter';
+import {IMegido} from '../../../interface/IMegido';
 import {SkillType, Attribute, ClassType, StyleType, ClockType} from '../../../enum/MegidoType';
 
-export const So44: ICharacter[] = [
+export const So44: IMegido[] = [
   {
     clockType: ClockType.So,
     no: 44,
@@ -11,7 +11,7 @@ export const So44: ICharacter[] = [
     classType: ClassType.Fighter,
     hp: 7581,
     offense: 954,
-    deffense: 478,
+    defense: 478,
     speed: 501,
     ability: {name: '暴走少女', text: '自身の素早さが30%上昇する'},
     skills: [
@@ -89,7 +89,7 @@ export const So44: ICharacter[] = [
     classType: ClassType.Fighter,
     hp: 7327,
     offense: 1157,
-    deffense: 428,
+    defense: 428,
     speed: 478,
     ability: {name: '鳥頭少女', text: '自身がチェインを行うとき、次の行動のチェイン数を+1する'},
     skills: [

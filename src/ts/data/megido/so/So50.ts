@@ -1,7 +1,7 @@
-import {ICharacter} from '../../../interface/ICharacter';
+import {IMegido} from '../../../interface/IMegido';
 import {SkillType, Attribute, ClassType, StyleType, ClockType} from '../../../enum/MegidoType';
 
-export const So50: ICharacter[] = [
+export const So50: IMegido[] = [
   {
     clockType: ClockType.So,
     no: 50,
@@ -11,7 +11,7 @@ export const So50: ICharacter[] = [
     classType: ClassType.Fighter,
     hp: 7649,
     offense: 1190,
-    deffense: 406,
+    defense: 406,
     speed: 477,
     ability: {name: '撲殺気分', text: '戦闘中、徐々に攻撃力が上昇する（最大値25%）'},
     skills: [

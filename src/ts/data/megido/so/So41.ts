@@ -1,7 +1,7 @@
-import {ICharacter} from '../../../interface/ICharacter';
+import {IMegido} from '../../../interface/IMegido';
 import {SkillType, Attribute, ClassType, StyleType, ClockType} from '../../../enum/MegidoType';
 
-export const So41: ICharacter[] = [
+export const So41: IMegido[] = [
   {
     clockType: ClockType.So,
     no: 41,
@@ -11,7 +11,7 @@ export const So41: ICharacter[] = [
     classType: ClassType.Trooper,
     hp: 7601,
     offense: 993,
-    deffense: 504,
+    defense: 504,
     speed: 487,
     ability: {name: '鍛練の成果', text: '戦闘中、徐々に防御力が上昇する（最大値50%）1ターン目に20%、2・4・6ターン目に10%上昇'},
     skills: [
@@ -71,7 +71,7 @@ export const So41: ICharacter[] = [
     classType: ClassType.Trooper,
     hp: 7219,
     offense: 728,
-    deffense: 507,
+    defense: 507,
     speed: 626,
     ability: {name: '戦場の覚悟', text: 'バレットのストック数に応じて、受けるダメージを軽減する（最大60%）'},
     skills: [

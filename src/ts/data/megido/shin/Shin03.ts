@@ -1,6 +1,6 @@
-import {ICharacter} from '../../../interface/ICharacter';
+import {IMegido} from '../../../interface/IMegido';
 import {SkillType, Attribute, ClassType, StyleType, ClockType} from '../../../enum/MegidoType';
-const megido: ICharacter[] = [
+const megido: IMegido[] = [
   {
     clockType: ClockType.Shin,
     no: 3,
@@ -10,7 +10,7 @@ const megido: ICharacter[] = [
     classType: ClassType.Trooper,
     hp: 7530,
     offense: 952,
-    deffense: 429,
+    defense: 429,
     speed: 631,
     ability: {name: 'カワイさの証明', text: '最初の2ターンの間、毎ターン終了時、自身の覚醒ゲージが+2される'},
     skills: [
@@ -70,7 +70,7 @@ const megido: ICharacter[] = [
     classType: ClassType.Trooper,
     hp: 8637,
     offense: 707,
-    deffense: 495,
+    defense: 495,
     speed: 534,
     ability: {name: 'アゲていくよ！', text: '毎ターン終了時、自身の覚醒ゲージが0のとき、覚醒ゲージが+2される'},
     skills: [

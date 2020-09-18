@@ -1,7 +1,7 @@
-import {ICharacter} from '../../../interface/ICharacter';
+import {IMegido} from '../../../interface/IMegido';
 import {SkillType, Attribute, ClassType, StyleType, ClockType} from '../../../enum/MegidoType';
 
-export const So15: ICharacter[] = [
+export const So15: IMegido[] = [
   {
     clockType: ClockType.So,
     no: 15,
@@ -11,7 +11,7 @@ export const So15: ICharacter[] = [
     classType: ClassType.Fighter,
     hp: 5896,
     offense: 768,
-    deffense: 622,
+    defense: 622,
     speed: 627,
     ability: {name: '闘争心', text: '虫系のモンスターに2倍のダメージ'},
     skills: [
@@ -71,7 +71,7 @@ export const So15: ICharacter[] = [
     classType: ClassType.Fighter,
     hp: 7119,
     offense: 1280,
-    deffense: 410,
+    defense: 410,
     speed: 462,
     ability: {name: '湧き上がる闘志', text: '封印状態中、自身のフォトン容量を+2する'},
     skills: [

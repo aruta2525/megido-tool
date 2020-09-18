@@ -51,22 +51,26 @@ input:read-only {
   }
 
   & > .row:nth-child(6) {
-    background: linear-gradient(#e9fcff, rgb(153, 240, 255));
+    background: linear-gradient(#ffe4d4, rgb(255, 182, 141));
   }
 
   & > .row:nth-child(7) {
-    background: linear-gradient(rgb(255, 234, 253), rgb(243, 194, 255));
+    background: linear-gradient(#e9fcff, rgb(153, 240, 255));
   }
 
   & > .row:nth-child(8) {
-    background: linear-gradient(#f0f4ff, rgb(153, 206, 255));
+    background: linear-gradient(rgb(255, 234, 253), rgb(243, 194, 255));
   }
 
   & > .row:nth-child(9) {
-    background: linear-gradient(#d8d8d8, rgb(180, 180, 180));
+    background: linear-gradient(#f0f4ff, rgb(153, 206, 255));
   }
 
   & > .row:nth-child(10) {
+    background: linear-gradient(#d8d8d8, rgb(180, 180, 180));
+  }
+
+  & > .row:nth-child(11) {
     background: linear-gradient(#ffcbcb, #f99);
   }
 }
@@ -101,4 +105,16 @@ input:read-only {
 
 .st-gold {
   background-color: rgb(255, 246, 162);
+}
+
+button.collapse-btn {
+  width: 1.5rem;
+  height: 1.5rem;
+  padding: 0px;
+  line-height: 0.5rem;
+}
+
+img.plus {
+  width: 50%;
+  height: 50%;
 }

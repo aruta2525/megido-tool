@@ -1,7 +1,7 @@
-import {ICharacter} from '../../../interface/ICharacter';
+import {IMegido} from '../../../interface/IMegido';
 import {SkillType, Attribute, ClassType, StyleType, ClockType} from '../../../enum/MegidoType';
 
-const megido: ICharacter[] = [
+const megido: IMegido[] = [
   {
     clockType: ClockType.Shin,
     no: 31,
@@ -11,7 +11,7 @@ const megido: ICharacter[] = [
     classType: ClassType.Sniper,
     hp: 7716,
     offense: 1004,
-    deffense: 421,
+    defense: 421,
     speed: 611,
     ability: {name: 'ノベリスターズハイ', text: '状態異常が付与されている敵1体につき、自身の攻撃力が8%上昇する'},
     skills: [

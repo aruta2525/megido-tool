@@ -1,7 +1,7 @@
-import {ICharacter} from '../../../interface/ICharacter';
+import {IMegido} from '../../../interface/IMegido';
 import {SkillType, Attribute, ClassType, StyleType, ClockType} from '../../../enum/MegidoType';
 
-const megido: ICharacter[] = [
+const megido: IMegido[] = [
   {
     clockType: ClockType.Shin,
     no: 2,
@@ -11,7 +11,7 @@ const megido: ICharacter[] = [
     classType: ClassType.Sniper,
     hp: 6143,
     offense: 1429,
-    deffense: 406,
+    defense: 406,
     speed: 480,
     ability: {name: 'ムードメーカー', text: '毎ターン終了時、25%の確率で自身以外の覚醒ゲージを+1する'},
     skills: [
@@ -86,7 +86,7 @@ const megido: ICharacter[] = [
     classType: ClassType.Sniper,
     hp: 9089,
     offense: 1058,
-    deffense: 482,
+    defense: 482,
     speed: 420,
     ability: {name: '新ネタ披露の大一番', text: '大協奏中、致死ダメージを受けたとき、35%の確率で踏みとどまる'},
     skills: [

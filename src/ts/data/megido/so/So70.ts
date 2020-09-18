@@ -1,7 +1,7 @@
-import {ICharacter} from '../../../interface/ICharacter';
+import {IMegido} from '../../../interface/IMegido';
 import {SkillType, Attribute, ClassType, StyleType, ClockType} from '../../../enum/MegidoType';
 
-export const So70: ICharacter[] = [
+export const So70: IMegido[] = [
   {
     clockType: ClockType.So,
     no: 70,
@@ -11,7 +11,7 @@ export const So70: ICharacter[] = [
     classType: ClassType.Fighter,
     hp: 5741,
     offense: 944,
-    deffense: 416,
+    defense: 416,
     speed: 711,
     ability: {name: 'トレジャーハンター', text: 'ラッシュのモンスターからのレアドロップ率が50%上昇する'},
     skills: [
@@ -71,7 +71,7 @@ export const So70: ICharacter[] = [
     classType: ClassType.Fighter,
     hp: 7922,
     offense: 884,
-    deffense: 646,
+    defense: 646,
     speed: 413,
     ability: {name: '準備は万全！', text: '自身封印中、ターン終了時、味方単体の状態異常を治癒する'},
     skills: [

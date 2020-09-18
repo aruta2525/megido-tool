@@ -1,7 +1,7 @@
-import {ICharacter} from '../../../interface/ICharacter';
+import {IMegido} from '../../../interface/IMegido';
 import {SkillType, Attribute, ClassType, StyleType, ClockType} from '../../../enum/MegidoType';
 
-export const So46: ICharacter[] = [
+export const So46: IMegido[] = [
   {
     clockType: ClockType.So,
     no: 46,
@@ -11,7 +11,7 @@ export const So46: ICharacter[] = [
     classType: ClassType.Trooper,
     hp: 7604,
     offense: 1189,
-    deffense: 493,
+    defense: 493,
     speed: 424,
     ability: {name: '魂狩り', text: '精霊系のモンスターに2倍のダメージ'},
     skills: [
@@ -71,7 +71,7 @@ export const So46: ICharacter[] = [
     classType: ClassType.Trooper,
     hp: 6422,
     offense: 1214,
-    deffense: 464,
+    defense: 464,
     speed: 468,
     ability: {name: '死に寄り添う者', text: 'ネクロ状態時、味方が戦闘不能になったとき、ソウルが+1される'},
     skills: [

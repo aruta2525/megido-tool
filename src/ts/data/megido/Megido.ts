@@ -1,5 +1,5 @@
 import $ from 'jquery';
-import {ICharacter} from '../../interface/ICharacter';
+import {IMegido} from '../../interface/IMegido';
 import {SkillType, Attribute, ClassType, StyleType, ClockType} from '../../enum/MegidoType';
 import {convertToStyleName} from '../../enum/MegidoType';
 
@@ -148,10 +148,10 @@ import Shin70 from './shin/Shin70';
 import Shin71 from './shin/Shin71';
 // import Shin72 from './shin/Shin72';
 
-export const MegidoList: ICharacter[] = [];
+export const MegidoList: IMegido[] = [];
 
-export function joinAndSortMegidoByName(): ICharacter[] {
-  let megidoList: ICharacter[] = [];
+export function joinAndSortMegidoByName(): IMegido[] {
+  let megidoList: IMegido[] = [];
   //#region メギド情報を配列にまとめる
   $.merge(megidoList, So01);
   $.merge(megidoList, So02);

@@ -1,7 +1,7 @@
-import {ICharacter} from '../../../interface/ICharacter';
+import {IMegido} from '../../../interface/IMegido';
 import {SkillType, Attribute, ClassType, StyleType, ClockType} from '../../../enum/MegidoType';
 
-export const So49: ICharacter[] = [
+export const So49: IMegido[] = [
   {
     clockType: ClockType.So,
     no: 49,
@@ -11,7 +11,7 @@ export const So49: ICharacter[] = [
     classType: ClassType.Sniper,
     hp: 5688,
     offense: 1197,
-    deffense: 287,
+    defense: 287,
     speed: 703,
     ability: {name: 'リズムに乗るのです！', text: '戦闘中、徐々に素早さが上昇する（最大値50%）'},
     skills: [
@@ -83,7 +83,7 @@ export const So49: ICharacter[] = [
     classType: ClassType.Sniper,
     hp: 5835,
     offense: 1164,
-    deffense: 476,
+    defense: 476,
     speed: 500,
     ability: {name: 'ポジティブスコア', text: 'アタック時、2ターンの間、継続する音符を1つ付与する'},
     skills: [

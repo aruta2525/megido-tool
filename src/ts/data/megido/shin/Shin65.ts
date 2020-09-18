@@ -1,7 +1,7 @@
-import {ICharacter} from '../../../interface/ICharacter';
+import {IMegido} from '../../../interface/IMegido';
 import {SkillType, Attribute, ClassType, StyleType, ClockType} from '../../../enum/MegidoType';
 
-const megido: ICharacter[] = [
+const megido: IMegido[] = [
   {
     clockType: ClockType.Shin,
     no: 65,
@@ -11,7 +11,7 @@ const megido: ICharacter[] = [
     classType: ClassType.Fighter,
     hp: 10192,
     offense: 1325,
-    deffense: 442,
+    defense: 442,
     speed: 363,
     ability: {name: '男の勲章', text: 'HP50%以下のとき、自身のアタックフォトンが強化される'},
     skills: [

@@ -1,7 +1,7 @@
-import {ICharacter} from '../../../interface/ICharacter';
+import {IMegido} from '../../../interface/IMegido';
 import {SkillType, Attribute, ClassType, StyleType, ClockType} from '../../../enum/MegidoType';
 
-export const So36: ICharacter[] = [
+export const So36: IMegido[] = [
   {
     clockType: ClockType.So,
     no: 36,
@@ -11,7 +11,7 @@ export const So36: ICharacter[] = [
     classType: ClassType.Trooper,
     hp: 7407,
     offense: 1167,
-    deffense: 411,
+    defense: 411,
     speed: 488,
     ability: {name: '花鳥風月', text: '行動開始時、20%の確率でスキルが追加される'},
     skills: [
@@ -71,7 +71,7 @@ export const So36: ICharacter[] = [
     classType: ClassType.Trooper,
     hp: 7952,
     offense: 1081,
-    deffense: 420,
+    defense: 420,
     speed: 479,
     ability: {name: '慈雨育苗', text: '自身がチャージフォトン使用時、自身の点穴を+5する'},
     skills: [

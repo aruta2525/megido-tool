@@ -1,7 +1,7 @@
-import {ICharacter} from '../../../interface/ICharacter';
+import {IMegido} from '../../../interface/IMegido';
 import {SkillType, Attribute, ClassType, StyleType, ClockType} from '../../../enum/MegidoType';
 
-export const So35: ICharacter[] = [
+export const So35: IMegido[] = [
   {
     clockType: ClockType.So,
     no: 35,
@@ -11,7 +11,7 @@ export const So35: ICharacter[] = [
     classType: ClassType.Sniper,
     hp: 7701,
     offense: 1152,
-    deffense: 431,
+    defense: 431,
     speed: 473,
     ability: {name: '悪魔狩り', text: '悪魔系のモンスターに2倍のダメージ'},
     skills: [
@@ -105,7 +105,7 @@ export const So35: ICharacter[] = [
     classType: ClassType.Sniper,
     hp: 6761,
     offense: 1338,
-    deffense: 465,
+    defense: 465,
     speed: 462,
     ability: {name: '正義の執行者(専用霊宝)', text: 'チェイン中、攻撃力が4%上昇する'},
     skills: [

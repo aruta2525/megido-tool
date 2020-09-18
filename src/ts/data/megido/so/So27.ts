@@ -1,7 +1,7 @@
-import {ICharacter} from '../../../interface/ICharacter';
+import {IMegido} from '../../../interface/IMegido';
 import {SkillType, Attribute, ClassType, StyleType, ClockType} from '../../../enum/MegidoType';
 
-export const So27: ICharacter[] = [
+export const So27: IMegido[] = [
   {
     clockType: ClockType.So,
     no: 27,
@@ -11,7 +11,7 @@ export const So27: ICharacter[] = [
     classType: ClassType.Fighter,
     hp: 10836,
     offense: 645,
-    deffense: 714,
+    defense: 714,
     speed: 285,
     ability: {name: '正義のヒーロー', text: 'HPが50%以下のとき、30%の確率で攻撃を無効化する'},
     skills: [

@@ -1,7 +1,7 @@
-import {ICharacter} from '../../../interface/ICharacter';
+import {IMegido} from '../../../interface/IMegido';
 import {SkillType, Attribute, ClassType, StyleType, ClockType} from '../../../enum/MegidoType';
 
-const megido: ICharacter[] = [
+const megido: IMegido[] = [
   {
     clockType: ClockType.Shin,
     no: 53,
@@ -11,7 +11,7 @@ const megido: ICharacter[] = [
     classType: ClassType.Trooper,
     hp: 7228,
     offense: 789,
-    deffense: 617,
+    defense: 617,
     speed: 504,
     ability: {name: 'アタシがハイライト！', text: '大協奏状態のとき、すべての覚醒ゲージ増加量が+1される'},
     skills: [

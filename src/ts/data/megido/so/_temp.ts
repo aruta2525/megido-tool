@@ -1,7 +1,7 @@
-import { ICharacter } from '../../../interface/ICharacter';
-import { SkillType, Attribute, ClassType, StyleType, ClockType } from '../../../enum/MegidoType';
+import {IMegido} from '../../../interface/IMegido';
+import {SkillType, Attribute, ClassType, StyleType, ClockType} from '../../../enum/MegidoType';
 
-export const So00: ICharacter[] = [];
+export const So00: IMegido[] = [];
 /*
 ,skills: [
   {

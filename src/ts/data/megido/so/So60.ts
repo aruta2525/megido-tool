@@ -1,7 +1,7 @@
-import {ICharacter} from '../../../interface/ICharacter';
+import {IMegido} from '../../../interface/IMegido';
 import {SkillType, Attribute, ClassType, StyleType, ClockType} from '../../../enum/MegidoType';
 
-export const So60: ICharacter[] = [
+export const So60: IMegido[] = [
   {
     clockType: ClockType.So,
     no: 60,
@@ -11,7 +11,7 @@ export const So60: ICharacter[] = [
     classType: ClassType.Trooper,
     hp: 5948,
     offense: 1375,
-    deffense: 409,
+    defense: 409,
     speed: 490,
     ability: {name: '一騎当千', text: '敵の数が多いほど、攻撃力が上昇する(最大20％)'},
     skills: [
@@ -87,7 +87,7 @@ export const So60: ICharacter[] = [
     classType: ClassType.Trooper,
     hp: 7826,
     offense: 953,
-    deffense: 624,
+    defense: 624,
     speed: 381,
     ability: {name: '百戦錬磨', text: '敵の数が多いほど、受けるダメージを軽減する（最大値20%）'},
     skills: [

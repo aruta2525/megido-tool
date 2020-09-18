@@ -1,7 +1,7 @@
-import {ICharacter} from '../../../interface/ICharacter';
+import {IMegido} from '../../../interface/IMegido';
 import {SkillType, Attribute, ClassType, StyleType, ClockType} from '../../../enum/MegidoType';
 
-const megido: ICharacter[] = [
+const megido: IMegido[] = [
   {
     clockType: ClockType.Shin,
     no: 15,
@@ -11,7 +11,7 @@ const megido: ICharacter[] = [
     classType: ClassType.Sniper,
     hp: 8818,
     offense: 624,
-    deffense: 646,
+    defense: 646,
     speed: 505,
     ability: {name: '功利的策略', text: '戦闘不能時、ラッシュの味方全体の点穴を＋15する'},
     skills: [
@@ -71,7 +71,7 @@ const megido: ICharacter[] = [
     classType: ClassType.Sniper,
     hp: 8986,
     offense: 815,
-    deffense: 475,
+    defense: 475,
     speed: 537,
     ability: {name: '疑似生命の培養', text: '毎ターン終了時、25%の確率で自身以外の覚醒ゲージを+1する'},
     skills: [

@@ -1,7 +1,7 @@
-import {ICharacter} from '../../../interface/ICharacter';
+import {IMegido} from '../../../interface/IMegido';
 import {SkillType, Attribute, ClassType, StyleType, ClockType} from '../../../enum/MegidoType';
 
-export const So16: ICharacter[] = [
+export const So16: IMegido[] = [
   {
     clockType: ClockType.So,
     no: 16,
@@ -11,7 +11,7 @@ export const So16: ICharacter[] = [
     classType: ClassType.Fighter,
     hp: 6210,
     offense: 1209,
-    deffense: 271,
+    defense: 271,
     speed: 693,
     ability: {name: '結婚願望', text: '男性キャラクターがパーティに居る場合、攻撃力が20%上昇する'},
     skills: [
@@ -71,7 +71,7 @@ export const So16: ICharacter[] = [
     classType: ClassType.Fighter,
     hp: 6210,
     offense: 1150,
-    deffense: 409,
+    defense: 409,
     speed: 642,
     ability: {name: '過激エンパシー', text: 'バーサーク状態の味方の数が多いほど、受けるダメージを軽減する（最大50%）'},
     skills: [

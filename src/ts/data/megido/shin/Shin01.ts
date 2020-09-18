@@ -1,7 +1,7 @@
-import {ICharacter} from '../../../interface/ICharacter';
+import {IMegido} from '../../../interface/IMegido';
 import {SkillType, Attribute, ClassType, StyleType, ClockType} from '../../../enum/MegidoType';
 
-const megido: ICharacter[] = [
+const megido: IMegido[] = [
   {
     clockType: ClockType.Shin,
     no: 1,
@@ -11,7 +11,7 @@ const megido: ICharacter[] = [
     classType: ClassType.Sniper,
     hp: 7342,
     offense: 1198,
-    deffense: 415,
+    defense: 415,
     speed: 496,
     ability: {
       name: '夢の世界の支配者',
@@ -89,7 +89,7 @@ const megido: ICharacter[] = [
     classType: ClassType.Sniper,
     hp: 6022,
     offense: 814,
-    deffense: 677,
+    defense: 677,
     speed: 533,
     ability: {name: '正邪の双翼', text: '自身の素早さが30%上昇する'},
     skills: [

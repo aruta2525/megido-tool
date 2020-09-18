@@ -1,7 +1,7 @@
-import {ICharacter} from '../../../interface/ICharacter';
+import {IMegido} from '../../../interface/IMegido';
 import {SkillType, Attribute, ClassType, StyleType, ClockType} from '../../../enum/MegidoType';
 
-export const So51: ICharacter[] = [
+export const So51: IMegido[] = [
   {
     clockType: ClockType.So,
     no: 51,
@@ -11,7 +11,7 @@ export const So51: ICharacter[] = [
     classType: ClassType.Fighter,
     hp: 5846,
     offense: 838,
-    deffense: 594,
+    defense: 594,
     speed: 676,
     ability: {name: '観察者', text: '奥義使用時、50%の確率で覚醒ゲージの消費が0になる'},
     skills: [

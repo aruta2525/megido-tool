@@ -1,7 +1,7 @@
-import {ICharacter} from '../../../interface/ICharacter';
+import {IMegido} from '../../../interface/IMegido';
 import {SkillType, Attribute, ClassType, StyleType, ClockType} from '../../../enum/MegidoType';
 
-export const So59: ICharacter[] = [
+export const So59: IMegido[] = [
   {
     clockType: ClockType.So,
     no: 59,
@@ -11,7 +11,7 @@ export const So59: ICharacter[] = [
     classType: ClassType.Sniper,
     hp: 5947,
     offense: 1191,
-    deffense: 278,
+    defense: 278,
     speed: 711,
     ability: {name: '不死の予言者', text: '次に出現するフォトンが亀裂の色でわかるようになる'},
     skills: [
@@ -71,7 +71,7 @@ export const So59: ICharacter[] = [
     classType: ClassType.Sniper,
     hp: 7486,
     offense: 750,
-    deffense: 610,
+    defense: 610,
     speed: 502,
     ability: {name: '雪華の予言者', text: '次に出現するフォトンが亀裂の色でわかるようになる'},
     skills: [

@@ -1,7 +1,7 @@
-import {ICharacter} from '../../../interface/ICharacter';
+import {IMegido} from '../../../interface/IMegido';
 import {SkillType, Attribute, ClassType, StyleType, ClockType} from '../../../enum/MegidoType';
 
-const megido: ICharacter[] = [
+const megido: IMegido[] = [
   {
     clockType: ClockType.Shin,
     no: 36,
@@ -11,7 +11,7 @@ const megido: ICharacter[] = [
     classType: ClassType.Sniper,
     hp: 5899,
     offense: 1194,
-    deffense: 417,
+    defense: 417,
     speed: 648,
     ability: {name: '出たとこ勝負！', text: 'HPが50%以下のとき、30%の確率で攻撃を無効化する'},
     skills: [
@@ -106,7 +106,7 @@ const megido: ICharacter[] = [
     classType: ClassType.Sniper,
     hp: 7452,
     offense: 615,
-    deffense: 637,
+    defense: 637,
     speed: 634,
     ability: {name: '悪魔の勝負師', text: '自身のHPが33.3%以下のとき、覚醒スキルの出目が必ず「8」になる'},
     skills: [

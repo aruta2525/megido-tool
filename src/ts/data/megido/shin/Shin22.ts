@@ -1,7 +1,7 @@
-import {ICharacter} from '../../../interface/ICharacter';
+import {IMegido} from '../../../interface/IMegido';
 import {SkillType, Attribute, ClassType, StyleType, ClockType} from '../../../enum/MegidoType';
 
-const megido: ICharacter[] = [
+const megido: IMegido[] = [
   {
     clockType: ClockType.Shin,
     no: 22,
@@ -11,7 +11,7 @@ const megido: ICharacter[] = [
     classType: ClassType.Trooper,
     hp: 7399,
     offense: 1053,
-    deffense: 490,
+    defense: 490,
     speed: 478,
     ability: {name: 'ムーンコレクター', text: '自身の覚醒ゲージが最大の50%以上のとき、敵を状態異常にした際の持続ターンが+1される'},
     skills: [
@@ -71,7 +71,7 @@ const megido: ICharacter[] = [
     classType: ClassType.Trooper,
     hp: 6797,
     offense: 1269,
-    deffense: 288,
+    defense: 288,
     speed: 617,
     ability: {name: 'デンジャラスゲーム', text: '致死ダメージを受けたとき、一度だけ踏みとどまる'},
     skills: [

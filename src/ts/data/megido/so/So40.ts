@@ -1,7 +1,7 @@
-import {ICharacter} from '../../../interface/ICharacter';
+import {IMegido} from '../../../interface/IMegido';
 import {SkillType, Attribute, ClassType, StyleType, ClockType} from '../../../enum/MegidoType';
 
-export const So40: ICharacter[] = [
+export const So40: IMegido[] = [
   {
     clockType: ClockType.So,
     no: 40,
@@ -11,7 +11,7 @@ export const So40: ICharacter[] = [
     classType: ClassType.Trooper,
     hp: 10094,
     offense: 1155,
-    deffense: 418,
+    defense: 418,
     speed: 277,
     ability: {name: '拾ったぞコラァッ！', text: '行動開始時、20%の確率でチャージが追加される'},
     skills: [
@@ -71,7 +71,7 @@ export const So40: ICharacter[] = [
     classType: ClassType.Trooper,
     hp: 9069,
     offense: 955,
-    deffense: 618,
+    defense: 618,
     speed: 282,
     ability: {name: '不屈の執念', text: '自身のHPが少ないほど、受けるダメージを軽減する（最大70%）'},
     skills: [

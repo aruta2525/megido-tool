@@ -1,7 +1,7 @@
-import {ICharacter} from '../../../interface/ICharacter';
+import {IMegido} from '../../../interface/IMegido';
 import {SkillType, Attribute, ClassType, StyleType, ClockType} from '../../../enum/MegidoType';
 
-const megido: ICharacter[] = [
+const megido: IMegido[] = [
   {
     clockType: ClockType.Shin,
     no: 57,
@@ -11,7 +11,7 @@ const megido: ICharacter[] = [
     classType: ClassType.Fighter,
     hp: 7450,
     offense: 1350,
-    deffense: 273,
+    defense: 273,
     speed: 499,
     ability: {name: '野生本能', text: '獣形態のとき、行動開始時、自身にアタックが追加される'},
     skills: [
@@ -104,7 +104,7 @@ const megido: ICharacter[] = [
     classType: ClassType.Fighter,
     hp: 8003,
     offense: 1183,
-    deffense: 387,
+    defense: 387,
     speed: 496,
     ability: {name: '', text: ''},
     skills: [

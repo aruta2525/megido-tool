@@ -1,7 +1,7 @@
-import {ICharacter} from '../../../interface/ICharacter';
+import {IMegido} from '../../../interface/IMegido';
 import {SkillType, Attribute, ClassType, StyleType, ClockType} from '../../../enum/MegidoType';
 
-const megido: ICharacter[] = [
+const megido: IMegido[] = [
   {
     clockType: ClockType.Shin,
     no: 21,
@@ -11,7 +11,7 @@ const megido: ICharacter[] = [
     classType: ClassType.Sniper,
     hp: 9551,
     offense: 446,
-    deffense: 532,
+    defense: 532,
     speed: 711,
     ability: {name: '母的本能', text: 'HPが50%以下の味方へのアーマー効果量が50%上昇する'},
     skills: [

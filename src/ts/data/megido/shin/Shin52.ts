@@ -1,7 +1,7 @@
-import {ICharacter} from '../../../interface/ICharacter';
+import {IMegido} from '../../../interface/IMegido';
 import {SkillType, Attribute, ClassType, StyleType, ClockType} from '../../../enum/MegidoType';
 
-const megido: ICharacter[] = [
+const megido: IMegido[] = [
   {
     clockType: ClockType.Shin,
     no: 52,
@@ -11,7 +11,7 @@ const megido: ICharacter[] = [
     classType: ClassType.Sniper,
     hp: 5955,
     offense: 840,
-    deffense: 494,
+    defense: 494,
     speed: 687,
     ability: {name: '自己防衛本能', text: '戦闘中、徐々に防御力が上昇する（最大値50%）'},
     skills: [
@@ -71,7 +71,7 @@ const megido: ICharacter[] = [
     classType: ClassType.Sniper,
     hp: 7004,
     offense: 1309,
-    deffense: 397,
+    defense: 397,
     speed: 514,
     ability: {name: '大いなる風の導き', text: '暴奏状態のとき、アタック、スキル、覚醒スキルの効果範囲が敵全体になる'},
     skills: [

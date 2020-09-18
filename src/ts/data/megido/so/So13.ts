@@ -1,7 +1,7 @@
-import {ICharacter} from '../../../interface/ICharacter';
+import {IMegido} from '../../../interface/IMegido';
 import {SkillType, Attribute, ClassType, StyleType, ClockType} from '../../../enum/MegidoType';
 
-export const So13: ICharacter[] = [
+export const So13: IMegido[] = [
   {
     clockType: ClockType.So,
     no: 13,
@@ -11,7 +11,7 @@ export const So13: ICharacter[] = [
     classType: ClassType.Trooper,
     hp: 5968,
     offense: 1206,
-    deffense: 411,
+    defense: 411,
     speed: 626,
     ability: {name: '憤怒の瞳(専用霊宝)', text: 'バーサーク時、毎ターン開始時にアタックフォトンを1つ追加する'},
     skills: [

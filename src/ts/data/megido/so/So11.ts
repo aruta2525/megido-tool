@@ -1,7 +1,7 @@
-import {ICharacter} from '../../../interface/ICharacter';
+import {IMegido} from '../../../interface/IMegido';
 import {SkillType, Attribute, ClassType, StyleType, ClockType} from '../../../enum/MegidoType';
 
-export const So11: ICharacter[] = [
+export const So11: IMegido[] = [
   {
     clockType: ClockType.So,
     no: 11,
@@ -11,7 +11,7 @@ export const So11: ICharacter[] = [
     classType: ClassType.Sniper,
     hp: 7727,
     offense: 857,
-    deffense: 430,
+    defense: 430,
     speed: 697,
     ability: {name: '負けず嫌い', text: 'HPが50%以下の時、攻撃力が30%上昇する'},
     skills: [
@@ -95,7 +95,7 @@ export const So11: ICharacter[] = [
     classType: ClassType.Sniper,
     hp: 8586,
     offense: 1037,
-    deffense: 430,
+    defense: 430,
     speed: 491,
     ability: {name: '褒めてもいいですよ', text: '音符が1つ以上蓄積されているとき、ターン終了時、味方単体のHPを音符1つにつき4%回復（最大値20%）'},
     skills: [

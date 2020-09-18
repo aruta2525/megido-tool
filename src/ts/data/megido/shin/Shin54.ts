@@ -1,7 +1,7 @@
-import {ICharacter} from '../../../interface/ICharacter';
+import {IMegido} from '../../../interface/IMegido';
 import {SkillType, Attribute, ClassType, StyleType, ClockType} from '../../../enum/MegidoType';
 
-const megido: ICharacter[] = [
+const megido: IMegido[] = [
   {
     clockType: ClockType.Shin,
     no: 54,
@@ -11,7 +11,7 @@ const megido: ICharacter[] = [
     classType: ClassType.Sniper,
     hp: 7286,
     offense: 1176,
-    deffense: 497,
+    defense: 497,
     speed: 414,
     ability: {name: '勇士の律動', text: '協奏状態のとき、アタック時の覚醒ゲージ増加量が+1される'},
     skills: [

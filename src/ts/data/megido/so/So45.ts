@@ -1,7 +1,7 @@
-import {ICharacter} from '../../../interface/ICharacter';
+import {IMegido} from '../../../interface/IMegido';
 import {SkillType, Attribute, ClassType, StyleType, ClockType} from '../../../enum/MegidoType';
 
-export const So45: ICharacter[] = [
+export const So45: IMegido[] = [
   {
     clockType: ClockType.So,
     no: 45,
@@ -11,7 +11,7 @@ export const So45: ICharacter[] = [
     classType: ClassType.Sniper,
     hp: 7394,
     offense: 841,
-    deffense: 416,
+    defense: 416,
     speed: 708,
     ability: {name: '慈愛の心', text: 'HPが50%以下の味方への回復量が50%上昇する'},
     skills: [
@@ -71,7 +71,7 @@ export const So45: ICharacter[] = [
     classType: ClassType.Sniper,
     hp: 7354,
     offense: 746,
-    deffense: 495,
+    defense: 495,
     speed: 647,
     ability: {name: 'お転婆姫君', text: 'HPが33.3%以下のとき、スキルの効果範囲が敵全体になる'},
     skills: [

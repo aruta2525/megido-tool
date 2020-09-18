@@ -1,7 +1,7 @@
-import {ICharacter} from '../../../interface/ICharacter';
+import {IMegido} from '../../../interface/IMegido';
 import {SkillType, Attribute, ClassType, StyleType, ClockType} from '../../../enum/MegidoType';
 
-export const So61: ICharacter[] = [
+export const So61: IMegido[] = [
   {
     clockType: ClockType.So,
     no: 61,
@@ -11,7 +11,7 @@ export const So61: ICharacter[] = [
     classType: ClassType.Fighter,
     hp: 8492,
     offense: 975,
-    deffense: 472,
+    defense: 472,
     speed: 406,
     ability: {name: 'パソドブレ', text: '15%の確率で攻撃を無効化する'},
     skills: [

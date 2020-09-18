@@ -1,7 +1,7 @@
-import {ICharacter} from '../../../interface/ICharacter';
+import {IMegido} from '../../../interface/IMegido';
 import {SkillType, Attribute, ClassType, StyleType, ClockType} from '../../../enum/MegidoType';
 
-export const So02: ICharacter[] = [
+export const So02: IMegido[] = [
   {
     clockType: ClockType.So,
     no: 2,
@@ -11,7 +11,7 @@ export const So02: ICharacter[] = [
     classType: ClassType.Sniper,
     hp: 10712,
     offense: 971,
-    deffense: 418,
+    defense: 418,
     speed: 427,
     ability: {name: '運命の導き', text: '致死ダメージを受けたとき、20%の確率で踏みとどまる'},
     skills: [
@@ -82,7 +82,7 @@ export const So02: ICharacter[] = [
     classType: ClassType.Sniper,
     hp: 6106,
     offense: 1218,
-    deffense: 394,
+    defense: 394,
     speed: 616,
     ability: {name: '運命の裁き', text: '神系のモンスターに2倍のダメージ'},
     skills: [

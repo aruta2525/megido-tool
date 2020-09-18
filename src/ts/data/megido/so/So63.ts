@@ -1,7 +1,7 @@
-import {ICharacter} from '../../../interface/ICharacter';
+import {IMegido} from '../../../interface/IMegido';
 import {SkillType, Attribute, ClassType, StyleType, ClockType} from '../../../enum/MegidoType';
 
-export const So63: ICharacter[] = [
+export const So63: IMegido[] = [
   {
     clockType: ClockType.So,
     no: 63,
@@ -11,7 +11,7 @@ export const So63: ICharacter[] = [
     classType: ClassType.Trooper,
     hp: 9109,
     offense: 849,
-    deffense: 490,
+    defense: 490,
     speed: 481,
     ability: {name: '特製プロテイン', text: '自身の防御力が30%上昇する'},
     skills: [
@@ -71,7 +71,7 @@ export const So63: ICharacter[] = [
     classType: ClassType.Trooper,
     hp: 7535,
     offense: 639,
-    deffense: 618,
+    defense: 618,
     speed: 609,
     ability: {name: '毒をもって毒を制す', text: '状態異常耐性50%上昇'},
     skills: [

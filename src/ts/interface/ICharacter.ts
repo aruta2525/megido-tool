@@ -1,8 +1,7 @@
-import { ClassType, StyleType, ClockType } from '../enum/MegidoType';
+import { ClassType, StyleType } from '../enum/MegidoType';
 import { ISkillData } from './ISkillData';
 
 export interface ICharacter {
-  clockType: ClockType;
   no: number;
   id: number;
   name: string;
@@ -10,7 +9,7 @@ export interface ICharacter {
   styleType: StyleType;
   hp?: number;
   offense: number;
-  deffense: number;
+  defense: number;
   speed?: number;
   ability?: {
     name: string;

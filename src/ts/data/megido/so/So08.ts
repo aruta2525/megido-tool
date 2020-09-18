@@ -1,7 +1,7 @@
-import {ICharacter} from '../../../interface/ICharacter';
+import {IMegido} from '../../../interface/IMegido';
 import {SkillType, Attribute, ClassType, StyleType, ClockType} from '../../../enum/MegidoType';
 
-export const So08: ICharacter[] = [
+export const So08: IMegido[] = [
   {
     clockType: ClockType.So,
     no: 8,
@@ -11,7 +11,7 @@ export const So08: ICharacter[] = [
     classType: ClassType.Sniper,
     hp: 7659,
     offense: 960,
-    deffense: 476,
+    defense: 476,
     speed: 474,
     ability: {name: '恋心をひとつまみ', text: '女性キャラクターへの回復量が30%上昇する'},
     skills: [
@@ -83,7 +83,7 @@ export const So08: ICharacter[] = [
     classType: ClassType.Sniper,
     hp: 7713,
     offense: 1226,
-    deffense: 421,
+    defense: 421,
     speed: 492,
     ability: {name: '流離いの吟遊詩人', text: '大協奏中なら自身のチャージが強化される'},
     skills: [

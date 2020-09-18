@@ -1,7 +1,7 @@
-import {ICharacter} from '../../../interface/ICharacter';
+import {IMegido} from '../../../interface/IMegido';
 import {SkillType, Attribute, ClassType, StyleType, ClockType} from '../../../enum/MegidoType';
 
-export const So19: ICharacter[] = [
+export const So19: IMegido[] = [
   {
     clockType: ClockType.So,
     no: 19,
@@ -11,7 +11,7 @@ export const So19: ICharacter[] = [
     classType: ClassType.Fighter,
     hp: 8474,
     offense: 945,
-    deffense: 490,
+    defense: 490,
     speed: 424,
     ability: {name: '後光アタック', text: '攻撃を受けたとき、10%の確率で暗闇攻撃で反撃する'},
     skills: [
@@ -71,7 +71,7 @@ export const So19: ICharacter[] = [
     classType: ClassType.Fighter,
     hp: 8330,
     offense: 881,
-    deffense: 525,
+    defense: 525,
     speed: 479,
     ability: {
       name: '仏の顔も三度まで',

@@ -1,7 +1,7 @@
-import {ICharacter} from '../../../interface/ICharacter';
+import {IMegido} from '../../../interface/IMegido';
 import {SkillType, Attribute, ClassType, StyleType, ClockType} from '../../../enum/MegidoType';
 
-export const So22: ICharacter[] = [
+export const So22: IMegido[] = [
   {
     clockType: ClockType.So,
     no: 22,
@@ -11,7 +11,7 @@ export const So22: ICharacter[] = [
     classType: ClassType.Fighter,
     hp: 9320,
     offense: 984,
-    deffense: 286,
+    defense: 286,
     speed: 646,
     ability: {name: '歴戦の兵', text: 'クエストでの獲得経験値が50％上昇する'},
     skills: [
@@ -71,7 +71,7 @@ export const So22: ICharacter[] = [
     classType: ClassType.Fighter,
     hp: 8705,
     offense: 617,
-    deffense: 630,
+    defense: 630,
     speed: 489,
     ability: {name: '闘争の探求者', text: '怒闘状態時、毎ターン開始時にアタックフォトンを1つ追加する'},
     skills: [

@@ -1,7 +1,7 @@
-import {ICharacter} from '../../../interface/ICharacter';
+import {IMegido} from '../../../interface/IMegido';
 import {SkillType, Attribute, ClassType, StyleType, ClockType} from '../../../enum/MegidoType';
 
-const megido: ICharacter[] = [
+const megido: IMegido[] = [
   {
     clockType: ClockType.Shin,
     no: 23,
@@ -11,7 +11,7 @@ const megido: ICharacter[] = [
     classType: ClassType.Sniper,
     hp: 8966,
     offense: 1098,
-    deffense: 483,
+    defense: 483,
     speed: 270,
     ability: {name: '庇護の心', text: '自身が巨大化のとき、自身の「かばう」の効果が「全域かばう」の効果になる'},
     skills: [
