@@ -399,7 +399,7 @@ function setupDifficultyLevel(name: String) {
     difficultSelect.selectpicker('val', String(index));
     const enemy = enemyList[Number(index)];
 
-    // TODO: HPや防御力を設定
+    // HPや防御力を設定
     $(`#${ids.defense}`).val(enemy.defense || '');
     $(`#${ids.hp}`).val(enemy.hp || '');
   });

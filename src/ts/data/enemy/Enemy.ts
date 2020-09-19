@@ -6,8 +6,20 @@ import ShiWoAyasumono from './kiniki/ShiWoAyasumono';
 import Beincheisaa from './kiniki/Beincheisaa';
 import Abisugaado from './kiniki/Abisugaado';
 import PorutaagaisutoHoudai from './kiniki/PorutaagaisutoHoudai';
-import PorutaagaisutoKoa from './kiniki/PorutaagaisutoKoa';
+import Porutaagaisuto from './kiniki/Porutaagaisuto';
 import Yugudorasiru from './kiniki/Yugudorasiru';
+import AsyutoretoHanasakinome from './kiniki/AsyutoretoHanasakinome';
+import AsyutoretoMe from './kiniki/AsyutoretoMe';
+import Asyutoreto from './kiniki/Asyutoreto';
+import AsyutoretoHontaikoa from './kiniki/AsyutoretoHontaikoa';
+import AsyutoretoTubasakoa from './kiniki/AsyutoretoTubasakoa';
+import Ruru from './kiniki/Ruru';
+import Osukaa from './kiniki/Osukaa';
+import Dwuumu1 from './kiniki/Dwuumu1';
+import Dwuumu2 from './kiniki/Dwuumu2';
+import Dwuumu3 from './kiniki/Dwuumu3';
+import Dwuumu4 from './kiniki/Dwuumu4';
+import Dwuumu5 from './kiniki/Dwuumu5';
 
 const noname: IEnemy = {
   stage: Stage.Chap1,
@@ -29,8 +41,20 @@ $.merge(enemyList, ShiWoAyasumono);
 $.merge(enemyList, Beincheisaa);
 $.merge(enemyList, Abisugaado);
 $.merge(enemyList, PorutaagaisutoHoudai);
-$.merge(enemyList, PorutaagaisutoKoa);
+$.merge(enemyList, Porutaagaisuto);
 $.merge(enemyList, Yugudorasiru);
+$.merge(enemyList, AsyutoretoHanasakinome);
+$.merge(enemyList, AsyutoretoMe);
+$.merge(enemyList, Asyutoreto);
+$.merge(enemyList, AsyutoretoHontaikoa);
+$.merge(enemyList, AsyutoretoTubasakoa);
+$.merge(enemyList, Ruru);
+$.merge(enemyList, Osukaa);
+$.merge(enemyList, Dwuumu1);
+$.merge(enemyList, Dwuumu2);
+$.merge(enemyList, Dwuumu3);
+$.merge(enemyList, Dwuumu4);
+$.merge(enemyList, Dwuumu5);
 //#endregion
 
 export default enemyList;
