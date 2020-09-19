@@ -470,7 +470,7 @@ function calculateDamage() {
 
   const hp = $(`#${ids.hp}`).val() as number;
   const dph = Math.round((totalMinDamage / hp) * 10000) / 100;
-  $(`#${ids.dph}`).val(`${dph.toLocaleString()}%`);
+  $(`#${ids.dph}`).val(`${dph.toLocaleString()} %`);
 
   $(`#${ids.damagePerHit}`).val(`${minDamage.toLocaleString()} ～ ${maxDamage.toLocaleString()}`);
   $(`#${ids.totalDamage}`).val(`${totalMinDamage.toLocaleString()} ～ ${totalMaxDamage.toLocaleString()}`);
