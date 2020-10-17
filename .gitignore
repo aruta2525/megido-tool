@@ -33,3 +33,6 @@ out/
 ### VS Code ###
 # .vscode/
 node_modules
+
+### local ###
+memo.txt

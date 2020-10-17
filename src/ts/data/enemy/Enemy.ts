@@ -73,7 +73,7 @@ export function matchEnemyStage(stage: Stage): IEnemy[] {
       .filter((e, i, self) => {
         return self.findIndex((s) => e.name === s.name) === i;
       }) || [];
-  console.log(list);
+  // console.log(list);
   if (list.length == 0) list.unshift(noname);
   return list;
 }

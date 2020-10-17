@@ -4,18 +4,18 @@ import {SkillType, Attribute, ClassType, StyleType, ClockType} from '../../../en
 const megido: IMegido[] = [
   {
     clockType: ClockType.Shin,
-    no: 1,
+    no: 16,
     id: 1,
-    name: '',
-    styleType: StyleType.Burst,
-    classType: ClassType.Sniper,
-    hp: 7342,
-    offense: 1198,
-    defense: 415,
-    speed: 496,
+    name: 'タナトス',
+    styleType: StyleType.Counter,
+    classType: ClassType.Trooper,
+    hp: 7120,
+    offense: 1215,
+    defense: 424,
+    speed: 458,
     ability: {
-      name: '',
-      text: ''
+      name: '死への関心',
+      text: 'HP50%以上の対象に1.5倍のダメージ'
     },
     skills: [
       {
@@ -30,34 +30,49 @@ const megido: IMegido[] = [
         ]
       },
       {
-        name: 'スキル',
+        name: 'ネクロエッジ＋',
         type: SkillType.Skill,
         levels: [
           {
             level: 1,
-            magnification: 1,
-            hit: 1
+            magnification: 0.7,
+            hit: 2
+          },
+          {
+            level: 2,
+            magnification: 0.9,
+            hit: 2
+          },
+          {
+            level: 3,
+            magnification: 1.1,
+            hit: 2
+          },
+          {
+            level: 4,
+            magnification: 1.3,
+            hit: 2
           }
         ]
       },
       {
-        name: '覚醒スキル',
+        name: 'ソウルディーリング＋',
         type: SkillType.AwakeningSkill,
         levels: [
           {
             level: 1,
-            magnification: 1,
-            hit: 1
+            magnification: 0,
+            hit: 0
           }
         ]
       },
       {
-        name: '奥義',
+        name: 'トーデストリープ＋',
         type: SkillType.Mysteries,
         levels: [
           {
             level: 1,
-            magnification: 1,
+            magnification: 5.25,
             hit: 1
           }
         ],
