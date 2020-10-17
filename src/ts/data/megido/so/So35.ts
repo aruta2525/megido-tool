@@ -107,7 +107,7 @@ export const So35: IMegido[] = [
     offense: 1338,
     defense: 465,
     speed: 462,
-    ability: {name: '正義の執行者(専用霊宝)', text: 'チェイン中、攻撃力が4%上昇する'},
+    ability: {name: '正義の執行者【専用霊宝】', text: 'チェイン中、攻撃力が4%上昇する'},
     skills: [
       {
         name: 'アタック',
@@ -196,7 +196,7 @@ export const So35: IMegido[] = [
         increment: 0.05
       },
       {
-        name: 'スターバースト＋（専用霊宝）',
+        name: 'スターバースト＋【専用霊宝】',
         type: SkillType.Mysteries,
         levels: [
           {

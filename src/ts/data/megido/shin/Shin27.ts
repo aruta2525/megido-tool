@@ -43,7 +43,7 @@ const megido: IMegido[] = [
         ]
       },
       {
-        name: 'バーニアダンス＋(専用霊宝)',
+        name: 'バーニアダンス＋【専用霊宝】',
         type: SkillType.Skill,
         levels: [
           {

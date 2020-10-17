@@ -61,7 +61,7 @@ const megido: IMegido[] = [
         increment: 0.05
       },
       {
-        name: 'ドゥルケソムニウム＋(専用霊宝)',
+        name: 'ドゥルケソムニウム＋【専用霊宝】',
         type: SkillType.Mysteries,
         levels: [
           {

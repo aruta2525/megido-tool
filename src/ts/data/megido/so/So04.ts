@@ -13,7 +13,7 @@ export const So04: IMegido[] = [
     offense: 1193,
     defense: 418,
     speed: 417,
-    ability: {name: '強襲ヒット', text: '遠距離攻撃を受けたとき、15%の確率で攻撃を無効化し、反撃する'},
+    ability: {name: '強襲ヒット【専用霊宝】', text: '自身より防御力が低い対象へのダメージが150%上昇する'},
     skills: [
       {
         name: 'アタック',

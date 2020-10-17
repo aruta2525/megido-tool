@@ -49,7 +49,7 @@ const megido: IMegido[] = [
         ]
       },
       {
-        name: 'ピウ・ブリッランテ＋(専用霊宝)',
+        name: 'ピウ・ブリッランテ＋【専用霊宝】',
         type: SkillType.AwakeningSkill,
         levels: [
           {
@@ -72,7 +72,7 @@ const megido: IMegido[] = [
         increment: 0.05
       },
       {
-        name: 'ラ・ヌッラロンド＋(専用霊宝)',
+        name: 'ラ・ヌッラロンド＋【専用霊宝】',
         type: SkillType.Mysteries,
         levels: [
           {

@@ -13,7 +13,10 @@ export const So58: IMegido[] = [
     offense: 953,
     defense: 406,
     speed: 626,
-    ability: {name: '絃結界', text: '戦闘中、徐々に素早さが上昇する（最大値50%）'},
+    ability: {
+      name: '絃結界',
+      text: '戦闘中、徐々に素早さが上昇する（最大値50%）'
+    },
     skills: [
       {
         name: 'アタック',

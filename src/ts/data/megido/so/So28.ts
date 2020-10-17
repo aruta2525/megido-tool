@@ -13,7 +13,7 @@ export const So28: IMegido[] = [
     offense: 1226,
     defense: 428,
     speed: 623,
-    ability: {name: '恥かかすなよ！', text: 'HPが50%以下のとき、攻撃力が30%上昇する'},
+    ability: {name: '恥かかすなよ！【専用霊宝】', text: 'HPが50%以下のとき、攻撃力が50%上昇する'},
     skills: [
       {
         name: 'アタック',

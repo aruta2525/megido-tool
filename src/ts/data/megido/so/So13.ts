@@ -13,7 +13,7 @@ export const So13: IMegido[] = [
     offense: 1206,
     defense: 411,
     speed: 626,
-    ability: {name: '憤怒の瞳(専用霊宝)', text: 'バーサーク時、毎ターン開始時にアタックフォトンを1つ追加する'},
+    ability: {name: '憤怒の瞳【専用霊宝】', text: 'バーサーク時、毎ターン開始時にアタックフォトンを1つ追加する'},
     skills: [
       {
         name: 'アタック',
