@@ -1,8 +1,7 @@
 import $ from 'jquery';
 import {IMegido} from '../../interface/IMegido';
-import {SkillType, Attribute, ClassType, StyleType, ClockType} from '../../enum/MegidoType';
 import {convertToStyleName} from '../../enum/MegidoType';
-
+//#region メギドimport
 import {So01} from './so/So01';
 import {So02} from './so/So02';
 import {So03} from './so/So03';
@@ -104,7 +103,7 @@ import Shin26 from './shin/Shin26';
 import Shin27 from './shin/Shin27';
 import Shin28 from './shin/Shin28';
 // import Shin29 from './shin/Shin29';
-// import Shin30 from './shin/Shin30';
+import Shin30 from './shin/Shin30';
 import Shin31 from './shin/Shin31';
 // import Shin32 from './shin/Shin32';
 import Shin33 from './shin/Shin33';
@@ -135,7 +134,7 @@ import Shin57 from './shin/Shin57';
 import Shin58 from './shin/Shin58';
 import Shin59 from './shin/Shin59';
 // import Shin60 from './shin/Shin60';
-// import Shin61 from './shin/Shin61';
+import Shin61 from './shin/Shin61';
 import Shin62 from './shin/Shin62';
 import Shin63 from './shin/Shin63';
 import Shin64 from './shin/Shin64';
@@ -147,6 +146,7 @@ import Shin69 from './shin/Shin69';
 import Shin70 from './shin/Shin70';
 import Shin71 from './shin/Shin71';
 // import Shin72 from './shin/Shin72';
+//#endregion
 
 export const MegidoList: IMegido[] = [];
 
@@ -254,7 +254,7 @@ export function joinAndSortMegidoByName(): IMegido[] {
   $.merge(megidoList, Shin27);
   $.merge(megidoList, Shin28);
   // $.merge(megidoList, Shin29);
-  // $.merge(megidoList, Shin30);
+  $.merge(megidoList, Shin30);
   $.merge(megidoList, Shin31);
   // $.merge(megidoList, Shin32);
   $.merge(megidoList, Shin33);
@@ -285,7 +285,7 @@ export function joinAndSortMegidoByName(): IMegido[] {
   $.merge(megidoList, Shin58);
   $.merge(megidoList, Shin59);
   // $.merge(megidoList, Shin60);
-  // $.merge(megidoList, Shin61);
+  $.merge(megidoList, Shin61);
   $.merge(megidoList, Shin62);
   $.merge(megidoList, Shin63);
   $.merge(megidoList, Shin64);

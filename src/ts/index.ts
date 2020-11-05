@@ -185,14 +185,14 @@ function setupSacredTreasure(selectId: string, textId: string, styleType: StyleT
   const stText = $(`#${textId}`);
   let beforeOffense = 0;
 
+  stSelect.empty();
+  // 系譜option group作成と初期化
   let genealogyGroup: {
     [GenealogyType: string]: JQuery;
   } = {};
   Object.entries(GenealogyType).forEach(([key, value]) => {
     genealogyGroup[value] = $(`<optgroup label="系譜: ${value}"></optgroup>`);
   });
-
-  stSelect.empty();
   sacredTreasureList.forEach((st, i) => {
     // 霊宝のスタイルとメギドのスタイルが一致してるなら追加
     if ((st.styleType & styleType) == styleType) {
@@ -211,6 +211,7 @@ function setupSacredTreasure(selectId: string, textId: string, styleType: StyleT
       genealogyGroup[st.type].append(`<option value="${i}" class="${background}">(${convertToGenealogySizeName(st.size)})${st.name}</option>`);
     }
   });
+  // option groupに中身があるならselectに追加
   Object.keys(genealogyGroup).forEach((key) => {
     if (genealogyGroup[key].children.length != 0) {
       stSelect.append(genealogyGroup[key]);
