@@ -1,5 +1,5 @@
-import { ClassType, StyleType } from '../enum/MegidoType';
-import { ISkillData } from './ISkillData';
+import {ClassType, StyleType} from '../enum/Megido';
+import {ISkillData} from './ISkillData';
 
 export interface ICharacter {
   no: number;

@@ -1,4 +1,4 @@
-import { SkillType, PhotonType } from '../enum/MegidoType';
+import {SkillType, PhotonType} from '../enum/Megido';
 
 /**
  * スキルタイプとフォトンタイプからダメージ補正を返します。

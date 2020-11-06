@@ -1,5 +1,5 @@
 import {IMegido} from '../../../interface/IMegido';
-import {SkillType, Attribute, ClassType, StyleType, ClockType} from '../../../enum/MegidoType';
+import {SkillType, Attribute, ClassType, StyleType, ClockType} from '../../../enum/Megido';
 
 export const So49: IMegido[] = [
   {

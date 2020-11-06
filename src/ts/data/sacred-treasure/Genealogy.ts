@@ -1,5 +1,5 @@
 import {IGenealogy} from '../../interface/ISacredTreasure';
-import {GenealogyType as Type} from '../../enum/MegidoType';
+import {GenealogyType as Type} from '../../enum/SacredTreasure';
 
 export const genealogyList: IGenealogy[] = [
   {

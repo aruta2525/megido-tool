@@ -1,6 +1,6 @@
 import $ from 'jquery';
 import {IMegido} from '../../interface/IMegido';
-import {convertToStyleName} from '../../enum/MegidoType';
+import {convertToStyleName} from '../../enum/Megido';
 //#region メギドimport
 import {So01} from './so/So01';
 import {So02} from './so/So02';

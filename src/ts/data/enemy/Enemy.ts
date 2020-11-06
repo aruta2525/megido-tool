@@ -1,25 +1,26 @@
 import $ from 'jquery';
 import {IEnemy} from '../../interface/IEnemy';
-import {ClassType, StyleType, Stage, DifficultyLevel} from '../../enum/MegidoType';
+import {ClassType, StyleType} from '../../enum/Megido';
+import {Stage, DifficultyLevel} from '../../enum/Stage';
 
-import ShiWoAyasumono from './kiniki/ShiWoAyasumono';
-import Beincheisaa from './kiniki/Beincheisaa';
-import Abisugaado from './kiniki/Abisugaado';
-import PorutaagaisutoHoudai from './kiniki/PorutaagaisutoHoudai';
-import Porutaagaisuto from './kiniki/Porutaagaisuto';
-import Yugudorasiru from './kiniki/Yugudorasiru';
-import AsyutoretoHanasakinome from './kiniki/AsyutoretoHanasakinome';
-import AsyutoretoMe from './kiniki/AsyutoretoMe';
-import Asyutoreto from './kiniki/Asyutoreto';
-import AsyutoretoHontaikoa from './kiniki/AsyutoretoHontaikoa';
-import AsyutoretoTubasakoa from './kiniki/AsyutoretoTubasakoa';
-import Ruru from './kiniki/Ruru';
-import Osukaa from './kiniki/Osukaa';
-import Dwuumu1 from './kiniki/Dwuumu1';
-import Dwuumu2 from './kiniki/Dwuumu2';
-import Dwuumu3 from './kiniki/Dwuumu3';
-import Dwuumu4 from './kiniki/Dwuumu4';
-import Dwuumu5 from './kiniki/Dwuumu5';
+import ShiWoAyasumono from './kiniki/ShiWoAyasumono/ShiWoAyasumono';
+import Beincheisaa from './kiniki/Beincheisaa/Beincheisaa';
+import Abisugaado from './kiniki/Abisugaado/Abisugaado';
+import PorutaagaisutoHoudai from './kiniki/Porutaagaisuto/PorutaagaisutoHoudai';
+import Porutaagaisuto from './kiniki/Porutaagaisuto/Porutaagaisuto';
+import Yugudorasiru from './kiniki/Yugudorasiru/Yugudorasiru';
+import AsyutoretoHanasakinome from './kiniki/Asyutoreto/AsyutoretoHanasakinome';
+import AsyutoretoMe from './kiniki/Asyutoreto/AsyutoretoMe';
+import Asyutoreto from './kiniki/Asyutoreto/Asyutoreto';
+import AsyutoretoHontaikoa from './kiniki/Asyutoreto/AsyutoretoHontaikoa';
+import AsyutoretoTubasakoa from './kiniki/Asyutoreto/AsyutoretoTubasakoa';
+import Ruru from './kiniki/Ruru/Ruru';
+import Osukaa from './kiniki/Osukaa/Osukaa';
+import Dwuumu1 from './kiniki/Dwuumu/Dwuumu1';
+import Dwuumu2 from './kiniki/Dwuumu/Dwuumu2';
+import Dwuumu3 from './kiniki/Dwuumu/Dwuumu3';
+import Dwuumu4 from './kiniki/Dwuumu/Dwuumu4';
+import Dwuumu5 from './kiniki/Dwuumu/Dwuumu5';
 
 const noname: IEnemy = {
   stage: Stage.Chap1,

@@ -1,10 +1,11 @@
-import {StyleType, GenealogyType, GenealogyRank, GenealogySize, ClockType} from '../enum/MegidoType';
+import {StyleType, ClockType} from '../enum/Megido';
+import {GenealogyType, SacredTreasureRank, SacredTreasureSize} from '../enum/SacredTreasure';
 
 // 霊宝インターフェース
 export interface ISacredTreasure {
   type: GenealogyType; // 系譜
-  rank: GenealogyRank; // ランク（金銀青
-  size: GenealogySize; // サイズ（大中小
+  rank: SacredTreasureRank; // ランク（金銀青
+  size: SacredTreasureSize; // サイズ（大中小
   styleType: StyleType; // 装備可能スタイル
   name: string; // 名前
   hp: number; // hp
@@ -16,10 +17,6 @@ export interface ISacredTreasure {
     type?: number;
     value: number; // 数値
     text: string; // 説明文
-  };
-  personal?: {
-    clockType: ClockType; // 時計タイプ（専用霊宝用）
-    megidoNo: number; // メギド番号（専用霊宝用）
   };
 }
 

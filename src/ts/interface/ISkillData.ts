@@ -1,4 +1,4 @@
-import { SkillType, Attribute } from '../enum/MegidoType';
+import {SkillType, Attribute} from '../enum/Megido';
 
 export interface ISkillLevel {
   level: number;

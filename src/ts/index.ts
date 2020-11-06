@@ -4,15 +4,18 @@ import 'bootstrap-select';
 
 import {joinAndSortMegidoByName} from './data/megido/Megido';
 import {matchEnemyStage, matchEnemyName} from './data/enemy/Enemy';
-import {sacredTreasureList} from './data/sacred-treasure/SacredTreasure';
+import {SacredTreasureList} from './data/sacred-treasure/SacredTreasure';
+import {getPersonalSacredTreasureList} from './data/sacred-treasure/PersonalSacredTreasure';
 import {genealogyList} from './data/sacred-treasure/Genealogy';
 import {ISkillData, ISkillLevel, defaultSkills} from './interface/ISkillData';
 import {getPhotonCorrection} from './util/MegidoUtil';
-import {PhotonType, StyleType, GenealogyRank, GenealogySize} from './enum/MegidoType';
-import {GenealogyType, convertToGenealogySizeName} from './enum/MegidoType';
-import {Stage, convertToStageName} from './enum/MegidoType';
-import {DifficultyLevel, convertToDifficultyLevelName} from './enum/MegidoType';
+import {PhotonType, StyleType} from './enum/Megido';
+import {SacredTreasureRank, SacredTreasureSize} from './enum/SacredTreasure';
+import {GenealogyType, convertToSacredTreasureSizeName} from './enum/SacredTreasure';
+import {Stage, convertToStageName} from './enum/Stage';
+import {DifficultyLevel, convertToDifficultyLevelName} from './enum/Stage';
 import {ISacredTreasure} from './interface/ISacredTreasure';
+import {IMegido} from './interface/IMegido';
 
 const megidoList = joinAndSortMegidoByName();
 const ids = {
@@ -52,6 +55,8 @@ const ids = {
   sacredTreasure4: 'sacredTreasure4',
   sacredTreasureText4: 'sacredTreasureText4',
   genealogy: 'genealogy',
+  personalSacredTreasure: 'personalSacredTreasure',
+  personalSacredTreasureText: 'personalSacredTreasureText',
   genealogyText: 'genealogyText',
   stage: 'stage',
   enemy: 'enemy',
@@ -75,7 +80,7 @@ $(document).ready(function () {
 
     if (megido.ability != undefined) setupAbility(megido.ability);
     setupSkills(megido.skills);
-    setupSacredTreasures(megido.styleType);
+    setupSacredTreasures(megido);
   });
   megidoSelect.trigger('change');
 
@@ -164,13 +169,89 @@ function setupLevels(levels: ISkillLevel[]) {
 
 /**
  * 全霊宝selectの設定
- * @param styleType 表示する霊宝のスタイル
+ * @param megido 表示する
  */
-function setupSacredTreasures(styleType: StyleType) {
-  setupSacredTreasure(ids.sacredTreasure1, ids.sacredTreasureText1, styleType);
-  setupSacredTreasure(ids.sacredTreasure2, ids.sacredTreasureText2, styleType);
-  setupSacredTreasure(ids.sacredTreasure3, ids.sacredTreasureText3, styleType);
-  setupSacredTreasure(ids.sacredTreasure4, ids.sacredTreasureText4, styleType);
+function setupSacredTreasures(megido: IMegido) {
+  const html1 = generateSacredTreasureOptionsHTMLString(megido.styleType);
+  setupSacredTreasure(ids.sacredTreasure1, ids.sacredTreasureText1, html1, SacredTreasureList);
+  setupSacredTreasure(ids.sacredTreasure2, ids.sacredTreasureText2, html1, SacredTreasureList);
+  setupSacredTreasure(ids.sacredTreasure3, ids.sacredTreasureText3, html1, SacredTreasureList);
+  setupSacredTreasure(ids.sacredTreasure4, ids.sacredTreasureText4, html1, SacredTreasureList);
+
+  const personalSacredTreasureList = getPersonalSacredTreasureList(megido.clockType, megido.no, megido.styleType);
+  const html2 = generatePersonalSacredTreasureOptionsHTMLString(megido);
+  setupSacredTreasure(ids.personalSacredTreasure, ids.personalSacredTreasureText, html2, personalSacredTreasureList);
+}
+
+/**
+ * 指定スタイルの霊宝のoption文字列を作成する関数です
+ *
+ * @param styleType 表示する霊宝のスタイル
+ * @return
+ */
+function generateSacredTreasureOptionsHTMLString(styleType: StyleType): string {
+  const selectDumy = $('<select></select>');
+  // 系譜option group作成と初期化
+  let genealogyGroup: {
+    [GenealogyType: string]: JQuery;
+  } = {};
+  Object.entries(GenealogyType).forEach(([key, value]) => {
+    genealogyGroup[value] = $(`<optgroup label="系譜: ${value}"></optgroup>`);
+  });
+  SacredTreasureList.forEach((st, i) => {
+    // 霊宝のスタイルとメギドのスタイルが一致してるなら追加
+    if ((st.styleType & styleType) == styleType) {
+      let background = '';
+      switch (st.rank) {
+        case SacredTreasureRank.Blue:
+          background = 'st-blue';
+          break;
+        case SacredTreasureRank.Silver:
+          background = 'st-silver';
+          break;
+        case SacredTreasureRank.Gold:
+          background = 'st-gold';
+          break;
+      }
+      genealogyGroup[st.type].append(`<option value="${i}" class="${background}">(${convertToSacredTreasureSizeName(st.size)})${st.name}</option>`);
+    }
+  });
+  // option groupに中身があるならselectに追加
+  Object.keys(genealogyGroup).forEach((key) => {
+    if (genealogyGroup[key].children.length != 0) {
+      selectDumy.append(genealogyGroup[key]);
+    }
+  });
+  return selectDumy.html();
+}
+
+/**
+ * 指定メギドの専用霊宝のoption文字列を作成する関数です
+ *
+ * @param megido 霊宝を表示するメギド
+ * @return
+ */
+function generatePersonalSacredTreasureOptionsHTMLString(megido: IMegido): string {
+  const selectDumy = $('<select></select>');
+  // 専用霊宝配列を取得
+  const personalSacredTreasureList = getPersonalSacredTreasureList(megido.clockType, megido.no, megido.styleType);
+  personalSacredTreasureList.forEach((st, i) => {
+    let background = '';
+    switch (st.rank) {
+      case SacredTreasureRank.Blue:
+        background = 'st-blue';
+        break;
+      case SacredTreasureRank.Silver:
+        background = 'st-silver';
+        break;
+      case SacredTreasureRank.Gold:
+        background = 'st-gold';
+        break;
+    }
+    selectDumy.append(`<option value="${i}" class="${background}">(${convertToSacredTreasureSizeName(st.size)})${st.name}</option>`);
+  });
+
+  return selectDumy.html();
 }
 
 /**
@@ -180,43 +261,13 @@ function setupSacredTreasures(styleType: StyleType) {
  * @param textId divのID
  * @param styleType 表示する霊宝のスタイル
  */
-function setupSacredTreasure(selectId: string, textId: string, styleType: StyleType) {
+function setupSacredTreasure(selectId: string, textId: string, html: string, sacredTreasureList: ISacredTreasure[]) {
   const stSelect = $(`#${selectId}`);
   const stText = $(`#${textId}`);
   let beforeOffense = 0;
 
   stSelect.empty();
-  // 系譜option group作成と初期化
-  let genealogyGroup: {
-    [GenealogyType: string]: JQuery;
-  } = {};
-  Object.entries(GenealogyType).forEach(([key, value]) => {
-    genealogyGroup[value] = $(`<optgroup label="系譜: ${value}"></optgroup>`);
-  });
-  sacredTreasureList.forEach((st, i) => {
-    // 霊宝のスタイルとメギドのスタイルが一致してるなら追加
-    if ((st.styleType & styleType) == styleType) {
-      let background = '';
-      switch (st.rank) {
-        case GenealogyRank.Blue:
-          background = 'st-blue';
-          break;
-        case GenealogyRank.Silver:
-          background = 'st-silver';
-          break;
-        case GenealogyRank.Gold:
-          background = 'st-gold';
-          break;
-      }
-      genealogyGroup[st.type].append(`<option value="${i}" class="${background}">(${convertToGenealogySizeName(st.size)})${st.name}</option>`);
-    }
-  });
-  // option groupに中身があるならselectに追加
-  Object.keys(genealogyGroup).forEach((key) => {
-    if (genealogyGroup[key].children.length != 0) {
-      stSelect.append(genealogyGroup[key]);
-    }
-  });
+  stSelect.html(html);
   stSelect.selectpicker('render').selectpicker('refresh');
 
   stSelect.off('change');
@@ -274,13 +325,13 @@ function calculateGenealogy() {
     .filter((st) => st.type === type)
     .forEach((st) => {
       switch (st.size) {
-        case GenealogySize.Big:
+        case SacredTreasureSize.Big:
           point += 15;
           break;
-        case GenealogySize.Medium:
+        case SacredTreasureSize.Medium:
           point += 10;
           break;
-        case GenealogySize.Small:
+        case SacredTreasureSize.Small:
           point += 5;
           break;
       }
@@ -301,7 +352,7 @@ function calculateGenealogy() {
 function getSelectedSacredTreasure(selectId: string): ISacredTreasure {
   const stSelect = $(`#${selectId}`);
   const index = stSelect.val();
-  const st = sacredTreasureList[Number(index)];
+  const st = SacredTreasureList[Number(index)];
 
   return st;
 }

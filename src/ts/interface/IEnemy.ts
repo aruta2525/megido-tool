@@ -1,5 +1,5 @@
 import {ICharacter} from './ICharacter';
-import {Stage, DifficultyLevel} from '../enum/MegidoType';
+import {Stage, DifficultyLevel} from '../enum/Stage';
 
 export interface IEnemy extends ICharacter {
   stage: Stage;
