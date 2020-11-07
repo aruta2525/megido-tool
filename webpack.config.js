@@ -6,12 +6,15 @@ module.exports = {
   mode: 'development',
   devtool: 'cheap-source-map',
   // メインとなるJavaScriptファイル（エントリーポイント）
-  entry: './src/ts/index.ts',
+  entry: {
+    calcDamage: './src/ts/calcDamage.ts',
+    hBomb: './src/ts/hBomb.ts'
+  },
   output: {
     //  出力ファイルのディレクトリ名
     path: `${__dirname}/dist`,
     // 出力ファイル名
-    filename: 'main.min.js'
+    filename: '[name].min.js'
   },
   module: {
     rules: [

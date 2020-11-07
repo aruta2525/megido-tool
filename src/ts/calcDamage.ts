@@ -178,6 +178,7 @@ function setupSacredTreasures(megido: IMegido) {
   setupSacredTreasure(ids.sacredTreasure3, ids.sacredTreasureText3, html1, SacredTreasureList);
   setupSacredTreasure(ids.sacredTreasure4, ids.sacredTreasureText4, html1, SacredTreasureList);
 
+  // 専用霊宝欄
   const personalSacredTreasureList = getPersonalSacredTreasureList(megido.clockType, megido.no, megido.styleType);
   const html2 = generatePersonalSacredTreasureOptionsHTMLString(megido);
   setupSacredTreasure(ids.personalSacredTreasure, ids.personalSacredTreasureText, html2, personalSacredTreasureList);
