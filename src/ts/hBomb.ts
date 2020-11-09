@@ -1,6 +1,6 @@
 import $ from 'jquery';
 import 'bootstrap';
-import 'bootstrap-select';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 const ids = {
   hp: 'hp',

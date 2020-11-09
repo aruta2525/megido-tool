@@ -4,32 +4,28 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="Cache-Control" content="no-cache" />
-    <!-- CSS only -->
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
-      integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
-      crossorigin="anonymous"
-    />
-    <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/css/bootstrap-select.min.css" />
 
-    <!-- test -->
     <script src="../dist/hBomb.min.js" type="module"></script>
     <link rel="stylesheet" href="../dist/css/index.css" />
-    <title>Hボム ダメージ計算ツール</title>
+    <title>錬ボム ダメージ計算ツール</title>
   </head>
   <body>
     <div class="container-md container-wrap pt-2">
-      <div class="row mb-2 align-items-end">
-        <div class="flex col-10 align-items-end">
-          <h3>Hボム ダメージ計算ツール</h3>
-          <span>v0.1.0</span>
+      <div class="row mb-2 d-flex align-items-end">
+        <div class="flex col-8 align-items-end">
+          <span class="title">錬ボム ダメージ計算ツール</span>
+          <span class="version">v1.0.0</span>
         </div>
 
         <div class="col-2">
-          <span class="flex-end presented-by">presented by </span>
-          <a href="https://twitter.com/aruta2525" class="flex-end presented-by">aruta2525</a>
+          <button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#helpModal">
+            ヘルプ
+          </button>
+        </div>
+
+        <div class="col-2 presented-by">
+          <span>presented by </span>
+          <span><a href="https://twitter.com/aruta2525">aruta</a>.</span>
         </div>
       </div>
 
@@ -56,7 +52,7 @@
               <input type="checkbox" class="form-check-input" name="checkbox" id="lvCheckbox" value="lv" title="逆引き時固定" checked />
               <label for="lvCheckbox" class="form-check-label">錬ボム付与者Lv</label>
             </div>
-            <div class="col-2">
+            <div class="col-3">
               <input type="number" class="form-control" id="lv" min="1" max="70" step="1" />
             </div>
           </div>
@@ -83,7 +79,7 @@
               <input type="checkbox" class="form-check-input" name="checkbox" id="quantityCheckbox" value="quantity" title="逆引き時固定" checked />
               <label for="quantityCheckbox" class="form-check-label">素材ボム数</label>
             </div>
-            <div class="col-2">
+            <div class="col-3">
               <input type="number" class="form-control" id="quantity" min="1" max="100" step="1" />
             </div>
           </div>
@@ -110,9 +106,9 @@
           <div class="form-group px-2 mb-1 row d-flex align-items-center">
             <div class="form-check col-3 ml-1">
               <input type="checkbox" class="form-check-input" name="checkbox" id="magnificationCheckbox" value="magnification" title="逆引き時固定" checked />
-              <label for="magnificationCheckbox" class="form-check-label">Hボム倍率</label>
+              <label for="magnificationCheckbox" class="form-check-label">錬ボム倍率</label>
             </div>
-            <div class="col-2">
+            <div class="col-3">
               <input type="number" class="form-control" id="magnification" min="0.1" max="50" step="0.1" />
             </div>
           </div>
@@ -136,7 +132,7 @@
               <input type="checkbox" class="form-check-input" name="checkbox" id="synchroCheckbox" value="synchro" title="逆引き時固定" checked />
               <label for="synchroCheckbox" class="form-check-label">同時爆破補正</label>
             </div>
-            <div class="col-2">
+            <div class="col-3">
               <input type="number" class="form-control" id="synchro" min="1.1" max="2.5" step="0.1" />
             </div>
           </div>
@@ -158,16 +154,20 @@
               <input type="checkbox" class="form-check-input" name="checkbox" id="revisionDamageCheckbox" value="revisionDamage" title="逆引き時固定" checked />
               <label for="revisionDamageCheckbox" class="form-check-label">ダメージ補正</label>
             </div>
-            <div class="col-2">
-              <input type="number" class="form-control" id="revisionDamage" min="0" max="80" step="40" />
+            <div class="col-3">
+              <input type="number" class="form-control" id="revisionDamage" min="0" max="380" step="10" />
             </div>
           </div>
 
-          <input type="range" id="revisionDamageRange" class="form-control-range" min="0" max="80" step="40" list="revisionDamageList" />
+          <input type="range" id="revisionDamageRange" class="form-control-range" min="0" max="380" step="10" list="revisionDamageList" />
           <datalist id="revisionDamageList">
             <option value="0"></option>
             <option value="40"></option>
             <option value="80"></option>
+            <option value="200"></option>
+            <option value="240"></option>
+            <option value="280"></option>
+            <option value="380"></option>
           </datalist>
         </div>
       </div>
@@ -177,6 +177,45 @@
           <label for="damage" class="col-12">ダメージ</label>
           <input type="tel" id="damage" class="form-control col-8 ml-2" style="text-align: center;" readonly />
           <button id="reverse" class="btn btn-primary col-3 ml-3">逆引き</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="helpModal" tabindex="-1" role="dialog" aria-labelledby="modalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content" role="document">
+          <div class="modal-header">
+            <h5 class="modal-title" id="modalLabel">ヘルプ</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+
+          <div class="modal-body">
+            <div class="help-subtitle">◆項目説明</div>
+            <ul>
+              <li>敵HP： 敵のHP</li>
+              <li>敵防御力： 敵の防御力</li>
+              <li>防御デバフ： 敵にかかっている防御力デバフ。複数かかってる場合は積算。単位は％</li>
+              <li>錬ボム付与者Lv： 現在の錬ボムを最後に付与したメギドのLv</li>
+              <li>素材ボム数： 素材に使った速、重、錬の合計数。最後に練った分も含む</li>
+              <li>錬ボム倍率： 錬ボムの倍率</li>
+              <li>同時爆破補正： 「1 + 0.1 × 【同ターンに爆発するボムの数】」。最大値は5体に3個ずつなので2.5</li>
+              <li>
+                ダメージ補正： ヒュトギンの奥義やシトリー（ラッシュ）の覚醒スキル（専用霊宝）によるHボムのダメージ上昇効果 ＆
+                ジャガーノート等の被ダメ上昇効果。複数ある場合は加算。単位は％。
+              </li>
+            </ul>
+            <div class="help-subtitle">◆逆引き機能の使い方</div>
+            <ol>
+              <li>敵HPや防御力を入力します。 ※HPは必須</li>
+              <li>自動で算出させたい項目の左端にあるチェックを外す</li>
+              <li>右下の逆引きボタンを押す</li>
+              <li>敵HPを上回るようにチェックを外した項目が算出されます</li>
+            </ol>
+            <div>※算出は一定刻みで加算しているだけなので、最適解ではありません</div>
+          </div>
         </div>
       </div>
     </div>

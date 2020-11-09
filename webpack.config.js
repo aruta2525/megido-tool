@@ -23,6 +23,15 @@ module.exports = {
         test: /\.ts$/,
         // TypeScript をコンパイルする
         use: 'ts-loader'
+      },
+      {
+        test: /\.css$/,
+        use: [
+          // スタイルシートをJSからlinkタグに展開する機能
+          'style-loader',
+          // CSSをバンドルするための機能
+          'css-loader'
+        ]
       }
     ]
   },
