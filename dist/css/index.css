@@ -33,6 +33,16 @@ body::-webkit-scrollbar {
   display: none;
 }
 
+input[type='tel'],
+input[type='number'] {
+  text-align: right;
+}
+
+input[type='number']::-webkit-outer-spin-button,
+input[type='number']::-webkit-inner-spin-button {
+  margin-left: 4px;
+}
+
 input:-moz-read-only {
   background-color: white !important;
 }
@@ -116,6 +126,7 @@ input:read-only {
 }
 
 .damage-row input {
+  text-align: center;
   background-color: white !important;
 }
 
@@ -172,6 +183,10 @@ img.plus {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
-  font-size: 0.7rem !important;
-  line-height: 0.9rem !important;
+  font-size: 0.7rem;
+  line-height: 1rem;
+}
+
+.presented-by a {
+  font-size: 1rem;
 }

@@ -18,7 +18,7 @@
         </div>
 
         <div class="col-2">
-          <button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#helpModal">
+          <button type="button" class="btn btn-info btn-sm" data-toggle="modal" data-target="#helpModal">
             ヘルプ
           </button>
         </div>
@@ -175,8 +175,12 @@
       <div class="row border-left border-right border-bottompx-0 damage-row">
         <div class="form-row col-12 px-2 mb-4">
           <label for="damage" class="col-12">ダメージ</label>
-          <input type="tel" id="damage" class="form-control col-8 ml-2" style="text-align: center;" readonly />
-          <button id="reverse" class="btn btn-primary col-3 ml-3">逆引き</button>
+          <div class="col-8">
+            <input type="tel" id="damage" class="form-control ml-2" readonly />
+          </div>
+          <div class="col-4">
+            <button id="reverse" class="btn btn-primary" style="width: 100%;">逆引き</button>
+          </div>
         </div>
       </div>
     </div>
@@ -212,9 +216,9 @@
               <li>敵HPや防御力を入力します。 ※HPは必須</li>
               <li>自動で算出させたい項目の左端にあるチェックを外す</li>
               <li>右下の逆引きボタンを押す</li>
-              <li>敵HPを上回るようにチェックを外した項目が算出されます</li>
+              <li>ダメージが敵HPを上回るように、チェックを外した項目が算出されます</li>
             </ol>
-            <div>※算出は一定刻みで加算しているだけなので、最適解ではありません</div>
+            <div>※算出は現在値に一定値を加算しているだけなので、最適解ではありません</div>
           </div>
         </div>
       </div>
