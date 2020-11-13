@@ -504,10 +504,10 @@ function calculateDamage() {
   const specialEfficacy3 = Number($(`#${ids.specialEfficacy3}`).val()) / 100 + 1;
   const additionalDamage = Number($(`#${ids.additionalDamage}`).val());
   const offensiveDebuff = 1 - Number($(`#${ids.offensiveDebuff}`).val()) / 100;
-  const defensiveBuff = Number($(`#${ids.defensiveBuff}`).val()) / 100;
+  const defensiveBuff = Number($(`#${ids.defensiveBuff}`).val()) / 100 + 1;
   const hit = Number($(`#${ids.hit}`).val());
 
-  const damage =
+  let damage =
     (offense * offensiveBuff * offensiveDebuff * magnification - defense * defensiveBuff * defensiveDebuff * ignoreDefense) *
     photonCorrection *
     classCorrection *
@@ -518,6 +518,7 @@ function calculateDamage() {
     specialEfficacy1 *
     specialEfficacy2 *
     specialEfficacy3;
+  damage = damage < 1 ? 1 : damage;
   const minDamage = Math.round(damage * 0.95) + additionalDamage;
   const maxDamage = Math.round(damage * 1.05) + additionalDamage;
   const totalMinDamage = minDamage * hit;
