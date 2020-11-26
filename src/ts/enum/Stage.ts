@@ -29,7 +29,8 @@ export const Stage = {
   Chap6: '6',
   Chap7: '7',
   Chap8: '8',
-  Kiniki: '100'
+  Kiniki: '100',
+  Shinshinken: '200'
 } as const;
 export type Stage = typeof Stage[keyof typeof Stage];
 export function convertToStageName(size: Stage): string {
@@ -52,6 +53,8 @@ export function convertToStageName(size: Stage): string {
       return '8章';
     case Stage.Kiniki:
       return '星間の禁域';
+    case Stage.Shinshinken:
+      return '心深圏';
     default:
       return 'なし';
   }

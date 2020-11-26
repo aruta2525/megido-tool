@@ -21,6 +21,10 @@ import Dwuumu2 from './kiniki/Dwuumu/Dwuumu2';
 import Dwuumu3 from './kiniki/Dwuumu/Dwuumu3';
 import Dwuumu4 from './kiniki/Dwuumu/Dwuumu4';
 import Dwuumu5 from './kiniki/Dwuumu/Dwuumu5';
+import Orochi from './kiniki/Orochi/Orochi';
+import Jaganoto from './kiniki/Jaganoto/Jaganoto';
+
+import Zabunbun from './shinshinken/kyotai/Zabunbun';
 
 const noname: IEnemy = {
   stage: Stage.Chap1,
@@ -56,6 +60,10 @@ $.merge(enemyList, Dwuumu2);
 $.merge(enemyList, Dwuumu3);
 $.merge(enemyList, Dwuumu4);
 $.merge(enemyList, Dwuumu5);
+$.merge(enemyList, Orochi);
+$.merge(enemyList, Jaganoto);
+
+$.merge(enemyList, Zabunbun);
 //#endregion
 
 export default enemyList;
