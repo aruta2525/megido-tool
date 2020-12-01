@@ -34,6 +34,7 @@ const ids = {
   photon: 'photon',
   classCorrection: 'classCorrection',
   freeze: 'freeze',
+  zombie: 'zombie',
   defense: 'defense',
   ignoreDefense: 'ignoreDefense',
   defensiveDebuff: 'defensiveDebuff',
@@ -493,6 +494,7 @@ function calculateDamage() {
   const photonCorrection = getPhotonCorrection(nowSkill.type, photonType);
   const classCorrection = Number($(`#${ids.classCorrection}`).val());
   const freeze = $(`#${ids.freeze}`).prop('checked') ? 2 : 1;
+  const zombie = $(`#${ids.zombie}`).prop('checked') ? 1.25 : 1;
   const defense = Number($(`#${ids.defense}`).val());
   const ignoreDefense = 1 - Number($(`#${ids.ignoreDefense}`).val()) / 100;
   const defensiveDebuff = 1 - Number($(`#${ids.defensiveDebuff}`).val()) / 100;
@@ -508,7 +510,7 @@ function calculateDamage() {
   const hit = Number($(`#${ids.hit}`).val());
 
   let damage =
-    (offense * offensiveBuff * offensiveDebuff * magnification - defense * defensiveBuff * defensiveDebuff * ignoreDefense) *
+    (offense * zombie * offensiveBuff * offensiveDebuff * magnification - defense * defensiveBuff * defensiveDebuff * ignoreDefense) *
     photonCorrection *
     classCorrection *
     attribute *

@@ -6,17 +6,23 @@
     <meta http-equiv="Cache-Control" content="no-cache" />
     <script src="../dist/calcDamage.min.js" type="module"></script>
     <link rel="stylesheet" href="../dist/css/index.css" />
-    <title>メギド72 ダメージ計算ツール</title>
+    <title>メギド72 スキルダメージ計算ツール</title>
   </head>
   <body>
     <div class="container-md container-wrap pt-2">
       <div class="row mb-2 align-items-end">
-        <div class="flex col-10 align-items-end">
-          <span class="title">メギド72 ダメージ計算ツール</span>
-          <span class="version">v0.5.5</span>
+        <div class="flex col-7 col-sm-8 align-items-end">
+          <span class="title">スキルダメージ計算ツール</span>
+          <span class="version">v0.6.0</span>
         </div>
 
-        <div class="col-2 presented-by">
+        <div class="col-2 col-sm-2">
+          <button type="button" class="btn btn-info btn-sm" data-toggle="modal" data-target="#helpModal">
+            ヘルプ
+          </button>
+        </div>
+
+        <div class="col-3 col-sm-2 presented-by">
           <span>presented by </span>
           <span><a href="https://twitter.com/aruta2525">aruta</a>.</span>
         </div>
@@ -176,7 +182,7 @@
 
       <!-- フォトン行 -->
       <div class="row border-left border-right align-items-center">
-        <div class="form-group col-sm-4 col-4 px-2">
+        <div class="form-group col-sm-3 col-3 px-2">
           <label for="photon">フォトン</label>
           <select title="" id="photon" class="selectpicker" data-width="100%">
             <option value="0">通常</option>
@@ -184,7 +190,7 @@
             <option value="2">劣化</option>
           </select>
         </div>
-        <div class="form-group col-sm-4 col-4 px-2">
+        <div class="form-group col-sm-3 col-3 px-2">
           <label for="classCorrection">クラス補正</label>
           <select title="" id="classCorrection" class="selectpicker" data-width="100%">
             <option value="1">1</option>
@@ -193,11 +199,20 @@
           </select>
         </div>
 
-        <div class="form-group col-sm-4 col-4 px-2">
+        <div class="form-group col-sm-3 col-3 px-2">
           <div class="form-check">
             <input class="form-check-input" type="checkbox" value="" id="freeze" />
             <label for="freeze" class="form-check-label">
               凍結
+            </label>
+          </div>
+        </div>
+
+        <div class="form-group col-sm-3 col-3 px-2">
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="zombie" />
+            <label for="zombie" class="form-check-label">
+              ゾンビ
             </label>
           </div>
         </div>
@@ -230,7 +245,7 @@
           <input type="tel" id="ignoreDefense" class="form-control" />
         </div>
         <div class="form-group col-4 px-2">
-          <label for="defensiveDebuff">防御デバフ[%]</label>
+          <label for="defensiveDebuff">敵防御デバフ[%]</label>
           <input type="tel" id="defensiveDebuff" class="form-control" />
         </div>
       </div>
@@ -275,18 +290,18 @@
           <input type="tel" id="offensiveDebuff" class="form-control" />
         </div>
         <div class="form-group col-4 px-2">
-          <label for="defensiveBuff">防御バフ[%]</label>
+          <label for="defensiveBuff">敵防御バフ[%]</label>
           <input type="tel" id="defensiveBuff" class="form-control" />
         </div>
       </div>
 
       <div class="row border-left border-right border-bottompx-0 damage-row">
         <div class="form-group col-6 px-2 collapse multi-damage mb-0">
-          <label for="hp">HP</label>
+          <label for="hp">敵HP</label>
           <input type="tel" id="hp" class="form-control mb-2" />
         </div>
         <div class="form-group col-6 px-2 collapse multi-damage mb-0">
-          <label for="dph">総ダメージ下限 / HP</label>
+          <label for="dph">総ダメージ下限 / 敵HP</label>
           <input type="tel" id="dph" class="form-control mb-2" readonly />
         </div>
         <div class="form-group col-6 px-2">
@@ -305,6 +320,72 @@
             <img src="../dist/img/plus.png" class="plus" />
           </button>
           <input type="tel" id="totalDamage" class="form-control" readonly />
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="helpModal" tabindex="-1" role="dialog" aria-labelledby="modalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content" role="document">
+          <div class="modal-header">
+            <h5 class="modal-title" id="modalLabel">ヘルプ</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+
+          <div class="modal-body">
+            <div class="help-subtitle">◆項目説明</div>
+            <ul>
+              <li>メギド：メギド選択欄。入力欄に文字を打つ事で絞り込みが可能。攻撃力や特性、スキル等が変化する</li>
+              <li>攻撃バフ： メギドの攻撃力バフ入力欄。複数付与されている場合は加算。心深圏のコンディションによる攻撃バフはここ。単位は％</li>
+              <li>特性： メギドの特性表示欄。この数値はバフや特攻に適応されていないので、自身で適所に入力してください</li>
+              <li>
+                霊宝：
+                霊宝選択欄。装備可能な霊宝が選択肢に現れます。霊宝のランクによって背景色が異なります。攻撃力は自動で加算。特性はメギドの特性同様に自動では適応されません。
+              </li>
+              <li>系譜： 系譜表示欄。装備した霊宝により系譜発動条件を満たすと表示されます。こちらも霊宝同様に特性は自動では適応されません</li>
+              <li>専用霊宝： 専用霊宝選択欄。詳細は霊宝と同じです</li>
+              <li>
+                技： 技選択欄。メギドのスキルが表示されます。選択した技に応じて倍率やHit数が変化します。スキルLvや奥義の場合は該当選択欄が有効になります。
+              </li>
+              <li>
+                スキルLv： スキルLv又はチェイン数選択欄。技選択欄で選んだ技にスキルLv、もしくはチェインがある場合は有効になります。Lvに応じで倍率が変化します。
+              </li>
+              <li>奥義Lv： 奥義Lv選択欄。技選択欄で奥義を選んだ場合に有効になります。Lvに応じて倍率が変化します</li>
+              <li>倍率： 技倍率入力欄。技、スキルLv、奥義Lvに応じて変化します</li>
+              <li>ファトン： フォトン選択欄</li>
+              <li>クラス補正： クラス補正選択欄。ファイターorスナイパーが前列を攻撃するなら1.25。トルーパーが後列を攻撃するなら1.5</li>
+              <li>凍結： 凍結チェック欄。敵が凍結状態ならチェック</li>
+              <li>ゾンビ： ゾンビチェック欄。メギドがゾンビ状態ならチェック</li>
+              <li>エリア： 敵の出現エリア選択欄。選択したい敵の居るエリアを選びます。v0.6.0現在は星間の禁域の一部の敵のみ実装してます</li>
+              <li>敵の名前： 敵選択欄。選択したエリアに属する敵が選択肢に表示されます</li>
+              <li>難易度： 難易度選択欄。選択した敵に難易度がある場合は有効になります。難易度に応じて敵HPと敵防御力に数値が入ります</li>
+              <li>敵防御力： 敵防御力入力欄</li>
+              <li>防御無視： 防御無視率入力欄。単位は％</li>
+              <li>敵防御デバフ： 敵防御力デバフ入力欄。複数付与されている場合は積算。単位は％</li>
+              <li>
+                属性補正：
+                属性補正入力欄。地形によるダメージ増加。ポルターガイストの特性「火ダメージを受けた際、被ダメージが2倍になる」、グリマルキンの覚醒スキル等の被ダメ上昇効果はここに該当します。複数ある場合は加算。単位は％。
+              </li>
+              <li>種族特攻： 種族特攻入力欄。複数ある場合は加算。別種族特攻であっても積算にはならない。単位は％</li>
+              <li>状態異常特攻： 状態異常特攻入力欄。複数ある場合は加算。別状態異常特攻であっても積算にはならない。単位は％</li>
+              <li>
+                特攻・補正１～３：
+                その他特攻・ダメージ補正入力欄。ダメージ補正は火・雷ダメージ上昇、単体・連続・列ダメージ上昇。そして軽減系です。軽減にする場合は、-（半角ハイフン）をつけてください。単位は％。※複数付与されている場合の加算積算の関係は不明です。単体・連続は加算の関係らしい。
+              </li>
+              <li>追加ダメージ： 追加ダメージ入力欄。1hitあたりの追加ダメージを入力してください</li>
+              <li>攻撃デバフ： 攻撃力デバフ入力欄。複数付与されている場合は積算。単位は％</li>
+              <li>敵防御バフ： 敵防御力バフ入力欄。複数付与されている場合は加算。単位は％</li>
+              <li>敵HP： 敵HP入力欄。</li>
+              <li>
+                総ダメージ下限 / 敵HP： 総ダメージの最低ダメージを敵HPで割った値です。最低何％削れるかを見れます。100%を超えれば乱数に依らず確定で倒せます。
+              </li>
+              <li>ダメージ / Hit： 1Hitあたりのダメージです。±5%の振れ幅があります。</li>
+              <li>総ダメージ： Hit数分の合計ダメージです。</li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>
