@@ -6,6 +6,10 @@
   .title {
     font-size: 1.2rem;
   }
+
+  .help-btn {
+    font-size: 0.9;
+  }
 }
 
 @media screen and (min-width: 575.99px) {
@@ -14,12 +18,24 @@
   }
 }
 
+.title-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: flex-end;
+}
+
+.title {
+  align-self: flex-start;
+}
+
 .help-subtitle {
   font-size: 1.1rem;
 }
 
 .version {
   margin-left: 4px;
+  line-height: 1rem;
 }
 
 body {
