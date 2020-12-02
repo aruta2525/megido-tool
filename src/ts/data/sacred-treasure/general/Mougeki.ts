@@ -6,18 +6,6 @@ import {GenealogyType as Type} from '../../../enum/SacredTreasure';
 
 const sacredTreasureList: ISacredTreasure[] = [
   {
-    name: 'なし',
-    styleType: StyleType.All,
-    rank: Rank.Blue,
-    size: Size.Small,
-    hp: 0,
-    offense: 0,
-    defense: 0,
-    speed: 0,
-    type: Type.None,
-    ability: {value: 0, text: ''}
-  },
-  {
     name: 'コールドエッジ',
     styleType: StyleType.Rush,
     rank: Rank.Blue,

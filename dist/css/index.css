@@ -157,16 +157,16 @@ input:read-only {
   background-color: white !important;
 }
 
-.st-blue {
-  background-color: #bae9ff;
+.dropdown-item:not(.active).st-blue {
+  background-color: #bae9ff !important;
 }
 
-.st-silver {
-  background-color: #dbdada;
+.dropdown-item:not(.active).st-silver {
+  background-color: #dbdada !important;
 }
 
-.st-gold {
-  background-color: #fff6a2;
+.dropdown-item:not(.active).st-gold {
+  background-color: #fff6a2 !important;
 }
 
 button.collapse-btn {

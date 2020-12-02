@@ -137,16 +137,18 @@ input:read-only {
   }
 }
 
-.st-blue {
-  background-color: rgb(186, 233, 255);
-}
+.dropdown-item:not(.active) {
+  &.st-blue {
+    background-color: rgb(186, 233, 255) !important;
+  }
 
-.st-silver {
-  background-color: rgb(219, 218, 218);
-}
+  &.st-silver {
+    background-color: rgb(219, 218, 218) !important;
+  }
 
-.st-gold {
-  background-color: rgb(255, 246, 162);
+  &.st-gold {
+    background-color: rgb(255, 246, 162) !important;
+  }
 }
 
 button.collapse-btn {
