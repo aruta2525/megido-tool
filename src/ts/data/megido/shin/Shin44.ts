@@ -6,7 +6,7 @@ const megido: IMegido[] = [
     clockType: ClockType.Shin,
     no: 44,
     id: 1,
-    name: '',
+    name: 'タムス',
     styleType: StyleType.Burst,
     classType: ClassType.Fighter,
     hp: 7970,
