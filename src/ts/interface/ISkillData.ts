@@ -19,7 +19,7 @@ export interface ISkillData {
 export const defaultSkills = [
   {
     name: 'アタック',
-    type: SkillType.Atack,
+    type: SkillType.Attack,
     levels: [
       {
         level: 1,

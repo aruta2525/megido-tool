@@ -17,7 +17,7 @@ export const So68: IMegido[] = [
     skills: [
       {
         name: 'アタック',
-        type: SkillType.Atack,
+        type: SkillType.Attack,
         levels: [
           {
             level: 1,
@@ -88,7 +88,7 @@ export const So68: IMegido[] = [
     skills: [
       {
         name: 'アタック',
-        type: SkillType.Atack,
+        type: SkillType.Attack,
         levels: [
           {
             level: 1,

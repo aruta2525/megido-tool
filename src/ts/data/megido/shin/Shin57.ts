@@ -17,7 +17,7 @@ const megido: IMegido[] = [
     skills: [
       {
         name: 'アタック',
-        type: SkillType.Atack,
+        type: SkillType.Attack,
         levels: [
           {
             level: 1,
@@ -28,7 +28,7 @@ const megido: IMegido[] = [
       },
       {
         name: 'アタック(獣形態)',
-        type: SkillType.Atack,
+        type: SkillType.Attack,
         levels: [
           {
             level: 1,
@@ -110,7 +110,7 @@ const megido: IMegido[] = [
     skills: [
       {
         name: 'アタック',
-        type: SkillType.Atack,
+        type: SkillType.Attack,
         levels: [
           {
             level: 1,
@@ -121,7 +121,7 @@ const megido: IMegido[] = [
       },
       {
         name: 'アタック(獣形態)',
-        type: SkillType.Atack,
+        type: SkillType.Attack,
         levels: [
           {
             level: 1,

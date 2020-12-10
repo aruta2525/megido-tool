@@ -12,7 +12,7 @@ export function getPhotonCorrection(skillType: SkillType, photonType: PhotonType
       value = 1;
       break;
     case PhotonType.Strengthening:
-      value = skillType == SkillType.Atack ? 2 : 1.5;
+      value = skillType == SkillType.Attack ? 2 : 1.5;
       break;
     case PhotonType.Deterioration:
       value = 0.5;

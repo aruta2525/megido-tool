@@ -27,7 +27,7 @@ const sacredTreasureList: ISacredTreasure[] = [
     defense: 21,
     speed: 0,
     type: Type.None,
-    ability: {value: 0, text: 'ポルターガイスト系,列・全体攻撃のダメージが7%上昇する'}
+    ability: {value: 0, text: '列・全体攻撃のダメージが7%上昇する'}
   },
   {
     name: '誇りの指輪',

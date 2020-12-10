@@ -17,7 +17,7 @@ export const So24: IMegido[] = [
     skills: [
       {
         name: 'アタック',
-        type: SkillType.Atack,
+        type: SkillType.Attack,
         levels: [
           {
             level: 1,

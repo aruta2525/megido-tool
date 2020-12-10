@@ -17,7 +17,7 @@ export const So26: IMegido[] = [
     skills: [
       {
         name: 'アタック',
-        type: SkillType.Atack,
+        type: SkillType.Attack,
         levels: [
           {
             level: 1,
@@ -58,7 +58,7 @@ export const So26: IMegido[] = [
             hit: 2
           }
         ],
-        increment: 0.05
+        increment: 0.025
       }
     ]
   },
@@ -77,7 +77,7 @@ export const So26: IMegido[] = [
     skills: [
       {
         name: 'アタック',
-        type: SkillType.Atack,
+        type: SkillType.Attack,
         levels: [
           {
             level: 1,

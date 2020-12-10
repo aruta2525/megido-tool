@@ -6,7 +6,7 @@ export const So00: IMegido[] = [];
 ,skills: [
   {
     name: 'アタック',
-    type: SkillType.Atack,
+    type: SkillType.Attack,
     levels: [
       {
         level: 1,
