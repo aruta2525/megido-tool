@@ -15,6 +15,7 @@ import Rensa from './general/Rensa';
 import Suishin from './general/Suishin';
 import Lyric from './general/Lyric';
 import Epic from './general/Epic';
+import Metric from './general/Metric';
 import Other from './general/Other';
 
 export const SacredTreasureList: ISacredTreasure[] = [
@@ -42,4 +43,5 @@ $.merge(SacredTreasureList, Rensa);
 $.merge(SacredTreasureList, Suishin);
 $.merge(SacredTreasureList, Lyric);
 $.merge(SacredTreasureList, Epic);
+$.merge(SacredTreasureList, Metric);
 $.merge(SacredTreasureList, Other);

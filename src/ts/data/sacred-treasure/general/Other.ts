@@ -52,6 +52,18 @@ const sacredTreasureList: ISacredTreasure[] = [
     speed: 2,
     type: Type.None,
     ability: {value: 0, text: '毎ターン終了時、HPが3%回復する'}
+  },
+  {
+    name: 'マキニスエンジン',
+    styleType: StyleType.Burst,
+    rank: Rank.Silver,
+    size: Size.Medium,
+    hp: 256,
+    offense: 0,
+    defense: 0,
+    speed: 4,
+    type: Type.None,
+    ability: {value: 0, text: '毎ターン終了時、HPが3%回復する'}
   }
 ];
 
