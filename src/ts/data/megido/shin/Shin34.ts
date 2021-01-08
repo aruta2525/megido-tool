@@ -83,7 +83,7 @@ const megido: IMegido[] = [
             hit: 2
           }
         ],
-        increment: 0.05
+        increment: 0.025
       }
     ]
   }
