@@ -194,7 +194,7 @@ function setupSacredTreasures(megido: IMegido) {
  * @return
  */
 function generateSacredTreasureOptionsHTMLString(styleType: StyleType): string {
-  const selectDumy = $('<select></select>');
+  const selectDummy = $('<select></select>');
   // 系譜option group作成と初期化
   let genealogyGroup: {
     [GenealogyType: string]: JQuery;
@@ -223,10 +223,10 @@ function generateSacredTreasureOptionsHTMLString(styleType: StyleType): string {
   // option groupに中身があるならselectに追加
   Object.keys(genealogyGroup).forEach((key) => {
     if (genealogyGroup[key].children.length != 0) {
-      selectDumy.append(genealogyGroup[key]);
+      selectDummy.append(genealogyGroup[key]);
     }
   });
-  return selectDumy.html();
+  return selectDummy.html();
 }
 
 /**
@@ -236,7 +236,7 @@ function generateSacredTreasureOptionsHTMLString(styleType: StyleType): string {
  * @return
  */
 function generatePersonalSacredTreasureOptionsHTMLString(megido: IMegido): string {
-  const selectDumy = $('<select></select>');
+  const selectDummy = $('<select></select>');
   // 専用霊宝配列を取得
   const personalSacredTreasureList = getPersonalSacredTreasureList(megido.clockType, megido.no, megido.styleType);
   personalSacredTreasureList.forEach((st, i) => {
@@ -252,10 +252,10 @@ function generatePersonalSacredTreasureOptionsHTMLString(megido: IMegido): strin
         background = 'st-gold';
         break;
     }
-    selectDumy.append(`<option value="${i}" class="${background}">(${convertToSacredTreasureSizeName(st.size)})${st.name}</option>`);
+    selectDummy.append(`<option value="${i}" class="${background}">(${convertToSacredTreasureSizeName(st.size)})${st.name}</option>`);
   });
 
-  return selectDumy.html();
+  return selectDummy.html();
 }
 
 /**
@@ -499,7 +499,7 @@ function calculateDamage() {
   const ignoreDefense = 1 - Number($(`#${ids.ignoreDefense}`).val()) / 100;
   const defensiveDebuff = 1 - Number($(`#${ids.defensiveDebuff}`).val()) / 100;
   const attribute = Number($(`#${ids.attribute}`).val()) / 100 + 1;
-  const speceis = Number($(`#${ids.species}`).val()) / 100 + 1;
+  const species = Number($(`#${ids.species}`).val()) / 100 + 1;
   const statusAbnormality = Number($(`#${ids.statusAbnormality}`).val()) / 100 + 1;
   const specialEfficacy1 = Number($(`#${ids.specialEfficacy1}`).val()) / 100 + 1;
   const specialEfficacy2 = Number($(`#${ids.specialEfficacy2}`).val()) / 100 + 1;
@@ -514,7 +514,7 @@ function calculateDamage() {
     photonCorrection *
     classCorrection *
     attribute *
-    speceis *
+    species *
     statusAbnormality *
     freeze *
     specialEfficacy1 *
