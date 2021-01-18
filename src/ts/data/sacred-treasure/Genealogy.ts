@@ -24,6 +24,13 @@ export const genealogyList: IGenealogy[] = [
     }
   },
   {
+    type: Type.Metsugan,
+    ability: {
+      value: 0,
+      text: 'バレット消費数が多いほど、ダメージが上昇する（最大20%）※発動者の累計消費数×2%。ダメージ上昇効果はバレットを消費しない攻撃にも乗る'
+    }
+  },
+  {
     type: Type.Gouken,
     ability: {
       value: 0,
@@ -42,6 +49,13 @@ export const genealogyList: IGenealogy[] = [
     ability: {
       value: 0,
       text: 'HP最大の味方を回復する行動時、2ターンの間対象の攻撃力と防御力を10%上昇させる'
+    }
+  },
+  {
+    type: Type.Kyoyu,
+    ability: {
+      value: 0,
+      text: '自身のHPが50%以下のとき、攻撃力が20%上昇する'
     }
   },
   {

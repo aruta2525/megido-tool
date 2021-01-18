@@ -143,7 +143,7 @@ import Shin49 from './personal/shin/Shin49';
 // import Shin63 from './personal/shin/Shin63';
 import Shin64 from './personal/shin/Shin64';
 import Shin65 from './personal/shin/Shin65';
-// import Shin66 from './personal/shin/Shin66';
+import Shin66 from './personal/shin/Shin66';
 // import Shin67 from './personal/shin/Shin67';
 // import Shin68 from './personal/shin/Shin68';
 // import Shin69 from './personal/shin/Shin69';
@@ -170,6 +170,7 @@ const defaultSacredTreasure: IPersonalSacredTreasure = {
     name: ''
   }
 };
+
 //#region 専用霊宝結合
 // $.merge(SacredTreasureList, So01);
 // $.merge(SacredTreasureList, So02);
@@ -308,7 +309,7 @@ $.merge(SacredTreasureList, Shin49);
 // $.merge(SacredTreasureList, Shin63);
 $.merge(SacredTreasureList, Shin64);
 $.merge(SacredTreasureList, Shin65);
-// $.merge(SacredTreasureList, Shin66);
+$.merge(SacredTreasureList, Shin66);
 // $.merge(SacredTreasureList, Shin67);
 // $.merge(SacredTreasureList, Shin68);
 // $.merge(SacredTreasureList, Shin69);

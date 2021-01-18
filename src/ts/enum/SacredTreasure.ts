@@ -2,9 +2,11 @@ export const GenealogyType = {
   None: 'なし',
   Mougeki: '猛撃',
   Isshin: '一心',
+  Metsugan: '滅丸',
   Gouken: '剛堅',
   Gourai: '轟雷',
   Kaiten: '廻天',
+  Kyoyu: '狂勇',
   Rekka: '烈火',
   Rensa: '連鎖',
   Suishin: '水心'
