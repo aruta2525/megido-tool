@@ -62,19 +62,6 @@ export const So57: IMegido[] = [
           }
         ],
         increment: 0.0166
-      },
-      {
-        name: '【専】猛りの暴獣爪＋',
-        type: SkillType.Mysteries,
-        text: '敵単体に攻撃力1.6倍の3連続ダメージ。さらに自身にアタックフォトンを1つ追加し、2ターンの間、アタックを強化',
-        levels: [
-          {
-            level: 1,
-            magnification: 1.6,
-            hit: 3
-          }
-        ],
-        increment: 0.0166
       }
     ]
   }

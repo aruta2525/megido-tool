@@ -120,36 +120,6 @@ export const So29: IMegido[] = [
         ]
       },
       {
-        name: '【専】一汗かこうヨ+',
-        type: SkillType.Skill,
-        levels: [
-          {
-            level: 1,
-            magnification: 0,
-            hit: 0,
-            text: '2ターンの間、自身のアタックを強化し、雷ダメージを25%上昇させる【使用するごとにスキルLv上昇】'
-          },
-          {
-            level: 2,
-            magnification: 0,
-            hit: 0,
-            text: '2ターンの間、自身のアタックを強化し、雷ダメージを50%上昇させる【使用するごとにスキルLv上昇】'
-          },
-          {
-            level: 3,
-            magnification: 0,
-            hit: 0,
-            text: '2ターンの間、自身のアタックを強化し、雷ダメージを75%上昇させる【使用するごとにスキルLv上昇】'
-          },
-          {
-            level: 4,
-            magnification: 0,
-            hit: 0,
-            text: '3ターンの間、自身のアタックを強化し、雷ダメージを100%上昇させ、攻撃力を100%上昇させる'
-          }
-        ]
-      },
-      {
         name: '悩殺スカルブレイク+',
         type: SkillType.AwakeningSkill,
         attribute: Attribute.Thunder,

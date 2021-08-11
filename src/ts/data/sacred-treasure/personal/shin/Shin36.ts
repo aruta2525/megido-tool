@@ -1,5 +1,5 @@
 import {IPersonalSacredTreasure} from '../../../../interface/IPersonalSacredTreasure';
-import {StyleType} from '../../../../enum/Megido';
+import {StyleType, SkillType} from '../../../../enum/Megido';
 import {SacredTreasureRank as Rank} from '../../../../enum/SacredTreasure';
 import {SacredTreasureSize as Size} from '../../../../enum/SacredTreasure';
 import {GenealogyType as Type} from '../../../../enum/SacredTreasure';
@@ -20,7 +20,22 @@ const sacredTreasureList: IPersonalSacredTreasure[] = [
     personal: {
       clockType: ClockType.Shin,
       megidoNo: 36,
-      name: 'メフィスト'
+      name: 'メフィスト',
+      skills: [
+        {
+          name: '【専】ロール・ロール＋',
+          type: SkillType.Skill,
+          text: `	出目で効果決定。さらに自身のHPが50%以下のとき、出目が4,5,6のいずれかになる<br>
+              【出目効果】1:効果なし/2,3:単体覚醒+1,防御10%上昇/4,5:列覚醒+1,防御15%上昇/6:全体覚醒+1,防御20%上昇(防御上昇2ターン)`,
+          levels: [
+            {
+              level: 1,
+              magnification: 0,
+              hit: 0
+            }
+          ]
+        }
+      ]
     }
   }
 ];

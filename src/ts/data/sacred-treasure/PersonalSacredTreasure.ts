@@ -64,11 +64,11 @@ import So53 from './personal/so/So53';
 // import So56 from './personal/so/So56';
 import So57 from './personal/so/So57';
 import So58 from './personal/so/So58';
-// import So59 from './personal/so/So59';
+import So59 from './personal/so/So59';
 import So60 from './personal/so/So60';
 // import So61 from './personal/so/So61';
 // import So62 from './personal/so/So62';
-// import So63 from './personal/so/So63';
+import So63 from './personal/so/So63';
 // import So64 from './personal/so/So64';
 // import So65 from './personal/so/So65';
 import So66 from './personal/so/So66';
@@ -167,7 +167,8 @@ const defaultSacredTreasure: IPersonalSacredTreasure = {
   personal: {
     clockType: ClockType.Shin,
     megidoNo: 0,
-    name: ''
+    name: '',
+    skills: []
   }
 };
 
@@ -230,11 +231,11 @@ $.merge(SacredTreasureList, So53);
 // $.merge(SacredTreasureList, So56);
 $.merge(SacredTreasureList, So57);
 $.merge(SacredTreasureList, So58);
-// $.merge(SacredTreasureList, So59);
+$.merge(SacredTreasureList, So59);
 $.merge(SacredTreasureList, So60);
 // $.merge(SacredTreasureList, So61);
 // $.merge(SacredTreasureList, So62);
-// $.merge(SacredTreasureList, So63);
+$.merge(SacredTreasureList, So63);
 // $.merge(SacredTreasureList, So64);
 // $.merge(SacredTreasureList, So65);
 $.merge(SacredTreasureList, So66);

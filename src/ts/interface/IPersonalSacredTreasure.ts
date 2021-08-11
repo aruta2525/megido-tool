@@ -1,4 +1,5 @@
 import {ISacredTreasure} from './ISacredTreasure';
+import {ISkillData} from './ISkillData';
 import {ClockType} from '../enum/Megido';
 
 // 専用霊宝インターフェース
@@ -8,10 +9,11 @@ export interface IPersonalSacredTreasure extends ISacredTreasure {
     megidoNo: number; // メギド番号
     name: string; //メギド名
     // 変更後メギド特性
-    megidoAbility?: {
+    ability?: {
       name: string;
       text: string;
     };
+    skills: ISkillData[];
   };
 }
 

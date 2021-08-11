@@ -39,18 +39,6 @@ export const So42: IMegido[] = [
         ]
       },
       {
-        name: '【専】ウェイブライダー＋',
-        type: SkillType.Skill,
-        text: '敵単体に攻撃力1.25倍のダメージ。さらに自身にアタックフォトンを1つ追加する',
-        levels: [
-          {
-            level: 1,
-            magnification: 1.25,
-            hit: 1
-          }
-        ]
-      },
-      {
         name: '水龍戟＋',
         type: SkillType.AwakeningSkill,
         text: '敵単体に攻撃力1.5倍のダメージ。さらに2ターンの間、自身のアタックを強化する',

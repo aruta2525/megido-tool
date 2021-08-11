@@ -51,19 +51,6 @@ export const So07: IMegido[] = [
         ]
       },
       {
-        name: '【専】ダーティレイド+',
-        type: SkillType.AwakeningSkill,
-        text: '敵単体に攻撃力1.5倍の2連続火ダメージ。さらに2ターンの間、自身の攻撃力を30%上昇させる',
-        attribute: Attribute.Fire,
-        levels: [
-          {
-            level: 1,
-            magnification: 1.5,
-            hit: 2
-          }
-        ]
-      },
-      {
         name: '世界を包む炎獄+',
         type: SkillType.Mysteries,
         text: '敵単体に攻撃力4.25倍の火ダメージ。2ターンの間、炎上の地形効果で1.25倍の継続ダメージを与える',

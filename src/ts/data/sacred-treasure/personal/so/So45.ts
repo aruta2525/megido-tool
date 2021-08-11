@@ -1,5 +1,5 @@
 import {IPersonalSacredTreasure} from '../../../../interface/IPersonalSacredTreasure';
-import {StyleType} from '../../../../enum/Megido';
+import {StyleType, SkillType} from '../../../../enum/Megido';
 import {SacredTreasureRank as Rank} from '../../../../enum/SacredTreasure';
 import {SacredTreasureSize as Size} from '../../../../enum/SacredTreasure';
 import {GenealogyType as Type} from '../../../../enum/SacredTreasure';
@@ -20,7 +20,21 @@ const sacredTreasureList: IPersonalSacredTreasure[] = [
     personal: {
       clockType: ClockType.So,
       megidoNo: 45,
-      name: 'ヴィネ'
+      name: 'ヴィネ',
+      skills: [
+        {
+          name: '【専】聖女の祈り＋',
+          type: SkillType.Skill,
+          text: '味方横一列のHPを20%回復させる。さらにHPが60%以上の味方に対して、2ターンの間、アタックフォトンからのダメージを30%軽減する',
+          levels: [
+            {
+              level: 1,
+              magnification: 0,
+              hit: 0
+            }
+          ]
+        }
+      ]
     }
   }
 ];

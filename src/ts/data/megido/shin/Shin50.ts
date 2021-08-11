@@ -27,18 +27,6 @@ const megido: IMegido[] = [
         ]
       },
       {
-        name: '【専】アタック',
-        type: SkillType.Attack,
-        attribute: Attribute.Thunder,
-        levels: [
-          {
-            level: 1,
-            magnification: 1,
-            hit: 1
-          }
-        ]
-      },
-      {
         name: 'バイラルスパーク＋',
         type: SkillType.Skill,
         attribute: Attribute.Thunder,

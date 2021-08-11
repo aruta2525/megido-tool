@@ -119,7 +119,7 @@ function changeMegido(index: number) {
   $(`#${ids.defense}`).val(megido.defense);
   $(`#${ids.speed}`).val(megido.speed);
 
-  if (megido.ability != undefined) setupAbility(megido.ability);
+  if (megido.ability) setupAbility(megido.ability);
   setupSkills(megido.skills);
   setupSacredTreasures(megido);
 }
@@ -144,7 +144,13 @@ function setupSkills(skills: ISkillData[] = defaultSkills) {
 
   skillSelect.empty();
   skills.forEach((skill, i) => {
-    skillSelect.append(`<option value="${i}">【${skill.type.charAt(0)}】${skill.name}</option>`);
+    let name;
+    if (skill.name.charAt(0) === '【') {
+      name = `【${skill.type.charAt(0)}・${skill.name.slice(1)}`;
+    } else {
+      name = `【${skill.type.charAt(0)}】${skill.name}`;
+    }
+    skillSelect.append(`<option value="${i}">${name}</option>`);
   });
   skillSelect.selectpicker('render').selectpicker('refresh');
 
@@ -374,14 +380,27 @@ function setupSacredTreasure(
     speedInput.val(afterSpeed);
 
     // 専用霊宝時処理
-    if (ev.target.id === ids.personalSacredTreasure) {
+    if (ev.target.id === ids.personalSacredTreasure && megido) {
       if (isIPersonalSacredTreasure(st) && st.personal.megidoNo !== 0) {
-        const ability = st.personal.megidoAbility || {name: '', text: ''};
-        // console.log('専用: ' + name);
-        $(`#${ids.megidoAbility}`).val(`【専】${ability.name}`);
-        $(`#${ids.megidoAbilityText}`).text(ability.text);
+        const personal = st.personal;
+        // 特性置き換え
+        if (personal.ability) {
+          $(`#${ids.megidoAbility}`).val(`【専】${personal.ability.name}`);
+          $(`#${ids.megidoAbilityText}`).text(personal.ability.text);
+        }
+        // 専用霊宝スキルに置き換え
+        if (personal.skills.length > 0) {
+          let newSkills: ISkillData[] = [];
+
+          megido.skills.forEach((ms) => {
+            const ps = personal.skills.find((ps) => ms.type === ps.type);
+            newSkills.push(ps || ms);
+          });
+
+          setupSkills(newSkills);
+        }
       } else {
-        const ability = !megido || !megido.ability ? {name: '', text: ''} : megido.ability;
+        const ability = !megido.ability ? {name: '', text: ''} : megido.ability;
 
         $(`#${ids.megidoAbility}`).val(ability.name);
         $(`#${ids.megidoAbilityText}`).text(ability.text);
@@ -391,6 +410,13 @@ function setupSacredTreasure(
     calculateGenealogy();
     calculateMagnification();
   });
+
+  // 専用霊宝を初期選択状態に
+  if (selectId === ids.personalSacredTreasure) {
+    const selectCount = stSelect.children('option').length;
+    stSelect.val(selectCount - 1);
+  }
+
   stSelect.trigger('change');
 }
 

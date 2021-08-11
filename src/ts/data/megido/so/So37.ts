@@ -64,20 +64,6 @@ export const So37: IMegido[] = [
           }
         ],
         increment: 0.05
-      },
-      {
-        name: '【専】不死鳥の羽ばたき+',
-        type: SkillType.Mysteries,
-        attribute: Attribute.Fire,
-        text: '敵全体に攻撃力2.25倍の火ダメージ。さらに炎上地形を狂炎地形にし、戦闘不能の味方を、最大HPの35％で蘇生させる',
-        levels: [
-          {
-            level: 1,
-            magnification: 2.25,
-            hit: 1
-          }
-        ],
-        increment: 0.05
       }
     ]
   },

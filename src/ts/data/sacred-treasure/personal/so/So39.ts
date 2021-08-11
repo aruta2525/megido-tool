@@ -1,5 +1,5 @@
 import {IPersonalSacredTreasure} from '../../../../interface/IPersonalSacredTreasure';
-import {StyleType} from '../../../../enum/Megido';
+import {StyleType, SkillType} from '../../../../enum/Megido';
 import {SacredTreasureRank as Rank} from '../../../../enum/SacredTreasure';
 import {SacredTreasureSize as Size} from '../../../../enum/SacredTreasure';
 import {GenealogyType as Type} from '../../../../enum/SacredTreasure';
@@ -20,7 +20,23 @@ const sacredTreasureList: IPersonalSacredTreasure[] = [
     personal: {
       clockType: ClockType.So,
       megidoNo: 39,
-      name: 'マルファス'
+      name: 'マルファス',
+      skills: [
+        {
+          name: '【専】コロッサスレイ+',
+          type: SkillType.Mysteries,
+          text: `敵横一列に攻撃力1.5倍の2連続ダメージ。さらに味方全体への攻撃を1回無効化し、レイズギフトを付与する<br>
+              【レイズギフト効果】蘇生されたとき、自身のHPを40%回復する。さらに2ターンの間、自身の最大HPの40%以下のダメージを無効化する`,
+          levels: [
+            {
+              level: 1,
+              magnification: 1.5,
+              hit: 2
+            }
+          ],
+          increment: 0.025
+        }
+      ]
     }
   }
 ];

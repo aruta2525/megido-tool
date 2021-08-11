@@ -51,18 +51,6 @@ export const So18: IMegido[] = [
         ]
       },
       {
-        name: '【専】ニューロトキシン＋',
-        type: SkillType.AwakeningSkill,
-        text: '敵単体に攻撃力3倍のダメージ。さらに2ターンの間、敵を毒状態にする。敵が毒状態の場合、ダメージが2倍になる',
-        levels: [
-          {
-            level: 1,
-            magnification: 2,
-            hit: 1
-          }
-        ]
-      },
-      {
         name: 'ポレンヒーリング＋',
         type: SkillType.Mysteries,
         text: '味方横一列のHPを40%回復させる',
@@ -71,50 +59,6 @@ export const So18: IMegido[] = [
             level: 1,
             magnification: 0,
             hit: 0
-          }
-        ],
-        increment: 0
-      },
-      {
-        name: '【専】ポレンヒーリング＋',
-        type: SkillType.Mysteries,
-        text: '味方横一列のHPを40%回復させる',
-        levels: [
-          {
-            level: 0,
-            magnification: 0,
-            hit: 0,
-            text: '味方横一列のHPを40%回復させる【HP80%以上の味方の数に応じて効果が変化】'
-          },
-          {
-            level: 1,
-            magnification: 0,
-            hit: 0,
-            text: '【HP80%以上1人以上】味方横一列のHPを40%回復させる。さらに2ターンの間、攻撃力を20%上昇させ'
-          },
-          {
-            level: 2,
-            magnification: 0,
-            hit: 0,
-            text: '【HP80%以上2人以上】味方横一列のHPを40%回復させる。さらに2ターンの間、攻撃力を30%上昇させる'
-          },
-          {
-            level: 3,
-            magnification: 0,
-            hit: 0,
-            text: '【HP80%以上3人以上】味方横一列のHPを40%回復させる。さらに2ターンの間、攻撃力を40%上昇させる'
-          },
-          {
-            level: 4,
-            magnification: 0,
-            hit: 0,
-            text: '【HP80%以上4人以上】味方横一列のHPを40%回復させる。さらに2ターンの間、攻撃力を50%上昇させる'
-          },
-          {
-            level: 5,
-            magnification: 0,
-            hit: 0,
-            text: '【HP80%以上5人以上】味方横一列のHPを40%回復させる。さらに2ターンの間、攻撃力を60%上昇させる'
           }
         ],
         increment: 0

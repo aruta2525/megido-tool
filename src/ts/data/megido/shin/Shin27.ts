@@ -47,33 +47,6 @@ const megido: IMegido[] = [
         ]
       },
       {
-        name: '【専】バーニアダンス＋',
-        type: SkillType.Skill,
-        levels: [
-          {
-            level: 0,
-            label: 'Ch0',
-            magnification: 1.5,
-            hit: 1,
-            text: '敵単体に攻撃力1.5倍のダメージ。チェイン数に応じて倍率と効果が変化'
-          },
-          {
-            level: 1,
-            label: 'Ch1',
-            magnification: 2.5,
-            hit: 1,
-            text: '敵単体に攻撃力2.5倍のダメージ。さらに90%の確率で積まれているフォトンを1つ破壊する。自身にチェイン'
-          },
-          {
-            level: 2,
-            label: 'Ch2',
-            magnification: 3.5,
-            hit: 1,
-            text: '	敵単体に攻撃力3.5倍のダメージ。さらに90%の確率で積まれているフォトンを1つ破壊する'
-          }
-        ]
-      },
-      {
         name: 'フルスロットル＋',
         type: SkillType.AwakeningSkill,
         levels: [
@@ -123,48 +96,6 @@ const megido: IMegido[] = [
             magnification: 4,
             hit: 1,
             text: '敵横一列攻撃力4倍ダメージ。2ターンの間突風地形効果で0.75倍継続ダメージを与え火に弱くする。'
-          }
-        ],
-        increment: 0.05
-      },
-      {
-        name: '【専】祖弐苦武羽霧＋',
-        type: SkillType.Mysteries,
-        levels: [
-          {
-            level: 0,
-            label: 'Ch0',
-            magnification: 2,
-            hit: 1,
-            text: '敵横一列攻撃力2倍ダメージ。2ターンの間突風地形効果で0.75倍継続ダメージを与え火に弱くする。自身にチェイン。チェイン数に応じて倍率変化'
-          },
-          {
-            level: 1,
-            label: 'Ch1',
-            magnification: 2.25,
-            hit: 1,
-            text: '敵横一列攻撃力2.25倍ダメージ。2ターンの間突風地形効果で0.75倍継続ダメージを与え火に弱くする。自身にチェイン。チェイン数に応じて倍率変化'
-          },
-          {
-            level: 2,
-            label: 'Ch2',
-            magnification: 2.75,
-            hit: 1,
-            text: '敵横一列攻撃力2倍ダメージ。2ターンの間突風地形効果で0.75倍継続ダメージを与え火に弱くする。自身にチェイン。チェイン数に応じて倍率変化'
-          },
-          {
-            level: 3,
-            label: 'Ch3',
-            magnification: 3.25,
-            hit: 1,
-            text: '敵横一列攻撃力3.25倍ダメージ。2ターンの間突風地形効果で0.75倍継続ダメージを与え火に弱くする。自身にチェイン。チェイン数に応じて倍率変化'
-          },
-          {
-            level: 4,
-            label: 'Ch4',
-            magnification: 4,
-            hit: 1,
-            text: '敵横一列攻撃力4倍ダメージ。2ターンの間突風地形効果で0.75倍継続ダメージを与え火に弱くする。自身にチェイン。'
           }
         ],
         increment: 0.05

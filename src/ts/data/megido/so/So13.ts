@@ -70,19 +70,6 @@ export const So13: IMegido[] = [
         ]
       },
       {
-        name: '【専】狂喜の怒り＋',
-        type: SkillType.AwakeningSkill,
-        text:
-          '自身の攻撃力を1ターンの間、50%上昇。毎ターン最大HPの10%ダメージを受け、攻撃力が最大150%上昇するバーサーク状態にする【バーサーク時、性能変化】<br>【バーサーク時】味方編成を怒闘状態にし2ターンの間、自身の攻撃力70%上昇',
-        levels: [
-          {
-            level: 1,
-            magnification: 0,
-            hit: 0
-          }
-        ]
-      },
-      {
         name: 'リアニメイター＋',
         type: SkillType.Mysteries,
         text: '戦闘不能の味方を、最大HPの35%で蘇生させ、2ターンの間、味方全体のアタックを強化するが、呪い状態になる',

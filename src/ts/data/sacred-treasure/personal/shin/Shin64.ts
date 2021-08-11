@@ -20,7 +20,8 @@ const sacredTreasureList: IPersonalSacredTreasure[] = [
     personal: {
       clockType: ClockType.Shin,
       megidoNo: 64,
-      name: 'プロメテウス'
+      name: 'プロメテウス',
+      skills: []
     }
   }
 ];

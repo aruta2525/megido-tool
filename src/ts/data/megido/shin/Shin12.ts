@@ -39,33 +39,9 @@ const megido: IMegido[] = [
         ]
       },
       {
-        name: '【専】トーテンタンツ＋',
-        type: SkillType.Skill,
-        text: '敵横一列に攻撃力1倍のダメージ。さらにそれぞれ80%（状態異常の敵の場合100%）の確率で2ターンの間、敵を病気、ゾンビ状態にする',
-        levels: [
-          {
-            level: 1,
-            magnification: 1,
-            hit: 1
-          }
-        ]
-      },
-      {
         name: 'ギフトヴィアベル＋',
         type: SkillType.AwakeningSkill,
         text: '敵横一列に攻撃力1.5倍のダメージ。さらに50%（束縛状態の敵の場合100%）の確率で2ターンの間、敵を毒状態にする',
-        levels: [
-          {
-            level: 1,
-            magnification: 1.5,
-            hit: 1
-          }
-        ]
-      },
-      {
-        name: '【専】ギフトヴィアベル＋',
-        type: SkillType.AwakeningSkill,
-        text: '敵横一列に攻撃力1.5倍のダメージ。さらに50%（状態異常の敵の場合100%）の確率で2ターンの間、敵を毒状態にする',
         levels: [
           {
             level: 1,

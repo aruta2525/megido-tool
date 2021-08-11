@@ -1,5 +1,5 @@
 import {IPersonalSacredTreasure} from '../../../../interface/IPersonalSacredTreasure';
-import {StyleType} from '../../../../enum/Megido';
+import {StyleType, SkillType} from '../../../../enum/Megido';
 import {SacredTreasureRank as Rank} from '../../../../enum/SacredTreasure';
 import {SacredTreasureSize as Size} from '../../../../enum/SacredTreasure';
 import {GenealogyType as Type} from '../../../../enum/SacredTreasure';
@@ -20,7 +20,22 @@ const sacredTreasureList: IPersonalSacredTreasure[] = [
     personal: {
       clockType: ClockType.So,
       megidoNo: 57,
-      name: 'オセ'
+      name: 'オセ',
+      skills: [
+        {
+          name: '【専】猛りの暴獣爪＋',
+          type: SkillType.Mysteries,
+          text: '敵単体に攻撃力1.6倍の3連続ダメージ。さらに自身にアタックフォトンを1つ追加し、2ターンの間、アタックを強化',
+          levels: [
+            {
+              level: 1,
+              magnification: 1.6,
+              hit: 3
+            }
+          ],
+          increment: 0.0166
+        }
+      ]
     }
   }
 ];

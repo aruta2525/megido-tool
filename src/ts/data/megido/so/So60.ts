@@ -121,19 +121,6 @@ export const So60: IMegido[] = [
         ]
       },
       {
-        name: '【専】奪掠＋',
-        type: SkillType.Skill,
-        text:
-          '70%の確率で敵横一列の覚醒ゲージを-1する（ハイドロボムが付与されている場合100%）。さらに敵にハイドロボムが付与されているとき、減少した覚醒ゲージを自身に加算する',
-        levels: [
-          {
-            level: 1,
-            magnification: 0,
-            hit: 0
-          }
-        ]
-      },
-      {
         name: '水滴石穿＋',
         type: SkillType.AwakeningSkill,
         text: '自身の覚醒ゲージを全て消費し、敵横一列に攻撃力0.8倍のダメージ、さらに2ターン後に弾ける威力0.5倍のハイドロボム速を付与',
@@ -149,21 +136,6 @@ export const So60: IMegido[] = [
         name: '千山万水＋',
         type: SkillType.Mysteries,
         text: '敵横一列に攻撃力1.5倍のダメージ。さらに3.25倍で7ターン後に弾けるハイドロボム重を付与する',
-        levels: [
-          {
-            level: 1,
-            magnification: 1.5,
-            hit: 1
-          }
-        ],
-        increment: 0.05
-      },
-      {
-        name: '【専】千山万水＋',
-        type: SkillType.Mysteries,
-        text: `敵横一列に攻撃力1.5倍のダメージ。対象の状態に応じてさらに効果が発生<br>
-              【ハイドロボム重が付与されていない場合】3.25倍で7ターン後に弾けるハイドロボム重を付与する<br>
-              【ハイドロボム重が付与されている場合】0.1倍で9ターン後に弾けるハイドロボム錬を錬成する`,
         levels: [
           {
             level: 1,

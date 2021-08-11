@@ -139,7 +139,7 @@ import Shin62 from './shin/Shin62';
 import Shin63 from './shin/Shin63';
 import Shin64 from './shin/Shin64';
 import Shin65 from './shin/Shin65';
-// import Shin66 from './shin/Shin66';
+import Shin66 from './shin/Shin66';
 // import Shin67 from './shin/Shin67';
 import Shin68 from './shin/Shin68';
 import Shin69 from './shin/Shin69';
@@ -290,7 +290,7 @@ export function joinAndSortMegidoByName(): IMegido[] {
   $.merge(megidoList, Shin63);
   $.merge(megidoList, Shin64);
   $.merge(megidoList, Shin65);
-  // $.merge(megidoList, Shin66);
+  $.merge(megidoList, Shin66);
   // $.merge(megidoList, Shin67);
   $.merge(megidoList, Shin68);
   $.merge(megidoList, Shin69);

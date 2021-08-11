@@ -102,18 +102,6 @@ export const So63: IMegido[] = [
         ]
       },
       {
-        name: '【専】ゼクチオンメッサー＋',
-        type: SkillType.Skill,
-        text: '敵横一列に攻撃力1倍のダメージ。さらに80%の確率で、2ターンの間、敵を暗闇状態にする',
-        levels: [
-          {
-            level: 1,
-            magnification: 1,
-            hit: 1
-          }
-        ]
-      },
-      {
         name: 'デリリアントブロー＋',
         type: SkillType.AwakeningSkill,
         text: '1ターンの間、味方単体の効果範囲を列化し、カウンターの場合、攻撃力を30%上昇させる',
@@ -122,26 +110,6 @@ export const So63: IMegido[] = [
             level: 1,
             magnification: 0,
             hit: 0
-          }
-        ]
-      },
-      {
-        name: '【専】デリリアントブロー＋',
-        type: SkillType.AwakeningSkill,
-        levels: [
-          {
-            level: 1,
-            label: '通常',
-            magnification: 0,
-            hit: 0,
-            text: '2ターンの間、味方単体の効果範囲を列化し、攻撃力を30%上昇させる【戦闘不能の味方がいる場合、効果が変化】'
-          },
-          {
-            level: 1,
-            label: '戦闘不能者有',
-            magnification: 0,
-            hit: 0,
-            text: '自身の覚醒ゲージを全て消費し、戦闘不能の味方単体を、最大HPの10%で蘇生させる。さらに2ターンの間、効果範囲を列化し、攻撃力を30%上昇させる'
           }
         ]
       },

@@ -1,5 +1,5 @@
 import {IPersonalSacredTreasure} from '../../../../interface/IPersonalSacredTreasure';
-import {StyleType} from '../../../../enum/Megido';
+import {StyleType, SkillType} from '../../../../enum/Megido';
 import {SacredTreasureRank as Rank} from '../../../../enum/SacredTreasure';
 import {SacredTreasureSize as Size} from '../../../../enum/SacredTreasure';
 import {GenealogyType as Type} from '../../../../enum/SacredTreasure';
@@ -20,7 +20,48 @@ const sacredTreasureList: IPersonalSacredTreasure[] = [
     personal: {
       clockType: ClockType.Shin,
       megidoNo: 9,
-      name: 'インキュバス'
+      name: 'インキュバス',
+      skills: [
+        {
+          name: '【専】ドゥルケソムニウム＋',
+          type: SkillType.Mysteries,
+          text:
+            '敵横一列に攻撃力2.25倍のダメージ。敵味方の女性1体につき倍率が0.35上昇、対象の敵女性を2ターンの間、悪夢状態にし、自身の両隣の女性を魅了状態にする',
+          levels: [
+            {
+              level: 0,
+              label: '女性0体',
+              magnification: 2.25,
+              hit: 1
+            },
+            {
+              level: 1,
+              label: '女性1体',
+              magnification: 2.6,
+              hit: 1
+            },
+            {
+              level: 2,
+              label: '女性2体',
+              magnification: 2.95,
+              hit: 1
+            },
+            {
+              level: 3,
+              label: '女性3体',
+              magnification: 3.3,
+              hit: 1
+            },
+            {
+              level: 4,
+              label: '女性4体',
+              magnification: 3.65,
+              hit: 1
+            }
+          ],
+          increment: 0.05
+        }
+      ]
     }
   }
 ];

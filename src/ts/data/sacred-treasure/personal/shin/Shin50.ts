@@ -1,5 +1,5 @@
 import {IPersonalSacredTreasure} from '../../../../interface/IPersonalSacredTreasure';
-import {StyleType} from '../../../../enum/Megido';
+import {StyleType, SkillType, Attribute} from '../../../../enum/Megido';
 import {SacredTreasureRank as Rank} from '../../../../enum/SacredTreasure';
 import {SacredTreasureSize as Size} from '../../../../enum/SacredTreasure';
 import {GenealogyType as Type} from '../../../../enum/SacredTreasure';
@@ -21,10 +21,24 @@ const sacredTreasureList: IPersonalSacredTreasure[] = [
       clockType: ClockType.Shin,
       megidoNo: 50,
       name: 'シャミハザ',
-      megidoAbility: {
+      ability: {
         name: '	テラインストール',
         text: 'HPが75%以下のとき、攻撃力が25%上昇する'
-      }
+      },
+      skills: [
+        {
+          name: '【専】アタック',
+          type: SkillType.Attack,
+          attribute: Attribute.Thunder,
+          levels: [
+            {
+              level: 1,
+              magnification: 1,
+              hit: 1
+            }
+          ]
+        }
+      ]
     }
   }
 ];

@@ -62,32 +62,6 @@ export const So25: IMegido[] = [
           }
         ],
         increment: 0.05
-      },
-      {
-        name: '【専】ピリオドの向こうへ＋',
-        type: SkillType.Mysteries,
-        text: '敵全体に攻撃力3倍のダメージ。ただし反動で、自身が戦闘不能になる',
-        levels: [
-          {
-            level: 0,
-            magnification: 3,
-            hit: 1,
-            text: '敵全体に攻撃力3倍のダメージ。ただし反動で、自身が戦闘不能になる'
-          },
-          {
-            level: 5,
-            magnification: 6,
-            hit: 1,
-            text: '自身のオーラを5個消費し、敵全体に攻撃力6倍のダメージ。ただし反動で、50%の確率で、自身が戦闘不能になる'
-          },
-          {
-            level: 10,
-            magnification: 8,
-            hit: 1,
-            text: '自身のオーラを10個消費し、敵全体に攻撃力8倍のダメージ'
-          }
-        ],
-        increment: 0.05
       }
     ]
   },
