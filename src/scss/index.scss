@@ -108,10 +108,14 @@ input:read-only {
   }
 
   & > .row:nth-child(10) {
-    background: linear-gradient(#d8d8d8, rgb(180, 180, 180));
+    background: linear-gradient(rgb(220, 253, 190), rgb(146, 197, 99));
   }
 
   & > .row:nth-child(11) {
+    background: linear-gradient(#d8d8d8, rgb(180, 180, 180));
+  }
+
+  & > .row:nth-child(12) {
     background: linear-gradient(#ffcbcb, #f99);
   }
 }

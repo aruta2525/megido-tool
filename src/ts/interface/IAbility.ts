@@ -11,4 +11,8 @@ export interface IAbility {
 export interface IAbilityParam {
   target: EffectTarget;
   value: number;
+  condition?: {
+    target: number;
+    inequalitySign: number;
+  };
 }
