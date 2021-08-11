@@ -32,14 +32,24 @@ const megido: IMegido[] = [
         levels: [
           {
             level: 1,
+            label: '通常',
             magnification: 0,
-            hit: 0
+            hit: 0,
+            text: '2ターンの間ライブ状態になり、火攻撃時、覚醒+1。攻撃力30%アップ/ダメージ軽減25%/ターン終了時HP20%回復を付与可能になる'
+          },
+          {
+            level: 1,
+            label: '大協奏',
+            magnification: 0,
+            hit: 0,
+            text: '3ターンの間ライブ状態になり、火攻撃時、覚醒+1。攻撃力35%アップ/ダメージ軽減30%/ターン終了時HP25%回復を付与可能になる'
           }
         ]
       },
       {
         name: '歌のチカラは∞！＋',
         type: SkillType.AwakeningSkill,
+        text: '2ターンの間、味方単体の全フォトンを強化し、さらに、ターン終了時にHPが15%回復する',
         levels: [
           {
             level: 1,
@@ -52,6 +62,7 @@ const megido: IMegido[] = [
         name: 'ルルディダロス＋',
         type: SkillType.Mysteries,
         attribute: Attribute.Fire,
+        text: '敵横一列に攻撃力3倍の火ダメージ。さらに自身以外の味方にスキルフォトンを1つ追加	',
         levels: [
           {
             level: 1,

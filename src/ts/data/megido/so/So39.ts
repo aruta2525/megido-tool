@@ -29,6 +29,7 @@ export const So39: IMegido[] = [
       {
         name: 'キャプチャー+',
         type: SkillType.Skill,
+        text: '敵単体に攻撃力1.25倍のダメージ。さらに45％の確率で、積まれているフォトンを1つ奪う',
         levels: [
           {
             level: 1,
@@ -40,6 +41,7 @@ export const So39: IMegido[] = [
       {
         name: 'レナスリング+',
         type: SkillType.AwakeningSkill,
+        text: '敵横一列に攻撃力1.75倍のダメージ。さらに80％の確率で、2ターンの間、防御力を60％低下させる',
         levels: [
           {
             level: 1,
@@ -51,6 +53,21 @@ export const So39: IMegido[] = [
       {
         name: 'コロッサスレイ+',
         type: SkillType.Mysteries,
+        text: '敵横一列に攻撃力1.5倍の2連続ダメージ。さらに味方全体への攻撃を1回無効化する',
+        levels: [
+          {
+            level: 1,
+            magnification: 1.5,
+            hit: 2
+          }
+        ],
+        increment: 0.025
+      },
+      {
+        name: '【専】コロッサスレイ+',
+        type: SkillType.Mysteries,
+        text: `敵横一列に攻撃力1.5倍の2連続ダメージ。さらに味方全体への攻撃を1回無効化し、レイズギフトを付与する<br>
+              【レイズギフト効果】蘇生されたとき、自身のHPを40%回復する。さらに2ターンの間、自身の最大HPの40%以下のダメージを無効化する`,
         levels: [
           {
             level: 1,

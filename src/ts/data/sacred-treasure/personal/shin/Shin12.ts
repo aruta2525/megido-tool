@@ -16,11 +16,15 @@ const sacredTreasureList: IPersonalSacredTreasure[] = [
     defense: 0,
     speed: 0,
     type: Type.None,
-    ability: {value: 0, text: '特性、スキル、覚醒スキルが変化する'},
+    ability: {name: '', text: '特性、スキル、覚醒スキルが変化する'},
     personal: {
       clockType: ClockType.Shin,
       megidoNo: 12,
-      name: 'ジニマル'
+      name: 'ジニマル',
+      megidoAbility: {
+        name: '蒼海の滅王',
+        text: '行動開始時、40%の確率でスキルが追加される'
+      }
     }
   }
 ];

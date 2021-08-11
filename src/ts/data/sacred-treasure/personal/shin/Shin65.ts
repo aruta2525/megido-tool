@@ -16,7 +16,7 @@ const sacredTreasureList: IPersonalSacredTreasure[] = [
     defense: 0,
     speed: 0,
     type: Type.None,
-    ability: {value: 0, text: 'サブマスエフェクトを発生させる'},
+    ability: {name: '', text: 'サブマスエフェクトを発生させる'},
     personal: {
       clockType: ClockType.Shin,
       megidoNo: 65,
@@ -33,7 +33,7 @@ const sacredTreasureList: IPersonalSacredTreasure[] = [
     defense: 15,
     speed: 0,
     type: Type.None,
-    ability: {value: 0, text: 'サブマスエフェクトを発生させる'},
+    ability: {name: '', text: 'サブマスエフェクトを発生させる'},
     personal: {
       clockType: ClockType.Shin,
       megidoNo: 65,
@@ -50,7 +50,7 @@ const sacredTreasureList: IPersonalSacredTreasure[] = [
     defense: 21,
     speed: 0,
     type: Type.None,
-    ability: {value: 0, text: 'サブマスエフェクトを発生させる'},
+    ability: {name: '', text: 'サブマスエフェクトを発生させる'},
     personal: {
       clockType: ClockType.Shin,
       megidoNo: 65,

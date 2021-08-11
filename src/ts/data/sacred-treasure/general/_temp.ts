@@ -15,7 +15,7 @@ const sacredTreasureList: ISacredTreasure[] = [
     defense: 0,
     speed: 0,
     type: Type.None,
-    ability: {value: 0, text: ''}
+    ability: {name: '', text: ''}
   }
 ];
 

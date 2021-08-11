@@ -29,6 +29,7 @@ export const So64: IMegido[] = [
       {
         name: '蛇腹剣＋',
         type: SkillType.Skill,
+        text: '敵単体に攻撃力0.9倍の2連続ダメージ。さらに80%の確率で、2ターンの間、敵をめまい状態にする',
         levels: [
           {
             level: 1,
@@ -40,6 +41,7 @@ export const So64: IMegido[] = [
       {
         name: 'リベンジストライク＋',
         type: SkillType.AwakeningSkill,
+        text: '敵横一列に攻撃力0.75倍の5連続ダメージ。さらに敵の覚醒ゲージが多いほど威力上昇(1つにつき倍率に0.15加算)',
         levels: [
           {
             level: 0,
@@ -77,6 +79,7 @@ export const So64: IMegido[] = [
         name: 'レオパルドブロー＋',
         type: SkillType.Mysteries,
         attribute: Attribute.Fire,
+        text: '敵単体に攻撃力3.25倍の火ダメージ。さらに90%の確率で、積まれているフォトンを1つ奪う',
         levels: [
           {
             level: 1,
@@ -115,6 +118,7 @@ export const So64: IMegido[] = [
       {
         name: '水砕剣＋',
         type: SkillType.Skill,
+        text: '敵横一列に攻撃力0.65倍の2連続ダメージ。さらに80%の確率で、0.5倍で3ターン後に弾けるハイドロボム速を付与する',
         levels: [
           {
             level: 1,
@@ -126,6 +130,7 @@ export const So64: IMegido[] = [
       {
         name: 'スタグナントビロー＋',
         type: SkillType.AwakeningSkill,
+        text: '敵横一列に攻撃力0.65倍のダメージ。さらに80%の確率で、3.5倍で7ターン後に弾けるハイドロボム重を付与する',
         levels: [
           {
             level: 1,
@@ -137,6 +142,7 @@ export const So64: IMegido[] = [
       {
         name: 'フォールフラッド＋',
         type: SkillType.Mysteries,
+        text: '敵全体に攻撃力2倍のダメージ。2ターンの間、滞水の地形効果で0.75倍の継続ダメージを与え、雷に弱くする',
         levels: [
           {
             level: 1,

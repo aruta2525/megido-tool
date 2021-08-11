@@ -14,10 +14,18 @@ export const SkillType = {
 } as const;
 export type SkillType = typeof SkillType[keyof typeof SkillType];
 
+export const ReferralStatus = {
+  Offence: '攻撃力',
+  Defence: '防御力',
+  Speed: '素早さ'
+} as const;
+export type ReferralStatus = typeof ReferralStatus[keyof typeof ReferralStatus];
+
 export const Attribute = {
   None: '無',
   Fire: '火',
   Thunder: '雷',
+  Break: '破断',
   Sound: '響撃'
 } as const;
 export type Attribute = typeof Attribute[keyof typeof Attribute];
@@ -58,3 +66,29 @@ export const ClockType = {
   Shin: '真'
 } as const;
 export type ClockType = typeof ClockType[keyof typeof ClockType];
+
+export const RangeType = {
+  One: '単体',
+  Line: '列',
+  All: '全体'
+} as const;
+export type RangeType = typeof RangeType[keyof typeof RangeType];
+
+export const TranceType = {
+  None: 'なし',
+  Concert: '協奏',
+  Berserk: '怒闘',
+  BArts: 'Bアーツ',
+  Necro: 'ネクロ',
+  Colosseum: 'コロッセオ'
+} as const;
+export type TranceType = typeof TranceType[keyof typeof TranceType];
+
+export const EffectTarget = {
+  None: 0,
+  OffenceBuff: 1,
+  DefenceBuff: 2,
+  SpeedilyBuff: 3,
+  a: 3
+} as const;
+export type EffectTarget = typeof EffectTarget[keyof typeof EffectTarget];

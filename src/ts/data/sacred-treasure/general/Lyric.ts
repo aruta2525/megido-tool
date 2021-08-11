@@ -15,7 +15,7 @@ const sacredTreasureList: ISacredTreasure[] = [
     defense: 7,
     speed: 0,
     type: Type.None,
-    ability: {value: 0, text: 'HPが7%上昇する'}
+    ability: {name: '', text: 'HPが7%上昇する'}
   },
   {
     name: 'ノーブルマント',
@@ -27,7 +27,7 @@ const sacredTreasureList: ISacredTreasure[] = [
     defense: 21,
     speed: 0,
     type: Type.None,
-    ability: {value: 0, text: 'HPが6%上昇する'}
+    ability: {name: '', text: 'HPが6%上昇する'}
   },
   {
     name: 'バーミリオンハート',
@@ -39,7 +39,7 @@ const sacredTreasureList: ISacredTreasure[] = [
     defense: 34,
     speed: 0,
     type: Type.None,
-    ability: {value: 0, text: 'HPが5%上昇する'}
+    ability: {name: '', text: 'HPが5%上昇する'}
   },
   {
     name: 'アピロマスカレード',
@@ -51,7 +51,7 @@ const sacredTreasureList: ISacredTreasure[] = [
     defense: 7,
     speed: 0,
     type: Type.None,
-    ability: {value: 0, text: 'HPが7%上昇する'}
+    ability: {name: '', text: 'HPが7%上昇する'}
   },
   {
     name: '信者のマント',
@@ -63,7 +63,7 @@ const sacredTreasureList: ISacredTreasure[] = [
     defense: 21,
     speed: 0,
     type: Type.None,
-    ability: {value: 0, text: 'HPが6%上昇する'}
+    ability: {name: '', text: 'HPが6%上昇する'}
   },
   {
     name: 'ペリドットウィング',
@@ -75,7 +75,7 @@ const sacredTreasureList: ISacredTreasure[] = [
     defense: 34,
     speed: 0,
     type: Type.None,
-    ability: {value: 0, text: 'HPが5%上昇する'}
+    ability: {name: '', text: 'HPが5%上昇する'}
   },
   {
     name: 'ジェイドマスク',
@@ -87,7 +87,7 @@ const sacredTreasureList: ISacredTreasure[] = [
     defense: 7,
     speed: 0,
     type: Type.None,
-    ability: {value: 0, text: 'HPが7%上昇する'}
+    ability: {name: '', text: 'HPが7%上昇する'}
   },
   {
     name: 'グレースマント',
@@ -99,7 +99,7 @@ const sacredTreasureList: ISacredTreasure[] = [
     defense: 21,
     speed: 0,
     type: Type.None,
-    ability: {value: 0, text: 'HPが6%上昇する'}
+    ability: {name: '', text: 'HPが6%上昇する'}
   },
   {
     name: '大海原の心',
@@ -111,7 +111,7 @@ const sacredTreasureList: ISacredTreasure[] = [
     defense: 34,
     speed: 0,
     type: Type.None,
-    ability: {value: 0, text: 'HPが5%上昇する'}
+    ability: {name: '', text: 'HPが5%上昇する'}
   }
 ];
 

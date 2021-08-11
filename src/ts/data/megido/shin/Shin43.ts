@@ -27,8 +27,9 @@ const megido: IMegido[] = [
         ]
       },
       {
-        name: 'スキル',
+        name: 'イレイズミスト+',
         type: SkillType.Skill,
+        text: '敵単体に掛かっている強化を解除する。さらに2ターンの間、防御力を20%低下させる',
         levels: [
           {
             level: 1,
@@ -38,8 +39,9 @@ const megido: IMegido[] = [
         ]
       },
       {
-        name: '覚醒スキル',
+        name: 'ソウルプリズン+',
         type: SkillType.AwakeningSkill,
+        text: '敵全体を完殺状態（永続）にする。さらに2ターンの間、攻撃力を25%低下させる',
         levels: [
           {
             level: 1,
@@ -49,8 +51,9 @@ const megido: IMegido[] = [
         ]
       },
       {
-        name: '奥義',
+        name: '海闊天空の息吹+',
         type: SkillType.Mysteries,
+        text: '2ターンの間、味方全体のアタックを強化し、攻撃力を10%上昇させる。味方単体にチェイン	',
         levels: [
           {
             level: 1,
@@ -58,7 +61,7 @@ const megido: IMegido[] = [
             hit: 0
           }
         ],
-        increment: 0.05
+        increment: 0
       }
     ]
   }

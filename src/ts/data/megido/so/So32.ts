@@ -30,6 +30,7 @@ export const So32: IMegido[] = [
         name: '蒼炎の剣＋',
         type: SkillType.Skill,
         attribute: Attribute.Fire,
+        text: '敵単体に攻撃力1.25倍の火ダメージ。さらに70%の確率で、敵を煉獄の炎状態にする（永続）',
         levels: [
           {
             level: 1,
@@ -41,6 +42,7 @@ export const So32: IMegido[] = [
       {
         name: '絶対者の息吹＋',
         type: SkillType.AwakeningSkill,
+        text: '敵単体に攻撃力3.25倍のダメージ。さらに2ターンの間、防御力を25%低下させ、自身の防御力を25%上昇させる',
         levels: [
           {
             level: 1,
@@ -53,6 +55,7 @@ export const So32: IMegido[] = [
         name: '破滅を齎す黒炎＋',
         type: SkillType.Mysteries,
         attribute: Attribute.Fire,
+        text: '敵単体に攻撃力6.25倍の火ダメージ。さらに2ターンの間、攻撃力、防御力、素早さをそれぞれ30%低下させる',
         levels: [
           {
             level: 1,

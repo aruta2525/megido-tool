@@ -29,6 +29,7 @@ const megido: IMegido[] = [
       {
         name: '女神の護り＋',
         type: SkillType.Skill,
+        text: '2ターンの間、すべての単体攻撃を受け持ち最大HPの20%以下のダメージを無効化する',
         levels: [
           {
             level: 1,
@@ -40,6 +41,7 @@ const megido: IMegido[] = [
       {
         name: 'ブリッツライド＋',
         type: SkillType.AwakeningSkill,
+        text: '	敵単体に攻撃力2倍のダメージ。さらに90%の確率で、覚醒ゲージを-2する',
         levels: [
           {
             level: 1,
@@ -51,6 +53,7 @@ const megido: IMegido[] = [
       {
         name: '閃煌轟雷襲＋',
         type: SkillType.Mysteries,
+        text: '敵横一列に攻撃力2倍のダメージ。さらに敵が覚醒状態のとき、ダメージが2倍になる',
         levels: [
           {
             level: 1,
@@ -89,6 +92,7 @@ const megido: IMegido[] = [
       {
         name: '地鳴閃＋',
         type: SkillType.Skill,
+        text: '敵単体に攻撃力0.8倍のダメージ。1ターンの間、地割れの効果で0.75倍の継続ダメージを与え、防御力を低下させる',
         levels: [
           {
             level: 1,
@@ -100,6 +104,7 @@ const megido: IMegido[] = [
       {
         name: '扇動の防衛陣＋',
         type: SkillType.AwakeningSkill,
+        text: '2ターンの間、敵味方全体の防御力を70%上昇させる',
         levels: [
           {
             level: 1,
@@ -111,6 +116,8 @@ const megido: IMegido[] = [
       {
         name: '煌々爆砕烈撃＋',
         type: SkillType.Mysteries,
+        attribute: Attribute.Break,
+        text: '敵横一列に攻撃力2.5倍の破断ダメージ。さらに2ターンの間、味方前列の攻撃力を20%上昇する',
         levels: [
           {
             level: 1,

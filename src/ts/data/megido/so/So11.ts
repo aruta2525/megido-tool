@@ -32,20 +32,18 @@ export const So11: IMegido[] = [
         levels: [
           {
             level: 1,
+            label: '通常',
             magnification: 1.25,
-            hit: 1
-          }
-        ]
-      },
-      {
-        name: '子守唄+（大協奏）',
-        type: SkillType.Skill,
-        attribute: Attribute.Sound,
-        levels: [
+            hit: 1,
+            text: '敵単体に攻撃力1.25倍のダメージ。さらに60%の確率で、2ターンの間、敵を睡眠状態にする'
+          },
           {
             level: 1,
+            label: '大協奏',
             magnification: 1.25,
-            hit: 1
+            hit: 1,
+            attribute: Attribute.Sound,
+            text: '敵単体に攻撃力1.25倍の響撃ダメージ。さらに80%の確率で、2ターンの間、敵を睡眠状態にする'
           }
         ]
       },
@@ -55,26 +53,24 @@ export const So11: IMegido[] = [
         levels: [
           {
             level: 1,
+            label: '通常',
             magnification: 0,
-            hit: 0
-          }
-        ]
-      },
-      {
-        name: 'オルフェウスの竪琴＋（大協奏）',
-        type: SkillType.AwakeningSkill,
-        attribute: Attribute.Sound,
-        levels: [
+            hit: 0,
+            text: '2ターンの間、味方全体の攻撃力を40%上昇させる'
+          },
           {
             level: 1,
+            label: '大協奏',
             magnification: 0,
-            hit: 0
+            hit: 0,
+            text: '2ターンの間、味方全体の攻撃力を45%上昇させる'
           }
         ]
       },
       {
         name: 'ビーストファング＋',
         type: SkillType.Mysteries,
+        text: '敵単体に攻撃力4.25倍のダメージ。さらに2ターンの間、攻撃力を35%低下させる',
         levels: [
           {
             level: 1,
@@ -116,20 +112,17 @@ export const So11: IMegido[] = [
         levels: [
           {
             level: 1,
+            label: '通常',
             magnification: 0,
-            hit: 0
-          }
-        ]
-      },
-      {
-        name: 'グレイスノーツ＋（大協奏）',
-        type: SkillType.Skill,
-        attribute: Attribute.Sound,
-        levels: [
+            hit: 0,
+            text: '味方横一列のHPを15%回復する'
+          },
           {
             level: 1,
+            label: '大協奏',
             magnification: 0,
-            hit: 0
+            hit: 0,
+            text: '味方横一列のHPを15%回復する。さらに攻撃を1回無効化する'
           }
         ]
       },
@@ -139,26 +132,25 @@ export const So11: IMegido[] = [
         levels: [
           {
             level: 1,
+            label: '通常',
             magnification: 1.45,
-            hit: 1
-          }
-        ]
-      },
-      {
-        name: '独奏アルペジオ＋（大協奏）',
-        type: SkillType.AwakeningSkill,
-        attribute: Attribute.Sound,
-        levels: [
+            hit: 1,
+            text: '敵全体に攻撃力1.45倍のダメージ。さらに2ターンの間、味方全体の防御力を30%上昇させる'
+          },
           {
             level: 1,
+            label: '大協奏',
             magnification: 1.45,
-            hit: 1
+            hit: 1,
+            attribute: Attribute.Sound,
+            text: '敵全体に攻撃力1.45倍の響撃ダメージ。さらに2ターンの間、味方全体の攻撃力、防御力、素早さをそれぞれ30%上昇させる'
           }
         ]
       },
       {
         name: 'オールオブアサドン＋',
         type: SkillType.Mysteries,
+        text: '敵横一列に攻撃力1.75倍の2連続ダメージ。さらに残りHP割合の高い敵ほど威力が上昇する',
         levels: [
           {
             level: 1,

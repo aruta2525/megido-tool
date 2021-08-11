@@ -15,7 +15,7 @@ const sacredTreasureList: ISacredTreasure[] = [
     defense: 7,
     speed: 0,
     type: Type.None,
-    ability: {value: 0, text: '列・全体攻撃のダメージが8%上昇する'}
+    ability: {name: '', text: '列・全体攻撃のダメージが8%上昇する'}
   },
   {
     name: 'ブレードコサージュ',
@@ -27,7 +27,7 @@ const sacredTreasureList: ISacredTreasure[] = [
     defense: 21,
     speed: 0,
     type: Type.None,
-    ability: {value: 0, text: '列・全体攻撃のダメージが7%上昇する'}
+    ability: {name: '', text: '列・全体攻撃のダメージが7%上昇する'}
   },
   {
     name: '誇りの指輪',
@@ -39,7 +39,7 @@ const sacredTreasureList: ISacredTreasure[] = [
     defense: 34,
     speed: 0,
     type: Type.None,
-    ability: {value: 0, text: '列・全体攻撃のダメージが6%上昇する'}
+    ability: {name: '', text: '列・全体攻撃のダメージが6%上昇する'}
   },
   {
     name: '薄桜の晶剣',
@@ -51,7 +51,7 @@ const sacredTreasureList: ISacredTreasure[] = [
     defense: 7,
     speed: 0,
     type: Type.None,
-    ability: {value: 0, text: '列・全体攻撃のダメージが8%上昇する'}
+    ability: {name: '', text: '列・全体攻撃のダメージが8%上昇する'}
   },
   {
     name: 'ソール・エッジ',
@@ -63,7 +63,7 @@ const sacredTreasureList: ISacredTreasure[] = [
     defense: 21,
     speed: 0,
     type: Type.None,
-    ability: {value: 0, text: '列・全体攻撃のダメージが7%上昇する'}
+    ability: {name: '', text: '列・全体攻撃のダメージが7%上昇する'}
   },
   {
     name: '慈しみの指輪',
@@ -75,7 +75,7 @@ const sacredTreasureList: ISacredTreasure[] = [
     defense: 34,
     speed: 0,
     type: Type.None,
-    ability: {value: 0, text: '列・全体攻撃のダメージが6%上昇する'}
+    ability: {name: '', text: '列・全体攻撃のダメージが6%上昇する'}
   },
   {
     name: '氷床の晶剣',
@@ -87,7 +87,7 @@ const sacredTreasureList: ISacredTreasure[] = [
     defense: 7,
     speed: 0,
     type: Type.None,
-    ability: {value: 0, text: '列・全体攻撃のダメージが8%上昇する'}
+    ability: {name: '', text: '列・全体攻撃のダメージが8%上昇する'}
   },
   {
     name: 'グラキエース・ソル',
@@ -99,7 +99,7 @@ const sacredTreasureList: ISacredTreasure[] = [
     defense: 21,
     speed: 0,
     type: Type.None,
-    ability: {value: 0, text: '列・全体攻撃のダメージが7%上昇する'}
+    ability: {name: '', text: '列・全体攻撃のダメージが7%上昇する'}
   },
   {
     name: '希望の指輪',
@@ -111,7 +111,7 @@ const sacredTreasureList: ISacredTreasure[] = [
     defense: 34,
     speed: 0,
     type: Type.None,
-    ability: {value: 0, text: '列・全体攻撃のダメージが6%上昇する'}
+    ability: {name: '', text: '列・全体攻撃のダメージが6%上昇する'}
   }
 ];
 

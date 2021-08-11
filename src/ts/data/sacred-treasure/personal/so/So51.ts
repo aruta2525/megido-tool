@@ -16,7 +16,7 @@ const sacredTreasureList: IPersonalSacredTreasure[] = [
     defense: 0,
     speed: 0,
     type: Type.None,
-    ability: {value: 0, text: 'スキル、覚醒スキル、奥義が変化する。攻撃時、敵を虚弱状態にする（3ターン） 自身状態異常付与時、覚醒ゲージ+1'},
+    ability: {name: '', text: 'スキル、覚醒スキル、奥義が変化する。攻撃時、敵を虚弱状態にする（3ターン） 自身状態異常付与時、覚醒ゲージ+1'},
     personal: {
       clockType: ClockType.So,
       megidoNo: 51,

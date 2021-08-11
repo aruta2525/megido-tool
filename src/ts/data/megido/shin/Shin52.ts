@@ -29,6 +29,7 @@ const megido: IMegido[] = [
       {
         name: '青天のとっぷう＋',
         type: SkillType.Skill,
+        text: '敵単体に攻撃力0.8倍のダメージ。1ターンの間、突風の地形効果で0.75倍の継続ダメージを与え、火に弱くする',
         levels: [
           {
             level: 1,
@@ -43,14 +44,24 @@ const megido: IMegido[] = [
         levels: [
           {
             level: 1,
+            label: '通常',
             magnification: 0,
-            hit: 1
+            hit: 0,
+            text: '味方全体のHPを25%回復させる'
+          },
+          {
+            level: 2,
+            label: '大協奏',
+            magnification: 0,
+            hit: 0,
+            text: '味方全体のHPを30%回復させる'
           }
         ]
       },
       {
         name: '終焉のモンスーン＋',
         type: SkillType.Mysteries,
+        text: '敵横一列に攻撃力3倍のダメージ。2ターンの間、突風の地形効果で0.75倍の継続ダメージを与え、火に弱くする',
         levels: [
           {
             level: 1,
@@ -92,20 +103,18 @@ const megido: IMegido[] = [
         levels: [
           {
             level: 1,
+            label: '通常',
             magnification: 1.25,
-            hit: 1
-          }
-        ]
-      },
-      {
-        name: '風のカンタービレ＋(大協奏)',
-        type: SkillType.Skill,
-        attribute: Attribute.Sound,
-        levels: [
+            hit: 1,
+            text: '敵横一列に攻撃力1.25倍のダメージ'
+          },
           {
             level: 1,
+            label: '大協奏',
             magnification: 1.5,
-            hit: 1
+            hit: 1,
+            attribute: Attribute.Sound,
+            text: '敵横一列に攻撃力1.5倍の響撃ダメージ'
           }
         ]
       },
@@ -115,26 +124,25 @@ const megido: IMegido[] = [
         levels: [
           {
             level: 1,
+            label: '通常',
             magnification: 1.5,
-            hit: 1
-          }
-        ]
-      },
-      {
-        name: '魔笛の風音＋',
-        type: SkillType.AwakeningSkill,
-        attribute: Attribute.Sound,
-        levels: [
+            hit: 1,
+            text: '敵横一列に攻撃力1.5倍のダメージ。さらに1ターンの間、アタックフォトンを劣化させる'
+          },
           {
             level: 1,
+            label: '大協奏',
             magnification: 1.75,
-            hit: 1
+            hit: 1,
+            attribute: Attribute.Sound,
+            text: '敵横一列に攻撃力1.75倍の響撃ダメージ。さらに1ターンの間、アタックフォトンを劣化させる'
           }
         ]
       },
       {
         name: '暴魔のソナタ＋',
         type: SkillType.Mysteries,
+        text: '3ターンの間、味方全体を暴奏状態にし、毎ターン終了時にHPを15%回復する。さらに味方編成を協奏状態にする',
         levels: [
           {
             level: 1,

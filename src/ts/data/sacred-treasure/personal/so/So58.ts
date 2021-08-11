@@ -16,7 +16,7 @@ const sacredTreasureList: IPersonalSacredTreasure[] = [
     defense: 0,
     speed: 0,
     type: Type.None,
-    ability: {value: 0, text: '攻撃力が30%上昇し、 敵がノックバック、引き寄せ状態の場合ダメージが2倍になる'},
+    ability: {name: '', text: '攻撃力が30%上昇し、 敵がノックバック、引き寄せ状態の場合ダメージが2倍になる'},
     personal: {
       clockType: ClockType.So,
       megidoNo: 58,

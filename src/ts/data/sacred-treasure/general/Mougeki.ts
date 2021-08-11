@@ -15,7 +15,7 @@ const sacredTreasureList: ISacredTreasure[] = [
     defense: 0,
     speed: 0,
     type: Type.None,
-    ability: {value: 0, text: ''}
+    ability: {name: '', text: ''}
   },
   {
     name: '雨乞いの願糸',
@@ -27,7 +27,7 @@ const sacredTreasureList: ISacredTreasure[] = [
     defense: 0,
     speed: 0,
     type: Type.None,
-    ability: {value: 0, text: ''}
+    ability: {name: '', text: ''}
   },
   {
     name: 'アルジェントパール',
@@ -39,7 +39,7 @@ const sacredTreasureList: ISacredTreasure[] = [
     defense: 28,
     speed: 0,
     type: Type.None,
-    ability: {value: 0, text: ''}
+    ability: {name: '', text: ''}
   },
   {
     name: '魔蛇の彫像',
@@ -51,7 +51,7 @@ const sacredTreasureList: ISacredTreasure[] = [
     defense: 4,
     speed: 0,
     type: Type.None,
-    ability: {value: 0, text: ''}
+    ability: {name: '', text: ''}
   },
   {
     name: 'ベルデエトワール',
@@ -63,7 +63,7 @@ const sacredTreasureList: ISacredTreasure[] = [
     defense: 0,
     speed: 0,
     type: Type.None,
-    ability: {value: 0, text: ''}
+    ability: {name: '', text: ''}
   },
   {
     name: 'デビルズリング',
@@ -75,7 +75,7 @@ const sacredTreasureList: ISacredTreasure[] = [
     defense: 24,
     speed: 0,
     type: Type.None,
-    ability: {value: 0, text: ''}
+    ability: {name: '', text: ''}
   },
   {
     name: 'マリスコスジェム',
@@ -87,7 +87,7 @@ const sacredTreasureList: ISacredTreasure[] = [
     defense: 4,
     speed: 0,
     type: Type.None,
-    ability: {value: 0, text: ''}
+    ability: {name: '', text: ''}
   },
   {
     name: 'ゴシックダガー',
@@ -99,7 +99,7 @@ const sacredTreasureList: ISacredTreasure[] = [
     defense: 0,
     speed: 0,
     type: Type.None,
-    ability: {value: 0, text: '攻撃時、敵の防御力を2%無視する'}
+    ability: {name: '', text: '攻撃時、敵の防御力を2%無視する'}
   },
   {
     name: 'スカイブルーファン',
@@ -111,7 +111,7 @@ const sacredTreasureList: ISacredTreasure[] = [
     defense: 0,
     speed: 0,
     type: Type.None,
-    ability: {value: 0, text: '与えたダメージの3%を吸収する'}
+    ability: {name: '', text: '与えたダメージの3%を吸収する'}
   },
   {
     name: 'ハートブローチ',
@@ -123,7 +123,7 @@ const sacredTreasureList: ISacredTreasure[] = [
     defense: 50,
     speed: 0,
     type: Type.None,
-    ability: {value: 0, text: '攻撃時、Lv×1の固定追加ダメージを付与する'}
+    ability: {name: '', text: '攻撃時、Lv×1の固定追加ダメージを付与する'}
   },
   {
     name: 'アルターエッジ',
@@ -135,7 +135,7 @@ const sacredTreasureList: ISacredTreasure[] = [
     defense: 7,
     speed: 0,
     type: Type.None,
-    ability: {value: 0, text: '単体ダメージが3%上昇する'}
+    ability: {name: '', text: '単体ダメージが3%上昇する'}
   },
   {
     name: '繁栄のフェイス',
@@ -147,7 +147,7 @@ const sacredTreasureList: ISacredTreasure[] = [
     defense: 0,
     speed: 0,
     type: Type.None,
-    ability: {value: 0, text: '致死ダメージを受けたとき、3%の確率で踏みとどまる'}
+    ability: {name: '', text: '致死ダメージを受けたとき、3%の確率で踏みとどまる'}
   },
   {
     name: 'アムールリング',
@@ -159,7 +159,7 @@ const sacredTreasureList: ISacredTreasure[] = [
     defense: 42,
     speed: 0,
     type: Type.None,
-    ability: {value: 0, text: '行動開始時、4%の確率でスキルフォトンが追加される'}
+    ability: {name: '', text: '行動開始時、4%の確率でスキルフォトンが追加される'}
   },
   {
     name: 'エベーヌフェイス',
@@ -171,7 +171,7 @@ const sacredTreasureList: ISacredTreasure[] = [
     defense: 15,
     speed: 0,
     type: Type.None,
-    ability: {value: 0, text: '素早さが5%上昇する'}
+    ability: {name: '', text: '素早さが5%上昇する'}
   },
   {
     name: 'アシストスープ',
@@ -183,7 +183,7 @@ const sacredTreasureList: ISacredTreasure[] = [
     defense: 0,
     speed: 0,
     type: Type.None,
-    ability: {value: 0, text: '連続ダメージが5%上昇する'}
+    ability: {name: '', text: '連続ダメージが5%上昇する'}
   },
   {
     name: '改良型テツマリ',
@@ -195,7 +195,7 @@ const sacredTreasureList: ISacredTreasure[] = [
     defense: 35,
     speed: 0,
     type: Type.None,
-    ability: {value: 0, text: '与えたダメージの4%を吸収する'}
+    ability: {name: '', text: '与えたダメージの4%を吸収する'}
   },
   {
     name: '金のアマルティア',
@@ -207,7 +207,7 @@ const sacredTreasureList: ISacredTreasure[] = [
     defense: 0,
     speed: 5,
     type: Type.Mougeki,
-    ability: {value: 0, text: '攻撃時、敵の防御力を3%無視する'}
+    ability: {name: '', text: '攻撃時、敵の防御力を3%無視する'}
   },
   {
     name: '銀のティモリア',
@@ -219,7 +219,7 @@ const sacredTreasureList: ISacredTreasure[] = [
     defense: 0,
     speed: 5,
     type: Type.Mougeki,
-    ability: {value: 0, text: '単体ダメージが4%上昇する'}
+    ability: {name: '', text: '単体ダメージが4%上昇する'}
   },
   {
     name: 'ヴェリタスの彫像',
@@ -231,7 +231,7 @@ const sacredTreasureList: ISacredTreasure[] = [
     defense: 0,
     speed: 5,
     type: Type.Mougeki,
-    ability: {value: 0, text: '連続ダメージが4%上昇する'}
+    ability: {name: '', text: '連続ダメージが4%上昇する'}
   },
   {
     name: '情熱のパトス',
@@ -243,7 +243,7 @@ const sacredTreasureList: ISacredTreasure[] = [
     defense: 0,
     speed: 3,
     type: Type.Mougeki,
-    ability: {value: 0, text: '与えたダメージの4%を吸収する'}
+    ability: {name: '', text: '与えたダメージの4%を吸収する'}
   },
   {
     name: '金色のエトス',
@@ -255,7 +255,7 @@ const sacredTreasureList: ISacredTreasure[] = [
     defense: 0,
     speed: 3,
     type: Type.Mougeki,
-    ability: {value: 0, text: '致死ダメージを受けたとき、4%の確率で踏みとどまる'}
+    ability: {name: '', text: '致死ダメージを受けたとき、4%の確率で踏みとどまる'}
   },
   {
     name: '漆黒のロゴス',
@@ -267,7 +267,7 @@ const sacredTreasureList: ISacredTreasure[] = [
     defense: 0,
     speed: 3,
     type: Type.Mougeki,
-    ability: {value: 0, text: '素早さが6%上昇する'}
+    ability: {name: '', text: '素早さが6%上昇する'}
   },
   {
     name: 'レディアントパール',
@@ -279,7 +279,7 @@ const sacredTreasureList: ISacredTreasure[] = [
     defense: 55,
     speed: 3,
     type: Type.Mougeki,
-    ability: {value: 0, text: '攻撃時、Lv×1の固定追加ダメージを付与する'}
+    ability: {name: '', text: '攻撃時、Lv×1の固定追加ダメージを付与する'}
   },
   {
     name: '桃真珠の首輪',
@@ -291,7 +291,7 @@ const sacredTreasureList: ISacredTreasure[] = [
     defense: 0,
     speed: 12,
     type: Type.Mougeki,
-    ability: {value: 0, text: '行動開始時、5%の確率でアタックフォトンが追加される'}
+    ability: {name: '', text: '行動開始時、5%の確率でアタックフォトンが追加される'}
   },
   {
     name: 'トレラントリング',
@@ -303,7 +303,7 @@ const sacredTreasureList: ISacredTreasure[] = [
     defense: 0,
     speed: 12,
     type: Type.Mougeki,
-    ability: {value: 0, text: '行動開始時、5%の確率でスキルフォトンが追加される'}
+    ability: {name: '', text: '行動開始時、5%の確率でスキルフォトンが追加される'}
   }
 ];
 

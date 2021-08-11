@@ -29,6 +29,7 @@ export const So56: IMegido[] = [
       {
         name: '先陣を切る＋',
         type: SkillType.Skill,
+        text: '敵単体に攻撃力1.25倍のダメージ。さらに80%の確率で、積まれているフォトンを1つ破壊する',
         levels: [
           {
             level: 1,
@@ -40,6 +41,7 @@ export const So56: IMegido[] = [
       {
         name: '突撃命令＋',
         type: SkillType.AwakeningSkill,
+        text: '2ターンの間、味方前列のアタックを強化し攻撃力を10%上昇させる',
         levels: [
           {
             level: 1,
@@ -51,6 +53,7 @@ export const So56: IMegido[] = [
       {
         name: '光のヴェール＋',
         type: SkillType.Mysteries,
+        text: '3ターンの間、味方全体へのアタックフォトンからのダメージを85%軽減する',
         levels: [
           {
             level: 1,

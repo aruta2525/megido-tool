@@ -36,7 +36,8 @@ const noname: IEnemy = {
   styleType: StyleType.Rush,
   hp: 0,
   offense: 0,
-  defense: 0
+  defense: 0,
+  speed: 0
 };
 
 let enemyList: IEnemy[] = [];

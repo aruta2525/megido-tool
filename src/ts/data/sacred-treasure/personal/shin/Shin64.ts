@@ -16,7 +16,7 @@ const sacredTreasureList: IPersonalSacredTreasure[] = [
     defense: 0,
     speed: 0,
     type: Type.None,
-    ability: {value: 0, text: 'スキルフォトン使用時、味方編成を協奏状態にする'},
+    ability: {name: '', text: 'スキルフォトン使用時、味方編成を協奏状態にする'},
     personal: {
       clockType: ClockType.Shin,
       megidoNo: 64,

@@ -15,7 +15,7 @@ const sacredTreasureList: ISacredTreasure[] = [
     defense: 0,
     speed: 3,
     type: Type.Suishin,
-    ability: {value: 0, text: 'ハイドロボムを付与したとき、HPを5%回復する'}
+    ability: {name: '', text: 'ハイドロボムを付与したとき、HPを5%回復する'}
   },
   {
     name: '修羅の仮面',
@@ -27,7 +27,7 @@ const sacredTreasureList: ISacredTreasure[] = [
     defense: 48,
     speed: 0,
     type: Type.Suishin,
-    ability: {value: 0, text: 'ハイドロボムのダメージが3%上昇する'}
+    ability: {name: '', text: 'ハイドロボムのダメージが3%上昇する'}
   },
   {
     name: '紺碧の魔塔ドーム',
@@ -39,7 +39,7 @@ const sacredTreasureList: ISacredTreasure[] = [
     defense: 21,
     speed: 0,
     type: Type.Suishin,
-    ability: {value: 0, text: 'ハイドロボムの命中率が5%上昇する'}
+    ability: {name: '', text: 'ハイドロボムの命中率が5%上昇する'}
   }
 ];
 

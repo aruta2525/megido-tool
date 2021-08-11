@@ -15,7 +15,7 @@ const sacredTreasureList: ISacredTreasure[] = [
     defense: 0,
     speed: 0,
     type: Type.Rensa,
-    ability: {value: 0, text: 'チェイン中、攻撃力が4%上昇する'}
+    ability: {name: '', text: 'チェイン中、攻撃力が4%上昇する'}
   },
   {
     name: '紅蓮の祭服',
@@ -27,7 +27,7 @@ const sacredTreasureList: ISacredTreasure[] = [
     defense: 10,
     speed: 0,
     type: Type.Rensa,
-    ability: {value: 0, text: '毎ターン終了時、HPが3%回復する'}
+    ability: {name: '', text: '毎ターン終了時、HPが3%回復する'}
   },
   {
     name: '生命のチョーカー',
@@ -39,7 +39,7 @@ const sacredTreasureList: ISacredTreasure[] = [
     defense: 0,
     speed: 17,
     type: Type.Rensa,
-    ability: {value: 0, text: 'チェイン中、ステータス弱体の命中率が8%上昇する'}
+    ability: {name: '', text: 'チェイン中、ステータス弱体の命中率が8%上昇する'}
   }
 ];
 

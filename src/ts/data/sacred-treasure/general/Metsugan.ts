@@ -15,7 +15,7 @@ const sacredTreasureList: ISacredTreasure[] = [
     defense: 0,
     speed: 0,
     type: Type.Metsugan,
-    ability: {value: 0, text: '単体ダメージが4%上昇する'}
+    ability: {name: '', text: '単体ダメージが4%上昇する'}
   },
   {
     name: '銃歩兵の鎧',
@@ -27,7 +27,7 @@ const sacredTreasureList: ISacredTreasure[] = [
     defense: 34,
     speed: 0,
     type: Type.Metsugan,
-    ability: {value: 0, text: '与えたダメージの4%を吸収する'}
+    ability: {name: '', text: '与えたダメージの4%を吸収する'}
   },
   {
     name: 'ラメールの筒',
@@ -39,7 +39,7 @@ const sacredTreasureList: ISacredTreasure[] = [
     defense: 55,
     speed: 0,
     type: Type.Metsugan,
-    ability: {value: 0, text: '行動開始時、5%の確率で スキルフォトンが追加される'}
+    ability: {name: '', text: '行動開始時、5%の確率で スキルフォトンが追加される'}
   }
 ];
 

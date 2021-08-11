@@ -29,6 +29,7 @@ const megido: IMegido[] = [
       {
         name: '風の紡ぎ唄＋',
         type: SkillType.Skill,
+        text: '自身の点穴を+15する。さらに、覚醒ゲージを+1する',
         levels: [
           {
             level: 1,
@@ -40,6 +41,7 @@ const megido: IMegido[] = [
       {
         name: '封邪のコントラクト＋',
         type: SkillType.AwakeningSkill,
+        text: '敵単体に掛かっている強化を解除する。さらに2ターンの間、束縛状態にする',
         levels: [
           {
             level: 1,
@@ -51,6 +53,7 @@ const megido: IMegido[] = [
       {
         name: 'タブー・マジック＋',
         type: SkillType.Mysteries,
+        text: '敵単体に攻撃力3倍のダメージ。さらに、自身の点穴を+25する',
         levels: [
           {
             level: 1,

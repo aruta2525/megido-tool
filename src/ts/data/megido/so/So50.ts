@@ -33,28 +33,33 @@ export const So50: IMegido[] = [
           {
             level: 1,
             magnification: 0.6,
-            hit: 2
+            hit: 2,
+            text: '敵単体に攻撃力0.6倍の防御無視2連続ダメージ【使用するごとにスキルLv上昇】'
           },
           {
             level: 2,
             magnification: 0.7,
-            hit: 2
+            hit: 2,
+            text: '敵単体に攻撃力0.7倍の防御無視2連続ダメージ【使用するごとにスキルLv上昇】'
           },
           {
             level: 3,
             magnification: 0.8,
-            hit: 2
+            hit: 2,
+            text: '敵単体に攻撃力0.8倍の防御無視2連続ダメージ【使用するごとにスキルLv上昇】'
           },
           {
             level: 4,
             magnification: 0.9,
-            hit: 2
+            hit: 2,
+            text: '敵単体に攻撃力0.9倍の防御無視2連続ダメージ'
           }
         ]
       },
       {
         name: 'マッドスラローム＋',
         type: SkillType.AwakeningSkill,
+        text: '敵単体に攻撃力3倍のダメージ。2ターンの間、自身の攻撃力を60%上昇させ反動で両隣が最大HPの15%ダメージ',
         levels: [
           {
             level: 1,
@@ -66,6 +71,7 @@ export const So50: IMegido[] = [
       {
         name: 'メルティアサルト＋',
         type: SkillType.Mysteries,
+        text: '単体に攻撃力1.75倍の3連続ダメージ。さらに2ターンの間、防御力を0にする',
         levels: [
           {
             level: 1,
@@ -107,6 +113,7 @@ export const So50: IMegido[] = [
       {
         name: 'アレイジスパイク＋',
         type: SkillType.Skill,
+        text: '敵単体に攻撃力0.9倍の2連続ダメージ。さらに味方編成を怒闘状態にする',
         levels: [
           {
             level: 1,
@@ -118,6 +125,7 @@ export const So50: IMegido[] = [
       {
         name: 'マッドゴーラウンド＋',
         type: SkillType.AwakeningSkill,
+        text: '敵単体に攻撃力0.65倍の防御無視4連続ダメージ。さらに与えたダメージの15%を吸収する',
         levels: [
           {
             level: 1,
@@ -129,6 +137,8 @@ export const So50: IMegido[] = [
       {
         name: 'クレイジーブルーム＋',
         type: SkillType.Mysteries,
+        text: `味方単体にスキルを1つ追加し、2ターンの間ターン終了時にHPを15%回復する。さらにカウンターの場合、1ターンの間攻撃力を50%上昇、バーサーク状態にする<br>
+              【バーサークの詳細】1ターン目:攻撃力75%UP。毎ターン25%ずつ上昇。最大150%。毎ターン、最大HPの10%ダメージを受ける`,
         levels: [
           {
             level: 1,

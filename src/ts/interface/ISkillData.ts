@@ -1,15 +1,18 @@
-import {SkillType, Attribute} from '../enum/Megido';
+import {SkillType, Attribute, ReferralStatus} from '../enum/Megido';
 
 export interface ISkillLevel {
   level: number;
+  label?: string;
   magnification: number;
   hit: number;
   text?: string;
+  attribute?: Attribute;
 }
 
 export interface ISkillData {
   name: string;
   type: SkillType;
+  referralStatus?: ReferralStatus;
   attribute?: Attribute;
   increment?: number;
   levels: ISkillLevel[];

@@ -16,11 +16,15 @@ const sacredTreasureList: IPersonalSacredTreasure[] = [
     defense: 0,
     speed: 0,
     type: Type.None,
-    ability: {value: 0, text: '特性、スキル、奥義が変化する。アタックが雷ダメージになる'},
+    ability: {name: '', text: '特性、スキル、奥義が変化する。アタックが雷ダメージになる'},
     personal: {
       clockType: ClockType.Shin,
       megidoNo: 10,
-      name: 'グリマルキン'
+      name: 'グリマルキン',
+      megidoAbility: {
+        name: 'バチバチしますニャ',
+        text: '自身が雷ダメージを与えたとき、対象のエレキレベルが25以下ならエレキレベルの上昇量を＋2する（連続ダメージは1回としてカウントする）'
+      }
     }
   }
 ];

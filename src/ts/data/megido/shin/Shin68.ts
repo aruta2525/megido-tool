@@ -27,52 +27,49 @@ const megido: IMegido[] = [
         ]
       },
       {
-        name: 'アイアンドーム＋',
+        name: 'アイアンドーム＋/危険対象物除去＋',
         type: SkillType.Skill,
         levels: [
           {
             level: 1,
+            label: '通常',
             magnification: 0,
-            hit: 0
-          }
-        ]
-      },
-      {
-        name: '危険対象物除去＋(自動操縦)',
-        type: SkillType.Skill,
-        levels: [
+            hit: 0,
+            text: '2ターンの間、自身の攻撃力を30%上昇させ、さらに攻撃を受けたとき、反撃する	'
+          },
           {
             level: 1,
+            label: '自動操縦',
             magnification: 1.25,
-            hit: 1
+            hit: 1,
+            text: '敵単体に攻撃力1.25倍のダメージ。さらに自身のHPが50%以下のとき、威力が2倍になる'
           }
         ]
       },
       {
-        name: 'ハンマーフィスト＋',
+        name: 'ハンマーフィスト＋/緊急回避行動＋',
         type: SkillType.AwakeningSkill,
         levels: [
           {
             level: 1,
+            label: '通常',
             magnification: 0.5,
-            hit: 4
-          }
-        ]
-      },
-      {
-        name: '緊急回避行動＋(自動操縦)',
-        type: SkillType.AwakeningSkill,
-        levels: [
+            hit: 4,
+            text: '敵単体に攻撃力0.5倍の防御無視4連続ダメージ'
+          },
           {
             level: 1,
+            label: '自動操縦',
             magnification: 2,
-            hit: 1
+            hit: 1,
+            text: '敵単体に攻撃力2倍のダメージ。さらにスキルを追加する'
           }
         ]
       },
       {
         name: 'グランドコンバイン＋',
         type: SkillType.Mysteries,
+        text: '敵単体に攻撃力3倍のダメージ。さらに2ターンの間、自身の攻撃力を50%上昇する',
         levels: [
           {
             level: 1,

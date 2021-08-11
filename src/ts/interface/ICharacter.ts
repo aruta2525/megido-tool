@@ -1,5 +1,6 @@
 import {ClassType, StyleType} from '../enum/Megido';
 import {ISkillData} from './ISkillData';
+import {IAbility} from './IAbility';
 
 export interface ICharacter {
   no: number;
@@ -10,10 +11,7 @@ export interface ICharacter {
   hp?: number;
   offense: number;
   defense: number;
-  speed?: number;
-  ability?: {
-    name: string;
-    text: string;
-  };
+  speed: number;
+  ability?: IAbility;
   skills?: ISkillData[];
 }

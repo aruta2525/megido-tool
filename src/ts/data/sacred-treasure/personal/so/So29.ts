@@ -17,7 +17,7 @@ const sacredTreasureList: IPersonalSacredTreasure[] = [
     speed: 0,
     type: Type.None,
     ability: {
-      value: 0,
+      name: '',
       text: 'スキルが変化。行動開始時、40%の確率でスキルが追加される'
     },
     personal: {

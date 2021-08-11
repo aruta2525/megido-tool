@@ -16,7 +16,7 @@ const sacredTreasureList: IPersonalSacredTreasure[] = [
     defense: 0,
     speed: 0,
     type: Type.None,
-    ability: {value: 0, text: '睡眠状態の敵に与えるダメージが2倍になる'},
+    ability: {name: '', text: '睡眠状態の敵に与えるダメージが2倍になる'},
     personal: {
       clockType: ClockType.So,
       megidoNo: 11,

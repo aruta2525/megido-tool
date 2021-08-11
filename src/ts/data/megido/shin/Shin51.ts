@@ -29,6 +29,7 @@ const megido: IMegido[] = [
       {
         name: 'ラピエル・フルーリ＋',
         type: SkillType.Skill,
+        text: '自身の点穴を+15し、敵単体に攻撃力1倍のダメージ',
         levels: [
           {
             level: 1,
@@ -38,8 +39,51 @@ const megido: IMegido[] = [
         ]
       },
       {
+        name: '【専】ラピエル・フルーリ＋',
+        type: SkillType.Skill,
+        levels: [
+          {
+            level: 1,
+            magnification: 1,
+            hit: 1,
+            text: '自身の点穴を+15し、敵単体に攻撃力1倍のダメージ【使用するごとに点穴増加量が変化】'
+          },
+          {
+            level: 2,
+            magnification: 1,
+            hit: 1,
+            text: '	自身の点穴を+30し、敵単体に攻撃力1倍のダメージ【使用するごとに点穴増加量が変化】'
+          },
+          {
+            level: 3,
+            magnification: 1,
+            hit: 1,
+            text: '自身の点穴を+45し、敵単体に攻撃力1倍のダメージ【使用するごとに点穴増加量が変化】'
+          },
+          {
+            level: 4,
+            magnification: 1,
+            hit: 1,
+            text: '自身の点穴を+60し、敵単体に攻撃力1倍のダメージ'
+          }
+        ]
+      },
+      {
         name: 'クゥ・デグラース＋',
         type: SkillType.AwakeningSkill,
+        text: '敵単体に攻撃力2.25倍のダメージ。さらに自身の点穴を+20する',
+        levels: [
+          {
+            level: 1,
+            magnification: 2.25,
+            hit: 1
+          }
+        ]
+      },
+      {
+        name: '【専】クゥ・デグラース＋',
+        type: SkillType.AwakeningSkill,
+        text: '敵単体に攻撃力2.25倍のダメージ。さらに自身の点穴を+30し、スキルフォトンを1つ追加する',
         levels: [
           {
             level: 1,
@@ -51,6 +95,7 @@ const megido: IMegido[] = [
       {
         name: 'ヴォロンテ・ド・フ＋',
         type: SkillType.Mysteries,
+        text: '自身の点穴を+40し、さらに2ターンの間、ターン終了時にHPが10%回復する',
         levels: [
           {
             level: 1,
@@ -92,18 +137,24 @@ const megido: IMegido[] = [
         levels: [
           {
             level: 0,
+            label: 'Ch0',
             magnification: 0.6,
-            hit: 2
+            hit: 2,
+            text: '敵単体に攻撃力0.6倍の防御無視2連続ダメージ。チェイン数に応じて効果が変化'
           },
           {
             level: 0,
+            label: 'Ch1',
             magnification: 0.6,
-            hit: 2
+            hit: 2,
+            text: '敵単体に攻撃力0.6倍の防御無視2連続ダメージ。さらに自身の覚醒ゲージを+1する。チェイン数に応じて効果が変化'
           },
           {
             level: 0,
+            label: 'Ch2',
             magnification: 0.6,
-            hit: 2
+            hit: 2,
+            text: '	敵単体に攻撃力0.6倍の防御無視2連続ダメージ。さらに自身の覚醒ゲージを+2する'
           }
         ]
       },
@@ -113,18 +164,24 @@ const megido: IMegido[] = [
         levels: [
           {
             level: 1,
+            label: 'Ch1以下',
             magnification: 2.25,
-            hit: 1
+            hit: 1,
+            text: '敵単体に攻撃力2.25倍のダメージ。さらに2ターンの間、敵が積めるフォトンの量を-1する。チェイン数に応じて効果範囲変化'
           },
           {
             level: 2,
+            label: 'Ch2',
             magnification: 2.25,
-            hit: 1
+            hit: 1,
+            text: '敵横一列に攻撃力2.25倍のダメージ。さらに2ターンの間、敵が積めるフォトンの量を-1する。チェイン数に応じて効果範囲変化'
           },
           {
             level: 3,
+            label: 'Ch3',
             magnification: 2.25,
-            hit: 1
+            hit: 1,
+            text: '	敵全体に攻撃力2.25倍のダメージ。さらに2ターンの間、敵が積めるフォトンの量を-1する'
           }
         ]
       },
@@ -134,28 +191,38 @@ const megido: IMegido[] = [
         levels: [
           {
             level: 3,
+            label: 'Ch3以下',
             magnification: 3.5,
-            hit: 1
+            hit: 1,
+            text: '	敵単体に攻撃力3.5倍のダメージ。味方単体にチェイン。チェイン数に応じて効果が変化'
           },
           {
             level: 4,
+            label: 'Ch4',
             magnification: 3.5,
-            hit: 1
+            hit: 1,
+            text: '敵単体に攻撃力3.5倍のダメージ。自身にアタックフォトンを1つ追加。自身にチェイン。チェイン数に応じて効果が変化'
           },
           {
             level: 5,
+            label: 'Ch5',
             magnification: 4,
-            hit: 1
+            hit: 1,
+            text: '	敵単体に攻撃力4倍のダメージ。自身にアタックフォトンを1つ追加（50%）。自身にチェイン。チェイン数に応じて効果が変化'
           },
           {
             level: 6,
+            label: 'Ch6',
             magnification: 6,
-            hit: 1
+            hit: 1,
+            text: '敵単体に攻撃力6倍のダメージ。自身にアタックフォトンを1つ追加（5%）。自身にチェイン。チェイン数に応じて効果が変化'
           },
           {
             level: 7,
+            label: 'Ch7',
             magnification: 8.5,
-            hit: 1
+            hit: 1,
+            text: '敵単体に攻撃力8.5倍のダメージ'
           }
         ],
         increment: 0.05

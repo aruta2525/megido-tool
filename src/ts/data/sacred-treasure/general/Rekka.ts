@@ -15,7 +15,7 @@ const sacredTreasureList: ISacredTreasure[] = [
     defense: 0,
     speed: 0,
     type: Type.None,
-    ability: {value: 0, text: ''}
+    ability: {name: '', text: ''}
   },
   {
     name: 'ピーチマフラー',
@@ -27,7 +27,7 @@ const sacredTreasureList: ISacredTreasure[] = [
     defense: 0,
     speed: 0,
     type: Type.None,
-    ability: {value: 0, text: ''}
+    ability: {name: '', text: ''}
   },
   {
     name: 'ブラックトルク',
@@ -39,7 +39,7 @@ const sacredTreasureList: ISacredTreasure[] = [
     defense: 28,
     speed: 0,
     type: Type.None,
-    ability: {value: 0, text: ''}
+    ability: {name: '', text: ''}
   },
   {
     name: '紅の香炉',
@@ -51,7 +51,7 @@ const sacredTreasureList: ISacredTreasure[] = [
     defense: 4,
     speed: 0,
     type: Type.None,
-    ability: {value: 0, text: ''}
+    ability: {name: '', text: ''}
   },
   {
     name: '漆黒のマフラー',
@@ -63,7 +63,7 @@ const sacredTreasureList: ISacredTreasure[] = [
     defense: 0,
     speed: 0,
     type: Type.None,
-    ability: {value: 0, text: ''}
+    ability: {name: '', text: ''}
   },
   {
     name: 'アンデッドスカル',
@@ -75,7 +75,7 @@ const sacredTreasureList: ISacredTreasure[] = [
     defense: 24,
     speed: 0,
     type: Type.None,
-    ability: {value: 0, text: ''}
+    ability: {name: '', text: ''}
   },
   {
     name: 'ブルーポンチョ',
@@ -87,7 +87,7 @@ const sacredTreasureList: ISacredTreasure[] = [
     defense: 4,
     speed: 0,
     type: Type.None,
-    ability: {value: 0, text: ''}
+    ability: {name: '', text: ''}
   },
   {
     name: '魔毒の封瓶',
@@ -99,7 +99,7 @@ const sacredTreasureList: ISacredTreasure[] = [
     defense: 0,
     speed: 0,
     type: Type.None,
-    ability: {value: 0, text: '火ダメージが3%上昇する'}
+    ability: {name: '', text: '火ダメージが3%上昇する'}
   },
   {
     name: 'スプリングフード',
@@ -111,7 +111,7 @@ const sacredTreasureList: ISacredTreasure[] = [
     defense: 0,
     speed: 0,
     type: Type.None,
-    ability: {value: 0, text: 'HPが3%上昇する'}
+    ability: {name: '', text: 'HPが3%上昇する'}
   },
   {
     name: 'タフネスチョーカー',
@@ -123,7 +123,7 @@ const sacredTreasureList: ISacredTreasure[] = [
     defense: 50,
     speed: 0,
     type: Type.None,
-    ability: {value: 0, text: '自身のHPが50%以下のとき、4%の確率でダメージを無効にする'}
+    ability: {name: '', text: '自身のHPが50%以下のとき、4%の確率でダメージを無効にする'}
   },
   {
     name: 'ワンダーインセンス',
@@ -135,7 +135,7 @@ const sacredTreasureList: ISacredTreasure[] = [
     defense: 15,
     speed: 0,
     type: Type.None,
-    ability: {value: 0, text: '全体攻撃のダメージが5%上昇する'}
+    ability: {name: '', text: '全体攻撃のダメージが5%上昇する'}
   },
   {
     name: 'オンブラポンチョ',
@@ -147,7 +147,7 @@ const sacredTreasureList: ISacredTreasure[] = [
     defense: 0,
     speed: 0,
     type: Type.None,
-    ability: {value: 0, text: '行動開始時、4%の確率でチャージフォトンが追加される'}
+    ability: {name: '', text: '行動開始時、4%の確率でチャージフォトンが追加される'}
   },
   {
     name: 'メタリックネイル',
@@ -159,7 +159,7 @@ const sacredTreasureList: ISacredTreasure[] = [
     defense: 42,
     speed: 0,
     type: Type.None,
-    ability: {value: 0, text: '覚醒ゲージ量が多いほど、防御力が上昇する（最大値6%）'}
+    ability: {name: '', text: '覚醒ゲージ量が多いほど、防御力が上昇する（最大値6%）'}
   },
   {
     name: 'シアンフード',
@@ -171,7 +171,7 @@ const sacredTreasureList: ISacredTreasure[] = [
     defense: 15,
     speed: 0,
     type: Type.None,
-    ability: {value: 0, text: '毎ターン終了時、 6%の確率で覚醒ゲージが+1される'}
+    ability: {name: '', text: '毎ターン終了時、 6%の確率で覚醒ゲージが+1される'}
   },
   {
     name: 'スピネルホーン',
@@ -183,7 +183,7 @@ const sacredTreasureList: ISacredTreasure[] = [
     defense: 5,
     speed: 0,
     type: Type.None,
-    ability: {value: 0, text: '覚醒ゲージ量が多いほど、攻撃力が上昇する（最大値6%）'}
+    ability: {name: '', text: '覚醒ゲージ量が多いほど、攻撃力が上昇する（最大値6%）'}
   },
   {
     name: 'グレイシアボトル',
@@ -195,7 +195,7 @@ const sacredTreasureList: ISacredTreasure[] = [
     defense: 0,
     speed: 3,
     type: Type.Rekka,
-    ability: {value: 0, text: '火ダメージが4%上昇する'}
+    ability: {name: '', text: '火ダメージが4%上昇する'}
   },
   {
     name: '雷魂の火種',
@@ -207,7 +207,7 @@ const sacredTreasureList: ISacredTreasure[] = [
     defense: 0,
     speed: 3,
     type: Type.Rekka,
-    ability: {value: 0, text: '覚醒ゲージ量が多いほど、攻撃力が上昇する（最大値6%）'}
+    ability: {name: '', text: '覚醒ゲージ量が多いほど、攻撃力が上昇する（最大値6%）'}
   },
   {
     name: '紅蓮の塗料',
@@ -219,7 +219,7 @@ const sacredTreasureList: ISacredTreasure[] = [
     defense: 0,
     speed: 0,
     type: Type.Rekka,
-    ability: {value: 0, text: '全体攻撃のダメージが8%上昇する'}
+    ability: {name: '', text: '全体攻撃のダメージが8%上昇する'}
   },
   {
     name: '桜花の法衣',
@@ -231,7 +231,7 @@ const sacredTreasureList: ISacredTreasure[] = [
     defense: 10,
     speed: 0,
     type: Type.Rekka,
-    ability: {value: 0, text: 'HPが4%上昇する'}
+    ability: {name: '', text: 'HPが4%上昇する'}
   },
   {
     name: '陽炎の法衣',
@@ -243,7 +243,7 @@ const sacredTreasureList: ISacredTreasure[] = [
     defense: 0,
     speed: 0,
     type: Type.Rekka,
-    ability: {value: 0, text: '行動開始時、5%の確率でチャージフォトンが追加される'}
+    ability: {name: '', text: '行動開始時、5%の確率でチャージフォトンが追加される'}
   },
   {
     name: '水流の法衣',
@@ -255,7 +255,7 @@ const sacredTreasureList: ISacredTreasure[] = [
     defense: 0,
     speed: 3,
     type: Type.Rekka,
-    ability: {value: 0, text: '毎ターン終了時、8%の確率で覚醒ゲージが+1される'}
+    ability: {name: '', text: '毎ターン終了時、8%の確率で覚醒ゲージが+1される'}
   },
   {
     name: 'クーリッシュカラー',
@@ -267,7 +267,7 @@ const sacredTreasureList: ISacredTreasure[] = [
     defense: 0,
     speed: 12,
     type: Type.Rekka,
-    ability: {value: 0, text: '自身のHPが50%以下のとき、6%の確率でダメージを無効にする'}
+    ability: {name: '', text: '自身のHPが50%以下のとき、6%の確率でダメージを無効にする'}
   },
   {
     name: 'ストラーナヘッド',
@@ -279,7 +279,7 @@ const sacredTreasureList: ISacredTreasure[] = [
     defense: 0,
     speed: 12,
     type: Type.Rekka,
-    ability: {value: 0, text: '覚醒ゲージ量が多いほど、防御力が上昇する（最大値9%）'}
+    ability: {name: '', text: '覚醒ゲージ量が多いほど、防御力が上昇する（最大値9%）'}
   },
   {
     name: 'アルジャンスカル',
@@ -291,7 +291,7 @@ const sacredTreasureList: ISacredTreasure[] = [
     defense: 0,
     speed: 12,
     type: Type.Rekka,
-    ability: {value: 0, text: 'ステータス弱体耐性が13%上昇する'}
+    ability: {name: '', text: 'ステータス弱体耐性が13%上昇する'}
   }
 ];
 

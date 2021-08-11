@@ -29,6 +29,7 @@ export const So52: IMegido[] = [
       {
         name: 'あとは任せた！＋',
         type: SkillType.Skill,
+        text: '2ターンの間、自身が睡眠状態になり、自身以外の攻撃力を35%上昇させる',
         levels: [
           {
             level: 1,
@@ -40,6 +41,7 @@ export const So52: IMegido[] = [
       {
         name: '少し本気出す！＋',
         type: SkillType.AwakeningSkill,
+        text: '敵単体に攻撃力3倍のダメージ。さらに敵が覚醒状態のとき、ダメージが2倍になる',
         levels: [
           {
             level: 1,
@@ -49,8 +51,9 @@ export const So52: IMegido[] = [
         ]
       },
       {
-        name: '復讐剣バルムンク＋（最大）',
+        name: '復讐剣バルムンク＋',
         type: SkillType.Mysteries,
+        text: '敵単体に自身のHPが少ないほど威力の高いダメージ（最大で攻撃力の11.5倍のダメージ）',
         levels: [
           {
             level: 1,

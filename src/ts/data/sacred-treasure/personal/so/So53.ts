@@ -16,7 +16,7 @@ const sacredTreasureList: IPersonalSacredTreasure[] = [
     defense: 0,
     speed: 0,
     type: Type.None,
-    ability: {value: 0, text: 'スキルが変化する。自身がブレイク待機状態のとき、自身が受けるダメージを25%軽減する'},
+    ability: {name: '', text: 'スキルが変化する。自身がブレイク待機状態のとき、自身が受けるダメージを25%軽減する'},
     personal: {
       clockType: ClockType.So,
       megidoNo: 53,

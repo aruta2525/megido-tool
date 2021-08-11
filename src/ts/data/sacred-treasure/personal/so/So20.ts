@@ -16,7 +16,7 @@ const sacredTreasureList: IPersonalSacredTreasure[] = [
     defense: 0,
     speed: 0,
     type: Type.None,
-    ability: {value: 0, text: '自身のHPが少ないほど攻撃力が上昇する(最大200%) 致死ダメージを受けたとき、6%の確率で踏みとどまる'},
+    ability: {name: '', text: '自身のHPが少ないほど攻撃力が上昇する(最大200%) 致死ダメージを受けたとき、6%の確率で踏みとどまる'},
     personal: {
       clockType: ClockType.So,
       megidoNo: 20,

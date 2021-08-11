@@ -29,6 +29,7 @@ const megido: IMegido[] = [
       {
         name: '秩序の障壁＋',
         type: SkillType.Skill,
+        text: '味方前列への攻撃を1回無効化する さらに2ターンの間、攻撃力を10%上昇させる',
         levels: [
           {
             level: 1,
@@ -40,6 +41,7 @@ const megido: IMegido[] = [
       {
         name: '判決『氷結の刑』＋',
         type: SkillType.AwakeningSkill,
+        text: '敵横一列に攻撃力1.75倍のダメージ。2ターンの間、氷結の地形効果で0.75倍の継続ダメージを与え、攻撃力を低下させる',
         levels: [
           {
             level: 1,
@@ -51,6 +53,7 @@ const megido: IMegido[] = [
       {
         name: '焼べる浄化の蒼炎＋',
         type: SkillType.Mysteries,
+        text: '味方横一列のHPを40%回復させる。さらに2ターンの間、攻撃力を30%上昇させる',
         levels: [
           {
             level: 1,

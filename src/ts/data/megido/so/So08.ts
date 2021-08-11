@@ -32,20 +32,18 @@ export const So08: IMegido[] = [
         levels: [
           {
             level: 1,
+            label: '通常',
             magnification: 1.25,
-            hit: 1
-          }
-        ]
-      },
-      {
-        name: '暴風のワルツ＋(大協奏)',
-        type: SkillType.Skill,
-        attribute: Attribute.Sound,
-        levels: [
+            hit: 1,
+            text: '敵単体に攻撃力1.25倍のダメージ。さらに60%の確率で、自身にチャージフォトンを1つ追加する'
+          },
           {
             level: 1,
+            label: '大協奏',
             magnification: 1.25,
-            hit: 1
+            hit: 1,
+            attribute: Attribute.Sound,
+            text: '敵単体に攻撃力1.25倍の響撃ダメージ。さらに自身にチャージフォトンを1つ追加する'
           }
         ]
       },
@@ -55,8 +53,17 @@ export const So08: IMegido[] = [
         levels: [
           {
             level: 1,
+            label: '通常',
             magnification: 0,
-            hit: 0
+            hit: 0,
+            text: '味方前列の攻撃力を40%上昇させる'
+          },
+          {
+            level: 1,
+            label: '大協奏',
+            magnification: 0,
+            hit: 0,
+            text: '味方前列の攻撃力を50%上昇させる'
           }
         ]
       },
@@ -66,8 +73,17 @@ export const So08: IMegido[] = [
         levels: [
           {
             level: 1,
+            label: '通常',
             magnification: 0,
-            hit: 0
+            hit: 0,
+            text: '味方単体のHPを55%回復させる'
+          },
+          {
+            level: 1,
+            label: '大協奏',
+            magnification: 0,
+            hit: 0,
+            text: '味方単体のHPを55%回復させる。さらに2ターンの間、ターン終了時にHPが60%回復する'
           }
         ],
         increment: 0.05
@@ -104,20 +120,18 @@ export const So08: IMegido[] = [
         levels: [
           {
             level: 1,
+            label: '通常',
             magnification: 1.25,
-            hit: 1
-          }
-        ]
-      },
-      {
-        name: '激情のプレリュード＋（大協奏）',
-        type: SkillType.Skill,
-        attribute: Attribute.Sound,
-        levels: [
+            hit: 1,
+            text: '敵単体に攻撃力1.25倍のダメージ。さらに味方編成を協奏状態にする'
+          },
           {
             level: 1,
+            label: '大協奏',
             magnification: 1.25,
-            hit: 1
+            hit: 1,
+            attribute: Attribute.Sound,
+            text: '敵全体に攻撃力1.25倍の響撃ダメージ'
           }
         ]
       },
@@ -127,44 +141,39 @@ export const So08: IMegido[] = [
         levels: [
           {
             level: 1,
+            label: '通常',
             magnification: 0.65,
-            hit: 3
-          }
-        ]
-      },
-      {
-        name: '嵐のシンフォニー＋（大協奏）',
-        type: SkillType.AwakeningSkill,
-        attribute: Attribute.Sound,
-        levels: [
+            hit: 3,
+            text: '敵単体に攻撃力0.65倍の3連続ダメージ。さらに味方編成を協奏状態にする'
+          },
           {
             level: 1,
+            label: '大協奏',
             magnification: 0.65,
-            hit: 3
+            hit: 3,
+            attribute: Attribute.Sound,
+            text: '敵全体に攻撃力0.65倍の3連続響撃ダメージ'
           }
         ]
       },
       {
         name: '還る者への鎮魂歌＋',
         type: SkillType.Mysteries,
-        levels: [
-          {
-            level: 1,
-            magnification: 1.5,
-            hit: 1
-          }
-        ],
-        increment: 0.05
-      },
-      {
-        name: '還る者への鎮魂歌＋（大協奏）',
-        type: SkillType.Mysteries,
         attribute: Attribute.Sound,
         levels: [
           {
             level: 1,
+            label: '通常',
+            magnification: 1.5,
+            hit: 1,
+            text: '敵全体に攻撃力1.5倍の響撃ダメージ'
+          },
+          {
+            level: 1,
+            label: '大協奏',
             magnification: 2,
-            hit: 1
+            hit: 1,
+            text: '敵全体に攻撃力2倍の響撃ダメージ'
           }
         ],
         increment: 0.05

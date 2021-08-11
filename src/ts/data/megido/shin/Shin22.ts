@@ -29,6 +29,7 @@ const megido: IMegido[] = [
       {
         name: 'ナイトストーカー+',
         type: SkillType.Skill,
+        text: '敵横一列に攻撃力0.75倍のダメージ。さらに2ターンの間、敵を束縛状態にする',
         levels: [
           {
             level: 1,
@@ -40,6 +41,7 @@ const megido: IMegido[] = [
       {
         name: 'シークレットコール+',
         type: SkillType.AwakeningSkill,
+        text: '敵単体を混乱状態にし、さらに防御力を10%低下させる(2ターン)。ただし対象の攻撃力が5%上昇する(3ターン)',
         levels: [
           {
             level: 1,
@@ -51,6 +53,7 @@ const megido: IMegido[] = [
       {
         name: '鮮血の一夜+',
         type: SkillType.Mysteries,
+        text: '敵横一列に攻撃力1.1倍の3連続ダメージ。さらに、残りHP割合の高い敵ほど威力が上昇する',
         levels: [
           {
             level: 1,
@@ -89,6 +92,7 @@ const megido: IMegido[] = [
       {
         name: 'スカーレットレディ＋',
         type: SkillType.Skill,
+        text: '敵横一列に攻撃力1.25倍のダメージ',
         levels: [
           {
             level: 1,
@@ -100,6 +104,7 @@ const megido: IMegido[] = [
       {
         name: 'デッドリーガーデン＋',
         type: SkillType.AwakeningSkill,
+        text: '敵単体に攻撃力0.9倍の4連続ダメージ。さらに自身のHPに応じて連続攻撃数が変化【50%以下で6回/25%以下で8回に変化】',
         levels: [
           {
             level: 1,
@@ -121,6 +126,7 @@ const megido: IMegido[] = [
       {
         name: '至極天の終夜＋',
         type: SkillType.Mysteries,
+        text: '敵横一列に攻撃力3倍のダメージ。さらに2ターンの間、自身のスキルを強化する',
         levels: [
           {
             level: 1,

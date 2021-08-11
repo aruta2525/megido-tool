@@ -29,6 +29,19 @@ export const So22: IMegido[] = [
       {
         name: '追撃態勢＋',
         type: SkillType.Skill,
+        text: '2ターンの間、味方のアタックに対して自身が追撃する状態になり、攻撃力が20%上昇する',
+        levels: [
+          {
+            level: 1,
+            magnification: 0,
+            hit: 0
+          }
+        ]
+      },
+      {
+        name: '【専】追撃態勢＋',
+        type: SkillType.Skill,
+        text: '2ターンの間、自身を遊撃状態にし、攻撃力を40%上昇させる',
         levels: [
           {
             level: 1,
@@ -40,6 +53,7 @@ export const So22: IMegido[] = [
       {
         name: 'トライピアシング＋',
         type: SkillType.AwakeningSkill,
+        text: '敵単体に攻撃力1倍の3連続ダメージ。さらに2ターンの間、自身の攻撃力を50%上昇させる',
         levels: [
           {
             level: 1,
@@ -51,6 +65,7 @@ export const So22: IMegido[] = [
       {
         name: 'ヴォジャノーイの渦＋',
         type: SkillType.Mysteries,
+        text: '敵横一列に攻撃力2倍のダメージ。2ターンの間、滞水の地形効果で0.75倍の継続ダメージを与え、雷に弱くする',
         levels: [
           {
             level: 1,
@@ -89,6 +104,7 @@ export const So22: IMegido[] = [
       {
         name: 'レオエスコビージャ＋',
         type: SkillType.Skill,
+        text: '味方単体の覚醒ゲージを+1し、2ターンの間毎ターン終了時にHPを20%回復するさらに味方編成を怒闘状態にする',
         levels: [
           {
             level: 1,
@@ -100,6 +116,7 @@ export const So22: IMegido[] = [
       {
         name: '魔獅子の宣誓＋',
         type: SkillType.AwakeningSkill,
+        text: '味方全体のHPを15%回復する バーサークの場合、2ターンの間、自身のアタックに加勢する状態にする',
         levels: [
           {
             level: 1,
@@ -111,6 +128,8 @@ export const So22: IMegido[] = [
       {
         name: 'レオンオブシャウト＋',
         type: SkillType.Mysteries,
+        text:
+          '味方単体にスキルを1つ追加し2ターンの間スキルダメージを40%軽減する。さらにカウンターの場合1ターンの間攻撃力を50%上昇、バーサーク状態にする<br>【バーサークの詳細】1ターン目:攻撃力75%UP。毎ターン25%ずつ上昇。最大150%。毎ターン、最大HPの10%ダメージを受ける',
         levels: [
           {
             level: 1,

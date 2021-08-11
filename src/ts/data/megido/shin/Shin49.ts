@@ -29,6 +29,7 @@ const megido: IMegido[] = [
       {
         name: '戦いのコンチェルト＋',
         type: SkillType.Skill,
+        text: '2ターンの間、味方全体の受けるダメージを15%軽減させる。さらに味方編成を協奏状態にする',
         levels: [
           {
             level: 1,
@@ -40,6 +41,8 @@ const megido: IMegido[] = [
       {
         name: 'ピウ・ブリッランテ＋',
         type: SkillType.AwakeningSkill,
+        attribute: Attribute.Sound,
+        text: '3ターンの間、ターン終了時、敵全体へ攻撃力1.5倍の響撃ダメージを与えるリザーブ状態になる',
         levels: [
           {
             level: 1,
@@ -49,8 +52,11 @@ const megido: IMegido[] = [
         ]
       },
       {
-        name: 'ピウ・ブリッランテ＋【専用霊宝】',
+        name: '【専】ピウ・ブリッランテ＋',
         type: SkillType.AwakeningSkill,
+        attribute: Attribute.Sound,
+        text:
+          '3ターンの間、ターン終了時、敵全体へ攻撃力2.5倍の響撃ダメージを与え、さらに蓄積されている1ターン音符を最大4個まで1ターン延長するリザーブ状態になる',
         levels: [
           {
             level: 1,
@@ -62,6 +68,8 @@ const megido: IMegido[] = [
       {
         name: 'ラ・ヌッラロンド＋',
         type: SkillType.Mysteries,
+        attribute: Attribute.Sound,
+        text: '敵横一列に攻撃力2.25倍の響撃ダメージ。さらに80%の確率で、2ターンの間、攻撃力を20%低下させる',
         levels: [
           {
             level: 1,
@@ -72,8 +80,10 @@ const megido: IMegido[] = [
         increment: 0.05
       },
       {
-        name: 'ラ・ヌッラロンド＋【専用霊宝】',
+        name: '【専】ラ・ヌッラロンド＋',
         type: SkillType.Mysteries,
+        attribute: Attribute.Sound,
+        text: '敵横一列に攻撃力3.5倍の響撃ダメージ。さらに80%の確率で、2ターンの間、攻撃力を20%低下させる',
         levels: [
           {
             level: 1,

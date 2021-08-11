@@ -11,13 +11,14 @@ import {getPersonalSacredTreasureList} from './data/sacred-treasure/PersonalSacr
 import {genealogyList} from './data/sacred-treasure/Genealogy';
 import {ISkillData, ISkillLevel, defaultSkills} from './interface/ISkillData';
 import {getPhotonCorrection} from './util/MegidoUtil';
-import {PhotonType, StyleType} from './enum/Megido';
+import {PhotonType, StyleType, ReferralStatus, Attribute} from './enum/Megido';
 import {SacredTreasureRank, SacredTreasureSize} from './enum/SacredTreasure';
 import {GenealogyType, convertToSacredTreasureSizeName} from './enum/SacredTreasure';
 import {Stage, convertToStageName} from './enum/Stage';
 import {DifficultyLevel, convertToDifficultyLevelName} from './enum/Stage';
 import {ISacredTreasure} from './interface/ISacredTreasure';
 import {IMegido} from './interface/IMegido';
+import {IPersonalSacredTreasure, isIPersonalSacredTreasure} from './interface/IPersonalSacredTreasure';
 
 const megidoList = joinAndSortMegidoByName();
 const ids = {
@@ -26,28 +27,38 @@ const ids = {
   megidoAbilityText: 'megidoAbilityText',
   offense: 'offense',
   offensiveBuff: 'offensiveBuff',
+  defense: 'defense',
+  defensiveBuff: 'defensiveBuff',
+  defensiveDebuff: 'defensiveDebuff',
+  speed: 'speed',
+  speedilyBuff: 'speedilyBuff',
+  speedilyDebuff: 'speedilyDebuff',
   skill: 'skill',
   skillLevels: 'skillLevels',
   mysteriesLevels: 'mysteriesLevels',
   magnification: 'magnification',
   hit: 'hit',
+  referralStatus: 'referralStatus',
+  attribute: 'attribute',
+  skillText: 'skillText',
   photon: 'photon',
   classCorrection: 'classCorrection',
   freeze: 'freeze',
   zombie: 'zombie',
-  defense: 'defense',
-  ignoreDefense: 'ignoreDefense',
-  defensiveDebuff: 'defensiveDebuff',
-  attribute: 'attribute',
+  enemyDefense: 'enemyDefense',
+  ignoreEnemyDefense: 'ignoreEnemyDefense',
+  enemyDefensiveDebuff: 'enemyDefensiveDebuff',
+  attributeBuff: 'attributeBuff',
   species: 'species',
   statusAbnormality: 'statusAbnormality',
+  supplementaryDamage: 'supplementaryDamage',
   specialEfficacy1: 'specialEfficacy1',
   specialEfficacy2: 'specialEfficacy2',
-  specialEfficacy3: 'specialEfficacy3',
+  enemyDamageReduction: 'enemyDamageReduction',
   additionalDamage: 'additionalDamage',
   damagePerHit: 'damagePerHit',
   offensiveDebuff: 'offensiveDebuff',
-  defensiveBuff: 'defensiveBuff',
+  enemyDefensiveBuff: 'enemyDefensiveBuff',
   totalDamage: 'totalDamage',
   sacredTreasure1: 'sacredTreasure1',
   sacredTreasureText1: 'sacredTreasureText1',
@@ -70,6 +81,9 @@ const ids = {
 let nowSkill: ISkillData = defaultSkills[0];
 
 $(document).ready(function () {
+  setupReferralStatusSelect();
+  setupAttributeSelect();
+
   const megidoSelect = $(`#${ids.megido}`);
   megidoList.forEach((megido, i) => {
     megidoSelect.append(`<option value="${i}">${megido.name}</option>`);
@@ -78,12 +92,7 @@ $(document).ready(function () {
 
   megidoSelect.on('change', function () {
     const index = megidoSelect.val();
-    const megido = megidoList[Number(index)];
-    $(`#${ids.offense}`).val(megido.offense);
-
-    if (megido.ability != undefined) setupAbility(megido.ability);
-    setupSkills(megido.skills);
-    setupSacredTreasures(megido);
+    changeMegido(Number(index));
   });
   megidoSelect.trigger('change');
 
@@ -98,6 +107,22 @@ $(document).ready(function () {
 $(document).on('change', () => {
   calculateDamage();
 });
+
+/**
+ * selectのメギド変更時呼び出し関数です。
+ *
+ * @param index listのインデックス
+ */
+function changeMegido(index: number) {
+  const megido = megidoList[index];
+  $(`#${ids.offense}`).val(megido.offense);
+  $(`#${ids.defense}`).val(megido.defense);
+  $(`#${ids.speed}`).val(megido.speed);
+
+  if (megido.ability != undefined) setupAbility(megido.ability);
+  setupSkills(megido.skills);
+  setupSacredTreasures(megido);
+}
 
 /**
  * メギドの特性をセットする関数です。
@@ -119,7 +144,7 @@ function setupSkills(skills: ISkillData[] = defaultSkills) {
 
   skillSelect.empty();
   skills.forEach((skill, i) => {
-    skillSelect.append(`<option value="${i}">${skill.name}</option>`);
+    skillSelect.append(`<option value="${i}">【${skill.type.charAt(0)}】${skill.name}</option>`);
   });
   skillSelect.selectpicker('render').selectpicker('refresh');
 
@@ -138,6 +163,16 @@ function setupSkills(skills: ISkillData[] = defaultSkills) {
     $(`#${ids.mysteriesLevels}`).selectpicker('render').selectpicker('refresh');
 
     setupLevels(skill.levels);
+
+    // 参照ステ
+    const referralStatusSelect = $(`#${ids.referralStatus}`);
+    referralStatusSelect.selectpicker('val', skill.referralStatus || ReferralStatus.Offence);
+    // 属性
+    const attributeSelect = $(`#${ids.attribute}`);
+    attributeSelect.selectpicker('val', skill.attribute || Attribute.None);
+    // スキル説明
+    const skillText = $(`#${ids.skillText}`);
+    skillText.html(skill.levels[0].text || skill.text || '');
   });
   skillSelect.trigger('change');
 }
@@ -151,7 +186,7 @@ function setupLevels(levels: ISkillLevel[]) {
 
   levelSelect.empty();
   levels.forEach((level, i) => {
-    levelSelect.append(`<option value="${i}">${level.level}</option>`);
+    levelSelect.append(`<option value="${i}">${level.label || level.level}</option>`);
   });
 
   if (levels.length != 1) {
@@ -165,9 +200,39 @@ function setupLevels(levels: ISkillLevel[]) {
   levelSelect.on('change', () => {
     const index = levelSelect.val();
     levelSelect.selectpicker('val', String(index));
+
+    const skillText = $(`#${ids.skillText}`);
+    skillText.html(levels[Number(index)].text || '');
+
     calculateMagnification();
   });
   levelSelect.trigger('change');
+}
+
+/**
+ * 参照ステータスSelectをセットアップする関数です。
+ */
+function setupReferralStatusSelect() {
+  const referralStatus = $(`#${ids.referralStatus}`);
+
+  referralStatus.empty();
+  Object.entries(ReferralStatus).forEach((value, i, array) => {
+    referralStatus.append(`<option value="${array[i][1]}">${array[i][1]}</option>`);
+  });
+  referralStatus.selectpicker('render').selectpicker('refresh');
+}
+
+/**
+ * 属性Selectをセットアップする関数です。
+ */
+function setupAttributeSelect() {
+  const attribute = $(`#${ids.attribute}`);
+
+  attribute.empty();
+  Object.entries(Attribute).forEach((value, i, array) => {
+    attribute.append(`<option value="${array[i][1]}">${array[i][1]}</option>`);
+  });
+  attribute.selectpicker('render').selectpicker('refresh');
 }
 
 /**
@@ -184,7 +249,7 @@ function setupSacredTreasures(megido: IMegido) {
   // 専用霊宝欄
   const personalSacredTreasureList = getPersonalSacredTreasureList(megido.clockType, megido.no, megido.styleType);
   const html2 = generatePersonalSacredTreasureOptionsHTMLString(megido);
-  setupSacredTreasure(ids.personalSacredTreasure, ids.personalSacredTreasureText, html2, personalSacredTreasureList);
+  setupSacredTreasure(ids.personalSacredTreasure, ids.personalSacredTreasureText, html2, personalSacredTreasureList, megido);
 }
 
 /**
@@ -265,27 +330,63 @@ function generatePersonalSacredTreasureOptionsHTMLString(megido: IMegido): strin
  * @param textId divのID
  * @param styleType 表示する霊宝のスタイル
  */
-function setupSacredTreasure(selectId: string, textId: string, html: string, sacredTreasureList: ISacredTreasure[]) {
+function setupSacredTreasure(
+  selectId: string,
+  textId: string,
+  html: string,
+  sacredTreasureList: ISacredTreasure[] | IPersonalSacredTreasure[],
+  megido?: IMegido
+) {
   const stSelect = $(`#${selectId}`);
   const stText = $(`#${textId}`);
   let beforeOffense = 0;
+  let beforeDefense = 0;
+  let beforeSpeed = 0;
 
   stSelect.empty();
   stSelect.html(html);
   stSelect.selectpicker('render').selectpicker('refresh');
 
   stSelect.off('change');
-  stSelect.on('change', () => {
-    const offenseInput = $(`#${ids.offense}`);
+  stSelect.on('change', (ev) => {
     const index = stSelect.val();
     stSelect.selectpicker('val', String(index));
-    const st = sacredTreasureList[Number(index)];
-    const offense = st.offense;
+    const st: ISacredTreasure | IPersonalSacredTreasure = sacredTreasureList[Number(index)];
     const ability = st.ability != undefined ? st.ability : {value: 0, text: ''};
     stText.text(ability.text);
-    const o = Number(offenseInput.val()) - beforeOffense + offense;
+    // 攻撃
+    const offenseInput = $(`#${ids.offense}`);
+    const offense = st.offense;
+    const afterOffense = Number(offenseInput.val()) - beforeOffense + offense;
     beforeOffense = offense;
-    offenseInput.val(o);
+    offenseInput.val(afterOffense);
+    // 防御
+    const defenseInput = $(`#${ids.defense}`);
+    const defense = st.defense;
+    const afterDefense = Number(defenseInput.val()) - beforeDefense + defense;
+    beforeDefense = defense;
+    defenseInput.val(afterDefense);
+    // 素早さ
+    const speedInput = $(`#${ids.speed}`);
+    const speed = st.speed;
+    const afterSpeed = Number(speedInput.val()) - beforeSpeed + speed;
+    beforeSpeed = speed;
+    speedInput.val(afterSpeed);
+
+    // 専用霊宝時処理
+    if (ev.target.id === ids.personalSacredTreasure) {
+      if (isIPersonalSacredTreasure(st) && st.personal.megidoNo !== 0) {
+        const ability = st.personal.megidoAbility || {name: '', text: ''};
+        // console.log('専用: ' + name);
+        $(`#${ids.megidoAbility}`).val(`【専】${ability.name}`);
+        $(`#${ids.megidoAbilityText}`).text(ability.text);
+      } else {
+        const ability = !megido || !megido.ability ? {name: '', text: ''} : megido.ability;
+
+        $(`#${ids.megidoAbility}`).val(ability.name);
+        $(`#${ids.megidoAbilityText}`).text(ability.text);
+      }
+    }
 
     calculateGenealogy();
     calculateMagnification();
@@ -456,7 +557,7 @@ function setupDifficultyLevel(name: String) {
     const enemy = enemyList[Number(index)];
 
     // HPや防御力を設定
-    $(`#${ids.defense}`).val(enemy.defense || '');
+    $(`#${ids.enemyDefense}`).val(enemy.defense || '');
     $(`#${ids.hp}`).val(enemy.hp || '');
   });
   difficultSelect.trigger('change');
@@ -487,40 +588,70 @@ function calculateMagnification() {
  * ([攻撃力] * [攻撃力バフ累計] *[攻撃力デバフ累計]* [技倍率]-[敵防御]*[防御力バフ累計]*[防御力デバフ累計]) * [アタック/スキル強化] * [クラス補正] * [特効(特効a*特効b*…*特効x)] * [属性補正] * [凍結補正] * [ダメージ補正] * [乱数]
  */
 function calculateDamage() {
-  const offense = Number($(`#${ids.offense}`).val());
-  const offensiveBuff = Number($(`#${ids.offensiveBuff}`).val()) / 100 + 1;
+  const referralStatus = $(`#${ids.referralStatus}`).val();
+
   const magnification = Number($(`#${ids.magnification}`).val());
   const photonType = getPhotonType(Number($(`#${ids.photon}`).val()));
   const photonCorrection = getPhotonCorrection(nowSkill.type, photonType);
   const classCorrection = Number($(`#${ids.classCorrection}`).val());
   const freeze = $(`#${ids.freeze}`).prop('checked') ? 2 : 1;
-  const zombie = $(`#${ids.zombie}`).prop('checked') ? 1.25 : 1;
-  const defense = Number($(`#${ids.defense}`).val());
-  const ignoreDefense = 1 - Number($(`#${ids.ignoreDefense}`).val()) / 100;
-  const defensiveDebuff = 1 - Number($(`#${ids.defensiveDebuff}`).val()) / 100;
-  const attribute = Number($(`#${ids.attribute}`).val()) / 100 + 1;
+  const isZombie = $(`#${ids.zombie}`).prop('checked');
+  const zombieBuff = isZombie ? 1.25 : 1;
+  const zombieDebuff = isZombie ? 0 : 1;
+  const enemyDefense = Number($(`#${ids.enemyDefense}`).val());
+  const ignoreEnemyDefense = 1 - Number($(`#${ids.ignoreEnemyDefense}`).val()) / 100;
+  const enemyDefensiveDebuff = 1 - Number($(`#${ids.enemyDefensiveDebuff}`).val()) / 100;
+  const attributeBuff = Number($(`#${ids.attributeBuff}`).val()) / 100 + 1;
   const species = Number($(`#${ids.species}`).val()) / 100 + 1;
   const statusAbnormality = Number($(`#${ids.statusAbnormality}`).val()) / 100 + 1;
+  const supplementaryDamage = Number($(`#${ids.supplementaryDamage}`).val()) / 100 + 1;
   const specialEfficacy1 = Number($(`#${ids.specialEfficacy1}`).val()) / 100 + 1;
   const specialEfficacy2 = Number($(`#${ids.specialEfficacy2}`).val()) / 100 + 1;
-  const specialEfficacy3 = Number($(`#${ids.specialEfficacy3}`).val()) / 100 + 1;
+  const enemyDamageReduction = 1 - Number($(`#${ids.enemyDamageReduction}`).val()) / 100;
   const additionalDamage = Number($(`#${ids.additionalDamage}`).val());
-  const offensiveDebuff = 1 - Number($(`#${ids.offensiveDebuff}`).val()) / 100;
-  const defensiveBuff = Number($(`#${ids.defensiveBuff}`).val()) / 100 + 1;
+  const enemyDefensiveBuff = Number($(`#${ids.enemyDefensiveBuff}`).val()) / 100 + 1;
   const hit = Number($(`#${ids.hit}`).val());
 
+  // 参照ステによる基礎ダメージ計算
+  let baseDamage = 0;
+  switch (referralStatus) {
+    case ReferralStatus.Defence:
+      const defense = Number($(`#${ids.defense}`).val());
+      const defensiveBuff = Number($(`#${ids.defensiveBuff}`).val()) / 100 + 1;
+      const defensiveDebuff = 1 - Number($(`#${ids.defensiveDebuff}`).val()) / 100;
+      baseDamage = defense * zombieDebuff * defensiveBuff * defensiveDebuff * magnification;
+      break;
+
+    case ReferralStatus.Speed:
+      const speed = Number($(`#${ids.speed}`).val());
+      const speedilyBuff = Number($(`#${ids.speedilyBuff}`).val()) / 100 + 1;
+      const speedilyDebuff = 1 - Number($(`#${ids.speedilyDebuff}`).val()) / 100;
+      baseDamage = speed * zombieDebuff * speedilyBuff * speedilyDebuff * magnification;
+      break;
+
+    default:
+      const offense = Number($(`#${ids.offense}`).val());
+      const offensiveBuff = Number($(`#${ids.offensiveBuff}`).val()) / 100 + 1;
+      const offensiveDebuff = 1 - Number($(`#${ids.offensiveDebuff}`).val()) / 100;
+      baseDamage = offense * zombieBuff * offensiveBuff * offensiveDebuff * magnification;
+      break;
+  }
+
   let damage =
-    (offense * zombie * offensiveBuff * offensiveDebuff * magnification - defense * defensiveBuff * defensiveDebuff * ignoreDefense) *
+    (baseDamage - enemyDefense * enemyDefensiveBuff * enemyDefensiveDebuff * ignoreEnemyDefense) *
     photonCorrection *
     classCorrection *
-    attribute *
+    attributeBuff *
     species *
     statusAbnormality *
     freeze *
+    supplementaryDamage *
     specialEfficacy1 *
     specialEfficacy2 *
-    specialEfficacy3;
+    enemyDamageReduction;
+
   damage = damage < 1 ? 1 : damage;
+
   const minDamage = Math.round(damage * 0.95) + additionalDamage;
   const maxDamage = Math.round(damage * 1.05) + additionalDamage;
   const totalMinDamage = minDamage * hit;

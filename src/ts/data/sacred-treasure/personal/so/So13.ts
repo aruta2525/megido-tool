@@ -16,11 +16,15 @@ const sacredTreasureList: IPersonalSacredTreasure[] = [
     defense: 0,
     speed: 0,
     type: Type.None,
-    ability: {value: 0, text: '特性、覚醒スキルが変化する'},
+    ability: {name: '', text: '特性、覚醒スキルが変化する'},
     personal: {
       clockType: ClockType.So,
       megidoNo: 13,
-      name: 'ベレト'
+      name: 'ベレト',
+      megidoAbility: {
+        name: '憤怒の瞳',
+        text: 'バーサーク時、毎ターン開始時にアタックフォトンを1つ追加する'
+      }
     }
   }
 ];

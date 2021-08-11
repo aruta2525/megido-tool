@@ -29,6 +29,7 @@ export const So16: IMegido[] = [
       {
         name: '三枚下ろし＋',
         type: SkillType.Skill,
+        text: '敵単体に攻撃力0.85倍の3連続ダメージ',
         levels: [
           {
             level: 1,
@@ -40,6 +41,7 @@ export const So16: IMegido[] = [
       {
         name: '微塵切り＋',
         type: SkillType.AwakeningSkill,
+        text: '敵単体に攻撃力0.7倍の6連続ダメージ。さらに自身にスキルフォトンを1つ追加する',
         levels: [
           {
             level: 1,
@@ -51,6 +53,7 @@ export const So16: IMegido[] = [
       {
         name: 'タービュランス＋',
         type: SkillType.Mysteries,
+        text: '敵単体に攻撃力0.85倍の5連続ダメージ。さらに2ターンの間、自身のスキルを強化する',
         levels: [
           {
             level: 1,
@@ -89,6 +92,7 @@ export const So16: IMegido[] = [
       {
         name: '四枚下ろし+',
         type: SkillType.Skill,
+        text: '敵単体に攻撃力0.75倍の4連続ダメージ',
         levels: [
           {
             level: 1,
@@ -100,6 +104,7 @@ export const So16: IMegido[] = [
       {
         name: 'アングリーオーダー+',
         type: SkillType.AwakeningSkill,
+        text: 'バーサーク状態の味方全体にアタックフォトンを1つ追加し、さらに2ターンの間、状態異常と弱体を無効化する状態になる',
         levels: [
           {
             level: 1,
@@ -111,6 +116,8 @@ export const So16: IMegido[] = [
       {
         name: '伝播する情動+',
         type: SkillType.Mysteries,
+        text: `味方単体のHPを20%回復する。さらにカウンターの場合、1ターンの間、攻撃力50%上昇させ、バーサーク状態にする<br>
+          【バーサークの詳細】1ターン目:攻撃力75%UP。毎ターン25%ずつ上昇。最大150%。毎ターン、最大HPの10%ダメージを受ける`,
         levels: [
           {
             level: 1,

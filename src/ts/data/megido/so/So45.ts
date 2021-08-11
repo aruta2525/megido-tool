@@ -29,6 +29,19 @@ export const So45: IMegido[] = [
       {
         name: '聖女の祈り＋',
         type: SkillType.Skill,
+        text: '味方横一列のHPを20%回復させる',
+        levels: [
+          {
+            level: 1,
+            magnification: 0,
+            hit: 0
+          }
+        ]
+      },
+      {
+        name: '【専】聖女の祈り＋',
+        type: SkillType.Skill,
+        text: '味方横一列のHPを20%回復させる。さらにHPが60%以上の味方に対して、2ターンの間、アタックフォトンからのダメージを30%軽減する',
         levels: [
           {
             level: 1,
@@ -40,6 +53,7 @@ export const So45: IMegido[] = [
       {
         name: '気高き願い＋',
         type: SkillType.AwakeningSkill,
+        text: '味方全体の覚醒ゲージを+1する。さらに2ターンの間、攻撃力を30%上昇させる',
         levels: [
           {
             level: 1,
@@ -51,6 +65,7 @@ export const So45: IMegido[] = [
       {
         name: '蒼海のアガペー＋',
         type: SkillType.Mysteries,
+        text: '味方全体のHPを40%回復させる',
         levels: [
           {
             level: 1,
@@ -89,6 +104,7 @@ export const So45: IMegido[] = [
       {
         name: '水刃のエラルド＋',
         type: SkillType.Skill,
+        text: '敵単体に2ターン後に弾ける威力0.5倍のハイドロボム速を付与する',
         levels: [
           {
             level: 1,
@@ -100,6 +116,7 @@ export const So45: IMegido[] = [
       {
         name: '水盾のラクス＋',
         type: SkillType.AwakeningSkill,
+        text: '味方全体への攻撃を1回無効化する。さらに2ターンの間、防御力を20%上昇させる',
         levels: [
           {
             level: 1,
@@ -111,6 +128,7 @@ export const So45: IMegido[] = [
       {
         name: '戦姫の洗礼＋',
         type: SkillType.Mysteries,
+        text: '敵横一列に0.5倍で2ターン後に弾けるハイドロボム速を付与し、2ターンの間、攻撃力を20%低下させる',
         levels: [
           {
             level: 1,

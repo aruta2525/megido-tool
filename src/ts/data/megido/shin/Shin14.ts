@@ -29,6 +29,7 @@ const megido: IMegido[] = [
       {
         name: '急に風が…！＋',
         type: SkillType.Skill,
+        text: 'ラッシュの味方単体の点穴を+15する。さらに2ターンの間、味方単体の防御力を10%上昇させる',
         levels: [
           {
             level: 1,
@@ -40,6 +41,7 @@ const megido: IMegido[] = [
       {
         name: '髪が傷んでるよ～＋',
         type: SkillType.AwakeningSkill,
+        text: '敵単体に攻撃力2.5倍のダメージ。さらに与えたダメージの30%を吸収する',
         levels: [
           {
             level: 1,
@@ -51,6 +53,7 @@ const megido: IMegido[] = [
       {
         name: '牧歌の癒光＋',
         type: SkillType.Mysteries,
+        text: '味方全体のHPを30%回復させる。さらに2ターンの間、ダメージを15%軽減する',
         levels: [
           {
             level: 1,

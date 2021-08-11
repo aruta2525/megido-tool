@@ -29,6 +29,7 @@ export const So65: IMegido[] = [
       {
         name: 'コンビネーション＋',
         type: SkillType.Skill,
+        text: '敵単体に攻撃力0.7倍の4連続ダメージ。さらに80%の確率で、積まれているフォトンを1つ破壊する',
         levels: [
           {
             level: 1,
@@ -40,6 +41,7 @@ export const So65: IMegido[] = [
       {
         name: 'レックレスラッシュ＋',
         type: SkillType.AwakeningSkill,
+        text: '敵単体に攻撃力0.8倍の6連続ダメージ。さらに2ターンの間、敵をめまい状態にする',
         levels: [
           {
             level: 1,
@@ -51,6 +53,7 @@ export const So65: IMegido[] = [
       {
         name: 'フェザーシールド＋',
         type: SkillType.Mysteries,
+        text: '3ターンの間、味方横一列へのダメージを30%軽減し、Lv×10の固定追加ダメージを付与する',
         levels: [
           {
             level: 1,

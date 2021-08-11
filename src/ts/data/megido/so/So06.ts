@@ -29,6 +29,7 @@ export const So06: IMegido[] = [
       {
         name: 'ワイルドハント＋',
         type: SkillType.Skill,
+        text: '敵単体に攻撃力0.75倍の4連続ダメージ',
         levels: [
           {
             level: 1,
@@ -40,6 +41,7 @@ export const So06: IMegido[] = [
       {
         name: '行くよ、野郎ども！＋',
         type: SkillType.AwakeningSkill,
+        text: '2ターンの間、味方全体の攻撃にLv×10の固定追加ダメージを付与する',
         levels: [
           {
             level: 1,
@@ -51,6 +53,7 @@ export const So06: IMegido[] = [
       {
         name: 'ロウオブザサバンナ＋',
         type: SkillType.Mysteries,
+        text: '敵単体に攻撃力1.2倍の4連続ダメージ。さらに2ターンの間、敵を毒状態にする',
         levels: [
           {
             level: 1,

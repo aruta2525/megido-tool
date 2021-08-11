@@ -33,7 +33,8 @@ const megido: IMegido[] = [
           {
             level: 1,
             magnification: 0.9,
-            hit: 1
+            hit: 1,
+            text: '敵横一列に攻撃力0.9倍のダメージ。さらに80%の確率で、0.5倍で3ターン後に弾けるハイドロボム速を付与する'
           }
         ]
       },
@@ -44,7 +45,8 @@ const megido: IMegido[] = [
           {
             level: 1,
             magnification: 0,
-            hit: 0
+            hit: 0,
+            text: '味方全体の状態異常を治癒する。さらにHPを15%回復させる'
           }
         ]
       },
@@ -55,7 +57,8 @@ const megido: IMegido[] = [
           {
             level: 1,
             magnification: 0,
-            hit: 0
+            hit: 0,
+            text: '敵全体に付与されているハイドロボムのダメージを40%上昇させる。さらに2ターンの間攻撃力を15%低下させる'
           }
         ],
         increment: 0

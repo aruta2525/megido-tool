@@ -29,6 +29,7 @@ export const So70: IMegido[] = [
       {
         name: 'ポーション投げ+',
         type: SkillType.Skill,
+        text: '味方単体の状態異常を治癒する。さらにHPを25%回復させる',
         levels: [
           {
             level: 1,
@@ -40,6 +41,7 @@ export const So70: IMegido[] = [
       {
         name: 'スパイラルエッジ+',
         type: SkillType.AwakeningSkill,
+        text: '敵単体に攻撃力1.75倍の2連続ダメージ。2ターンの間、突風の地形効果で0.75倍の継続ダメージを与え、火に弱くする',
         levels: [
           {
             level: 1,
@@ -49,8 +51,9 @@ export const So70: IMegido[] = [
         ]
       },
       {
-        name: 'ランプの魔人+（全体ダメージ）',
+        name: 'ランプの魔人+',
         type: SkillType.Mysteries,
+        text: '敵全体ダメージ(攻撃力2.5倍)、全体ダメージ軽減(3ターン/60%)、全体回復(55%)の3つからランダムで効果が発生。3回まで使用可能で、同じ効果は発生しない',
         levels: [
           {
             level: 1,
@@ -89,6 +92,7 @@ export const So70: IMegido[] = [
       {
         name: 'バーストエッジ＋',
         type: SkillType.Skill,
+        text: '敵単体に攻撃力0.6倍の4連続ダメージ',
         levels: [
           {
             level: 1,
@@ -100,6 +104,8 @@ export const So70: IMegido[] = [
       {
         name: 'とびきりドリンク＋',
         type: SkillType.AwakeningSkill,
+        text: `味方全体のHPを10%回復させ、さらに2ターンの間、Lv×10の固定追加ダメージを付与する<br>
+              【自身封印中の場合、味方全体のHP15%回復。2ターン間Lv×15の固定追加ダメージ】`,
         levels: [
           {
             level: 1,
@@ -111,6 +117,7 @@ export const So70: IMegido[] = [
       {
         name: 'ひらめきロケット＋',
         type: SkillType.Mysteries,
+        text: '味方全体の状態異常を治癒する。さらに3ターンの間、防御力を70%上昇させる。ラッシュの場合、封印状態にする',
         levels: [
           {
             level: 1,

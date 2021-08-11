@@ -16,7 +16,7 @@ const sacredTreasureList: IPersonalSacredTreasure[] = [
     defense: 0,
     speed: 0,
     type: Type.None,
-    ability: {value: 0, text: '奥義が変化する。戦闘開始時、2ターンの間両隣の女性を魅了状態にする'},
+    ability: {name: '', text: '奥義が変化する。戦闘開始時、2ターンの間両隣の女性を魅了状態にする'},
     personal: {
       clockType: ClockType.Shin,
       megidoNo: 9,

@@ -29,6 +29,7 @@ export const So66: IMegido[] = [
       {
         name: 'アマゾネスの槍＋',
         type: SkillType.Skill,
+        text: '敵単体に攻撃力1.25倍のダメージ。さらに80%の確率で、2ターンの間、敵を暗闇状態にする',
         levels: [
           {
             level: 1,
@@ -40,6 +41,7 @@ export const So66: IMegido[] = [
       {
         name: '微塵粉灰＋',
         type: SkillType.AwakeningSkill,
+        text: '敵単体に攻撃力2.5倍のダメージ。さらに自身にスキルフォトンを1つ追加する',
         levels: [
           {
             level: 1,
@@ -51,6 +53,7 @@ export const So66: IMegido[] = [
       {
         name: '破壊衝動＋',
         type: SkillType.Mysteries,
+        text: '2ターンの間、味方全体のスキルを強化し、攻撃力を20%上昇させる',
         levels: [
           {
             level: 1,
@@ -93,28 +96,34 @@ export const So66: IMegido[] = [
           {
             level: 1,
             magnification: 1.5,
-            hit: 1
+            hit: 1,
+            text: '敵単体に攻撃力1.5倍のダメージ【味方が戦闘不能になるたびにスキルLv上昇】'
           },
           {
             level: 2,
             magnification: 2,
-            hit: 1
+            hit: 1,
+            text: '敵単体に攻撃力2倍のダメージ【味方が戦闘不能になるたびにスキルLv上昇】'
           },
           {
             level: 3,
             magnification: 2.5,
-            hit: 1
+            hit: 1,
+            text: '敵単体に攻撃力2.5倍のダメージ【味方が戦闘不能になるたびにスキルLv上昇】'
           },
           {
             level: 4,
             magnification: 3,
-            hit: 1
+            hit: 1,
+            text: '敵単体に攻撃力3倍のダメージ'
           }
         ]
       },
       {
         name: '星下ろしの儀＋',
         type: SkillType.AwakeningSkill,
+        text: `味方全体にデスギフトを付与し、味方編成をネクロ状態にする<br>
+              【デスギフト効果】戦闘不能時、敵全体に攻撃力1倍のダメージ`,
         levels: [
           {
             level: 1,
@@ -129,20 +138,17 @@ export const So66: IMegido[] = [
         levels: [
           {
             level: 1,
+            label: '通常',
             magnification: 4.25,
-            hit: 1
-          }
-        ],
-        increment: 0.05
-      },
-      {
-        name: '渾然撃砕＋（ソウル2）',
-        type: SkillType.Mysteries,
-        levels: [
+            hit: 1,
+            text: '敵単体に攻撃力4.25倍の防御無視ダメージ'
+          },
           {
             level: 1,
+            label: 'ネクロ',
             magnification: 7.25,
-            hit: 1
+            hit: 1,
+            text: 'ソウルを2つ消費し、敵単体に攻撃力7.25倍の防御無視ダメージ'
           }
         ],
         increment: 0.05

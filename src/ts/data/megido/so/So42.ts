@@ -29,6 +29,19 @@ export const So42: IMegido[] = [
       {
         name: 'ウェイブライダー＋',
         type: SkillType.Skill,
+        text: '敵単体に攻撃力1.25倍のダメージ。さらに60%の確率で、自身にアタックフォトンを1つ追加する',
+        levels: [
+          {
+            level: 1,
+            magnification: 1.25,
+            hit: 1
+          }
+        ]
+      },
+      {
+        name: '【専】ウェイブライダー＋',
+        type: SkillType.Skill,
+        text: '敵単体に攻撃力1.25倍のダメージ。さらに自身にアタックフォトンを1つ追加する',
         levels: [
           {
             level: 1,
@@ -40,6 +53,7 @@ export const So42: IMegido[] = [
       {
         name: '水龍戟＋',
         type: SkillType.AwakeningSkill,
+        text: '敵単体に攻撃力1.5倍のダメージ。さらに2ターンの間、自身のアタックを強化する',
         levels: [
           {
             level: 1,
@@ -51,6 +65,7 @@ export const So42: IMegido[] = [
       {
         name: 'セイレーンの涙＋',
         type: SkillType.Mysteries,
+        text: '敵単体に攻撃力1.1倍の3連続ダメージ。さらに与えたダメージの30%を吸収する',
         levels: [
           {
             level: 1,
@@ -89,6 +104,7 @@ export const So42: IMegido[] = [
       {
         name: 'ツイストウェイブ+',
         type: SkillType.Skill,
+        text: '90%の確率で、敵単体に3倍で7ターン後に弾けるハイドロボム重を付与する',
         levels: [
           {
             level: 1,
@@ -100,6 +116,7 @@ export const So42: IMegido[] = [
       {
         name: 'ウンディーネの戯れ+',
         type: SkillType.AwakeningSkill,
+        text: '敵全体に攻撃力0.8倍のダメージさらに80%の確率で、0.5倍で3ターン後に弾けるハイドロボム速を付与する',
         levels: [
           {
             level: 1,
@@ -111,6 +128,7 @@ export const So42: IMegido[] = [
       {
         name: 'オーシャンティア+',
         type: SkillType.Mysteries,
+        text: '敵単体に6倍で7ターン後に弾けるハイドロボム重を付与し、2ターンの間、防御力を20%低下させる',
         levels: [
           {
             level: 1,

@@ -15,7 +15,7 @@ const sacredTreasureList: ISacredTreasure[] = [
     defense: 0,
     speed: 0,
     type: Type.Isshin,
-    ability: {value: 0, text: '自身の点穴の値が高いほど、毎ターン終了時、HPが回復する（最大5%）'}
+    ability: {name: '', text: '自身の点穴の値が高いほど、毎ターン終了時、HPが回復する（最大5%）'}
   },
   {
     name: '黄金色の羽扇子',
@@ -27,7 +27,7 @@ const sacredTreasureList: ISacredTreasure[] = [
     defense: 10,
     speed: 0,
     type: Type.Isshin,
-    ability: {value: 0, text: '点穴によってダメージを与えた際、与えたダメージの1%を吸収する'}
+    ability: {name: '', text: '点穴によってダメージを与えた際、与えたダメージの1%を吸収する'}
   },
   {
     name: '歓喜の雫',
@@ -39,7 +39,7 @@ const sacredTreasureList: ISacredTreasure[] = [
     defense: 10,
     speed: 12,
     type: Type.Isshin,
-    ability: {value: 0, text: '自身の点穴の値が高いほど、防御力が上昇する（最大10%）'}
+    ability: {name: '', text: '自身の点穴の値が高いほど、防御力が上昇する（最大10%）'}
   }
 ];
 

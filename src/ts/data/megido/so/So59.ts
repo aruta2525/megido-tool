@@ -29,6 +29,19 @@ export const So59: IMegido[] = [
       {
         name: '変化の魔法＋',
         type: SkillType.Skill,
+        text: '2ターンの間、60%の確率で、敵をねずみにする',
+        levels: [
+          {
+            level: 1,
+            magnification: 0,
+            hit: 0
+          }
+        ]
+      },
+      {
+        name: '【専】変化の魔法＋',
+        type: SkillType.Skill,
+        text: '2ターンの間、敵単体を60%の確率で、ねずみ化する。さらに80%の確率で、スキルフォトンを劣化させる',
         levels: [
           {
             level: 1,
@@ -40,6 +53,7 @@ export const So59: IMegido[] = [
       {
         name: '冬の大三角＋',
         type: SkillType.AwakeningSkill,
+        text: '敵全体に攻撃力1.35倍のダメージ。2ターンの間、氷結の地形効果で0.75倍の継続ダメージを与え、攻撃力を低下させる',
         levels: [
           {
             level: 1,
@@ -51,11 +65,33 @@ export const So59: IMegido[] = [
       {
         name: 'ヘイルキャノン＋',
         type: SkillType.Mysteries,
+        text: '敵単体に攻撃力4.25倍のダメージ。さらに2ターンの間、敵を凍結状態にする',
         levels: [
           {
             level: 1,
             magnification: 4.25,
             hit: 1
+          }
+        ],
+        increment: 0.05
+      },
+      {
+        name: '【専】ヘイルキャノン＋',
+        type: SkillType.Mysteries,
+        levels: [
+          {
+            level: 1,
+            label: '通常',
+            magnification: 4.25,
+            hit: 1,
+            text: '敵単体に攻撃力4.25倍のダメージ。さらに2ターンの間、敵を凍結状態にする'
+          },
+          {
+            level: 1,
+            label: 'ネクロ',
+            magnification: 4.25,
+            hit: 1,
+            text: 'ソウルを4つ消費し、敵単体に攻撃力4.25倍のダメージ。2ターンの間、敵を凍結状態にする。さらに味方全体を戦闘不能時にHP25%で蘇生する状態にする'
           }
         ],
         increment: 0.05
@@ -89,6 +125,7 @@ export const So59: IMegido[] = [
       {
         name: 'ブリザードコフィン＋',
         type: SkillType.Skill,
+        text: '敵単体に攻撃力1.25倍のダメージ。2ターンの間、氷結の地形効果で0.75倍の継続ダメージを与え、攻撃力を低下させる',
         levels: [
           {
             level: 1,
@@ -100,6 +137,7 @@ export const So59: IMegido[] = [
       {
         name: 'アイオブプリザーブ＋',
         type: SkillType.AwakeningSkill,
+        text: '敵全体を2ターンの間、それぞれ40%の確率で、めまい、呪い状態にする。さらに2ターン繰り返すリザーブ状態になる',
         levels: [
           {
             level: 1,
@@ -111,6 +149,7 @@ export const So59: IMegido[] = [
       {
         name: '占星なる聖域＋',
         type: SkillType.Mysteries,
+        text: '3ターンの間、味方全体の状態異常命中率を30%上昇させ、防御力を40%上昇させる',
         levels: [
           {
             level: 1,

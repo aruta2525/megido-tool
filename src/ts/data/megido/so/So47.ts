@@ -29,6 +29,7 @@ export const So47: IMegido[] = [
       {
         name: 'クレセントスライス＋',
         type: SkillType.Skill,
+        text: '敵単体に攻撃力1.25倍のダメージ。さらに敵に掛かっている強化効果を解除する',
         levels: [
           {
             level: 1,
@@ -40,6 +41,7 @@ export const So47: IMegido[] = [
       {
         name: 'ラウンドスレイヤー＋',
         type: SkillType.AwakeningSkill,
+        text: '敵単体に攻撃力0.7倍の6連続ダメージ。さらに2ターンの間、敵が積めるフォトンの量を-1する',
         levels: [
           {
             level: 1,
@@ -51,6 +53,7 @@ export const So47: IMegido[] = [
       {
         name: 'ランページビート＋',
         type: SkillType.Mysteries,
+        text: '敵単体に攻撃力2.25倍のダメージ。さらに2ターンの間、自身の攻撃にLv×10の固定追加ダメージを付与する',
         levels: [
           {
             level: 1,

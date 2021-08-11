@@ -32,6 +32,7 @@ const megido: IMegido[] = [
       {
         name: 'エイドクリスタル＋',
         type: SkillType.Skill,
+        text: '2ターンの間、味方全体の防御力を15%上昇させ、ターン終了時にHPが15%回復する',
         levels: [
           {
             level: 1,
@@ -43,6 +44,8 @@ const megido: IMegido[] = [
       {
         name: 'ワンダーヘルメット＋',
         type: SkillType.AwakeningSkill,
+        text:
+          '味方横一列への攻撃を1回無効化し、2ターンの間、防御力を25%上昇させる。さらに種族に【物体】を持つオーブを装備している対象に勇猛のオーラを2個付与する',
         levels: [
           {
             level: 1,
@@ -57,20 +60,17 @@ const megido: IMegido[] = [
         levels: [
           {
             level: 1,
+            label: '通常',
             magnification: 4,
-            hit: 1
-          }
-        ],
-        increment: 0.05
-      },
-      {
-        name: 'エヴァーフローズン＋（オーラ消費）',
-        type: SkillType.Mysteries,
-        levels: [
+            hit: 1,
+            text: '敵単体に攻撃力4倍のダメージ。さらに2ターンの間、敵を凍結状態にする'
+          },
           {
             level: 1,
+            label: 'オーラ',
             magnification: 6,
-            hit: 1
+            hit: 1,
+            text: '自身のオーラを2個消費し、敵単体に攻撃力6倍のダメージ。2ターンの間、敵を凍結状態にする。さらに自身以外の味方にアタックを1つ追加'
           }
         ],
         increment: 0.05

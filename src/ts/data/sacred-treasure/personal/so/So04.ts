@@ -16,11 +16,15 @@ const sacredTreasureList: IPersonalSacredTreasure[] = [
     defense: 0,
     speed: 0,
     type: Type.None,
-    ability: {value: 0, text: '特性が変化する。防御力が30%上昇する'},
+    ability: {name: '', text: '特性が変化する。防御力が30%上昇する'},
     personal: {
       clockType: ClockType.So,
       megidoNo: 4,
-      name: 'ガミジン'
+      name: 'ガミジン',
+      megidoAbility: {
+        name: '強襲ヒット',
+        text: '自身より防御力が低い対象へのダメージが150%上昇する'
+      }
     }
   }
 ];

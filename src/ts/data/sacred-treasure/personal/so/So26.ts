@@ -17,7 +17,7 @@ const sacredTreasureList: IPersonalSacredTreasure[] = [
     speed: 0,
     type: Type.None,
     ability: {
-      value: 0,
+      name: '',
       text:
         '戦闘開始時、自身を剛剣状態にする。自身にフォトンが与えられなかった場合、ターン終了時、自身を剛剣状態にする。剛剣状態：フォトンによる攻撃に、ダメージ200%上昇・防御貫通・ダメージ軽減無効が発生する特殊状態'
     },

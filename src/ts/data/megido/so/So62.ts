@@ -29,6 +29,7 @@ export const So62: IMegido[] = [
       {
         name: '南風の舞+',
         type: SkillType.Skill,
+        text: '2ターンの間、味方全体の素早さを30%上昇させ、ターン終了時にHPが15%回復する',
         levels: [
           {
             level: 1,
@@ -40,6 +41,7 @@ export const So62: IMegido[] = [
       {
         name: '音響の槍+',
         type: SkillType.AwakeningSkill,
+        text: '敵単体に3.5倍のダメージさらに味方前列の覚醒ゲージを+1する',
         levels: [
           {
             level: 1,
@@ -54,21 +56,18 @@ export const So62: IMegido[] = [
         levels: [
           {
             level: 1,
+            label: '通常',
             magnification: 2.25,
-            hit: 1
-          }
-        ],
-        increment: 0.05
-      },
-      {
-        name: 'サイコウェイブ+（大協奏）',
-        type: SkillType.Mysteries,
-        attribute: Attribute.Sound,
-        levels: [
+            hit: 1,
+            text: '敵全体に攻撃力2.25倍のダメージ。さらに70%の確率で、2ターンの間、敵を混乱状態にする'
+          },
           {
             level: 1,
+            label: '大協奏',
             magnification: 2.25,
-            hit: 1
+            hit: 1,
+            attribute: Attribute.Sound,
+            text: '敵全体に攻撃力2.25倍の響撃ダメージ。さらに70%の確率で、3ターンの間、敵を混乱状態にする'
           }
         ],
         increment: 0.05

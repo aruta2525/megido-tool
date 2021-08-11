@@ -29,6 +29,7 @@ export const So25: IMegido[] = [
       {
         name: 'ぶん回し＋',
         type: SkillType.Skill,
+        text: '敵横一列に攻撃力1.5倍のダメージ。ただし反動で、自身が最大HPの5%ダメージを受ける',
         levels: [
           {
             level: 1,
@@ -40,6 +41,7 @@ export const So25: IMegido[] = [
       {
         name: 'グレートぶん回し＋',
         type: SkillType.AwakeningSkill,
+        text: '敵単体に攻撃力3.5倍の防御無視ダメージ',
         levels: [
           {
             level: 1,
@@ -51,11 +53,38 @@ export const So25: IMegido[] = [
       {
         name: 'ピリオドの向こうへ＋',
         type: SkillType.Mysteries,
+        text: '敵全体に攻撃力3倍のダメージ。ただし反動で、自身が戦闘不能になる',
         levels: [
           {
             level: 1,
             magnification: 3,
             hit: 1
+          }
+        ],
+        increment: 0.05
+      },
+      {
+        name: '【専】ピリオドの向こうへ＋',
+        type: SkillType.Mysteries,
+        text: '敵全体に攻撃力3倍のダメージ。ただし反動で、自身が戦闘不能になる',
+        levels: [
+          {
+            level: 0,
+            magnification: 3,
+            hit: 1,
+            text: '敵全体に攻撃力3倍のダメージ。ただし反動で、自身が戦闘不能になる'
+          },
+          {
+            level: 5,
+            magnification: 6,
+            hit: 1,
+            text: '自身のオーラを5個消費し、敵全体に攻撃力6倍のダメージ。ただし反動で、50%の確率で、自身が戦闘不能になる'
+          },
+          {
+            level: 10,
+            magnification: 8,
+            hit: 1,
+            text: '自身のオーラを10個消費し、敵全体に攻撃力8倍のダメージ'
           }
         ],
         increment: 0.05
@@ -89,6 +118,8 @@ export const So25: IMegido[] = [
       {
         name: 'グレートスパーク＋',
         type: SkillType.Skill,
+        text: '敵横一列に攻撃力1.15倍の雷ダメージ。ただし反動で、自身が最大HPの25%ダメージを受ける',
+        attribute: Attribute.Thunder,
         levels: [
           {
             level: 1,
@@ -103,31 +134,38 @@ export const So25: IMegido[] = [
         levels: [
           {
             level: 1,
+            label: '通常',
             magnification: 0,
-            hit: 0
+            hit: 0,
+            text: '2ターンの間、自身の雷ダメージを35%上昇させる'
+          },
+          {
+            level: 2,
+            label: 'HP10%以下',
+            magnification: 0,
+            hit: 0,
+            text: '2ターンの間、自身のアタックを強化し、雷ダメージを75%上昇させる'
           }
         ]
       },
       {
         name: 'デスダンス＋',
         type: SkillType.Mysteries,
+        attribute: Attribute.Thunder,
         levels: [
           {
             level: 1,
+            label: '通常',
             magnification: 4.25,
-            hit: 1
-          }
-        ],
-        increment: 0.05
-      },
-      {
-        name: 'デスダンス＋(HP10%以下)',
-        type: SkillType.Mysteries,
-        levels: [
+            hit: 1,
+            text: '敵単体に攻撃力4.25倍の雷ダメージ。さらに積まれているフォトンを1つ破壊する'
+          },
           {
-            level: 1,
+            level: 2,
+            label: 'HP10%以下',
             magnification: 9.25,
-            hit: 1
+            hit: 1,
+            text: '敵単体に攻撃力9.25倍の雷ダメージ。さらに積まれているフォトンを1つ破壊する'
           }
         ],
         increment: 0.05

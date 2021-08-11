@@ -15,7 +15,7 @@ const sacredTreasureList: ISacredTreasure[] = [
     defense: 0,
     speed: 0,
     type: Type.Kyoyu,
-    ability: {value: 0, text: '自身のHPが50%以下のとき、攻撃力が5%上昇する'}
+    ability: {name: '', text: '自身のHPが50%以下のとき、攻撃力が5%上昇する'}
   },
   {
     name: '血潮の頑強',
@@ -27,7 +27,7 @@ const sacredTreasureList: ISacredTreasure[] = [
     defense: 10,
     speed: 0,
     type: Type.Kyoyu,
-    ability: {value: 0, text: '防御力が6%上昇する'}
+    ability: {name: '', text: '防御力が6%上昇する'}
   },
   {
     name: '穿孔の首飾り',
@@ -39,7 +39,7 @@ const sacredTreasureList: ISacredTreasure[] = [
     defense: 0,
     speed: 12,
     type: Type.Kyoyu,
-    ability: {value: 0, text: '攻撃時、敵の防御力を1%無視する'}
+    ability: {name: '', text: '攻撃時、敵の防御力を1%無視する'}
   }
 ];
 

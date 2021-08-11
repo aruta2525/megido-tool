@@ -15,7 +15,7 @@ const sacredTreasureList: ISacredTreasure[] = [
     defense: 0,
     speed: 0,
     type: Type.None,
-    ability: {value: 0, text: ''}
+    ability: {name: '', text: ''}
   },
   {
     name: 'ミラーストーン',
@@ -27,7 +27,7 @@ const sacredTreasureList: ISacredTreasure[] = [
     defense: 0,
     speed: 0,
     type: Type.None,
-    ability: {value: 0, text: ''}
+    ability: {name: '', text: ''}
   },
   {
     name: 'スウィートパウダー',
@@ -39,7 +39,7 @@ const sacredTreasureList: ISacredTreasure[] = [
     defense: 28,
     speed: 0,
     type: Type.None,
-    ability: {value: 0, text: ''}
+    ability: {name: '', text: ''}
   },
   {
     name: 'プレミアムメタル',
@@ -51,7 +51,7 @@ const sacredTreasureList: ISacredTreasure[] = [
     defense: 4,
     speed: 0,
     type: Type.None,
-    ability: {value: 0, text: ''}
+    ability: {name: '', text: ''}
   },
   {
     name: '悪魔殺しの槌',
@@ -63,7 +63,7 @@ const sacredTreasureList: ISacredTreasure[] = [
     defense: 0,
     speed: 0,
     type: Type.None,
-    ability: {value: 0, text: ''}
+    ability: {name: '', text: ''}
   },
   {
     name: '深緑の絞り汁',
@@ -75,7 +75,7 @@ const sacredTreasureList: ISacredTreasure[] = [
     defense: 24,
     speed: 0,
     type: Type.None,
-    ability: {value: 0, text: ''}
+    ability: {name: '', text: ''}
   },
   {
     name: 'グリーンスケイル',
@@ -87,7 +87,7 @@ const sacredTreasureList: ISacredTreasure[] = [
     defense: 4,
     speed: 0,
     type: Type.None,
-    ability: {value: 0, text: ''}
+    ability: {name: '', text: ''}
   },
   {
     name: 'ルーメンレンズ',
@@ -99,7 +99,7 @@ const sacredTreasureList: ISacredTreasure[] = [
     defense: 0,
     speed: 0,
     type: Type.None,
-    ability: {value: 0, text: '攻撃を受けたとき、5%の確率で攻撃力1.2倍のダメージで反撃する'}
+    ability: {name: '', text: '攻撃を受けたとき、5%の確率で攻撃力1.2倍のダメージで反撃する'}
   },
   {
     name: 'シルバーミラー',
@@ -111,7 +111,7 @@ const sacredTreasureList: ISacredTreasure[] = [
     defense: 15,
     speed: 0,
     type: Type.None,
-    ability: {value: 0, text: '受けるダメージを3%軽減する'}
+    ability: {name: '', text: '受けるダメージを3%軽減する'}
   },
   {
     name: 'ビーンズペースト',
@@ -123,7 +123,7 @@ const sacredTreasureList: ISacredTreasure[] = [
     defense: 35,
     speed: 0,
     type: Type.None,
-    ability: {value: 0, text: '毎ターン終了時、HPが2%回復する'}
+    ability: {name: '', text: '毎ターン終了時、HPが2%回復する'}
   },
   {
     name: '極銀の片眼鏡',
@@ -135,7 +135,7 @@ const sacredTreasureList: ISacredTreasure[] = [
     defense: 15,
     speed: 0,
     type: Type.None,
-    ability: {value: 0, text: '状態異常命中率が3%上昇する'}
+    ability: {name: '', text: '状態異常命中率が3%上昇する'}
   },
   {
     name: '破魔の盾',
@@ -147,7 +147,7 @@ const sacredTreasureList: ISacredTreasure[] = [
     defense: 0,
     speed: 0,
     type: Type.None,
-    ability: {value: 0, text: '3%の確率でダメージを無効にする'}
+    ability: {name: '', text: '3%の確率でダメージを無効にする'}
   },
   {
     name: '若草のケーキ',
@@ -159,7 +159,7 @@ const sacredTreasureList: ISacredTreasure[] = [
     defense: 42,
     speed: 0,
     type: Type.None,
-    ability: {value: 0, text: '自身が与える回復量が3%上昇する'}
+    ability: {name: '', text: '自身が与える回復量が3%上昇する'}
   },
   {
     name: '毒除けの盾',
@@ -171,7 +171,7 @@ const sacredTreasureList: ISacredTreasure[] = [
     defense: 15,
     speed: 0,
     type: Type.None,
-    ability: {value: 0, text: '5%の確率で、味方への単体攻撃を受け持つ'}
+    ability: {name: '', text: '5%の確率で、味方への単体攻撃を受け持つ'}
   },
   {
     name: '冥界ノ栞',
@@ -183,7 +183,7 @@ const sacredTreasureList: ISacredTreasure[] = [
     defense: 35,
     speed: 0,
     type: Type.None,
-    ability: {value: 0, text: '自身のHPが50%以下のとき、 毎ターン終了時、HPが4%回復する'}
+    ability: {name: '', text: '自身のHPが50%以下のとき、 毎ターン終了時、HPが4%回復する'}
   },
   {
     name: 'ハンターゴーグル',
@@ -195,7 +195,7 @@ const sacredTreasureList: ISacredTreasure[] = [
     defense: 0,
     speed: 0,
     type: Type.Gouken,
-    ability: {value: 0, text: '攻撃を受けたとき、8%の確率で攻撃力1.2倍のダメージで反撃する'}
+    ability: {name: '', text: '攻撃を受けたとき、8%の確率で攻撃力1.2倍のダメージで反撃する'}
   },
   {
     name: '紅のプロトポロス',
@@ -207,7 +207,7 @@ const sacredTreasureList: ISacredTreasure[] = [
     defense: 10,
     speed: 0,
     type: Type.Gouken,
-    ability: {value: 0, text: '状態異常命中率が4%上昇する'}
+    ability: {name: '', text: '状態異常命中率が4%上昇する'}
   },
   {
     name: '蒼のエピファネイア',
@@ -219,7 +219,7 @@ const sacredTreasureList: ISacredTreasure[] = [
     defense: 10,
     speed: 0,
     type: Type.Gouken,
-    ability: {value: 0, text: 'ステータス弱体の命中率が4%上昇する'}
+    ability: {name: '', text: 'ステータス弱体の命中率が4%上昇する'}
   },
   {
     name: '極光の金鏡',
@@ -231,7 +231,7 @@ const sacredTreasureList: ISacredTreasure[] = [
     defense: 10,
     speed: 0,
     type: Type.Gouken,
-    ability: {value: 0, text: '受けるダメージを4%軽減する'}
+    ability: {name: '', text: '受けるダメージを4%軽減する'}
   },
   {
     name: '神罰の重盾',
@@ -243,7 +243,7 @@ const sacredTreasureList: ISacredTreasure[] = [
     defense: 10,
     speed: 0,
     type: Type.Gouken,
-    ability: {value: 0, text: '4%の確率でダメージを無効にする'}
+    ability: {name: '', text: '4%の確率でダメージを無効にする'}
   },
   {
     name: '断罪の重盾',
@@ -255,7 +255,7 @@ const sacredTreasureList: ISacredTreasure[] = [
     defense: 10,
     speed: 0,
     type: Type.Gouken,
-    ability: {value: 0, text: '6%の確率で、味方への単体攻撃を受け持つ'}
+    ability: {name: '', text: '6%の確率で、味方への単体攻撃を受け持つ'}
   },
   {
     name: '紫芋のケーキ',
@@ -267,7 +267,7 @@ const sacredTreasureList: ISacredTreasure[] = [
     defense: 0,
     speed: 12,
     type: Type.Gouken,
-    ability: {value: 0, text: '毎ターン終了時、 HPが3%回復する'}
+    ability: {name: '', text: '毎ターン終了時、 HPが3%回復する'}
   },
   {
     name: 'カフェモカロール',
@@ -279,7 +279,7 @@ const sacredTreasureList: ISacredTreasure[] = [
     defense: 0,
     speed: 15,
     type: Type.Gouken,
-    ability: {value: 0, text: '自身が与える回復量が5%上昇する'}
+    ability: {name: '', text: '自身が与える回復量が5%上昇する'}
   },
   {
     name: 'マグワートロール',
@@ -291,7 +291,7 @@ const sacredTreasureList: ISacredTreasure[] = [
     defense: 0,
     speed: 15,
     type: Type.Gouken,
-    ability: {value: 0, text: '全ての状態異常への耐性が8%上昇する'}
+    ability: {name: '', text: '全ての状態異常への耐性が8%上昇する'}
   }
 ];
 

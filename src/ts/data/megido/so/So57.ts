@@ -29,6 +29,7 @@ export const So57: IMegido[] = [
       {
         name: 'ポイズンクロー＋',
         type: SkillType.Skill,
+        text: '敵単体に攻撃力1.25倍のダメージ。さらに80%の確率で、2ターンの間、敵を毒状態にする',
         levels: [
           {
             level: 1,
@@ -40,6 +41,7 @@ export const So57: IMegido[] = [
       {
         name: 'マッハクロー＋',
         type: SkillType.AwakeningSkill,
+        text: '敵単体に攻撃力0.75倍の4連続ダメージ。さらに自身にアタックフォトンを1つ追加する',
         levels: [
           {
             level: 1,
@@ -51,10 +53,24 @@ export const So57: IMegido[] = [
       {
         name: '猛りの暴獣爪＋',
         type: SkillType.Mysteries,
+        text: '敵単体に攻撃力1.1倍の3連続ダメージ。さらに2ターンの間、自身のアタックを強化する',
         levels: [
           {
             level: 1,
             magnification: 1.1,
+            hit: 3
+          }
+        ],
+        increment: 0.0166
+      },
+      {
+        name: '【専】猛りの暴獣爪＋',
+        type: SkillType.Mysteries,
+        text: '敵単体に攻撃力1.6倍の3連続ダメージ。さらに自身にアタックフォトンを1つ追加し、2ターンの間、アタックを強化',
+        levels: [
+          {
+            level: 1,
+            magnification: 1.6,
             hit: 3
           }
         ],

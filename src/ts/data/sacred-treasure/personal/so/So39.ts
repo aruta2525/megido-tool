@@ -16,7 +16,7 @@ const sacredTreasureList: IPersonalSacredTreasure[] = [
     defense: 0,
     speed: 0,
     type: Type.None,
-    ability: {value: 0, text: '奥義が変化する。素早さが40%上昇する。覚醒に必要なゲージを-1する'},
+    ability: {name: '', text: '奥義が変化する。素早さが40%上昇する。覚醒に必要なゲージを-1する'},
     personal: {
       clockType: ClockType.So,
       megidoNo: 39,

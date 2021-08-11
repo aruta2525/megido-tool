@@ -15,7 +15,7 @@ const sacredTreasureList: ISacredTreasure[] = [
     defense: 10,
     speed: 0,
     type: Type.None,
-    ability: {value: 0, text: '防御力が8%上昇し、 素早さが5%減少する'}
+    ability: {name: '', text: '防御力が8%上昇し、 素早さが5%減少する'}
   },
   {
     name: '紅蓮の大盾',
@@ -27,7 +27,7 @@ const sacredTreasureList: ISacredTreasure[] = [
     defense: 10,
     speed: 0,
     type: Type.None,
-    ability: {value: 0, text: '防御力が8%上昇し、 素早さが5%減少する'}
+    ability: {name: '', text: '防御力が8%上昇し、 素早さが5%減少する'}
   },
   {
     name: '堅氷の大盾',
@@ -39,7 +39,7 @@ const sacredTreasureList: ISacredTreasure[] = [
     defense: 10,
     speed: 0,
     type: Type.None,
-    ability: {value: 0, text: '防御力が8%上昇し、 素早さが5%減少する'}
+    ability: {name: '', text: '防御力が8%上昇し、 素早さが5%減少する'}
   }
 ];
 

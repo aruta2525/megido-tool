@@ -29,6 +29,7 @@ export const So10: IMegido[] = [
       {
         name: 'ドロップフォトン+',
         type: SkillType.Skill,
+        text: '味方後列の覚醒ゲージを+1し、攻撃力を10%上昇させる',
         levels: [
           {
             level: 1,
@@ -40,6 +41,7 @@ export const So10: IMegido[] = [
       {
         name: 'パワーブースト+',
         type: SkillType.AwakeningSkill,
+        text: '2ターンの間、味方後列のアタックを強化し、攻撃力を10%上昇させる',
         levels: [
           {
             level: 1,
@@ -51,6 +53,7 @@ export const So10: IMegido[] = [
       {
         name: 'スターライトアイ+',
         type: SkillType.Mysteries,
+        text: '2ターンの間、味方全体のチャージを強化し、攻撃力を20%上昇させる',
         levels: [
           {
             level: 1,

@@ -15,7 +15,7 @@ const sacredTreasureList: ISacredTreasure[] = [
     defense: 0,
     speed: 0,
     type: Type.Gourai,
-    ability: {value: 0, text: '雷ダメージが4%上昇する'}
+    ability: {name: '', text: '雷ダメージが4%上昇する'}
   },
   {
     name: 'スリリングトリック',
@@ -27,7 +27,7 @@ const sacredTreasureList: ISacredTreasure[] = [
     defense: 10,
     speed: 0,
     type: Type.Gourai,
-    ability: {value: 0, text: '3%の確率で、敵に雷ダメージで反撃する'}
+    ability: {name: '', text: '3%の確率で、敵に雷ダメージで反撃する'}
   },
   {
     name: 'プランダー・スカル',
@@ -39,7 +39,7 @@ const sacredTreasureList: ISacredTreasure[] = [
     defense: 0,
     speed: 12,
     type: Type.Gourai,
-    ability: {value: 0, text: '自身が発生させた帯電による、感電付与確率が8%上昇する'}
+    ability: {name: '', text: '自身が発生させた帯電による、感電付与確率が8%上昇する'}
   },
   {
     name: '紫雲の雷霆液',
@@ -51,7 +51,7 @@ const sacredTreasureList: ISacredTreasure[] = [
     defense: 0,
     speed: 0,
     type: Type.Gourai,
-    ability: {value: 0, text: '雷ダメージが4%上昇する'}
+    ability: {name: '', text: '雷ダメージが4%上昇する'}
   },
   {
     name: 'ゴールドトラッシュ',
@@ -63,7 +63,7 @@ const sacredTreasureList: ISacredTreasure[] = [
     defense: 10,
     speed: 0,
     type: Type.Gourai,
-    ability: {value: 0, text: '全体攻撃のダメージが7%上昇する'}
+    ability: {name: '', text: '全体攻撃のダメージが7%上昇する'}
   },
   {
     name: '深淵の黒髑髏',
@@ -75,7 +75,7 @@ const sacredTreasureList: ISacredTreasure[] = [
     defense: 0,
     speed: 12,
     type: Type.Gourai,
-    ability: {value: 0, text: '自身が発生させた帯電による、感電付与確率が8%上昇する'}
+    ability: {name: '', text: '自身が発生させた帯電による、感電付与確率が8%上昇する'}
   }
 ];
 

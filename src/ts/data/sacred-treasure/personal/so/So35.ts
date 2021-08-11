@@ -16,7 +16,7 @@ const sacredTreasureList: IPersonalSacredTreasure[] = [
     defense: 0,
     speed: 0,
     type: Type.None,
-    ability: {value: 0, text: '特性、奥義が変化する。アタック時、自身にチェインする'},
+    ability: {name: '', text: '特性、奥義が変化する。アタック時、自身にチェインする'},
     personal: {
       clockType: ClockType.So,
       megidoNo: 35,

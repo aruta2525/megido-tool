@@ -33,7 +33,8 @@ export const So01: IMegido[] = [
           {
             level: 1,
             magnification: 0,
-            hit: 0
+            hit: 0,
+            text: '2ターンの間、味方単体のチャージを強化し、ダメージを10%軽減する'
           }
         ]
       },
@@ -45,7 +46,8 @@ export const So01: IMegido[] = [
           {
             level: 1,
             magnification: 1.55,
-            hit: 1
+            hit: 1,
+            text: '敵全体に攻撃力1.55倍の雷ダメージ。2ターンの間、帯電の地形効果で0.75倍の継続ダメージを与え、確率で感電させる'
           }
         ]
       },
@@ -58,7 +60,8 @@ export const So01: IMegido[] = [
           {
             level: 1,
             magnification: 6.25,
-            hit: 1
+            hit: 1,
+            text: '敵単体に攻撃力6.25倍の雷ダメージ。さらに味方後列にチャージフォトンを1つ追加する'
           }
         ]
       }

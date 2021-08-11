@@ -29,6 +29,7 @@ export const So27: IMegido[] = [
       {
         name: 'ウェポンガード＋',
         type: SkillType.Skill,
+        text: '2ターンの間、すべての単体攻撃を受け持ちスキルフォトンからのダメージを60%軽減する',
         levels: [
           {
             level: 1,
@@ -40,6 +41,7 @@ export const So27: IMegido[] = [
       {
         name: 'ブランディッシュ＋',
         type: SkillType.AwakeningSkill,
+        text: '敵単体に攻撃力1.5倍の2連続ダメージ。さらに積まれているフォトンを1つ破壊する',
         levels: [
           {
             level: 1,
@@ -51,6 +53,7 @@ export const So27: IMegido[] = [
       {
         name: 'エクトプラズム＋',
         type: SkillType.Mysteries,
+        text: '2ターンの間、味方単体を無敵状態にし、HPを20%回復させる',
         levels: [
           {
             level: 1,

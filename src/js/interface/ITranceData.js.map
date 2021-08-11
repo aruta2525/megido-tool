@@ -1,0 +1,1 @@
+{"version":3,"file":"ITranceData.js","sourceRoot":"","sources":["../../ts/interface/ITranceData.ts"],"names":[],"mappings":"AAAA,OAAO,EAAC,UAAU,EAAC,MAAM,gBAAgB,CAAC;AAe1C,MAAM,CAAC,MAAM,cAAc,GAAkB;IAC3C;QACE,IAAI,EAAE,UAAU,CAAC,IAAI;QACrB,MAAM,EAAE;YACN;gBACE,KAAK,EAAE,CAAC;gBACR,IAAI,EAAE,IAAI;gBACV,IAAI,EAAE,EAAE;aACT;SACF;KACF;CACF,CAAC"}

@@ -16,11 +16,15 @@ const sacredTreasureList: IPersonalSacredTreasure[] = [
     defense: 0,
     speed: 0,
     type: Type.None,
-    ability: {value: 0, text: '特性、奥義が変化する。HPが10%上昇する'},
+    ability: {name: '', text: '特性、奥義が変化する。HPが10%上昇する'},
     personal: {
       clockType: ClockType.So,
       megidoNo: 28,
-      name: 'ベリト'
+      name: 'ベリト',
+      megidoAbility: {
+        name: '恥かかすなよ！',
+        text: 'HPが50%以下のとき、攻撃力が50%上昇する'
+      }
     }
   }
 ];

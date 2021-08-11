@@ -29,6 +29,7 @@ export const So55: IMegido[] = [
       {
         name: '原初の魔法『零』＋',
         type: SkillType.Skill,
+        text: '敵単体に攻撃力1.25倍のダメージ。さらに2ターンの間、敵を束縛状態にする',
         levels: [
           {
             level: 1,
@@ -40,6 +41,7 @@ export const So55: IMegido[] = [
       {
         name: '原初の魔法『結』＋',
         type: SkillType.AwakeningSkill,
+        text: '敵横一列に攻撃力1.25倍のダメージ。さらに80%の確率で、2ターンの間、敵を呪い状態にする',
         levels: [
           {
             level: 1,
@@ -51,6 +53,7 @@ export const So55: IMegido[] = [
       {
         name: 'グランドリープ＋',
         type: SkillType.Mysteries,
+        text: '敵単体に攻撃力2.25倍のダメージ。さらに覚醒ゲージを-2する',
         levels: [
           {
             level: 1,
@@ -95,8 +98,19 @@ export const So55: IMegido[] = [
         levels: [
           {
             level: 1,
-            magnification: 1,
-            hit: 1
+            label: '通常',
+            magnification: 0,
+            hit: 0,
+            text: `2ターンの間、味方単体のスキルを強化し、攻撃力を10%上昇させる。さらにデスギフト(1)を付与する<br>
+                  【デスギフト(1)効果】戦闘不能時、敵単体の覚醒ゲージを-2する`
+          },
+          {
+            level: 1,
+            label: 'ネクロ',
+            magnification: 0,
+            hit: 0,
+            text: `ソウルを2つ消費し、2ターンの間、味方単体のスキルを強化し、攻撃力を10%上昇させる。さらにデスギフト(2)を付与する<br>
+                  【デスギフト(2)効果】戦闘不能時、敵全体の覚醒ゲージを-2する`
           }
         ]
       },
@@ -106,14 +120,27 @@ export const So55: IMegido[] = [
         levels: [
           {
             level: 1,
+            label: '通常',
             magnification: 0,
-            hit: 0
+            hit: 0,
+            text: `自身以外の味方にデスギフト(1)を付与し、2ターンの間自身以外の攻撃力を、味方全体のデスギフト数×5%上昇させる【最大100%】<br>
+                  【デスギフト(1)効果】戦闘不能時、敵単体に攻撃力1.5倍のダメージ 対象の覚醒ゲージが0の場合、ダメージが1.2倍`
+          },
+          {
+            level: 1,
+            label: 'ネクロ',
+            magnification: 0,
+            hit: 0,
+            text: `ソウルを2つ消費し、自身以外の味方にデスギフト(2)を付与し、2ターンの間自身以外の攻撃力を、味方全体のデスギフト数×5%上昇させる【最大100%】<br>
+                  【デスギフト(2)効果】戦闘不能時、敵単体に攻撃力1.5倍のダメージ 対象の覚醒ゲージが0の場合、ダメージが1.5倍`
           }
         ]
       },
       {
         name: '我これに報いん＋',
         type: SkillType.Mysteries,
+        text:
+          '1ターンの間、敵全体を執心状態。2ターンの間自身以外の味方が受けるダメージを20%軽減。自身以外の味方に付与されているデスギフトを、最大10個まで自身に移す',
         levels: [
           {
             level: 1,

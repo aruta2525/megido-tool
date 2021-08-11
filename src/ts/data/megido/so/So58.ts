@@ -32,6 +32,7 @@ export const So58: IMegido[] = [
       {
         name: '籠絡絃＋',
         type: SkillType.Skill,
+        text: '敵横一列に攻撃力1.15倍のダメージ。さらに2ターンの間、敵を引き寄せ状態にする',
         levels: [
           {
             level: 1,
@@ -43,6 +44,7 @@ export const So58: IMegido[] = [
       {
         name: '捕縛陣＋',
         type: SkillType.AwakeningSkill,
+        text: '敵横一列に攻撃力2倍のダメージ。さらに80%の確率で、2ターンの間、敵の素早さを60%低下させる',
         levels: [
           {
             level: 1,
@@ -55,6 +57,7 @@ export const So58: IMegido[] = [
         name: 'ブレイズスラッシュ＋',
         type: SkillType.Mysteries,
         attribute: Attribute.Fire,
+        text: '敵単体に攻撃力5.25倍の火ダメージ。さらに味方前列にアタックフォトンを1つ追加する',
         levels: [
           {
             level: 1,

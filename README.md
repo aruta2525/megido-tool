@@ -31,6 +31,7 @@ https://twitter.com/megido72_tool 様 提供のツールが使えなくなって
 - ~~系譜追加~~
 - メギドSelectにアイコン追加
 - favicon
+- トランス対応
 
 ## 更新履歴
 ### Hボムダメージ計算ツール

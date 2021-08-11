@@ -32,19 +32,17 @@ const megido: IMegido[] = [
         levels: [
           {
             level: 1,
+            label: '通常',
             magnification: 1.25,
-            hit: 1
-          }
-        ]
-      },
-      {
-        name: 'キラースナイプ＋()Bアーツ',
-        type: SkillType.Skill,
-        levels: [
+            hit: 1,
+            text: '敵単体に攻撃力1.25倍のダメージ。さらに80%の確率で、積まれているフォトンを1つ破壊する'
+          },
           {
             level: 1,
+            label: 'Bアーツ',
             magnification: 1.25,
-            hit: 1
+            hit: 1,
+            text: 'バレットを消費し、敵単体に攻撃力1.25倍のダメージ。さらに90%の確率で、積まれているフォトンを1つ破壊する	'
           }
         ]
       },
@@ -54,25 +52,24 @@ const megido: IMegido[] = [
         levels: [
           {
             level: 1,
+            label: '通常',
             magnification: 1.1,
-            hit: 2
-          }
-        ]
-      },
-      {
-        name: '非情なる粛清＋(Bアーツ)',
-        type: SkillType.AwakeningSkill,
-        levels: [
+            hit: 2,
+            text: '敵横一列に攻撃力1.1倍の2連続ダメージ。さらに80%の確率で、2ターンの間、攻撃力を25%低下させる'
+          },
           {
             level: 1,
+            label: 'Bアーツ',
             magnification: 1.1,
-            hit: 2
+            hit: 2,
+            text: 'バレットを消費し、敵横一列に攻撃力1.1倍の2連続ダメージ。さらに90%の確率で、2ターンの間、攻撃力を25%低下させる'
           }
         ]
       },
       {
         name: 'ハウンド・ドッグ＋',
         type: SkillType.Mysteries,
+        text: '敵単体に攻撃力4.25倍のダメージ。さらに、2ターンの間、敵が積めるフォトンの量を-1する',
         levels: [
           {
             level: 1,

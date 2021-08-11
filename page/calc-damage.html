@@ -45,15 +45,15 @@
       <div class="row border border-bottom-0 px-0">
         <div class="form-group col-sm-6 col-12 px-2 mb-2">
           <label for="megido">メギド</label>
-          <select title="" id="megido" class="selectpicker" data-live-search="true" data-width="100%" tabindex="1"> </select>
+          <select title="" id="megido" class="selectpicker" data-live-search="true" data-width="100%" tabindex> </select>
         </div>
         <div class="form-group col-sm-3 col-6 px-2 mb-2">
           <label for="offense">攻撃力</label>
-          <input type="tel" id="offense" class="form-control" tabindex="2" />
+          <input type="tel" id="offense" class="form-control" tabindex />
         </div>
         <div class="form-group col-sm-3 col-6 px-2 mb-2">
           <label for="offensiveBuff">攻撃バフ[%]</label>
-          <input type="tel" id="offensiveBuff" class="form-control" tabindex="3" />
+          <input type="tel" id="offensiveBuff" class="form-control" tabindex />
         </div>
 
         <div class="form-group col-12 mb-0">
@@ -83,6 +83,42 @@
             </div>
           </div>
         </div>
+
+        <div class="form-group col-12 mb-0">
+          <div class="row">
+            <div class="col-12 px-2">
+              <label>他ステータス</label>
+              <button
+                type="button"
+                class="btn btn-primary rounded-circle collapse-btn ml-1"
+                data-toggle="collapse"
+                data-target=".megido-other-status"
+                aria-expanded="false"
+                title=""
+              >
+                <img src="../dist/img/plus.png" class="plus" />
+              </button>
+            </div>
+          </div>
+          <div class="row pr-2 mb-0 collapse megido-other-status">
+            <div class="form-group col-sm-3 col-6 px-2 mb-2">
+              <label for="defense">防御力</label>
+              <input type="tel" id="defense" class="form-control" tabindex />
+            </div>
+            <div class="form-group col-sm-3 col-6 px-2 mb-2">
+              <label for="defensiveBuff">防御バフ[%]</label>
+              <input type="tel" id="defensiveBuff" class="form-control" tabindex />
+            </div>
+            <div class="form-group col-sm-3 col-6 px-2 mb-2">
+              <label for="speed">素早さ</label>
+              <input type="tel" id="speed" class="form-control" tabindex />
+            </div>
+            <div class="form-group col-sm-3 col-6 px-2 mb-2">
+              <label for="speedilyBuff">素早さバフ[%]</label>
+              <input type="tel" id="speedilyBuff" class="form-control" tabindex />
+            </div>
+          </div>
+        </div>
       </div>
 
       <!-- 霊宝行 -->
@@ -97,7 +133,7 @@
         <div class="form-group col-sm-12 mb-0 collapse multi-st">
           <div class="row mb-2">
             <div class="col-5 px-2">
-              <select title="" id="sacredTreasure1" class="selectpicker" data-width="100%" tabindex="4"> </select>
+              <select title="" id="sacredTreasure1" class="selectpicker" data-width="100%" tabindex> </select>
             </div>
             <div id="sacredTreasureText1" class="col-7 px-2 border border-light rounded ability-text"></div>
           </div>
@@ -106,7 +142,7 @@
         <div class="form-group col-sm-12 mb-0 collapse multi-st">
           <div class="row mb-2">
             <div class="col-5 px-2">
-              <select title="" id="sacredTreasure2" class="selectpicker" data-width="100%" tabindex="5"> </select>
+              <select title="" id="sacredTreasure2" class="selectpicker" data-width="100%" tabindex> </select>
             </div>
             <div id="sacredTreasureText2" class="col-7 px-2 border border-light rounded ability-text" data-width="100%"></div>
           </div>
@@ -115,7 +151,7 @@
         <div class="form-group col-sm-12 mb-0 collapse multi-st">
           <div class="row mb-2">
             <div class="col-5 px-2">
-              <select title="" id="sacredTreasure3" class="selectpicker" data-width="100%" tabindex="6"> </select>
+              <select title="" id="sacredTreasure3" class="selectpicker" data-width="100%" tabindex> </select>
             </div>
             <div id="sacredTreasureText3" class="col-7 px-2 border border-light rounded ability-text" data-width="100%"></div>
           </div>
@@ -124,7 +160,7 @@
         <div class="form-group col-sm-12 mb-0 collapse multi-st">
           <div class="row mb-2">
             <div class="col-5 px-2">
-              <select title="" id="sacredTreasure4" class="selectpicker" data-width="100%" tabindex="7"> </select>
+              <select title="" id="sacredTreasure4" class="selectpicker" data-width="100%" tabindex> </select>
             </div>
             <div id="sacredTreasureText4" class="col-7 px-2 border border-light rounded ability-text" data-width="100%"></div>
           </div>
@@ -152,25 +188,36 @@
           </div>
           <div class="row mb-3">
             <div class="col-5 px-2">
-              <select title="" id="personalSacredTreasure" class="selectpicker" data-width="100%" tabindex="8"> </select>
+              <select title="" id="personalSacredTreasure" class="selectpicker" data-width="100%" tabindex> </select>
             </div>
             <div id="personalSacredTreasureText" class="col-7 px-2 border border-light rounded ability-text" data-width="100%"></div>
           </div>
         </div>
       </div>
+
       <!-- スキル行 -->
       <div class="row border-left border-right">
         <div class="form-group col-sm-4 col-6 px-2">
           <label for="skill">技</label>
-          <select title="" id="skill" class="selectpicker" data-width="100%" tabindex="9"> </select>
+          <button
+                type="button"
+                class="btn btn-primary rounded-circle collapse-btn ml-1"
+                data-toggle="collapse"
+                data-target=".skill-details"
+                aria-expanded="false"
+                title=""
+              >
+            <img src="../dist/img/plus.png" class="plus" />
+          </button>
+          <select title="" id="skill" class="selectpicker" data-width="100%" tabindex> </select>
         </div>
         <div class="form-group col-sm-2 col-3 px-1">
           <label for="skillLevels">スキルLv</label>
-          <select title="" id="skillLevels" class="selectpicker" data-width="100%" tabindex="10"> </select>
+          <select title="" id="skillLevels" class="selectpicker" data-width="100%" tabindex> </select>
         </div>
         <div class="form-group col-sm-2 col-3 px-1">
           <label for="mysteriesLevels">奥義Lv</label>
-          <select title="" id="mysteriesLevels" class="selectpicker" data-width="100%" tabindex="11">
+          <select title="" id="mysteriesLevels" class="selectpicker" data-width="100%" tabindex>
             <option value="0">1</option>
             <option value="1">2</option>
             <option value="2">3</option>
@@ -184,20 +231,39 @@
           </select>
         </div>
         <div class="form-group col-sm-2 col-6 px-2">
-          <label for="">倍率</label>
-          <input type="tel" id="magnification" class="form-control" tabindex="12" />
+          <label for="magnification">倍率</label>
+          <input type="tel" id="magnification" class="form-control" tabindex />
         </div>
         <div class="form-group col-sm-2 col-6 px-2">
           <label for="hit">Hit数</label>
-          <input type="tel" id="hit" class="form-control" tabindex="13" />
+          <input type="tel" id="hit" class="form-control" tabindex />
         </div>
+        <!-- TODO: 修正 -->
+        <div class="form-group col-12 mb-0">
+          <div class="row pr-2 mb-0 collapse skill-details">
+            <div class="col-12">
+              <div class="row">
+                <div class="form-group col-sm-3 col-6 px-2">
+                  <label for="referralStatus">参照</label>
+                  <select title="" id="referralStatus" class="selectpicker" data-width="100%" tabindex> </select>
+                </div>
+                <div class="form-group col-sm-2 col-6 px-2">
+                  <label for="attribute">属性</label>
+                  <select title="" id="attribute" class="selectpicker" data-width="100%" tabindex> </select>
+                </div>
+                <div id="skillText" class="col-sm-7 col-12 border border-light rounded ability-text mb-3"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
       </div>
 
       <!-- フォトン行 -->
       <div class="row border-left border-right align-items-center">
         <div class="form-group col-sm-3 col-3 px-2">
           <label for="photon">フォトン</label>
-          <select title="" id="photon" class="selectpicker" data-width="100%" tabindex="14">
+          <select title="" id="photon" class="selectpicker" data-width="100%" tabindex>
             <option value="0">通常</option>
             <option value="1">強化</option>
             <option value="2">劣化</option>
@@ -205,7 +271,7 @@
         </div>
         <div class="form-group col-sm-3 col-3 px-2">
           <label for="classCorrection">クラス補正</label>
-          <select title="" id="classCorrection" class="selectpicker" data-width="100%" tabindex="15">
+          <select title="" id="classCorrection" class="selectpicker" data-width="100%" tabindex>
             <option value="1">1</option>
             <option value="1.25">1.25</option>
             <option value="1.5">1.5</option>
@@ -214,7 +280,7 @@
 
         <div class="form-group col-sm-3 col-3 px-2">
           <div class="form-check">
-            <input class="form-check-input" type="checkbox" value="" id="freeze" tabindex="16" />
+            <input class="form-check-input" type="checkbox" value="" id="freeze" tabindex />
             <label for="freeze" class="form-check-label">
               凍結
             </label>
@@ -223,7 +289,7 @@
 
         <div class="form-group col-sm-3 col-3 px-2">
           <div class="form-check">
-            <input class="form-check-input" type="checkbox" value="" id="zombie" tabindex="17" />
+            <input class="form-check-input" type="checkbox" value="" id="zombie" tabindex />
             <label for="zombie" class="form-check-label">
               ゾンビ
             </label>
@@ -235,83 +301,96 @@
       <div class="row border-left border-right">
         <div class="form-group col-sm-3 col-3 px-2">
           <label for="stage">エリア</label>
-          <select title="" id="stage" class="selectpicker" data-width="100%" tabindex="18"> </select>
+          <select title="" id="stage" class="selectpicker" data-width="100%" tabindex> </select>
         </div>
         <div class="form-group col-sm-6 col-6 px-2">
           <label for="enemy">敵の名前</label>
-          <select title="" id="enemy" class="selectpicker" data-width="100%" tabindex="19"> </select>
+          <select title="" id="enemy" class="selectpicker" data-width="100%" tabindex> </select>
         </div>
         <div class="form-group col-sm-3 col-3 px-2">
           <label for="difficultyLevel">難易度</label>
-          <select title="" id="difficultyLevel" class="selectpicker" data-width="100%" tabindex="20"> </select>
+          <select title="" id="difficultyLevel" class="selectpicker" data-width="100%" tabindex> </select>
         </div>
       </div>
 
       <!-- 防御行 -->
       <div class="row border-left border-right px-0">
         <div class="form-group col-4 px-2">
-          <label for="defense">敵防御力</label>
-          <input type="tel" id="defense" class="form-control" tabindex="21" />
+          <label for="enemyDefense">敵防御力</label>
+          <input type="tel" id="enemyDefense" class="form-control" tabindex />
         </div>
         <div class="form-group col-4 px-2">
-          <label for="ignoreDefense">防御無視[%]</label>
-          <input type="tel" id="ignoreDefense" class="form-control" tabindex="22" />
+          <label for="ignoreEnemyDefense">防御無視[%]</label>
+          <input type="tel" id="ignoreEnemyDefense" class="form-control" tabindex />
         </div>
         <div class="form-group col-4 px-2">
-          <label for="defensiveDebuff">敵防御デバフ[%]</label>
-          <input type="tel" id="defensiveDebuff" class="form-control" tabindex="23" />
+          <label for="enemyDefensiveDebuff">敵防御デバフ[%]</label>
+          <input type="tel" id="enemyDefensiveDebuff" class="form-control" tabindex />
         </div>
       </div>
 
       <div class="row border-left border-rightpx-0">
         <div class="form-group col-4 px-2">
-          <label for="attribute">属性補正[%]</label>
-          <input type="tel" id="attribute" class="form-control" tabindex="24" />
+          <label for="attributeBuff">属性補正[%]</label>
+          <input type="tel" id="attributeBuff" class="form-control" tabindex />
         </div>
         <div class="form-group col-4 px-2">
           <label for="species">種族特攻[%]</label>
-          <input type="tel" id="species" class="form-control" tabindex="25" />
+          <input type="tel" id="species" class="form-control" tabindex />
         </div>
         <div class="form-group col-4 px-2">
           <label for="statusAbnormality">状態異常特攻[%]</label>
-          <input type="tel" id="statusAbnormality" class="form-control" tabindex="26" />
+          <input type="tel" id="statusAbnormality" class="form-control" tabindex />
         </div>
       </div>
 
       <div class="row border-left border-rightpx-0">
         <div class="form-group col-4 px-2">
-          <label for="specialEfficacy1">特効・補正１[%]</label>
-          <input type="tel" id="specialEfficacy1" class="form-control" tabindex="27" />
+          <label for="supplementaryDamage">ダメージ補正[%]</label>
+          <input type="tel" id="supplementaryDamage" class="form-control" tabindex />
         </div>
         <div class="form-group col-4 px-2">
-          <label for="specialEfficacy2">特効・補正２[%]</label>
-          <input type="tel" id="specialEfficacy2" class="form-control" tabindex="28" />
+          <label for="specialEfficacy1">その他特効１[%]</label>
+          <input type="tel" id="specialEfficacy1" class="form-control" tabindex />
         </div>
         <div class="form-group col-4 px-2">
-          <label for="specialEfficacy3">特効・補正３[%]</label>
-          <input type="tel" id="specialEfficacy3" class="form-control" tabindex="29" />
+          <label for="specialEfficacy2">その他特効２[%]</label>
+          <input type="tel" id="specialEfficacy2" class="form-control" tabindex />
         </div>
       </div>
 
       <div class="row border-left border-rightpx-0">
         <div class="form-group col-4 px-2">
           <label for="additionalDamage">追加ダメージ</label>
-          <input type="tel" id="additionalDamage" class="form-control" tabindex="30" />
+          <input type="tel" id="additionalDamage" class="form-control" tabindex />
+        </div>
+        <div class="form-group col-4 px-2">
+          <label for="enemyDamageReduction">敵ダメージ軽減[%]</label>
+          <input type="tel" id="enemyDamageReduction" class="form-control" tabindex />
+        </div>
+        <div class="form-group col-4 px-2">
+          <label for="enemyDefensiveBuff">敵防御バフ[%]</label>
+          <input type="tel" id="enemyDefensiveBuff" class="form-control" tabindex />
+        </div>
         </div>
         <div class="form-group col-4 px-2">
           <label for="offensiveDebuff">攻撃デバフ[%]</label>
-          <input type="tel" id="offensiveDebuff" class="form-control" tabindex="31" />
+          <input type="tel" id="offensiveDebuff" class="form-control" tabindex />
         </div>
         <div class="form-group col-4 px-2">
-          <label for="defensiveBuff">敵防御バフ[%]</label>
-          <input type="tel" id="defensiveBuff" class="form-control" tabindex="32" />
+          <label for="defensiveDebuff">防御デバフ[%]</label>
+          <input type="tel" id="defensiveDebuff" class="form-control" tabindex />
+        </div>
+        <div class="form-group col-4 px-2">
+          <label for="speedilyDebuff">素早さデバフ[%]</label>
+          <input type="tel" id="speedilyDebuff" class="form-control" tabindex />
         </div>
       </div>
 
       <div class="row border-left border-right border-bottompx-0 damage-row">
         <div class="form-group col-6 px-2 collapse multi-damage mb-0">
           <label for="hp">敵HP</label>
-          <input type="tel" id="hp" class="form-control mb-2" tabindex="33" />
+          <input type="tel" id="hp" class="form-control mb-2" tabindex />
         </div>
         <div class="form-group col-6 px-2 collapse multi-damage mb-0">
           <label for="dph">総ダメージ下限 / 敵HP</label>
@@ -338,7 +417,7 @@
     </div>
 
     <!-- Modal -->
-    <div class="modal fade" id="helpModal" tabindex="34-1" role="dialog" aria-labelledby="modalLabel" aria-hidden="true">
+    <div class="modal fade" id="helpModal" tabindex1" role="dialog" aria-labelledby="modalLabel" aria-hidden="true">
       <div class="modal-dialog modal-lg">
         <div class="modal-content" role="document">
           <div class="modal-header">
@@ -364,7 +443,7 @@
                 技： 技選択欄。メギドのスキルが表示されます。選択した技に応じて倍率やHit数が変化します。奥義やスキルにLvがある場合は該当選択欄が有効になります。
               </li>
               <li>
-                スキルLv： スキルLv又はチェイン数選択欄。技選択欄で選んだ技にスキルLv、もしくはチェインがある場合は有効になります。Lvに応じで倍率が変化します。
+                スキルLv： スキルLv又はチェイン数等選択欄。技選択欄で選んだ技が変化する場合は有効になります。Lvに応じで倍率等が変化します。
               </li>
               <li>奥義Lv： 奥義Lv選択欄。技選択欄で奥義を選んだ場合に有効になります。Lvに応じて倍率が変化します</li>
               <li>倍率： 技倍率入力欄。技、スキルLv、奥義Lvに応じて変化します</li>

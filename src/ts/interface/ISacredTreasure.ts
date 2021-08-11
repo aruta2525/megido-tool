@@ -1,5 +1,6 @@
 import {StyleType, ClockType} from '../enum/Megido';
 import {GenealogyType, SacredTreasureRank, SacredTreasureSize} from '../enum/SacredTreasure';
+import {IAbility} from '../interface/IAbility';
 
 // 霊宝インターフェース
 export interface ISacredTreasure {
@@ -13,19 +14,11 @@ export interface ISacredTreasure {
   defense: number; // 防御力
   speed: number; // 素早さ
   // 能力
-  ability?: {
-    type?: number;
-    value: number; // 数値
-    text: string; // 説明文
-  };
+  ability?: IAbility;
 }
 
 // 系譜インターフェース
 export interface IGenealogy {
   type: GenealogyType; // 系譜
-  ability: {
-    type?: number;
-    value: number; // 数値
-    text: string; // 説明文
-  };
+  ability: IAbility;
 }

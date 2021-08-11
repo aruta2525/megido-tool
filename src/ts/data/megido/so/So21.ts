@@ -29,6 +29,7 @@ export const So21: IMegido[] = [
       {
         name: '巨岩割り＋',
         type: SkillType.Skill,
+        text: '敵単体に攻撃力1.25倍の防御無視ダメージ',
         levels: [
           {
             level: 1,
@@ -40,6 +41,7 @@ export const So21: IMegido[] = [
       {
         name: '必勝・大炎風＋',
         type: SkillType.AwakeningSkill,
+        text: '敵単体に攻撃力2.5倍のダメージ。さらに2ターンの間、自身のスキルを強化する',
         levels: [
           {
             level: 1,
@@ -51,6 +53,7 @@ export const So21: IMegido[] = [
       {
         name: 'ミノスの大戦斧＋',
         type: SkillType.Mysteries,
+        text: '敵単体に攻撃力4.25倍のダメージ。2ターンの間、地割れの地形効果で0.75倍の継続ダメージを与え、防御力を低下させる',
         levels: [
           {
             level: 1,

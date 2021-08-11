@@ -13,7 +13,7 @@ export const So05: IMegido[] = [
     offense: 628,
     defense: 489,
     speed: 719,
-    ability: {name: '私すごーい☆', text: '毎ターン終了時、覚醒ゲージが+1される	'},
+    ability: {name: '私すごーい☆', text: '毎ターン終了時、覚醒ゲージが+1される'},
     skills: [
       {
         name: 'アタック',
@@ -29,6 +29,7 @@ export const So05: IMegido[] = [
       {
         name: 'マジカルヒール+',
         type: SkillType.Skill,
+        text: '味方単体のHPを30%回復させる',
         levels: [
           {
             level: 1,
@@ -40,6 +41,7 @@ export const So05: IMegido[] = [
       {
         name: 'ミスティック+',
         type: SkillType.AwakeningSkill,
+        text: '味方単体のHPを40%回復させ、覚醒ゲージを+2する',
         levels: [
           {
             level: 1,
@@ -51,6 +53,7 @@ export const So05: IMegido[] = [
       {
         name: 'クルーエルラブ+',
         type: SkillType.Mysteries,
+        text: '味方全体のHPを25%回復させ、2ターンの間、防御力を40%上昇させる【攻撃を2回受けるたびにスキルLv上昇】',
         levels: [
           {
             level: 1,
@@ -89,6 +92,7 @@ export const So05: IMegido[] = [
       {
         name: 'チアフルリリィ＋',
         type: SkillType.Skill,
+        text: 'ラッシュの味方前列の点穴を+5する。さらに2ターンの間、味方前列の防御力を20%上昇させる',
         levels: [
           {
             level: 1,
@@ -100,6 +104,7 @@ export const So05: IMegido[] = [
       {
         name: 'ミスティックマター＋',
         type: SkillType.AwakeningSkill,
+        text: '敵全体に攻撃力1.35倍のダメージ。さらに50%の確率で、フォトンを1つ破壊',
         levels: [
           {
             level: 1,
@@ -111,6 +116,7 @@ export const So05: IMegido[] = [
       {
         name: '夢見る乙女＋',
         type: SkillType.Mysteries,
+        text: 'ラッシュの味方前列の点穴を+20する。さらに2ターンの間、ターン終了時に味方前列のHPが15%回復する',
         levels: [
           {
             level: 1,

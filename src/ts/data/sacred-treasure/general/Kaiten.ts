@@ -15,7 +15,7 @@ const sacredTreasureList: ISacredTreasure[] = [
     defense: 10,
     speed: 0,
     type: Type.Kaiten,
-    ability: {value: 0, text: '戦闘不能を蘇生するとき、HP割合量が10%上昇する'}
+    ability: {name: '', text: '戦闘不能を蘇生するとき、HP割合量が10%上昇する'}
   },
   {
     name: '霊験なる盃',
@@ -27,7 +27,7 @@ const sacredTreasureList: ISacredTreasure[] = [
     defense: 48,
     speed: 5,
     type: Type.Kaiten,
-    ability: {value: 0, text: '全ての状態異常への耐性が8%上昇する'}
+    ability: {name: '', text: '全ての状態異常への耐性が8%上昇する'}
   },
   {
     name: '蠱惑の肉球',
@@ -39,7 +39,7 @@ const sacredTreasureList: ISacredTreasure[] = [
     defense: 21,
     speed: 0,
     type: Type.Kaiten,
-    ability: {value: 0, text: '自身が与える回復量が5%上昇する'}
+    ability: {name: '', text: '自身が与える回復量が5%上昇する'}
   }
 ];
 

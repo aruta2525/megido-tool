@@ -29,6 +29,7 @@ export const So26: IMegido[] = [
       {
         name: '斬撃『一字ノ太刀』＋',
         type: SkillType.Skill,
+        text: '敵横一列に攻撃力1.25倍のダメージ',
         levels: [
           {
             level: 1,
@@ -40,6 +41,7 @@ export const So26: IMegido[] = [
       {
         name: '斬撃『兜割ノ太刀』＋',
         type: SkillType.AwakeningSkill,
+        text: '敵単体に攻撃力2倍のダメージ。さらに90%の確率で、覚醒ゲージを-2する',
         levels: [
           {
             level: 1,
@@ -51,6 +53,7 @@ export const So26: IMegido[] = [
       {
         name: '龍王天懐撃＋',
         type: SkillType.Mysteries,
+        text: '敵横一列に攻撃力1.5倍の2連続ダメージ。さらに敵の覚醒ゲージが多いほど威力上昇(1つにつき倍率に0.15加算)',
         levels: [
           {
             level: 1,
@@ -89,6 +92,7 @@ export const So26: IMegido[] = [
       {
         name: '連撃『双撃ノ太刀』＋',
         type: SkillType.Skill,
+        text: '敵横一列に攻撃力0.9倍の2連続ダメージ',
         levels: [
           {
             level: 1,
@@ -100,6 +104,7 @@ export const So26: IMegido[] = [
       {
         name: '地這いの剛撃＋',
         type: SkillType.AwakeningSkill,
+        text: '敵横一列に攻撃力2倍のダメージ。3ターンの間、地割れの効果で0.75倍の継続ダメージを与え、防御力を低下させる',
         levels: [
           {
             level: 1,
@@ -111,6 +116,8 @@ export const So26: IMegido[] = [
       {
         name: '烈震剛滅破＋',
         type: SkillType.Mysteries,
+        text: '敵単体に攻撃力6.25倍の破断ダメージ。さらに80%の確率で、積まれているフォトンを1つ破壊する',
+        attribute: Attribute.Break,
         levels: [
           {
             level: 1,

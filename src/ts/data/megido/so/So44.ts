@@ -30,6 +30,7 @@ export const So44: IMegido[] = [
         name: 'びりびり斬り+',
         type: SkillType.Skill,
         attribute: Attribute.Thunder,
+        text: '敵単体に攻撃力1.25倍の雷ダメージ。さらに80%の確率で、2ターンの間、敵を感電状態にする',
         levels: [
           {
             level: 1,
@@ -42,6 +43,7 @@ export const So44: IMegido[] = [
         name: 'もっとびりびり斬り+',
         type: SkillType.AwakeningSkill,
         attribute: Attribute.Thunder,
+        text: '敵単体に攻撃力1.25倍の2連続雷ダメージ。2ターンの間、帯電の地形効果で0.75倍の継続ダメージを与え、確率で感電させる',
         levels: [
           {
             level: 1,
@@ -58,22 +60,26 @@ export const So44: IMegido[] = [
           {
             level: 1,
             magnification: 3.25,
-            hit: 1
+            hit: 1,
+            text: '敵単体に攻撃力3.25倍の雷ダメージ【攻撃を2回受けるたびにスキルLv上昇】'
           },
           {
             level: 2,
             magnification: 4.25,
-            hit: 1
+            hit: 1,
+            text: '敵単体に攻撃力4.25倍の雷ダメージ【攻撃を2回受けるたびにスキルLv上昇】'
           },
           {
             level: 3,
             magnification: 5.25,
-            hit: 1
+            hit: 1,
+            text: '敵単体に攻撃力5.25倍の雷ダメージ【攻撃を2回受けるたびにスキルLv上昇】'
           },
           {
             level: 4,
             magnification: 6.25,
-            hit: 1
+            hit: 1,
+            text: '敵単体に攻撃力6.25倍の雷ダメージ'
           }
         ],
         increment: 0.05
@@ -108,6 +114,7 @@ export const So44: IMegido[] = [
         name: 'バリバリ斬り＋',
         type: SkillType.Skill,
         attribute: Attribute.Thunder,
+        text: '敵単体に攻撃力0.5倍の4連続雷ダメージ。チェイン中、味方単体にチェイン',
         levels: [
           {
             level: 1,
@@ -120,6 +127,7 @@ export const So44: IMegido[] = [
         name: 'イナズマアタック＋',
         type: SkillType.AwakeningSkill,
         attribute: Attribute.Thunder,
+        text: '敵単体に攻撃力1.75倍の雷ダメージ。さらに2ターンの間、味方全体の攻撃力を20%上昇させ、ターゲットに関係なく最も素早さの低い味方にチェイン',
         levels: [
           {
             level: 1,
@@ -135,18 +143,24 @@ export const So44: IMegido[] = [
         levels: [
           {
             level: 0,
+            label: 'Ch0',
             magnification: 3.75,
-            hit: 1
+            hit: 1,
+            text: '敵単体に攻撃力3.75倍の雷ダメージ。チェイン数に応じて効果範囲変化'
           },
           {
             level: 1,
+            label: 'Ch1',
             magnification: 3.75,
-            hit: 1
+            hit: 1,
+            text: '敵横一列に攻撃力3.75倍の雷ダメージ'
           },
           {
             level: 2,
+            label: 'Ch2',
             magnification: 3.75,
-            hit: 1
+            hit: 1,
+            text: '敵全体に攻撃力3.75倍の雷ダメージ'
           }
         ],
         increment: 0.05

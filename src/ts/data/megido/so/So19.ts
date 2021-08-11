@@ -29,6 +29,7 @@ export const So19: IMegido[] = [
       {
         name: '臨兵闘者皆陣列在前+',
         type: SkillType.Skill,
+        text: '味方全体の状態異常を治癒する。さらにHPを10%回復させる',
         levels: [
           {
             level: 1,
@@ -40,6 +41,7 @@ export const So19: IMegido[] = [
       {
         name: '三途の川渡し+',
         type: SkillType.AwakeningSkill,
+        text: '敵全体に攻撃力1.35倍のダメージ2ターンの間、滞水の地形効果で0.75倍の継続ダメージを与え、雷に弱くする',
         levels: [
           {
             level: 1,
@@ -51,6 +53,7 @@ export const So19: IMegido[] = [
       {
         name: '腐食のブレス+',
         type: SkillType.Mysteries,
+        text: '敵横一列に攻撃力2.5倍のダメージさらに80%の確率で、2ターンの間、敵を呪い状態にする',
         levels: [
           {
             level: 1,
@@ -92,6 +95,7 @@ export const So19: IMegido[] = [
       {
         name: '水神の怒り＋',
         type: SkillType.Skill,
+        text: '味方単体への攻撃を1回無効化し、2ターンの間、スキルを強化する。さらに味方編成を怒闘状態にする',
         levels: [
           {
             level: 1,
@@ -107,13 +111,22 @@ export const So19: IMegido[] = [
           {
             level: 1,
             magnification: 0,
-            hit: 0
+            hit: 0,
+            text: '味方前列の状態異常を治癒する。さらにHPを20%回復する【攻撃を2回受けるとスキルLv上昇】'
+          },
+          {
+            level: 2,
+            magnification: 0,
+            hit: 0,
+            text: '味方前列の状態異常を治癒する。さらにHPを30%回復する'
           }
         ]
       },
       {
         name: '三途の濁流＋',
         type: SkillType.Mysteries,
+        text:
+          '敵横一列に攻撃力1.25倍ダメージ。さらに2ターンの間、滞水地形（0.5倍ダメージ）。味方単体、カウンターの場合1ターンの間攻撃力50%上昇、バーサーク状態にする<br>【バーサークの詳細】1ターン目:攻撃力75%UP。毎ターン25%ずつ上昇。最大150%。毎ターン、最大HPの10%ダメージを受ける',
         levels: [
           {
             level: 1,

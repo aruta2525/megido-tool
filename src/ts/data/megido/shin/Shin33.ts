@@ -29,6 +29,7 @@ const megido: IMegido[] = [
       {
         name: '筋骨隆々の舞＋',
         type: SkillType.Skill,
+        text: '敵横一列に攻撃力1.15倍のダメージ。さらに2ターンの間、敵をノックバック状態にする',
         levels: [
           {
             level: 1,
@@ -40,6 +41,7 @@ const megido: IMegido[] = [
       {
         name: 'かかってこんかい！＋(最大)',
         type: SkillType.AwakeningSkill,
+        text: '自身への攻撃を1回無効化し、1度だけHPが少ないほど威力の高いダメージで反撃（最大で攻撃力の5.75倍のダメージ）',
         levels: [
           {
             level: 1,
@@ -51,6 +53,7 @@ const megido: IMegido[] = [
       {
         name: '根源なる筋肉の胎動＋',
         type: SkillType.Mysteries,
+        text: '敵横一列に自身のHPが少ないほど威力の高いダメージ（最大で攻撃力の5.25倍）。2ターンの間、0.75倍の地割れ地形にする',
         levels: [
           {
             level: 1,

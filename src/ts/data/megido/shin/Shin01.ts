@@ -36,28 +36,33 @@ const megido: IMegido[] = [
           {
             level: 1,
             magnification: 1.25,
-            hit: 1
+            hit: 1,
+            text: '敵単体に攻撃力1.25倍のダメージ【使用するごとにスキルLv上昇】'
           },
           {
             level: 2,
             magnification: 1.35,
-            hit: 1
+            hit: 1,
+            text: '敵単体に攻撃力1.35倍のダメージ。40%の確率で、2ターンの間、敵を睡眠状態【使用するごとにスキルLv上昇】'
           },
           {
             level: 3,
             magnification: 1.35,
-            hit: 1
+            hit: 1,
+            text: '敵横一列に攻撃力1.35倍のダメージ。40%の確率で、2ターンの間、敵を睡眠状態【使用するごとにスキルLv上昇】'
           },
           {
             level: 4,
             magnification: 1.35,
-            hit: 1
+            hit: 1,
+            text: '敵全体に攻撃力1.35倍のダメージ。40%の確率で、2ターンの間、敵を睡眠状態'
           }
         ]
       },
       {
         name: '苦痛のパトス＋',
         type: SkillType.AwakeningSkill,
+        text: '2ターンの間、敵単体の攻撃力、防御力、素早さを30%低下させる',
         levels: [
           {
             level: 1,
@@ -69,6 +74,7 @@ const megido: IMegido[] = [
       {
         name: 'メルヘンダービー＋',
         type: SkillType.Mysteries,
+        text: '敵横一列に攻撃力3.5倍のダメージ。さらに弱体、状態異常が付与されている敵に対して、効果1種類につき倍率が0.1上昇する',
         levels: [
           {
             level: 1,
@@ -107,6 +113,7 @@ const megido: IMegido[] = [
       {
         name: '探りの夢見＋',
         type: SkillType.Skill,
+        text: '2ターンの間、敵単体の防御力を25%低下させる。さらに、味方単体のアタックを強化する',
         levels: [
           {
             level: 1,
@@ -118,6 +125,7 @@ const megido: IMegido[] = [
       {
         name: '鬨夢＋',
         type: SkillType.AwakeningSkill,
+        text: '敵横一列に掛かっている強化を解除し、さらに2ターンの間、味方横一列の攻撃にLv×10の固定追加ダメージを付与する',
         levels: [
           {
             level: 1,
@@ -129,6 +137,7 @@ const megido: IMegido[] = [
       {
         name: '魘夢のプフェーアト＋',
         type: SkillType.Mysteries,
+        text: '敵横一列に攻撃力2.5倍のダメージ。さらに80%の確率で、覚醒ゲージを-2する',
         levels: [
           {
             level: 1,

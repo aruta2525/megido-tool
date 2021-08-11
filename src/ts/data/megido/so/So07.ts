@@ -29,6 +29,7 @@ export const So07: IMegido[] = [
       {
         name: '巾着切り+',
         type: SkillType.Skill,
+        text: '敵単体に攻撃力1.25倍のダメージさらに45%の確率で、積まれているフォトンを1つ奪う',
         levels: [
           {
             level: 1,
@@ -40,6 +41,20 @@ export const So07: IMegido[] = [
       {
         name: 'ダーティレイド+',
         type: SkillType.AwakeningSkill,
+        text: '敵単体に攻撃力1.5倍の2連続ダメージ。さらに30%の確率で、敵を即死させる',
+        levels: [
+          {
+            level: 1,
+            magnification: 1.5,
+            hit: 2
+          }
+        ]
+      },
+      {
+        name: '【専】ダーティレイド+',
+        type: SkillType.AwakeningSkill,
+        text: '敵単体に攻撃力1.5倍の2連続火ダメージ。さらに2ターンの間、自身の攻撃力を30%上昇させる',
+        attribute: Attribute.Fire,
         levels: [
           {
             level: 1,
@@ -51,6 +66,8 @@ export const So07: IMegido[] = [
       {
         name: '世界を包む炎獄+',
         type: SkillType.Mysteries,
+        text: '敵単体に攻撃力4.25倍の火ダメージ。2ターンの間、炎上の地形効果で1.25倍の継続ダメージを与える',
+        attribute: Attribute.Fire,
         levels: [
           {
             level: 1,
@@ -89,6 +106,7 @@ export const So07: IMegido[] = [
       {
         name: 'クレセント＋',
         type: SkillType.Skill,
+        text: '自身にアタックを追加する。さらに2ターンの間、攻撃力を30%上昇させる【使用後Lv2：アタックを2つ追加】',
         levels: [
           {
             level: 1,
@@ -100,6 +118,7 @@ export const So07: IMegido[] = [
       {
         name: 'サイレンスリーパー＋',
         type: SkillType.AwakeningSkill,
+        text: '敵単体に攻撃力0.75倍の4連続ダメージ。さらに80%の確率で、覚醒ゲージを-2する',
         levels: [
           {
             level: 1,
@@ -111,6 +130,7 @@ export const So07: IMegido[] = [
       {
         name: 'リヴィールエッジ＋',
         type: SkillType.Mysteries,
+        text: '敵単体に攻撃力1.2倍の4連続ダメージ',
         levels: [
           {
             level: 1,

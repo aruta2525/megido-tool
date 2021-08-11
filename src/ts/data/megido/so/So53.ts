@@ -29,6 +29,20 @@ export const So53: IMegido[] = [
       {
         name: 'マインドクラッシュ+',
         type: SkillType.Skill,
+        text: '敵単体に1.25倍のダメージ。さらに80%の確率で、覚醒ゲージを-1する',
+        levels: [
+          {
+            level: 1,
+            magnification: 1.25,
+            hit: 1
+          }
+        ]
+      },
+      {
+        name: '【専】マインドクラッシュ+',
+        type: SkillType.Skill,
+        text: `敵単体に攻撃力1.25倍のダメージ。さらに覚醒ゲージを-1し、自身をアタックブレイク状態にする<br>
+              【アタックブレイク】80%の確率で、1ターンの間、敵単体を封印状態にする`,
         levels: [
           {
             level: 1,
@@ -40,6 +54,7 @@ export const So53: IMegido[] = [
       {
         name: 'オブリビオン+',
         type: SkillType.AwakeningSkill,
+        text: '敵単体に攻撃力2.5倍のダメージ。さらに積まれているフォトンを1つ破壊する',
         levels: [
           {
             level: 1,
@@ -51,6 +66,7 @@ export const So53: IMegido[] = [
       {
         name: 'トリックスター+',
         type: SkillType.Mysteries,
+        text: '80%の確率で、2ターンの間、敵全体に積めるフォトンの量を-2する',
         levels: [
           {
             level: 1,

@@ -29,6 +29,7 @@ export const So48: IMegido[] = [
       {
         name: 'それちょうだいよぅ＋',
         type: SkillType.Skill,
+        text: '敵単体に攻撃力1.25倍のダメージ。さらに45%の確率で、積まれているフォトンを1つ奪う',
         levels: [
           {
             level: 1,
@@ -40,6 +41,7 @@ export const So48: IMegido[] = [
       {
         name: 'ハニワの奇跡＋',
         type: SkillType.AwakeningSkill,
+        text: '敵全体に攻撃力1.35倍のダメージ。さらに50%の確率で、フォトンを1つ破壊【スキル使用時に100G消費する】',
         levels: [
           {
             level: 1,
@@ -51,6 +53,7 @@ export const So48: IMegido[] = [
       {
         name: 'ハートオブゴールド＋',
         type: SkillType.Mysteries,
+        text: '2ターンの間、敵全体を暗闇状態にし、攻撃力を20%低下させる',
         levels: [
           {
             level: 1,
@@ -92,34 +95,88 @@ export const So48: IMegido[] = [
         levels: [
           {
             level: 0,
+            label: 'CH0',
             magnification: 1,
-            hit: 1
+            hit: 1,
+            text: '敵単体に攻撃力1倍のダメージ。さらに80%の確率で、覚醒ゲージを-1する。チェイン数に応じて倍率と覚醒減少数変化'
           },
           {
             level: 1,
+            label: 'CH1',
             magnification: 1.5,
-            hit: 1
+            hit: 1,
+            text: '敵単体に攻撃力1.5倍のダメージ。さらに80%の確率で、覚醒ゲージを-2する。チェイン数に応じて倍率と覚醒減少数変化'
           },
           {
             level: 2,
+            label: 'CH2',
             magnification: 2,
-            hit: 1
+            hit: 1,
+            text: '敵単体に攻撃力2倍のダメージ。さらに80%の確率で、覚醒ゲージを-3する。チェイン数に応じて倍率と覚醒減少数変化'
           },
           {
             level: 3,
+            label: 'CH3',
             magnification: 2.5,
-            hit: 1
+            hit: 1,
+            text: '敵単体に攻撃力2.5倍のダメージ。さらに80%の確率で、覚醒ゲージを-4する。チェイン数に応じて倍率と覚醒減少数変化'
           },
           {
             level: 4,
+            label: 'CH4',
             magnification: 3,
-            hit: 1
+            hit: 1,
+            text: '敵単体に攻撃力3倍のダメージ。さらに80%の確率で、覚醒ゲージを-5する。'
+          }
+        ]
+      },
+      {
+        name: '【専】来て！フレンズ+',
+        type: SkillType.Skill,
+        levels: [
+          {
+            level: 0,
+            label: 'CH0',
+            magnification: 1,
+            hit: 1,
+            text: '敵単体に攻撃力1倍のダメージ。さらに80%の確率で、覚醒ゲージを-1し、自身に加算する。味方単体にチェイン。チェイン数に応じて倍率と覚醒減少数変化'
+          },
+          {
+            level: 1,
+            label: 'CH1',
+            magnification: 1.5,
+            hit: 1,
+            text:
+              '敵単体に攻撃力1.5倍のダメージ。さらに80%の確率で、覚醒ゲージを-2し、自身に加算する。味方単体にチェイン。チェイン数に応じて倍率と覚醒減少数変化'
+          },
+          {
+            level: 2,
+            label: 'CH2',
+            magnification: 2,
+            hit: 1,
+            text: '敵単体に攻撃力2倍のダメージ。さらに80%の確率で、覚醒ゲージを-3し、自身に加算する。味方単体にチェイン。チェイン数に応じて倍率と覚醒減少数変化'
+          },
+          {
+            level: 3,
+            label: 'CH3',
+            magnification: 2.5,
+            hit: 1,
+            text:
+              '敵単体に攻撃力2.5倍のダメージ。さらに80%の確率で、覚醒ゲージを-4し、自身に加算する。味方単体にチェイン。チェイン数に応じて倍率と覚醒減少数変化'
+          },
+          {
+            level: 4,
+            label: 'CH4',
+            magnification: 3,
+            hit: 1,
+            text: '敵単体に攻撃力3倍のダメージ。さらに80%の確率で、覚醒ゲージを-5し、自身に加算する。味方単体にチェイン。'
           }
         ]
       },
       {
         name: 'でっかくなれ〜+',
         type: SkillType.AwakeningSkill,
+        text: '敵全体に攻撃力1.35倍のダメージさらに1ターンの間、敵の防御力を50%低下。チェイン中、味方単体にチェイン',
         levels: [
           {
             level: 1,
@@ -131,6 +188,20 @@ export const So48: IMegido[] = [
       {
         name: '色褪せない宝物！+',
         type: SkillType.Mysteries,
+        text: '1ターンの間、味方全体の攻撃力を50%上昇させる。味方単体にチェイン',
+        levels: [
+          {
+            level: 1,
+            magnification: 0,
+            hit: 0
+          }
+        ],
+        increment: 0
+      },
+      {
+        name: '【専】色褪せない宝物！+',
+        type: SkillType.Mysteries,
+        text: '2ターンの間、味方全体の攻撃力を50%上昇させる。味方単体にチェイン',
         levels: [
           {
             level: 1,

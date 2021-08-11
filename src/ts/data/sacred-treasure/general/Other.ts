@@ -15,7 +15,7 @@ const sacredTreasureList: ISacredTreasure[] = [
     defense: 28,
     speed: 0,
     type: Type.None,
-    ability: {value: 0, text: '「カカオの森の黒い犬」のクエストでのみHPが10%上昇する'}
+    ability: {name: '', text: '「カカオの森の黒い犬」のクエストでのみHPが10%上昇する'}
   },
   {
     name: 'ハブ・ア・バイト',
@@ -27,7 +27,7 @@ const sacredTreasureList: ISacredTreasure[] = [
     defense: 35,
     speed: 0,
     type: Type.None,
-    ability: {value: 0, text: '「カカオの森の黒い犬」のクエストでのみ攻撃力が100%上昇する'}
+    ability: {name: '', text: '「カカオの森の黒い犬」のクエストでのみ攻撃力が100%上昇する'}
   },
   {
     name: 'プチボヌール',
@@ -39,7 +39,7 @@ const sacredTreasureList: ISacredTreasure[] = [
     defense: 35,
     speed: 0,
     type: Type.None,
-    ability: {value: 0, text: '「カカオの森の黒い犬」のクエストでのみHPが100%上昇する'}
+    ability: {name: '', text: '「カカオの森の黒い犬」のクエストでのみHPが100%上昇する'}
   },
   {
     name: 'プレシャスタイム',
@@ -51,7 +51,7 @@ const sacredTreasureList: ISacredTreasure[] = [
     defense: 7,
     speed: 2,
     type: Type.None,
-    ability: {value: 0, text: '毎ターン終了時、HPが3%回復する'}
+    ability: {name: '', text: '毎ターン終了時、HPが3%回復する'}
   },
   {
     name: 'マキニスエンジン',
@@ -63,7 +63,7 @@ const sacredTreasureList: ISacredTreasure[] = [
     defense: 0,
     speed: 4,
     type: Type.None,
-    ability: {value: 0, text: '毎ターン終了時、HPが3%回復する'}
+    ability: {name: '', text: '毎ターン終了時、HPが3%回復する'}
   }
 ];
 
