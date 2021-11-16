@@ -64,6 +64,69 @@ const megido: IMegido[] = [
         increment: 0.05
       }
     ]
+  },
+  {
+    clockType: ClockType.Shin,
+    no: 33,
+    id: 2,
+    name: 'ハック',
+    styleType: StyleType.Burst,
+    classType: ClassType.Fighter,
+    hp: 7969,
+    offense: 848,
+    defense: 464,
+    speed: 618,
+    ability: {name: '熱血セコンド', text: '自身がチェインを発動したときチェイン先の味方単体のHPを15%回復する'},
+    skills: [
+      {
+        name: 'アタック',
+        type: SkillType.Attack,
+        levels: [
+          {
+            level: 1,
+            magnification: 1,
+            hit: 1
+          }
+        ]
+      },
+      {
+        name: 'よし、行ってこい！＋',
+        type: SkillType.Skill,
+        text: '2ターンの間、味方単体のスキルを強化する。さらに、ターゲットに関係なく最も攻撃力の高い味方にチェイン',
+        levels: [
+          {
+            level: 1,
+            magnification: 0,
+            hit: 0
+          }
+        ]
+      },
+      {
+        name: 'ハックヒップバット＋',
+        type: SkillType.AwakeningSkill,
+        text: '敵単体に攻撃力2倍のダメージ。さらに敵に掛かっている強化を解除する。自身に回数チェイン1回を付与する',
+        levels: [
+          {
+            level: 1,
+            magnification: 2,
+            hit: 1
+          }
+        ]
+      },
+      {
+        name: '熱き筋肉の至宝＋',
+        type: SkillType.Mysteries,
+        text: '2ターンの間、味方単体の攻撃力を70%上昇させ、積めるフォトンの量を+1する。味方単体にチェイン',
+        levels: [
+          {
+            level: 1,
+            magnification: 0,
+            hit: 0
+          }
+        ],
+        increment: 0
+      }
+    ]
   }
 ];
 

@@ -78,5 +78,34 @@ export const genealogyList: IGenealogy[] = [
       name: '',
       text: 'ハイドロボムが付与されている敵から受けるダメージを15%軽減する'
     }
+  },
+  // 以下は系譜ではありません
+  {
+    type: Type.Lyric,
+    ability: {
+      name: '',
+      text: ''
+    }
+  },
+  {
+    type: Type.Epic,
+    ability: {
+      name: '',
+      text: ''
+    }
+  },
+  {
+    type: Type.Metric,
+    ability: {
+      name: '',
+      text: ''
+    }
+  },
+  {
+    type: Type.Scenery,
+    ability: {
+      name: '',
+      text: ''
+    }
   }
 ];

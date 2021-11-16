@@ -6,6 +6,7 @@ export const PhotonType = {
 export type PhotonType = typeof PhotonType[keyof typeof PhotonType];
 
 export const SkillType = {
+  Counter: '反撃',
   Attack: 'アタック',
   Skill: 'スキル',
   AwakeningSkill: '覚醒スキル',

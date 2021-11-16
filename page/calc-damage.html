@@ -22,23 +22,38 @@
     <title>メギド72 スキルダメージ計算ツール</title>
   </head>
   <body>
-    <div class="container-md container-wrap pt-2">
-      <div class="row mb-2 align-items-end">
-        <div class="col-8 col-sm-8 title-wrap">
+    <div class="container-md container-wrap">
+      <div class="row mb-0 nav">
+        <div class="col-11 col-sm-11 title-wrap">
           <span class="title">スキルダメージ計算ツール</span>
-          <span class="version">v1.1.1</span>
+          <span class="version">v1.2.0</span>
         </div>
 
-        <div class="col-2 col-sm-2 p-0">
-          <button type="button" class="btn btn-info btn-sm help-btn" data-toggle="modal" data-target="#helpModal">
-            ヘルプ
-          </button>
-        </div>
-
-        <div class="col-2 col-sm-2 presented-by pl-0">
-          <span>presented by </span>
-          <span><a href="https://twitter.com/aruta2525">aruta</a>.</span>
-        </div>
+        <ul class="col-1 col-sm-1 p-0 menu-list">
+          <li class="nav-item">
+            <a href="#" class="dropdown">
+              <img src="../dist/img/menu.png" class="menu-img" />
+            </a>
+            <div class="panel dropdown-menu">
+              <ul class="panel-inner">
+                <li class="panel-item">
+                  <a href="#" data-toggle="modal" data-target="#importModal"><img src="../dist/img/upload.png" class="menu-item-img" />インポート</a>
+                </li>
+                <li class="panel-item">
+                  <a href="#" data-toggle="modal" data-target="#exportModal"><img src="../dist/img/download.png" class="menu-item-img" />エクスポート</a>
+                </li>
+                <li class="panel-item">
+                  <a href="#" data-toggle="modal" data-target="#helpModal"> <img src="../dist/img/help.png" class="menu-item-img" />ヘルプ </a>
+                </li>
+                <li class="panel-item">
+                  <a href="https://twitter.com/aruta2525" target="_blank" rel="noopener noreferrer">
+                    <img src="../dist/img/twitter.png" class="menu-item-img" />連絡(@aruta2525)
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </li>
+        </ul>
       </div>
 
       <!-- メギド行 -->
@@ -200,13 +215,13 @@
         <div class="form-group col-sm-4 col-6 px-2">
           <label for="skill">技</label>
           <button
-                type="button"
-                class="btn btn-primary rounded-circle collapse-btn ml-1"
-                data-toggle="collapse"
-                data-target=".skill-details"
-                aria-expanded="false"
-                title=""
-              >
+            type="button"
+            class="btn btn-primary rounded-circle collapse-btn ml-1"
+            data-toggle="collapse"
+            data-target=".skill-details"
+            aria-expanded="false"
+            title=""
+          >
             <img src="../dist/img/plus.png" class="plus" />
           </button>
           <select title="" id="skill" class="selectpicker" data-width="100%" tabindex> </select>
@@ -256,7 +271,6 @@
             </div>
           </div>
         </div>
-
       </div>
 
       <!-- フォトン行 -->
@@ -373,7 +387,7 @@
           <input type="tel" id="enemyDefensiveBuff" class="form-control" tabindex />
         </div>
       </div>
-      
+
       <div class="row border-left border-rightpx-0">
         <div class="form-group col-4 px-2">
           <label for="offensiveDebuff">攻撃デバフ[%]</label>
@@ -418,8 +432,8 @@
       </div>
     </div>
 
-    <!-- Modal -->
-    <div class="modal fade" id="helpModal" tabindex1" role="dialog" aria-labelledby="modalLabel" aria-hidden="true">
+    <!-- Help Modal -->
+    <div class="modal fade" id="helpModal" role="dialog" aria-labelledby="modalLabel" aria-hidden="true">
       <div class="modal-dialog modal-lg">
         <div class="modal-content" role="document">
           <div class="modal-header">
@@ -465,7 +479,9 @@
               </li>
               <li>種族特攻： 種族特攻入力欄。複数ある場合は加算。別種族特攻であっても乗算にはならない。単位は％</li>
               <li>状態異常特攻： 状態異常特攻入力欄。複数ある場合は加算。別状態異常特攻であっても乗算にはならない。単位は％</li>
-              <li>ダメージ補正： ダメージ補正入力欄。ダメージ補正は火・雷ダメージ上昇、単体・連続・列ダメージ上昇等のダメージ上昇○%と表記されてるものが該当します。
+              <li>
+                ダメージ補正：
+                ダメージ補正入力欄。ダメージ補正は火・雷ダメージ上昇、単体・連続・列ダメージ上昇等のダメージ上昇○%と表記されてるものが該当します。
                 種類が異なっても加算関係。単位は％
               </li>
               <li>その他特攻１、２： その他特攻入力欄。覚醒特攻やHP特攻等のダメージ○倍と表記されているものが該当します。単位は％</li>
@@ -486,5 +502,86 @@
         </div>
       </div>
     </div>
+
+    <!-- Import Modal -->
+    <form id="import">
+      <div class="modal fade" id="importModal" role="dialog" aria-labelledby="modalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+          <div class="modal-content" role="document">
+            <div class="modal-header">
+              <h5 class="modal-title" id="modalLabel">インポート</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+
+            <div class="modal-body">
+              <div class="input-group">
+                <!-- <div class="custom-file">
+                  <label class="custom-file-label" for="inputGroupFile">ファイルを選択</label>
+                  <input type="file" class="custom-file-input" id="importFilePath" accept="application/json" />
+                </div> -->
+                <div class="custom-file">
+                  <input type="file" id="importFilePath" accept="application/json" style="width: 100%;" />
+                </div>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">閉じる</button>
+              <button type="button" class="btn btn-primary" id="importButton">インポート</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </form>
+
+    <!-- Export Modal -->
+    <form id="export">
+      <div class="modal fade" id="exportModal" role="dialog" aria-labelledby="modalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+          <div class="modal-content" role="document">
+            <div class="modal-header">
+              <h5 class="modal-title" id="modalLabel">エクスポート</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+
+            <div class="modal-body">
+              <label for="url" class="help-subtitle">◆URL</label>
+              <div class="flex">
+                <input type="text" class="form-control" id="url" />
+                <!-- <button type="button" class="btn btn-secondary ml-2">短縮化</button> -->
+              </div>
+              <div class="help-subtitle mt-4">◆ファイル</div>
+              <div class="mt-2 ml-2">
+                <div class="form-check">
+                  <input class="form-check-input" name="downloadType" type="radio" id="isText" value="text" checked />
+                  <label class="form-check-label" for="isText">
+                    テキスト
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" name="downloadType" type="radio" id="isCsv" value="csv" />
+                  <label class="form-check-label" for="isCsv">
+                    CSV
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" name="downloadType" type="radio" id="isJson" value="json" />
+                  <label class="form-check-label" for="isJson">
+                    JSON
+                  </label>
+                </div>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">閉じる</button>
+              <button type="button" class="btn btn-primary" id="download">ダウンロード</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </form>
   </body>
 </html>

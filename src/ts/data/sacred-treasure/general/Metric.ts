@@ -14,7 +14,7 @@ const sacredTreasureList: ISacredTreasure[] = [
     offense: 0,
     defense: 10,
     speed: 0,
-    type: Type.None,
+    type: Type.Metric,
     ability: {name: '', text: '防御力が8%上昇し、 素早さが5%減少する'}
   },
   {
@@ -26,7 +26,7 @@ const sacredTreasureList: ISacredTreasure[] = [
     offense: 0,
     defense: 10,
     speed: 0,
-    type: Type.None,
+    type: Type.Metric,
     ability: {name: '', text: '防御力が8%上昇し、 素早さが5%減少する'}
   },
   {
@@ -38,7 +38,7 @@ const sacredTreasureList: ISacredTreasure[] = [
     offense: 0,
     defense: 10,
     speed: 0,
-    type: Type.None,
+    type: Type.Metric,
     ability: {name: '', text: '防御力が8%上昇し、 素早さが5%減少する'}
   }
 ];

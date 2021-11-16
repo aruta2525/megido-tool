@@ -45,10 +45,12 @@
   },
   "optionalDependencies": {},
   "dependencies": {
-    "bootstrap": "^4.5.2",
+    "@types/rison": "0.0.7",
+    "bootstrap": "^4.6.1",
     "bootstrap-select": "^1.13.18",
     "express": "^4.17.1",
     "jquery": "^3.5.1",
-    "popper.js": "^1.16.1"
+    "popper.js": "^1.16.1",
+    "rison": "^0.1.1"
   }
 }

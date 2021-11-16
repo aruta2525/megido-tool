@@ -1,5 +1,5 @@
 import {IPersonalSacredTreasure} from '../../../../interface/IPersonalSacredTreasure';
-import {StyleType} from '../../../../enum/Megido';
+import {StyleType, SkillType, Attribute} from '../../../../enum/Megido';
 import {SacredTreasureRank as Rank} from '../../../../enum/SacredTreasure';
 import {SacredTreasureSize as Size} from '../../../../enum/SacredTreasure';
 import {GenealogyType as Type} from '../../../../enum/SacredTreasure';

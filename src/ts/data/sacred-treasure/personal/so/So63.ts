@@ -16,7 +16,7 @@ const sacredTreasureList: IPersonalSacredTreasure[] = [
     defense: 0,
     speed: 0,
     type: Type.None,
-    ability: {name: '', text: 'スキル、覚醒スキルが変化。'},
+    ability: {name: '', text: 'スキル、覚醒スキルが変化'},
     personal: {
       clockType: ClockType.So,
       megidoNo: 63,

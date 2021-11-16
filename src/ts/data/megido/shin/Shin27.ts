@@ -95,10 +95,73 @@ const megido: IMegido[] = [
             label: 'Ch4',
             magnification: 4,
             hit: 1,
-            text: '敵横一列攻撃力4倍ダメージ。2ターンの間突風地形効果で0.75倍継続ダメージを与え火に弱くする。'
+            text: '敵横一列攻撃力4倍ダメージ。2ターンの間突風地形効果で0.75倍継続ダメージを与え火に弱くする'
           }
         ],
         increment: 0.05
+      }
+    ]
+  },
+  {
+    clockType: ClockType.Shin,
+    no: 27,
+    id: 2,
+    name: 'マルチネ',
+    styleType: StyleType.Counter,
+    classType: ClassType.Fighter,
+    hp: 7854,
+    offense: 905,
+    defense: 471,
+    speed: 521,
+    ability: {name: '我武者羅ブレーキ	', text: 'HPが33.3%以下の味方への単体攻撃を受け持つ'},
+    skills: [
+      {
+        name: 'アタック',
+        type: SkillType.Attack,
+        levels: [
+          {
+            level: 1,
+            magnification: 1,
+            hit: 1
+          }
+        ]
+      },
+      {
+        name: 'ラウジングアップ＋',
+        type: SkillType.Skill,
+        levels: [
+          {
+            level: 1,
+            text: '2ターンの間、味方単体へのスキルフォトンからのダメージを30%軽減させ、状態異常と弱体を無効化する状態になる',
+            magnification: 0,
+            hit: 0
+          }
+        ]
+      },
+      {
+        name: '崖っぷちランチャー＋',
+        type: SkillType.AwakeningSkill,
+        levels: [
+          {
+            level: 1,
+            text: '敵単体に掛かっている強化を解除し、自身のHPが少ないほど威力の高いダメージ（最大で攻撃力の4倍のダメージ）',
+            magnification: 4,
+            hit: 1
+          }
+        ]
+      },
+      {
+        name: '純然たる根性の原動＋',
+        type: SkillType.Mysteries,
+        levels: [
+          {
+            level: 1,
+            magnification: 0,
+            hit: 0,
+            text: '2ターンの間、味方全体の防御力を30%上昇させる。さらに味方全体に対象のLv×60のアーマーを付与する'
+          }
+        ],
+        increment: 0
       }
     ]
   }

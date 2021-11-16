@@ -9,7 +9,11 @@ export const GenealogyType = {
   Kyoyu: '狂勇',
   Rekka: '烈火',
   Rensa: '連鎖',
-  Suishin: '水心'
+  Suishin: '水心',
+  Lyric: 'リリック',
+  Epic: 'エピック',
+  Metric: 'メトリック',
+  Scenery: 'シーナリー'
 } as const;
 export type GenealogyType = typeof GenealogyType[keyof typeof GenealogyType];
 

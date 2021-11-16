@@ -14,7 +14,7 @@ const sacredTreasureList: ISacredTreasure[] = [
     offense: 0,
     defense: 7,
     speed: 0,
-    type: Type.None,
+    type: Type.Lyric,
     ability: {name: '', text: 'HPが7%上昇する'}
   },
   {
@@ -26,7 +26,7 @@ const sacredTreasureList: ISacredTreasure[] = [
     offense: 0,
     defense: 21,
     speed: 0,
-    type: Type.None,
+    type: Type.Lyric,
     ability: {name: '', text: 'HPが6%上昇する'}
   },
   {
@@ -38,7 +38,7 @@ const sacredTreasureList: ISacredTreasure[] = [
     offense: 0,
     defense: 34,
     speed: 0,
-    type: Type.None,
+    type: Type.Lyric,
     ability: {name: '', text: 'HPが5%上昇する'}
   },
   {
@@ -50,7 +50,7 @@ const sacredTreasureList: ISacredTreasure[] = [
     offense: 0,
     defense: 7,
     speed: 0,
-    type: Type.None,
+    type: Type.Lyric,
     ability: {name: '', text: 'HPが7%上昇する'}
   },
   {
@@ -62,7 +62,7 @@ const sacredTreasureList: ISacredTreasure[] = [
     offense: 0,
     defense: 21,
     speed: 0,
-    type: Type.None,
+    type: Type.Lyric,
     ability: {name: '', text: 'HPが6%上昇する'}
   },
   {
@@ -74,7 +74,7 @@ const sacredTreasureList: ISacredTreasure[] = [
     offense: 0,
     defense: 34,
     speed: 0,
-    type: Type.None,
+    type: Type.Lyric,
     ability: {name: '', text: 'HPが5%上昇する'}
   },
   {
@@ -86,7 +86,7 @@ const sacredTreasureList: ISacredTreasure[] = [
     offense: 0,
     defense: 7,
     speed: 0,
-    type: Type.None,
+    type: Type.Lyric,
     ability: {name: '', text: 'HPが7%上昇する'}
   },
   {
@@ -98,7 +98,7 @@ const sacredTreasureList: ISacredTreasure[] = [
     offense: 0,
     defense: 21,
     speed: 0,
-    type: Type.None,
+    type: Type.Lyric,
     ability: {name: '', text: 'HPが6%上昇する'}
   },
   {
@@ -110,7 +110,7 @@ const sacredTreasureList: ISacredTreasure[] = [
     offense: 0,
     defense: 34,
     speed: 0,
-    type: Type.None,
+    type: Type.Lyric,
     ability: {name: '', text: 'HPが5%上昇する'}
   }
 ];

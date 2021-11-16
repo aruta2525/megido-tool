@@ -16,7 +16,7 @@ const sacredTreasureList: IPersonalSacredTreasure[] = [
     defense: 0,
     speed: 0,
     type: Type.None,
-    ability: {name: '', text: 'スキル・奥義が変化。'},
+    ability: {name: '', text: 'スキル・奥義が変化'},
     personal: {
       clockType: ClockType.So,
       megidoNo: 48,
@@ -63,7 +63,7 @@ const sacredTreasureList: IPersonalSacredTreasure[] = [
               label: 'CH4',
               magnification: 3,
               hit: 1,
-              text: '敵単体に攻撃力3倍のダメージ。さらに80%の確率で、覚醒ゲージを-5し、自身に加算する。味方単体にチェイン。'
+              text: '敵単体に攻撃力3倍のダメージ。さらに80%の確率で、覚醒ゲージを-5し、自身に加算する。味方単体にチェイン'
             }
           ]
         },

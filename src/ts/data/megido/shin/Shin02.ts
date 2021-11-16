@@ -143,7 +143,7 @@ const megido: IMegido[] = [
             text: '敵横一列に攻撃力1.75倍のダメージ。さらに2ターンの間、敵をノックバック状態にする'
           },
           {
-            level: 1,
+            level: 2,
             label: '大協奏',
             magnification: 1.75,
             hit: 1,
@@ -164,7 +164,7 @@ const megido: IMegido[] = [
             text: '2ターンの間、味方単体の攻撃力を20%上昇させる。さらにアタック・スキル・チャージをそれぞれ1つずつランダムな順で追加する'
           },
           {
-            level: 1,
+            level: 2,
             label: '大協奏',
             magnification: 0,
             hit: 0,

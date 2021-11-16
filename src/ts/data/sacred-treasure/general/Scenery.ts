@@ -6,7 +6,7 @@ import {GenealogyType as Type} from '../../../enum/SacredTreasure';
 
 const sacredTreasureList: ISacredTreasure[] = [
   {
-    name: '紫檀の晶剣',
+    name: 'レアメタルサーベル',
     styleType: StyleType.Rush,
     rank: Rank.Gold,
     size: Size.Big,
@@ -14,11 +14,11 @@ const sacredTreasureList: ISacredTreasure[] = [
     offense: 62,
     defense: 7,
     speed: 0,
-    type: Type.Epic,
-    ability: {name: '', text: '列・全体攻撃のダメージが8%上昇する'}
+    type: Type.Scenery,
+    ability: {name: '', text: '単体攻撃のダメージが6%上昇する'}
   },
   {
-    name: 'ブレードコサージュ',
+    name: '見せしめのプギオ',
     styleType: StyleType.Rush,
     rank: Rank.Gold,
     size: Size.Medium,
@@ -26,11 +26,11 @@ const sacredTreasureList: ISacredTreasure[] = [
     offense: 48,
     defense: 21,
     speed: 0,
-    type: Type.Epic,
-    ability: {name: '', text: '列・全体攻撃のダメージが7%上昇する'}
+    type: Type.Scenery,
+    ability: {name: '', text: '単体攻撃のダメージが5%上昇する'}
   },
   {
-    name: '誇りの指輪',
+    name: '晦冥の首飾り',
     styleType: StyleType.Rush,
     rank: Rank.Gold,
     size: Size.Small,
@@ -38,11 +38,11 @@ const sacredTreasureList: ISacredTreasure[] = [
     offense: 34,
     defense: 34,
     speed: 0,
-    type: Type.Epic,
-    ability: {name: '', text: '列・全体攻撃のダメージが6%上昇する'}
+    type: Type.Scenery,
+    ability: {name: '', text: '単体攻撃のダメージが4%上昇する'}
   },
   {
-    name: '薄桜の晶剣',
+    name: '名剣マクシミリアン',
     styleType: StyleType.Counter,
     rank: Rank.Gold,
     size: Size.Big,
@@ -50,11 +50,11 @@ const sacredTreasureList: ISacredTreasure[] = [
     offense: 62,
     defense: 7,
     speed: 0,
-    type: Type.Epic,
-    ability: {name: '', text: '列・全体攻撃のダメージが8%上昇する'}
+    type: Type.Scenery,
+    ability: {name: '', text: '単体攻撃のダメージが6%上昇する'}
   },
   {
-    name: 'ソール・エッジ',
+    name: '施しのバゼラード',
     styleType: StyleType.Counter,
     rank: Rank.Gold,
     size: Size.Medium,
@@ -62,11 +62,11 @@ const sacredTreasureList: ISacredTreasure[] = [
     offense: 48,
     defense: 21,
     speed: 0,
-    type: Type.Epic,
-    ability: {name: '', text: '列・全体攻撃のダメージが7%上昇する'}
+    type: Type.Scenery,
+    ability: {name: '', text: '単体攻撃のダメージが5%上昇する'}
   },
   {
-    name: '慈しみの指輪',
+    name: '妖光の首飾り',
     styleType: StyleType.Counter,
     rank: Rank.Gold,
     size: Size.Small,
@@ -74,11 +74,11 @@ const sacredTreasureList: ISacredTreasure[] = [
     offense: 34,
     defense: 34,
     speed: 0,
-    type: Type.Epic,
-    ability: {name: '', text: '列・全体攻撃のダメージが6%上昇する'}
+    type: Type.Scenery,
+    ability: {name: '', text: '単体攻撃のダメージが4%上昇する'}
   },
   {
-    name: '氷床の晶剣',
+    name: '魔影のエストック',
     styleType: StyleType.Burst,
     rank: Rank.Gold,
     size: Size.Big,
@@ -86,11 +86,11 @@ const sacredTreasureList: ISacredTreasure[] = [
     offense: 62,
     defense: 7,
     speed: 0,
-    type: Type.Epic,
-    ability: {name: '', text: '列・全体攻撃のダメージが8%上昇する'}
+    type: Type.Scenery,
+    ability: {name: '', text: '単体攻撃のダメージが6%上昇する'}
   },
   {
-    name: 'グラキエース・ソル',
+    name: '艶麗チンクエディア',
     styleType: StyleType.Burst,
     rank: Rank.Gold,
     size: Size.Medium,
@@ -98,11 +98,11 @@ const sacredTreasureList: ISacredTreasure[] = [
     offense: 48,
     defense: 21,
     speed: 0,
-    type: Type.Epic,
-    ability: {name: '', text: '列・全体攻撃のダメージが7%上昇する'}
+    type: Type.Scenery,
+    ability: {name: '', text: '単体攻撃のダメージが5%上昇する'}
   },
   {
-    name: '希望の指輪',
+    name: '明澄の首飾り',
     styleType: StyleType.Burst,
     rank: Rank.Gold,
     size: Size.Small,
@@ -110,8 +110,8 @@ const sacredTreasureList: ISacredTreasure[] = [
     offense: 34,
     defense: 34,
     speed: 0,
-    type: Type.Epic,
-    ability: {name: '', text: '列・全体攻撃のダメージが6%上昇する'}
+    type: Type.Scenery,
+    ability: {name: '', text: '単体攻撃のダメージが4%上昇する'}
   }
 ];
 

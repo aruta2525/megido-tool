@@ -64,5 +64,98 @@ export const So47: IMegido[] = [
         increment: 0.05
       }
     ]
-  }
+  },
+  {
+    clockType: ClockType.So,
+    no: 47,
+    id: 2,
+    name: 'ウヴァル',
+    styleType: StyleType.Counter,
+    classType: ClassType.Fighter,
+    hp: 8527,
+    offense: 1366,
+    defense: 388,
+    speed: 422,
+    ability: {name: 'エッジカウンター', text: '執心状態の敵から攻撃を受けたとき攻撃力2.5倍のダメージで反撃する'},
+    skills: [
+      {
+        name: 'エッジカウンター',
+        type: SkillType.Counter,
+        text: '執心状態の敵から攻撃を受けたとき攻撃力2.5倍のダメージで反撃する',
+        levels: [
+          {
+            level: 1,
+            magnification: 2.5,
+            hit: 1
+          }
+        ]
+      },
+      {
+        name: 'アタック',
+        type: SkillType.Attack,
+        levels: [
+          {
+            level: 1,
+            magnification: 1,
+            hit: 1
+          }
+        ]
+      },
+      {
+        name: '淡紅の眼光＋',
+        type: SkillType.Skill,
+        text: '2ターンの間、敵単体を執心状態にする。さらに自身へのダメージを20%軽減する',
+        levels: [
+          {
+            level: 1,
+            magnification: 0,
+            hit: 0
+          }
+        ]
+      },
+      {
+        name: '魔獣切り＋',
+        type: SkillType.AwakeningSkill,
+        text: '敵単体に攻撃力2.75倍のダメージ。さらに2ターンの間、自身の攻撃力を50%上昇する',
+        levels: [
+          {
+            level: 1,
+            magnification: 2.75,
+            hit: 1
+          }
+        ]
+      },
+      {
+        name: 'メテオストライク＋',
+        type: SkillType.Mysteries,
+        levels: [
+          {
+            level: 1,
+            text: '敵単体に攻撃力4.5倍のダメージ【攻撃を2回受けるたびにスキルLv上昇】',
+            magnification: 4.5,
+            hit: 1
+          },
+          {
+            level: 2,
+            text: '敵単体に攻撃力5.5倍のダメージ【攻撃を2回受けるたびにスキルLv上昇】',
+            magnification: 5.5,
+            hit: 1
+          },
+          {
+            level: 3,
+            text: '敵単体に攻撃力6.5倍のダメージ【攻撃を2回受けるたびにスキルLv上昇】',
+            magnification: 6.5,
+            hit: 1
+          },
+          {
+            level: 4,
+            text: '敵単体に攻撃力7.5倍のダメージ',
+            magnification: 7.5,
+            hit: 1
+          },
+        ],
+        increment: 0.05
+      }
+    ]
+  },
 ];

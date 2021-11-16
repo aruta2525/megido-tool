@@ -86,7 +86,7 @@ const sacredTreasureList: IPersonalSacredTreasure[] = [
               label: 'Ch4',
               magnification: 4,
               hit: 1,
-              text: '敵横一列攻撃力4倍ダメージ。2ターンの間突風地形効果で0.75倍継続ダメージを与え火に弱くする。自身にチェイン。'
+              text: '敵横一列攻撃力4倍ダメージ。2ターンの間突風地形効果で0.75倍継続ダメージを与え火に弱くする。自身にチェイン'
             }
           ],
           increment: 0.05
