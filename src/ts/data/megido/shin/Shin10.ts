@@ -66,6 +66,73 @@ const megido: IMegido[] = [
         increment: 0.05
       }
     ]
+  },
+  {
+    clockType: ClockType.Shin,
+    no: 10,
+    id: 2,
+    name: 'グリマルキン',
+    styleType: StyleType.Rush,
+    classType: ClassType.Sniper,
+    hp: 7705,
+    offense: 726,
+    defense: 473,
+    speed: 655,
+    ability: {name: 'パチパチバリア', text: 'エネルギーの数に応じて、受けるダメージを軽減する（最大60%）'},
+    skills: [
+      {
+        name: 'アタック',
+        type: SkillType.Attack,
+        levels: [
+          {
+            level: 1,
+            magnification: 1,
+            hit: 1
+          }
+        ]
+      },
+      {
+        name: 'ねこねこマジック！＋',
+        type: SkillType.Skill,
+        attribute: Attribute.Thunder,
+        text: `味方編成をFインパルス状態にする。さらにリリースにリリース効果を付与し、自身のエネルギーを+30する<br>
+              【リリース効果】与えたダメージの15%を味方全体に吸収する`,
+        levels: [
+          {
+            level: 1,
+            magnification: 0,
+            hit: 0
+          }
+        ]
+      },
+      {
+        name: '秘技！ねこ電撃星！＋',
+        type: SkillType.AwakeningSkill,
+        text: '敵単体に攻撃力0.85倍の3連続雷ダメージ。さらに2ターンの間、防御力を30%低下させる',
+        levels: [
+          {
+            level: 1,
+            magnification: 0.85,
+            hit: 3,
+            attribute: Attribute.Thunder
+          }
+        ]
+      },
+      {
+        name: '曇りのち猫ニャ！＋',
+        text: '2ターンの間、味方単体の攻撃力を50%上昇させ、積めるフォトンの量を+1する',
+        type: SkillType.Mysteries,
+        attribute: Attribute.Thunder,
+        levels: [
+          {
+            level: 1,
+            magnification: 0,
+            hit: 0
+          }
+        ],
+        increment: 0
+      }
+    ]
   }
 ];
 

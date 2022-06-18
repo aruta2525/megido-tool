@@ -81,7 +81,7 @@ import Shin04 from './shin/Shin04';
 import Shin05 from './shin/Shin05';
 import Shin06 from './shin/Shin06';
 import Shin07 from './shin/Shin07';
-// import Shin08 from './shin/Shin08';
+import Shin08 from './shin/Shin08';
 import Shin09 from './shin/Shin09';
 import Shin10 from './shin/Shin10';
 import Shin11 from './shin/Shin11';
@@ -145,7 +145,7 @@ import Shin68 from './shin/Shin68';
 import Shin69 from './shin/Shin69';
 import Shin70 from './shin/Shin70';
 import Shin71 from './shin/Shin71';
-// import Shin72 from './shin/Shin72';
+import Shin72 from './shin/Shin72';
 //#endregion
 
 export const MegidoList: IMegido[] = [];
@@ -232,7 +232,7 @@ export function joinAndSortMegidoByName(): IMegido[] {
   $.merge(megidoList, Shin05);
   $.merge(megidoList, Shin06);
   $.merge(megidoList, Shin07);
-  // $.merge(megidoList, Shin08);
+  $.merge(megidoList, Shin08);
   $.merge(megidoList, Shin09);
   $.merge(megidoList, Shin10);
   $.merge(megidoList, Shin11);
@@ -296,7 +296,7 @@ export function joinAndSortMegidoByName(): IMegido[] {
   $.merge(megidoList, Shin69);
   $.merge(megidoList, Shin70);
   $.merge(megidoList, Shin71);
-  // $.merge(megidoList, Shin72);
+  $.merge(megidoList, Shin72);
   //#endregion
 
   $.merge(megidoList, MegidoList);

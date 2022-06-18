@@ -72,10 +72,10 @@ export const So20: IMegido[] = [
     name: 'プルソン',
     styleType: StyleType.Burst,
     classType: ClassType.Trooper,
-    hp: 8688,
-    offense: 975,
-    defense: 412,
-    speed: 475,
+    hp: 7094,
+    offense: 1225,
+    defense: 514,
+    speed: 392,
     ability: {name: '不屈の義勇', text: '致死ダメージを受けたとき、生存している味方が多いほど、高確率で踏みとどまる（最大40％）'},
     skills: [
       {
@@ -116,8 +116,7 @@ export const So20: IMegido[] = [
       {
         name: 'ブレイブストライク+',
         type: SkillType.Mysteries,
-        text:
-          '敵単体に攻撃力3.25倍のダメージ。さらに攻撃対象より自身の強化効果の数が多いとき、数に応じてダメージが変化する<br>【3個差：3倍　4個差：4倍　5個差：5倍】',
+        text: '敵単体に攻撃力3.25倍のダメージ。さらに攻撃対象より自身の強化効果の数が多いとき、数に応じてダメージが変化する<br>【3個差：3倍　4個差：4倍　5個差：5倍】',
         levels: [
           {
             level: 1,
