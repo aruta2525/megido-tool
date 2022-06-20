@@ -37,19 +37,6 @@ export const So53 = [
                 ]
             },
             {
-                name: '【専】マインドクラッシュ+',
-                type: SkillType.Skill,
-                text: `敵単体に攻撃力1.25倍のダメージ。さらに覚醒ゲージを-1し、自身をアタックブレイク状態にする<br>
-              【アタックブレイク】80%の確率で、1ターンの間、敵単体を封印状態にする`,
-                levels: [
-                    {
-                        level: 1,
-                        magnification: 1.25,
-                        hit: 1
-                    }
-                ]
-            },
-            {
                 name: 'オブリビオン+',
                 type: SkillType.AwakeningSkill,
                 text: '敵単体に攻撃力2.5倍のダメージ。さらに積まれているフォトンを1つ破壊する',

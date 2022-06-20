@@ -1,4 +1,4 @@
-import { SkillType, ClassType, StyleType, ClockType } from '../../../enum/Megido';
+import { SkillType, Attribute, ClassType, StyleType, ClockType } from '../../../enum/Megido';
 const megido = [
     {
         clockType: ClockType.Shin,
@@ -27,6 +27,7 @@ const megido = [
             {
                 name: '戦いのコンチェルト＋',
                 type: SkillType.Skill,
+                text: '2ターンの間、味方全体の受けるダメージを15%軽減させる。さらに味方編成を協奏状態にする',
                 levels: [
                     {
                         level: 1,
@@ -38,6 +39,8 @@ const megido = [
             {
                 name: 'ピウ・ブリッランテ＋',
                 type: SkillType.AwakeningSkill,
+                attribute: Attribute.Sound,
+                text: '3ターンの間、ターン終了時、敵全体へ攻撃力1.5倍の響撃ダメージを与えるリザーブ状態になる',
                 levels: [
                     {
                         level: 1,
@@ -47,35 +50,14 @@ const megido = [
                 ]
             },
             {
-                name: 'ピウ・ブリッランテ＋【専用霊宝】',
-                type: SkillType.AwakeningSkill,
-                levels: [
-                    {
-                        level: 1,
-                        magnification: 2.5,
-                        hit: 1
-                    }
-                ]
-            },
-            {
                 name: 'ラ・ヌッラロンド＋',
                 type: SkillType.Mysteries,
+                attribute: Attribute.Sound,
+                text: '敵横一列に攻撃力2.25倍の響撃ダメージ。さらに80%の確率で、2ターンの間、攻撃力を20%低下させる',
                 levels: [
                     {
                         level: 1,
                         magnification: 2.25,
-                        hit: 1
-                    }
-                ],
-                increment: 0.05
-            },
-            {
-                name: 'ラ・ヌッラロンド＋【専用霊宝】',
-                type: SkillType.Mysteries,
-                levels: [
-                    {
-                        level: 1,
-                        magnification: 3.5,
                         hit: 1
                     }
                 ],

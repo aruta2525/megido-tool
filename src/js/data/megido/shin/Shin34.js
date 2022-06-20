@@ -30,6 +30,8 @@ const megido = [
             {
                 name: '嘆きの宣誓＋',
                 type: SkillType.Skill,
+                text: `味方全体にレイズギフトを付与し、味方編成をネクロ状態にする<br>
+              【レイズギフト効果】蘇生された1ターン後に、2ターンの間、味方全体の攻撃力と防御力を30%上昇する	`,
                 levels: [
                     {
                         level: 1,
@@ -45,17 +47,20 @@ const megido = [
                     {
                         level: 1,
                         magnification: 1.3,
-                        hit: 1
+                        hit: 1,
+                        text: '	敵横一列に攻撃力1.3倍のダメージ【味方が戦闘不能になるたびにスキルLv上昇】'
                     },
                     {
                         level: 2,
                         magnification: 1.6,
-                        hit: 1
+                        hit: 1,
+                        text: '	敵横一列に攻撃力1.6倍のダメージ【味方が戦闘不能になるたびにスキルLv上昇】'
                     },
                     {
                         level: 3,
                         magnification: 1.9,
-                        hit: 1
+                        hit: 1,
+                        text: '	敵横一列に攻撃力1.9倍のダメージ'
                     }
                 ]
             },
@@ -65,20 +70,17 @@ const megido = [
                 levels: [
                     {
                         level: 1,
+                        label: '通常',
                         magnification: 2.25,
-                        hit: 2
-                    }
-                ],
-                increment: 0.025
-            },
-            {
-                name: '悲劇の発露＋(ネクロ)',
-                type: SkillType.Mysteries,
-                levels: [
+                        hit: 2,
+                        text: '敵単体に攻撃力2.25倍の2連続ダメージ'
+                    },
                     {
                         level: 1,
+                        label: 'ネクロ',
                         magnification: 3,
-                        hit: 2
+                        hit: 2,
+                        text: 'ソウルを2つ消費し、敵単体に掛かっている強化を解除し、攻撃力3倍の2連続ダメージ'
                     }
                 ],
                 increment: 0.025

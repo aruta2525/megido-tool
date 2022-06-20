@@ -18,7 +18,8 @@ const sacredTreasureList = [
         personal: {
             clockType: ClockType.Shin,
             megidoNo: 21,
-            name: 'リヴァイアサン'
+            name: 'リヴァイアサン',
+            skills: []
         }
     },
     {
@@ -35,7 +36,8 @@ const sacredTreasureList = [
         personal: {
             clockType: ClockType.Shin,
             megidoNo: 21,
-            name: 'リヴァイアサン'
+            name: 'リヴァイアサン',
+            skills: []
         }
     },
     {
@@ -52,7 +54,8 @@ const sacredTreasureList = [
         personal: {
             clockType: ClockType.Shin,
             megidoNo: 21,
-            name: 'リヴァイアサン'
+            name: 'リヴァイアサン',
+            skills: []
         }
     }
 ];

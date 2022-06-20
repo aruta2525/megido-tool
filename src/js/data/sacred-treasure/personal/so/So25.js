@@ -1,4 +1,4 @@
-import { StyleType } from '../../../../enum/Megido';
+import { StyleType, SkillType } from '../../../../enum/Megido';
 import { SacredTreasureRank as Rank } from '../../../../enum/SacredTreasure';
 import { SacredTreasureSize as Size } from '../../../../enum/SacredTreasure';
 import { GenealogyType as Type } from '../../../../enum/SacredTreasure';
@@ -19,10 +19,42 @@ const sacredTreasureList = [
             clockType: ClockType.So,
             megidoNo: 25,
             name: 'グラシャラボラス',
-            megidoAbility: {
+            ability: {
                 name: '器物破損',
-                text: '自身が種族に【精霊】か【物体】を持つオーブを装備時、自身が攻撃か反動ダメージを受けたとき、自身に伝説のオーラを1個付与する（連続ダメージは1回としてカウントする）<br>伝説のオーラ：1個につき、ダメージブロック2%。またターン終了時、自身の覚醒ゲージを+1する確率が5%'
-            }
+                text: `自身が種族に【精霊】か【物体】を持つオーブを装備時、自身が攻撃か反動ダメージを受けたとき、自身に伝説のオーラを1個付与する（連続ダメージは1回としてカウントする）<br>
+          伝説のオーラ：1個につき、ダメージブロック2%。またターン終了時、自身の覚醒ゲージを+1する確率が5%`
+            },
+            skills: [
+                {
+                    name: '【専】ピリオドの向こうへ＋',
+                    type: SkillType.Mysteries,
+                    text: '敵全体に攻撃力3倍のダメージ。ただし反動で、自身が戦闘不能になる',
+                    levels: [
+                        {
+                            level: 0,
+                            label: '通常',
+                            magnification: 3,
+                            hit: 1,
+                            text: '敵全体に攻撃力3倍のダメージ。ただし反動で、自身が戦闘不能になる'
+                        },
+                        {
+                            level: 5,
+                            label: 'オーラ(5個)',
+                            magnification: 6,
+                            hit: 1,
+                            text: '自身のオーラを5個消費し、敵全体に攻撃力6倍のダメージ。ただし反動で、50%の確率で、自身が戦闘不能になる'
+                        },
+                        {
+                            level: 10,
+                            label: 'オーラ(10個)',
+                            magnification: 8,
+                            hit: 1,
+                            text: '自身のオーラを10個消費し、敵全体に攻撃力8倍のダメージ'
+                        }
+                    ],
+                    increment: 0.05
+                }
+            ]
         }
     }
 ];

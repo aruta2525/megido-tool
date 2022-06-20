@@ -37,18 +37,6 @@ export const So45 = [
                 ]
             },
             {
-                name: '【専】聖女の祈り＋',
-                type: SkillType.Skill,
-                text: '味方横一列のHPを20%回復させる。さらにHPが60%以上の味方に対して、2ターンの間、アタックフォトンからのダメージを30%軽減する',
-                levels: [
-                    {
-                        level: 1,
-                        magnification: 0,
-                        hit: 0
-                    }
-                ]
-            },
-            {
                 name: '気高き願い＋',
                 type: SkillType.AwakeningSkill,
                 text: '味方全体の覚醒ゲージを+1する。さらに2ターンの間、攻撃力を30%上昇させる',

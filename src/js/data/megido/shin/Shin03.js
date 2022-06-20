@@ -99,32 +99,32 @@ const megido = [
                         text: '味方横一列のHPを10%回復させ、2ターンの間状態異常と弱体を無効化する状態になる。チェイン数に応じてHP回復量変化'
                     },
                     {
-                        level: 1,
+                        level: 2,
                         label: 'Ch1',
                         magnification: 0,
                         hit: 0,
                         text: '味方横一列のHPを15%回復させ、2ターンの間状態異常と弱体を無効化する状態になる。チェイン数に応じてHP回復量変化'
                     },
                     {
-                        level: 1,
+                        level: 3,
                         label: 'Ch2',
                         magnification: 0,
                         hit: 0,
                         text: '味方横一列のHPを25%回復させ、2ターンの間状態異常と弱体を無効化する状態になる。チェイン数に応じてHP回復量変化'
                     },
                     {
-                        level: 1,
+                        level: 4,
                         label: 'Ch3',
                         magnification: 0,
                         hit: 0,
                         text: '味方横一列のHPを40%回復させ、2ターンの間状態異常と弱体を無効化する状態になる。チェイン数に応じてHP回復量変化'
                     },
                     {
-                        level: 1,
+                        level: 5,
                         label: 'Ch4',
                         magnification: 0,
                         hit: 0,
-                        text: '味方横一列のHPを60%回復させ、2ターンの間状態異常と弱体を無効化する状態になる。'
+                        text: '味方横一列のHPを60%回復させ、2ターンの間状態異常と弱体を無効化する状態になる'
                     }
                 ]
             },

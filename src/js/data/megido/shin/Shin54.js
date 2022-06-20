@@ -30,20 +30,18 @@ const megido = [
                 levels: [
                     {
                         level: 1,
+                        label: '通常',
                         magnification: 1.05,
-                        hit: 1
-                    }
-                ]
-            },
-            {
-                name: 'サウンドステップ＋(大協奏)',
-                type: SkillType.Skill,
-                attribute: Attribute.Sound,
-                levels: [
+                        hit: 1,
+                        text: '敵全体に攻撃力1.05倍のダメージ'
+                    },
                     {
                         level: 1,
+                        label: '大協奏',
                         magnification: 1.25,
-                        hit: 1
+                        hit: 1,
+                        attribute: Attribute.Sound,
+                        text: '敵全体に攻撃力1.25倍の響撃ダメージ'
                     }
                 ]
             },
@@ -53,20 +51,18 @@ const megido = [
                 levels: [
                     {
                         level: 1,
+                        label: '通常',
                         magnification: 0.7,
-                        hit: 4
-                    }
-                ]
-            },
-            {
-                name: 'ビートショット＋(大協奏)',
-                type: SkillType.AwakeningSkill,
-                attribute: Attribute.Sound,
-                levels: [
+                        hit: 4,
+                        text: '敵全体に攻撃力0.7倍の4連続ダメージ。ただし、味方編成に蓄積されている全ての2ターン音符の継続ターンを-1する'
+                    },
                     {
                         level: 1,
+                        label: '大協奏',
                         magnification: 0.8,
-                        hit: 4
+                        hit: 4,
+                        attribute: Attribute.Sound,
+                        text: '敵全体に攻撃力0.8倍の4連続響撃ダメージ。ただし、味方編成に蓄積されている全ての2ターン音符の継続ターンを-1する'
                     }
                 ]
             },
@@ -76,21 +72,18 @@ const megido = [
                 levels: [
                     {
                         level: 1,
+                        label: '通常',
                         magnification: 2.25,
-                        hit: 1
-                    }
-                ],
-                increment: 0.05
-            },
-            {
-                name: 'ブレイクメドレー＋(大協奏)',
-                type: SkillType.Mysteries,
-                attribute: Attribute.Sound,
-                levels: [
+                        hit: 1,
+                        text: '敵全体に攻撃力2.25倍のダメージ。さらに60%の確率で、2ターンの間、敵の素早さを0にする'
+                    },
                     {
                         level: 1,
+                        label: '大協奏',
                         magnification: 2.25,
-                        hit: 1
+                        attribute: Attribute.Sound,
+                        hit: 1,
+                        text: '敵全体に攻撃力2.25倍の響撃ダメージ。さらに80%の確率で、2ターンの間、敵の素早さを0にする'
                     }
                 ],
                 increment: 0.05

@@ -1,4 +1,4 @@
-import { SkillType, ClassType, StyleType, ClockType } from '../../../enum/Megido';
+import { SkillType, Attribute, ClassType, StyleType, ClockType } from '../../../enum/Megido';
 const megido = [
     {
         clockType: ClockType.Shin,
@@ -28,57 +28,65 @@ const megido = [
                 ]
             },
             {
-                name: '赤熱レンチ！＋(分離武器)',
+                name: '赤熱レンチ！＋/ブラストフレイム＋',
                 type: SkillType.Skill,
+                attribute: Attribute.Fire,
                 levels: [
                     {
                         level: 1,
+                        label: '分離武器',
                         magnification: 1.25,
-                        hit: 1
-                    }
-                ]
-            },
-            {
-                name: 'ブラストフレイム＋(連結武器)',
-                type: SkillType.Skill,
-                levels: [
+                        hit: 1,
+                        text: '敵単体に攻撃力1.25倍の火ダメージ。2ターンの間、炎上の地形効果で1.25倍の継続ダメージを与える'
+                    },
                     {
                         level: 1,
+                        label: '連結武器',
                         magnification: 0.9,
-                        hit: 2
+                        hit: 2,
+                        text: '敵単体に攻撃力0.9倍の2連続火ダメージ。さらに、自身の覚醒ゲージを+2する	'
                     }
                 ]
             },
             {
-                name: '熱狂フューエル！＋(分離武器)',
+                name: '熱狂フューエル！＋/フルブラストフレイム＋',
                 type: SkillType.AwakeningSkill,
                 levels: [
                     {
                         level: 1,
+                        label: '分離武器',
                         magnification: 0,
-                        hit: 0
-                    }
-                ]
-            },
-            {
-                name: 'フルブラストフレイム＋(連結武器)',
-                type: SkillType.AwakeningSkill,
-                levels: [
+                        hit: 0,
+                        text: '自身の覚醒ゲージを全て消費し、敵全体の炎上地形を狂炎地形にする。さらに、自身にアーマーを3000付与する'
+                    },
                     {
                         level: 1,
+                        label: '連結武器',
                         magnification: 0.8,
-                        hit: 8
+                        hit: 8,
+                        attribute: Attribute.Fire,
+                        text: '敵全体に攻撃力0.8倍の8連続火ダメージ。さらに、味方全体への攻撃を1回無効化する。分離武器にシフトし、スキル、覚醒スキル、奥義の効果が変化する'
                     }
                 ]
             },
             {
                 name: '焦熱リーサルフレア＋',
                 type: SkillType.Mysteries,
+                attribute: Attribute.Fire,
                 levels: [
                     {
                         level: 1,
+                        label: '分離武器',
                         magnification: 2,
-                        hit: 1
+                        hit: 1,
+                        text: '敵全体に攻撃力2倍の火ダメージ。2ターンの間、炎上の地形効果で1.5倍の継続ダメージ。さらに連結武器にシフトし、スキル、覚醒スキル、奥義の効果が変化する'
+                    },
+                    {
+                        level: 1,
+                        label: '連結武器',
+                        magnification: 2,
+                        hit: 1,
+                        text: '敵全体に攻撃力2倍の火ダメージ。2ターンの間、炎上の地形効果で1.5倍の継続ダメージ'
                     }
                 ],
                 increment: 0.05

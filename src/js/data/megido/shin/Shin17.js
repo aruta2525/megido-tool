@@ -28,50 +28,42 @@ const megido = [
                 ]
             },
             {
-                name: '栄養満点スープ＋',
+                name: '栄養満点スープ＋/憎悪のポタージュ＋',
                 type: SkillType.Skill,
-                text: '味方前列の覚醒ゲージを+1し、2ターンの間、防御力を20%上昇させる',
                 levels: [
                     {
                         level: 1,
+                        label: '通常',
                         magnification: 0,
-                        hit: 0
-                    }
-                ]
-            },
-            {
-                name: '【シフト】憎悪のポタージュ＋',
-                type: SkillType.Skill,
-                text: '敵単体に攻撃力1.5倍のダメージ',
-                levels: [
+                        hit: 0,
+                        text: '味方前列の覚醒ゲージを+1し、2ターンの間、防御力を20%上昇させる'
+                    },
                     {
                         level: 1,
+                        label: 'シフト',
                         magnification: 1.5,
-                        hit: 1
+                        hit: 1,
+                        text: '敵単体に攻撃力1.5倍のダメージ'
                     }
                 ]
             },
             {
-                name: '快復マル秘レシピ＋',
+                name: '快復マル秘レシピ＋/念入りの下処理＋',
                 type: SkillType.AwakeningSkill,
-                text: '戦闘不能の味方単体を、最大HPの20%で蘇生させ、さらに2ターンの間、防御力を25%上昇させる',
                 levels: [
                     {
                         level: 1,
+                        label: '通常',
                         magnification: 0,
-                        hit: 0
-                    }
-                ]
-            },
-            {
-                name: '【シフト】念入りの下処理＋',
-                type: SkillType.AwakeningSkill,
-                text: '敵単体に攻撃力0.85倍の6連続ダメージ',
-                levels: [
+                        hit: 0,
+                        text: '戦闘不能の味方単体を、最大HPの20%で蘇生させ、さらに2ターンの間、防御力を25%上昇させる'
+                    },
                     {
                         level: 1,
+                        label: 'シフト',
                         magnification: 0.85,
-                        hit: 6
+                        hit: 6,
+                        text: '敵単体に攻撃力0.85倍の6連続ダメージ'
                     }
                 ]
             },

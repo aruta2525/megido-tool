@@ -18,7 +18,8 @@ const sacredTreasureList = [
         personal: {
             clockType: ClockType.So,
             megidoNo: 58,
-            name: 'アミー'
+            name: 'アミー',
+            skills: []
         }
     }
 ];

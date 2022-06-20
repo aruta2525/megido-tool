@@ -37,18 +37,6 @@ export const So22 = [
                 ]
             },
             {
-                name: '【専】追撃態勢＋',
-                type: SkillType.Skill,
-                text: '2ターンの間、自身を遊撃状態にし、攻撃力を40%上昇させる',
-                levels: [
-                    {
-                        level: 1,
-                        magnification: 0,
-                        hit: 0
-                    }
-                ]
-            },
-            {
                 name: 'トライピアシング＋',
                 type: SkillType.AwakeningSkill,
                 text: '敵単体に攻撃力1倍の3連続ダメージ。さらに2ターンの間、自身の攻撃力を50%上昇させる',

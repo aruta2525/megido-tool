@@ -30,20 +30,18 @@ const megido = [
                 levels: [
                     {
                         level: 1,
+                        label: '通常',
                         magnification: 1.25,
-                        hit: 1
-                    }
-                ]
-            },
-            {
-                name: 'ウルトラリミックス＋(大協奏)',
-                type: SkillType.Skill,
-                attribute: Attribute.Sound,
-                levels: [
+                        hit: 1,
+                        text: '敵単体に攻撃力1.25倍のダメージ。さらに2ターンの間、自身の攻撃力を15%上昇させる'
+                    },
                     {
                         level: 1,
+                        label: '大協奏',
                         magnification: 1.25,
-                        hit: 1
+                        hit: 1,
+                        attribute: Attribute.Sound,
+                        text: '敵単体に攻撃力1.25倍の響撃ダメージ。さらに2ターンの間、自身の攻撃力を20%上昇させる	'
                     }
                 ]
             },
@@ -53,8 +51,17 @@ const megido = [
                 levels: [
                     {
                         level: 1,
+                        label: '通常',
                         magnification: 0,
-                        hit: 0
+                        hit: 0,
+                        text: '2ターンライブ、音符1個で防御力4%上昇。攻撃時、覚醒0の対象にダメージ1.2倍/2ターン攻防早7%低下/ダメージ7%吸収を付与可能'
+                    },
+                    {
+                        level: 1,
+                        label: '大協奏',
+                        magnification: 0,
+                        hit: 0,
+                        text: '3ターンライブ、音符1個で防御力4%上昇。攻撃時、覚醒0の対象にダメージ1.5倍/2ターン攻防早10%低下/ダメージ9%吸収を付与可能'
                     }
                 ]
             },
@@ -64,8 +71,17 @@ const megido = [
                 levels: [
                     {
                         level: 1,
+                        label: '通常',
                         magnification: 0,
-                        hit: 0
+                        hit: 0,
+                        text: '2ターンの間、自身の効果範囲を列化する。さらにアタックフォトンからのダメージを45%軽減し、味方編成を協奏状態にする'
+                    },
+                    {
+                        level: 1,
+                        label: '大協奏',
+                        magnification: 0,
+                        hit: 0,
+                        text: '2ターンの間、自身の効果範囲を全体化する。さらにアタックフォトンからのダメージを55%軽減する'
                     }
                 ],
                 increment: 0

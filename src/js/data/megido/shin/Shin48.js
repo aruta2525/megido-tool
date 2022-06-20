@@ -27,6 +27,8 @@ const megido = [
             {
                 name: 'ラウズアップカノン+',
                 type: SkillType.Skill,
+                text: `味方編成をバレットアーツ状態にし、バレットを2個作成する<br>
+              【バレット効果】2ターンの間、攻撃力を20%低下+獣系の対象に2倍ダメージ`,
                 levels: [
                     {
                         level: 1,
@@ -41,19 +43,19 @@ const megido = [
                 levels: [
                     {
                         level: 1,
+                        label: '通常',
                         magnification: 2,
-                        hit: 1
-                    }
-                ]
-            },
-            {
-                name: 'チャージボンバード+(Bアーツ)',
-                type: SkillType.AwakeningSkill,
-                levels: [
+                        hit: 1,
+                        text: `敵単体に攻撃力2倍のダメージ。さらに、バレットを2個作成する<br>
+                  【バレット効果】掛かっている強化を解除+80%の確率で覚醒-1`
+                    },
                     {
                         level: 1,
+                        label: 'Bアーツ',
                         magnification: 2.25,
-                        hit: 1
+                        hit: 1,
+                        text: `バレットを消費し、敵単体に攻撃力2.25倍のダメージ。さらに、バレットを2個作成する<br>
+                  【バレット効果】掛かっている強化を解除+80%の確率で覚醒-1`
                     }
                 ]
             },
@@ -63,20 +65,17 @@ const megido = [
                 levels: [
                     {
                         level: 1,
+                        label: '通常',
                         magnification: 3.25,
-                        hit: 1
-                    }
-                ],
-                increment: 0.05
-            },
-            {
-                name: '撃滅の導弾+(Bアーツ)',
-                type: SkillType.Mysteries,
-                levels: [
+                        hit: 1,
+                        text: '敵単体に攻撃力3.25倍のダメージ。さらに3ターンの間、対象に導を付与する'
+                    },
                     {
                         level: 1,
+                        label: 'Bアーツ',
                         magnification: 3.75,
-                        hit: 1
+                        hit: 1,
+                        text: 'バレットを消費し、敵単体に攻撃力3.75倍のダメージ。さらに3ターンの間、対象に導を付与する'
                     }
                 ],
                 increment: 0.05

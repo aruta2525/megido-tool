@@ -18,7 +18,8 @@ const sacredTreasureList = [
         personal: {
             clockType: ClockType.Shin,
             megidoNo: 65,
-            name: 'ベルフェゴール'
+            name: 'ベルフェゴール',
+            skills: []
         }
     },
     {
@@ -35,7 +36,8 @@ const sacredTreasureList = [
         personal: {
             clockType: ClockType.Shin,
             megidoNo: 65,
-            name: 'ベルフェゴール'
+            name: 'ベルフェゴール',
+            skills: []
         }
     },
     {
@@ -52,7 +54,8 @@ const sacredTreasureList = [
         personal: {
             clockType: ClockType.Shin,
             megidoNo: 65,
-            name: 'ベルフェゴール'
+            name: 'ベルフェゴール',
+            skills: []
         }
     }
 ];

@@ -70,10 +70,10 @@ export const So20 = [
         name: 'プルソン',
         styleType: StyleType.Burst,
         classType: ClassType.Trooper,
-        hp: 8688,
-        offense: 975,
-        defense: 412,
-        speed: 475,
+        hp: 7094,
+        offense: 1225,
+        defense: 514,
+        speed: 392,
         ability: { name: '不屈の義勇', text: '致死ダメージを受けたとき、生存している味方が多いほど、高確率で踏みとどまる（最大40％）' },
         skills: [
             {

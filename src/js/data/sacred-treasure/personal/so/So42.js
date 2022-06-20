@@ -1,4 +1,4 @@
-import { StyleType } from '../../../../enum/Megido';
+import { StyleType, SkillType } from '../../../../enum/Megido';
 import { SacredTreasureRank as Rank } from '../../../../enum/SacredTreasure';
 import { SacredTreasureSize as Size } from '../../../../enum/SacredTreasure';
 import { GenealogyType as Type } from '../../../../enum/SacredTreasure';
@@ -18,7 +18,21 @@ const sacredTreasureList = [
         personal: {
             clockType: ClockType.So,
             megidoNo: 42,
-            name: 'ウェパル'
+            name: 'ウェパル',
+            skills: [
+                {
+                    name: '【専】ウェイブライダー＋',
+                    type: SkillType.Skill,
+                    text: '敵単体に攻撃力1.25倍のダメージ。さらに自身にアタックフォトンを1つ追加する',
+                    levels: [
+                        {
+                            level: 1,
+                            magnification: 1.25,
+                            hit: 1
+                        }
+                    ]
+                }
+            ]
         }
     }
 ];

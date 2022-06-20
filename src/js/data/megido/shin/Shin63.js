@@ -27,6 +27,7 @@ const megido = [
             {
                 name: '廻転凍突き＋',
                 type: SkillType.Skill,
+                text: '敵単体に攻撃力1.25倍のダメージ。さらに60%の確率で、2ターンの間、敵を凍結状態にする',
                 levels: [
                     {
                         level: 1,
@@ -38,6 +39,7 @@ const megido = [
             {
                 name: '槍塵跳天燕落とし＋',
                 type: SkillType.AwakeningSkill,
+                text: '敵単体に攻撃力1.75倍のダメージ。さらに自身にアタックフォトンを2つ追加する',
                 levels: [
                     {
                         level: 1,
@@ -49,6 +51,7 @@ const megido = [
             {
                 name: '氷氷武踏攻備＋',
                 type: SkillType.Mysteries,
+                text: '3ターンの間、味方全体の素早さを30%上昇させる。さらにラッシュの場合、封印状態にし封印状態の味方の数だけ攻撃力を10%上昇させアタックを強化する',
                 levels: [
                     {
                         level: 1,

@@ -1,4 +1,4 @@
-import { SkillType, Attribute, ClassType, StyleType, ClockType, ReferralStatus } from '../../../enum/Megido';
+import { SkillType, Attribute, ClassType, StyleType, ClockType } from '../../../enum/Megido';
 export const So15 = [
     {
         clockType: ClockType.So,
@@ -37,19 +37,6 @@ export const So15 = [
                 ]
             },
             {
-                name: '【専】トンファーガード＋',
-                type: SkillType.Skill,
-                text: '2ターンの間、自身が攻撃を受けたとき、防御力1.35倍の2連続ダメージで反撃する状態になり、攻撃を2回無効化する',
-                referralStatus: ReferralStatus.Defence,
-                levels: [
-                    {
-                        level: 1,
-                        magnification: 1.35,
-                        hit: 2
-                    }
-                ]
-            },
-            {
                 name: '滅多打ち＋',
                 type: SkillType.AwakeningSkill,
                 text: '敵単体に攻撃力0.75倍の4連続ダメージ。さらに2ターンの間、敵をめまい状態にする',
@@ -65,19 +52,6 @@ export const So15 = [
                 name: 'ラストガーディアン＋',
                 type: SkillType.Mysteries,
                 text: '敵単体に攻撃力2.25倍のダメージ。さらに2ターンの間、味方全体の防御力を50%上昇させる',
-                levels: [
-                    {
-                        level: 1,
-                        magnification: 2.25,
-                        hit: 1
-                    }
-                ],
-                increment: 0.05
-            },
-            {
-                name: '【専】ラストガーディアン＋',
-                type: SkillType.Mysteries,
-                text: '敵単体に攻撃力2.25倍のダメージ。さらに2ターンの間、味方全体の防御力を50%上昇させ、すべての単体攻撃を受け持つ',
                 levels: [
                     {
                         level: 1,

@@ -17,6 +17,12 @@ export function getPhotonCorrection(skillType, photonType) {
             value = 0.5;
             break;
     }
+    // 反撃なら1に修正
+    switch (skillType) {
+        case SkillType.Counter:
+            value = 1;
+            break;
+    }
     return value;
 }
 //# sourceMappingURL=MegidoUtil.js.map

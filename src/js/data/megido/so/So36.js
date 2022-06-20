@@ -129,47 +129,6 @@ export const So36 = [
                 ]
             },
             {
-                name: '【専】紫陽爛漫＋',
-                type: SkillType.Skill,
-                levels: [
-                    {
-                        level: 1,
-                        label: 'なし',
-                        magnification: 1.25,
-                        hit: 1,
-                        text: '敵単体に攻撃力1.25倍のダメージ。自身の点穴の値に応じて自身点穴上昇【点穴30:+35%/点穴50:+40%/点穴80:+45%/点穴100:+50%】'
-                    },
-                    {
-                        level: 1,
-                        label: '三分咲',
-                        magnification: 1.25,
-                        hit: 1,
-                        text: '敵単体に攻撃力1.25倍のダメージ。さらに自身の点穴の35%を得る'
-                    },
-                    {
-                        level: 1,
-                        label: '五分咲',
-                        magnification: 1.25,
-                        hit: 1,
-                        text: '敵単体に攻撃力1.25倍のダメージ。さらに自身の点穴の40%を得る'
-                    },
-                    {
-                        level: 1,
-                        label: '八分咲',
-                        magnification: 1.25,
-                        hit: 1,
-                        text: '敵単体に攻撃力1.25倍のダメージ。さらに自身の点穴の45%を得る'
-                    },
-                    {
-                        level: 1,
-                        label: '満開',
-                        magnification: 1.25,
-                        hit: 1,
-                        text: '敵単体に攻撃力1.25倍のダメージ。さらに自身の点穴の50%を得る'
-                    }
-                ]
-            },
-            {
                 name: '八仙開花＋',
                 type: SkillType.AwakeningSkill,
                 text: '自身以外の味方前列から点穴を最大20ずつ徴収。さらに自身のHPを30%回復する',

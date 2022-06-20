@@ -25,22 +25,9 @@ export const So30 = [
                 ]
             },
             {
-                name: '一時の虚脱＋',
+                name: '偽りの加護＋',
                 type: SkillType.Skill,
                 text: '2ターンの間、味方単体へのスキルフォトンからのダメージを60%軽減する',
-                levels: [
-                    {
-                        level: 1,
-                        magnification: 0,
-                        hit: 0
-                    }
-                ]
-            },
-            {
-                name: '【専】一時の虚脱＋',
-                type: SkillType.Skill,
-                text: `2ターンの間、味方単体へのスキルフォトンからのダメージを60%軽減する。種族に【精霊】か【飛行】を持つオーブを装備中の自身と対象に友愛のオーラを2個付与<br>
-          友愛のオーラ：1個につき攻撃力3%上昇・自然回復3%付与`,
                 levels: [
                     {
                         level: 1,
@@ -58,26 +45,6 @@ export const So30 = [
                         level: 1,
                         magnification: 2.5,
                         hit: 1
-                    }
-                ]
-            },
-            {
-                name: '【専】一時の虚脱＋',
-                type: SkillType.AwakeningSkill,
-                levels: [
-                    {
-                        level: 1,
-                        label: '通常',
-                        magnification: 2.5,
-                        hit: 1,
-                        text: '敵単体に攻撃力2.5倍のダメージ。さらに2ターンの間、敵が積めるフォトンの量を-1する'
-                    },
-                    {
-                        level: 2,
-                        label: 'オーラ',
-                        magnification: 3,
-                        hit: 1,
-                        text: '自身のオーラを2個消費し、敵単体に攻撃力3倍のダメージ。さらに2ターンの間、味方横一列に積めるフォトンの量を+1する'
                     }
                 ]
             },

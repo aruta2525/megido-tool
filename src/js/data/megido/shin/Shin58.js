@@ -27,6 +27,7 @@ const megido = [
             {
                 name: 'ホイップベリーラブ＋',
                 type: SkillType.Skill,
+                text: '敵全体に攻撃力0.9倍のダメージ。さらに、与えたダメージの15%を吸収する	',
                 levels: [
                     {
                         level: 1,
@@ -38,6 +39,7 @@ const megido = [
             {
                 name: 'キャラメルクランチ＋',
                 type: SkillType.AwakeningSkill,
+                text: '敵単体に攻撃力1.35倍の3連続ダメージ。さらに2ターンの間、自身のスキルを強化する',
                 levels: [
                     {
                         level: 1,
@@ -53,12 +55,14 @@ const megido = [
                     {
                         level: 1,
                         magnification: 2.75,
-                        hit: 1
+                        hit: 1,
+                        text: '敵横一列に攻撃力2.75倍のダメージ。自身攻撃力50%上昇。自身バーサーク（25%毎上昇 最大150% HP10%ダメージ）【使用後Lv2：自身＋両隣（カウンター）】'
                     },
                     {
                         level: 2,
                         magnification: 2.75,
-                        hit: 1
+                        hit: 1,
+                        text: '	敵横一列に攻撃力2.75倍のダメージ。自身とカウンターの両隣に攻撃力50%上昇とバーサーク（25%毎上昇 最大150% HP10%ダメージ）'
                     }
                 ],
                 increment: 0.05

@@ -4,6 +4,7 @@ export const PhotonType = {
     Deterioration: '劣化'
 };
 export const SkillType = {
+    Counter: '反撃',
     Attack: 'アタック',
     Skill: 'スキル',
     AwakeningSkill: '覚醒スキル',

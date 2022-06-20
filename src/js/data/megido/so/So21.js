@@ -62,6 +62,69 @@ export const So21 = [
                 increment: 0.05
             }
         ]
+    },
+    {
+        clockType: ClockType.So,
+        no: 21,
+        id: 2,
+        name: 'モラクス',
+        styleType: StyleType.Rush,
+        classType: ClassType.Fighter,
+        hp: 6519,
+        offense: 1318,
+        defense: 285,
+        speed: 644,
+        ability: { name: '燃えてきたぜ！', text: 'フォトンを使用するたびに敵に与える連続ダメージが上昇する【1回につき+20%、最大60%】（ターン経過でリセット)' },
+        skills: [
+            {
+                name: 'アタック',
+                type: SkillType.Attack,
+                levels: [
+                    {
+                        level: 1,
+                        magnification: 1,
+                        hit: 1
+                    }
+                ]
+            },
+            {
+                name: '八ツ裂き斬斧＋',
+                type: SkillType.Skill,
+                text: '敵単体に攻撃力0.7倍の4連続ダメージ。さらに敵の覚醒ゲージが0のとき、ダメージが1.5倍になる',
+                levels: [
+                    {
+                        level: 1,
+                        magnification: 0.7,
+                        hit: 4
+                    }
+                ]
+            },
+            {
+                name: '圧勝・ボースギア＋',
+                type: SkillType.AwakeningSkill,
+                text: '敵単体に攻撃力0.75倍の6連続ダメージ。さらに自身に積まれているフォトンをすべてスキルフォトンに変化させる',
+                levels: [
+                    {
+                        level: 1,
+                        magnification: 0.75,
+                        hit: 6
+                    }
+                ]
+            },
+            {
+                name: '勝鬨イグニッション＋',
+                type: SkillType.Mysteries,
+                text: '2ターンの間、自身を封印状態にし、自身の両隣を猛攻状態にする。さらに自身と両隣の攻撃力を50%上昇させる',
+                levels: [
+                    {
+                        level: 1,
+                        magnification: 0,
+                        hit: 0
+                    }
+                ],
+                increment: 0
+            }
+        ]
     }
 ];
 //# sourceMappingURL=So21.js.map

@@ -30,25 +30,24 @@ const megido = [
                 levels: [
                     {
                         level: 1,
+                        label: '通常',
                         magnification: 0,
-                        hit: 0
-                    }
-                ]
-            },
-            {
-                name: 'カワイイに誓って＋(ブレイク)',
-                type: SkillType.Skill,
-                levels: [
+                        hit: 0,
+                        text: '自身をアタックブレイク状態にする。さらに2ターンの間、防御力が40%上昇する'
+                    },
                     {
                         level: 1,
+                        label: 'ブレイク',
                         magnification: 1.25,
-                        hit: 1
+                        hit: 1,
+                        text: '【アタックブレイク】敵単体に攻撃力1.25倍のダメージ。さらに2ターンの間、味方横一列の防御力を40％上昇させる'
                     }
                 ]
             },
             {
                 name: 'タイニーマジック＋',
                 type: SkillType.AwakeningSkill,
+                text: '2ターンの間、味方単体のアタックとチャージを強化する。さらに攻撃力を20%上昇させる',
                 levels: [
                     {
                         level: 1,
@@ -60,6 +59,7 @@ const megido = [
             {
                 name: 'ピクシーファウナ＋',
                 type: SkillType.Mysteries,
+                text: '	横一列の戦闘不能の味方を最大HP30%で蘇生させ、さらに2ターンの間、ダメージを30%軽減する',
                 levels: [
                     {
                         level: 1,
@@ -67,7 +67,7 @@ const megido = [
                         hit: 0
                     }
                 ],
-                increment: 0.05
+                increment: 0
             }
         ]
     }

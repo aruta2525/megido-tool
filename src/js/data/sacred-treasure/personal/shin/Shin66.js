@@ -18,7 +18,8 @@ const sacredTreasureList = [
         personal: {
             clockType: ClockType.Shin,
             megidoNo: 66,
-            name: 'マモン'
+            name: 'マモン',
+            skills: []
         }
     },
     {
@@ -35,7 +36,26 @@ const sacredTreasureList = [
         personal: {
             clockType: ClockType.Shin,
             megidoNo: 66,
-            name: 'マモン'
+            name: 'マモン',
+            skills: []
+        }
+    },
+    {
+        name: '＜剛＞アーラデュオ',
+        styleType: StyleType.All,
+        rank: Rank.Gold,
+        size: Size.Small,
+        hp: 203,
+        offense: 21,
+        defense: 21,
+        speed: 0,
+        type: Type.None,
+        ability: { name: '', text: 'サブマスエフェクトを発生させる' },
+        personal: {
+            clockType: ClockType.Shin,
+            megidoNo: 66,
+            name: 'マモン',
+            skills: []
         }
     }
 ];

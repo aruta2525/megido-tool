@@ -60,19 +60,6 @@ export const So28 = [
                     }
                 ],
                 increment: 0.05
-            },
-            {
-                name: '【専】ワールドイズマイン＋',
-                type: SkillType.Mysteries,
-                text: '敵単体に攻撃力4.75倍のダメージ。ただし反動で、自身が最大HPの50%ダメージを受ける【自身のHPが50%以下のとき防御無視ダメージに変化】',
-                levels: [
-                    {
-                        level: 1,
-                        magnification: 4.75,
-                        hit: 1
-                    }
-                ],
-                increment: 0.05
             }
         ]
     },

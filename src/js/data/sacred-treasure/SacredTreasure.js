@@ -16,6 +16,7 @@ import Suishin from './general/Suishin';
 import Lyric from './general/Lyric';
 import Epic from './general/Epic';
 import Metric from './general/Metric';
+import Scenery from './general/Scenery';
 import Other from './general/Other';
 export const SacredTreasureList = [
     {
@@ -44,5 +45,6 @@ $.merge(SacredTreasureList, Suishin);
 $.merge(SacredTreasureList, Lyric);
 $.merge(SacredTreasureList, Epic);
 $.merge(SacredTreasureList, Metric);
+$.merge(SacredTreasureList, Scenery);
 $.merge(SacredTreasureList, Other);
 //# sourceMappingURL=SacredTreasure.js.map

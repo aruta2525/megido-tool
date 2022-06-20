@@ -16,76 +16,24 @@ import { GenealogyType, convertToSacredTreasureSizeName } from './enum/SacredTre
 import { Stage, convertToStageName } from './enum/Stage';
 import { DifficultyLevel, convertToDifficultyLevelName } from './enum/Stage';
 import { isIPersonalSacredTreasure } from './interface/IPersonalSacredTreasure';
+import { ID_LIST as ids } from './lib/calcDamage/const';
+import { setupImportForm, importFromURL } from './lib/calcDamage/import';
+import { setupExportForm, generateURL } from './lib/calcDamage/export';
 const megidoList = joinAndSortMegidoByName();
-const ids = {
-    megido: 'megido',
-    megidoAbility: 'megidoAbility',
-    megidoAbilityText: 'megidoAbilityText',
-    offense: 'offense',
-    offensiveBuff: 'offensiveBuff',
-    defense: 'defense',
-    defensiveBuff: 'defensiveBuff',
-    defensiveDebuff: 'defensiveDebuff',
-    speed: 'speed',
-    speedilyBuff: 'speedilyBuff',
-    speedilyDebuff: 'speedilyDebuff',
-    skill: 'skill',
-    skillLevels: 'skillLevels',
-    mysteriesLevels: 'mysteriesLevels',
-    magnification: 'magnification',
-    hit: 'hit',
-    referralStatus: 'referralStatus',
-    attribute: 'attribute',
-    skillText: 'skillText',
-    photon: 'photon',
-    classCorrection: 'classCorrection',
-    freeze: 'freeze',
-    zombie: 'zombie',
-    enemyDefense: 'enemyDefense',
-    ignoreEnemyDefense: 'ignoreEnemyDefense',
-    enemyDefensiveDebuff: 'enemyDefensiveDebuff',
-    attributeBuff: 'attributeBuff',
-    species: 'species',
-    statusAbnormality: 'statusAbnormality',
-    supplementaryDamage: 'supplementaryDamage',
-    specialEfficacy1: 'specialEfficacy1',
-    specialEfficacy2: 'specialEfficacy2',
-    enemyDamageReduction: 'enemyDamageReduction',
-    additionalDamage: 'additionalDamage',
-    damagePerHit: 'damagePerHit',
-    offensiveDebuff: 'offensiveDebuff',
-    enemyDefensiveBuff: 'enemyDefensiveBuff',
-    totalDamage: 'totalDamage',
-    sacredTreasure1: 'sacredTreasure1',
-    sacredTreasureText1: 'sacredTreasureText1',
-    sacredTreasure2: 'sacredTreasure2',
-    sacredTreasureText2: 'sacredTreasureText2',
-    sacredTreasure3: 'sacredTreasure3',
-    sacredTreasureText3: 'sacredTreasureText3',
-    sacredTreasure4: 'sacredTreasure4',
-    sacredTreasureText4: 'sacredTreasureText4',
-    genealogy: 'genealogy',
-    personalSacredTreasure: 'personalSacredTreasure',
-    personalSacredTreasureText: 'personalSacredTreasureText',
-    genealogyText: 'genealogyText',
-    stage: 'stage',
-    enemy: 'enemy',
-    difficultyLevel: 'difficultyLevel',
-    hp: 'hp',
-    dph: 'dph'
-};
 let nowSkill = defaultSkills[0];
 $(document).ready(function () {
+    setupDropDownMenu();
     setupReferralStatusSelect();
     setupAttributeSelect();
     const megidoSelect = $(`#${ids.megido}`);
     megidoList.forEach((megido, i) => {
-        megidoSelect.append(`<option value="${i}">${megido.name}</option>`);
+        const v = `${megido.clockType}-${megido.no}-${megido.id}`;
+        megidoSelect.append(`<option value="${v}">${megido.name}</option>`);
     });
     megidoSelect.selectpicker('refresh');
     megidoSelect.on('change', function () {
-        const index = megidoSelect.val();
-        changeMegido(Number(index));
+        const index = String(megidoSelect.val());
+        changeMegido(index);
     });
     megidoSelect.trigger('change');
     const mysteriesLevels = $(`#${ids.mysteriesLevels}`);
@@ -93,21 +41,52 @@ $(document).ready(function () {
         calculateMagnification();
     });
     setupStage();
+    setupImportForm();
+    setupExportForm();
+    importFromURL();
 });
+// HTML内のchangeイベント
 $(document).on('change', () => {
     calculateDamage();
+    $(`#${ids.url}`).val(generateURL());
 });
+function setupDropDownMenu() {
+    let $dropdown = $('.dropdown');
+    const DURATION = 200; //アニメーションの速さ
+    function fadeOutMenu() {
+        $dropdown.removeClass('is-active').next('.dropdown-menu').stop().slideUp(DURATION);
+    }
+    $dropdown.on('click', (ev) => {
+        const $target = $(ev.currentTarget);
+        //要素が.is-activeを持っていない場合
+        if (!$target.hasClass('is-active')) {
+            fadeOutMenu();
+        }
+        //クリックした要素を表示させる
+        $target.toggleClass('is-active').next('.dropdown-menu').stop().slideToggle(DURATION);
+    });
+    // 別の場所をクリックすると閉じる処理
+    $(document).on('click touchend', function (event) {
+        if (!$(event.target).closest('.nav-item').length) {
+            fadeOutMenu();
+        }
+    });
+    $('.panel-item').on('click touchend', function (event) {
+        fadeOutMenu();
+    });
+}
 /**
  * selectのメギド変更時呼び出し関数です。
  *
  * @param index listのインデックス
  */
 function changeMegido(index) {
-    const megido = megidoList[index];
+    const [clockType, no, id] = index.split('-');
+    const megido = megidoList.find((m) => m.clockType == clockType && m.no == Number(no) && m.id == Number(id)) || megidoList[0];
     $(`#${ids.offense}`).val(megido.offense);
     $(`#${ids.defense}`).val(megido.defense);
     $(`#${ids.speed}`).val(megido.speed);
-    if (megido.ability != undefined)
+    if (megido.ability)
         setupAbility(megido.ability);
     setupSkills(megido.skills);
     setupSacredTreasures(megido);
@@ -129,8 +108,16 @@ function setupAbility(ability) {
 function setupSkills(skills = defaultSkills) {
     const skillSelect = $(`#${ids.skill}`);
     skillSelect.empty();
+    // 専用霊宝スキル名の表示変更
     skills.forEach((skill, i) => {
-        skillSelect.append(`<option value="${i}">【${skill.type.charAt(0)}】${skill.name}</option>`);
+        let name;
+        if (skill.name.charAt(0) === '【') {
+            name = `【${skill.type.charAt(0)}・${skill.name.slice(1)}`;
+        }
+        else {
+            name = `【${skill.type.charAt(0)}】${skill.name}`;
+        }
+        skillSelect.append(`<option value="${i}">${name}</option>`);
     });
     skillSelect.selectpicker('render').selectpicker('refresh');
     skillSelect.off('change');
@@ -331,15 +318,26 @@ function setupSacredTreasure(selectId, textId, html, sacredTreasureList, megido)
         beforeSpeed = speed;
         speedInput.val(afterSpeed);
         // 専用霊宝時処理
-        if (ev.target.id === ids.personalSacredTreasure) {
+        if (ev.target.id === ids.personalSacredTreasure && megido) {
             if (isIPersonalSacredTreasure(st) && st.personal.megidoNo !== 0) {
-                const ability = st.personal.megidoAbility || { name: '', text: '' };
-                // console.log('専用: ' + name);
-                $(`#${ids.megidoAbility}`).val(`【専】${ability.name}`);
-                $(`#${ids.megidoAbilityText}`).text(ability.text);
+                const personal = st.personal;
+                // 特性置き換え
+                if (personal.ability) {
+                    $(`#${ids.megidoAbility}`).val(`【専】${personal.ability.name}`);
+                    $(`#${ids.megidoAbilityText}`).text(personal.ability.text);
+                }
+                // 専用霊宝スキルに置き換え
+                if (personal.skills.length > 0) {
+                    let newSkills = [];
+                    megido.skills.forEach((ms) => {
+                        const ps = personal.skills.find((ps) => ms.type === ps.type);
+                        newSkills.push(ps || ms);
+                    });
+                    setupSkills(newSkills);
+                }
             }
             else {
-                const ability = !megido || !megido.ability ? { name: '', text: '' } : megido.ability;
+                const ability = !megido.ability ? { name: '', text: '' } : megido.ability;
                 $(`#${ids.megidoAbility}`).val(ability.name);
                 $(`#${ids.megidoAbilityText}`).text(ability.text);
             }
@@ -347,6 +345,11 @@ function setupSacredTreasure(selectId, textId, html, sacredTreasureList, megido)
         calculateGenealogy();
         calculateMagnification();
     });
+    // 専用霊宝を初期選択状態に
+    if (selectId === ids.personalSacredTreasure) {
+        const selectCount = stSelect.children('option').length;
+        stSelect.val(selectCount - 1);
+    }
     stSelect.trigger('change');
 }
 /**

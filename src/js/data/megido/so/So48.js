@@ -124,48 +124,7 @@ export const So48 = [
                         label: 'CH4',
                         magnification: 3,
                         hit: 1,
-                        text: '敵単体に攻撃力3倍のダメージ。さらに80%の確率で、覚醒ゲージを-5する。'
-                    }
-                ]
-            },
-            {
-                name: '【専】来て！フレンズ+',
-                type: SkillType.Skill,
-                levels: [
-                    {
-                        level: 0,
-                        label: 'CH0',
-                        magnification: 1,
-                        hit: 1,
-                        text: '敵単体に攻撃力1倍のダメージ。さらに80%の確率で、覚醒ゲージを-1し、自身に加算する。味方単体にチェイン。チェイン数に応じて倍率と覚醒減少数変化'
-                    },
-                    {
-                        level: 1,
-                        label: 'CH1',
-                        magnification: 1.5,
-                        hit: 1,
-                        text: '敵単体に攻撃力1.5倍のダメージ。さらに80%の確率で、覚醒ゲージを-2し、自身に加算する。味方単体にチェイン。チェイン数に応じて倍率と覚醒減少数変化'
-                    },
-                    {
-                        level: 2,
-                        label: 'CH2',
-                        magnification: 2,
-                        hit: 1,
-                        text: '敵単体に攻撃力2倍のダメージ。さらに80%の確率で、覚醒ゲージを-3し、自身に加算する。味方単体にチェイン。チェイン数に応じて倍率と覚醒減少数変化'
-                    },
-                    {
-                        level: 3,
-                        label: 'CH3',
-                        magnification: 2.5,
-                        hit: 1,
-                        text: '敵単体に攻撃力2.5倍のダメージ。さらに80%の確率で、覚醒ゲージを-4し、自身に加算する。味方単体にチェイン。チェイン数に応じて倍率と覚醒減少数変化'
-                    },
-                    {
-                        level: 4,
-                        label: 'CH4',
-                        magnification: 3,
-                        hit: 1,
-                        text: '敵単体に攻撃力3倍のダメージ。さらに80%の確率で、覚醒ゲージを-5し、自身に加算する。味方単体にチェイン。'
+                        text: '敵単体に攻撃力3倍のダメージ。さらに80%の確率で、覚醒ゲージを-5する'
                     }
                 ]
             },
@@ -185,19 +144,6 @@ export const So48 = [
                 name: '色褪せない宝物！+',
                 type: SkillType.Mysteries,
                 text: '1ターンの間、味方全体の攻撃力を50%上昇させる。味方単体にチェイン',
-                levels: [
-                    {
-                        level: 1,
-                        magnification: 0,
-                        hit: 0
-                    }
-                ],
-                increment: 0
-            },
-            {
-                name: '【専】色褪せない宝物！+',
-                type: SkillType.Mysteries,
-                text: '2ターンの間、味方全体の攻撃力を50%上昇させる。味方単体にチェイン',
                 levels: [
                     {
                         level: 1,

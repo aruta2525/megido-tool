@@ -28,7 +28,7 @@ export const So12 = [
                 name: 'ジャスティスライト+',
                 type: SkillType.Skill,
                 attribute: Attribute.Thunder,
-                text: '敵単体に攻撃力0.75倍の3連続雷ダメージ。2ターンの間、帯電の地形効果で0.75倍の継続ダメージを与え、確率で感電させる。',
+                text: '敵単体に攻撃力0.75倍の3連続雷ダメージ。2ターンの間、帯電の地形効果で0.75倍の継続ダメージを与え、確率で感電させる',
                 levels: [
                     {
                         level: 1,
@@ -41,7 +41,7 @@ export const So12 = [
                 name: 'エクスプロージョン+',
                 type: SkillType.AwakeningSkill,
                 attribute: Attribute.Thunder,
-                text: '敵全体に攻撃力1.45倍の雷ダメージ。さらに2ターンの間、自身のスキルを強化する。',
+                text: '敵全体に攻撃力1.45倍の雷ダメージ。さらに2ターンの間、自身のスキルを強化する',
                 levels: [
                     {
                         level: 1,
@@ -54,7 +54,7 @@ export const So12 = [
                 name: 'エアリアルグロー+',
                 type: SkillType.Mysteries,
                 attribute: Attribute.Thunder,
-                text: '敵単体に攻撃力5.25倍の雷ダメージ。さらに2ターンの間、敵を感電状態にする。',
+                text: '敵単体に攻撃力5.25倍の雷ダメージ。さらに2ターンの間、敵を感電状態にする',
                 levels: [
                     {
                         level: 1,
@@ -115,34 +115,9 @@ export const So12 = [
                 ]
             },
             {
-                name: '【専】水落魚竜ノ夜＋',
-                type: SkillType.AwakeningSkill,
-                text: '自身の覚醒ゲージを全て消費し、敵単体に5.5倍で7ターン後に弾けるハイドロボム重を付与し、付与されているハイドロボムのダメージを40%上昇させる',
-                levels: [
-                    {
-                        level: 1,
-                        magnification: 0,
-                        hit: 0
-                    }
-                ]
-            },
-            {
                 name: 'ハイドロブラスト＋',
                 type: SkillType.Mysteries,
                 text: '敵単体に攻撃力2倍のダメージ。さらに敵にHボムが付与されているとき、ダメージが2倍になる',
-                levels: [
-                    {
-                        level: 1,
-                        magnification: 2,
-                        hit: 1
-                    }
-                ],
-                increment: 0.05
-            },
-            {
-                name: '【専】ハイドロブラスト＋',
-                type: SkillType.Mysteries,
-                text: '敵単体に攻撃力2倍のダメージ。さらに敵にHボムが付与されているとき、ダメージが3倍になる',
                 levels: [
                     {
                         level: 1,

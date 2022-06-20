@@ -27,6 +27,7 @@ const megido = [
             {
                 name: 'ロール・ロール＋',
                 type: SkillType.Skill,
+                text: '出目で効果決定 1:効果なし/2,3:単体覚醒+1,防御10%上昇/4,5:列覚醒+1,防御15%上昇/6:全体覚醒+1,防御20%上昇(防御上昇2ターン)	',
                 levels: [
                     {
                         level: 1,
@@ -38,6 +39,7 @@ const megido = [
             {
                 name: 'イービル・ダイス＋',
                 type: SkillType.AwakeningSkill,
+                text: '出目で効果決定1:敵単体に攻撃力4.8倍のダメージ/2～6:敵単体に攻撃力0.75倍の出目数連続ダメージ',
                 levels: [
                     {
                         level: 1,
@@ -78,17 +80,20 @@ const megido = [
                     {
                         level: 1,
                         magnification: 1.75,
-                        hit: 1
+                        hit: 1,
+                        text: '	敵全体に攻撃力1.75倍の防御無視ダメージ。1%の確率で対象を即死させる【ロール・ロール3回使用でLv上昇/最大Lv3】'
                     },
                     {
                         level: 2,
                         magnification: 2,
-                        hit: 1
+                        hit: 1,
+                        text: '敵全体に攻撃力2倍の防御無視ダメージ。1%の確率で対象を即死させる【ロール・ロール3回使用でLv上昇/最大Lv3】'
                     },
                     {
                         level: 3,
                         magnification: 2.25,
-                        hit: 1
+                        hit: 1,
+                        text: '敵全体に攻撃力2.25倍の防御無視ダメージ。1%の確率で対象を即死させる'
                     }
                 ],
                 increment: 0.05
@@ -126,7 +131,8 @@ const megido = [
                     {
                         level: 1,
                         magnification: 0,
-                        hit: 1
+                        hit: 0,
+                        text: '味方単体のHPを最大HPの25%減らす。さらに対象への攻撃を2回無効化し、2ターンの間、攻撃力を20%上昇させる'
                     }
                 ]
             },
@@ -136,14 +142,24 @@ const megido = [
                 levels: [
                     {
                         level: 1,
-                        magnification: 1,
-                        hit: 1
+                        label: '通常',
+                        magnification: 0,
+                        hit: 1,
+                        text: '敵単体に、ダイスの出目×自身のLv×13の固定ダメージ'
+                    },
+                    {
+                        level: 1,
+                        label: '奥義使用後',
+                        magnification: 0,
+                        hit: 1,
+                        text: '敵単体に、ダイスの出目の和×自身のLv×13の固定ダメージ'
                     }
                 ]
             },
             {
                 name: 'フォーチュンロア＋',
                 type: SkillType.Mysteries,
+                text: '2ターンの間、自身へのダメージを40%軽減。さらに、覚醒スキルで使用するダイスを3個に増やす【使用後1回につき1度のみ】',
                 levels: [
                     {
                         level: 1,
